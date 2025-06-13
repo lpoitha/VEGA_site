@@ -37,7 +37,7 @@
 body {
     background-color: #F7F3F8;
     overflow-x: hidden;
-    height: 2500px;
+    height: clamp(1250.000px, 130.208vw, 2500.000px);
 }
 
 /* ==========================================================================
@@ -46,8 +46,8 @@ body {
 
 .hero-section {
     position: relative;
-    width: 1920px;
-    height: 1080px;
+    width: clamp(960.000px, 100.000vw, 1920.000px);
+    height: clamp(540.000px, 56.250vw, 1080.000px);
     margin: 0 auto;
     overflow: hidden;
 }
@@ -58,8 +58,8 @@ body {
 
 .hero-background {
     position: absolute;
-    width: 960px;
-    height: 1080px;
+    width: clamp(480.000px, 50.000vw, 960.000px);
+    height: clamp(540.000px, 56.250vw, 1080.000px);
     right: 0;
     top: 0;
 }
@@ -84,10 +84,10 @@ body {
 
 .hero-planet-bg {
     position: absolute;
-    width: 1047.06px;
-    height: 1047.06px;
-    left: 436.5px;
-    top: 226.47px;
+    width: clamp(523.530px, 54.534vw, 1047.060px);
+    height: clamp(523.530px, 54.534vw, 1047.060px);
+    left: clamp(218.250px, 22.734vw, 436.500px);
+    top: clamp(113.235px, 11.795vw, 226.470px);
     background: linear-gradient(101.31deg, #5F268A 56.09%, rgba(145, 58, 212, 0.1) 170.31%);
     border-radius: 50%;
     z-index: 3;
@@ -99,9 +99,9 @@ body {
 
 .orbits {
     position: absolute;
-    width: 1500px;
-    height: 1500px;
-    left: 210px;
+    width: clamp(750.000px, 78.125vw, 1500.000px);
+    height: clamp(750.000px, 78.125vw, 1500.000px);
+    left: clamp(105.000px, 10.938vw, 210.000px);
     top: 0;
     z-index: 2;
 }
@@ -113,18 +113,18 @@ body {
 }
 
 .orbit--outer {
-    width: 1500px;
-    height: 1500px;
+    width: clamp(750.000px, 78.125vw, 1500.000px);
+    height: clamp(750.000px, 78.125vw, 1500.000px);
     left: 0;
     top: 0;
     border: 1px solid rgba(165, 120, 199, 0.25);
 }
 
 .orbit--inner {
-    width: 1262.75px;
-    height: 1262.75px;
-    left: 328.6px;
-    top: 328.6px;
+    width: clamp(631.375px, 65.768vw, 1262.750px);
+    height: clamp(631.375px, 65.768vw, 1262.750px);
+    left: clamp(164.300px, 17.115vw, 328.600px);
+    top: clamp(164.300px, 17.115vw, 328.600px);
     border: 1px solid rgba(165, 120, 199, 0.4);
 }
 
@@ -134,98 +134,98 @@ body {
 }
 
 .planet--1 {
-    width: 35.29px;
-    height: 35.29px;
-    left: 111px;
-    top: 618.63px;
+    width: clamp(17.645px, 1.838vw, 35.290px);
+    height: clamp(17.645px, 1.838vw, 35.290px);
+    left: clamp(55.500px, 5.781vw, 111.000px);
+    top: clamp(309.315px, 32.220vw, 618.630px);
     background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
 }
 
 .planet--2 {
-    width: 21.57px;
-    height: 21.57px;
-    left: 365px;
-    top: 231.6px;
+    width: clamp(10.785px, 1.123vw, 21.570px);
+    height: clamp(10.785px, 1.123vw, 21.570px);
+    left: clamp(182.500px, 19.010vw, 365.000px);
+    top: clamp(115.800px, 12.062vw, 231.600px);
     background: #A578C7;
 }
 
 .planet--3 {
-    width: 21.57px;
-    height: 21.57px;
-    left: 1210px;
-    top: 1216.67px;
+    width: clamp(10.785px, 1.123vw, 21.570px);
+    height: clamp(10.785px, 1.123vw, 21.570px);
+    left: clamp(605.000px, 63.021vw, 1210.000px);
+    top: clamp(608.335px, 63.368vw, 1216.670px);
     background: #A578C7;
 }
 
 .planet--4 {
-    width: 17.65px;
-    height: 17.65px;
-    left: 1066.86px;
-    top: 66.6px;
+    width: clamp(8.825px, 0.919vw, 17.650px);
+    height: clamp(8.825px, 0.919vw, 17.650px);
+    left: clamp(533.430px, 55.566vw, 1066.860px);
+    top: clamp(33.300px, 3.469vw, 66.600px);
     background: #895EB1;
 }
 
 .planet--5 {
-    width: 14.3px;
-    height: 14.3px;
-    left: 62.8px;
-    top: 432.6px;
+    width: clamp(7.150px, 0.745vw, 14.300px);
+    height: clamp(7.150px, 0.745vw, 14.300px);
+    left: clamp(31.400px, 3.271vw, 62.800px);
+    top: clamp(216.300px, 22.531vw, 432.600px);
     background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
 }
 
 .planet--6 {
-    width: 15.69px;
-    height: 15.69px;
-    left: 340px;
-    top: 110px;
+    width: clamp(7.845px, 0.817vw, 15.690px);
+    height: clamp(7.845px, 0.817vw, 15.690px);
+    left: clamp(170.000px, 17.708vw, 340.000px);
+    top: clamp(55.000px, 5.729vw, 110.000px);
     background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
 }
 
 .planet--7 {
-    width: 15.69px;
-    height: 15.69px;
-    left: 312.94px;
-    top: 1180.27px;
+    width: clamp(7.845px, 0.817vw, 15.690px);
+    height: clamp(7.845px, 0.817vw, 15.690px);
+    left: clamp(156.470px, 16.299vw, 312.940px);
+    top: clamp(590.135px, 61.472vw, 1180.270px);
     background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
 }
 
 .planet--8 {
-    width: 31.37px;
-    height: 31.37px;
-    left: 1108.7px;
-    top: 87.25px;
+    width: clamp(15.685px, 1.634vw, 31.370px);
+    height: clamp(15.685px, 1.634vw, 31.370px);
+    left: clamp(554.350px, 57.745vw, 1108.700px);
+    top: clamp(43.625px, 4.544vw, 87.250px);
     background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
 }
 
 .planet--9 {
-    width: 31.37px;
-    height: 31.37px;
-    left: 1024.71px;
-    top: 1265.69px;
+    width: clamp(15.685px, 1.634vw, 31.370px);
+    height: clamp(15.685px, 1.634vw, 31.370px);
+    left: clamp(512.355px, 53.370vw, 1024.710px);
+    top: clamp(632.845px, 65.921vw, 1265.690px);
     background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
 }
 
 .planet--10 {
-    width: 13.73px;
-    height: 13.73px;
-    left: 1359.8px;
-    top: 619.61px;
+    width: clamp(6.865px, 0.715vw, 13.730px);
+    height: clamp(6.865px, 0.715vw, 13.730px);
+    left: clamp(679.900px, 70.823vw, 1359.800px);
+    top: clamp(309.805px, 32.271vw, 619.610px);
     background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
 }
 
 .planet--11 {
-    width: 11.76px;
-    height: 11.76px;
-    left: 1278.63px;
-    top: 215.69px;
+    width: clamp(5.880px, 0.613vw, 11.760px);
+    height: clamp(5.880px, 0.613vw, 11.760px);
+    left: clamp(639.315px, 66.595vw, 1278.630px);
+    top: clamp(107.845px, 11.234vw, 215.690px);
     background: #A578C7;
 }
 
 .planet--12 {
-    width: 17.65px;
-    height: 17.65px;
-    left: 1441.8px;
-    top: 478px;
+    width: clamp(8.825px, 0.919vw, 17.650px);
+    height: clamp(8.825px, 0.919vw, 17.650px);
+    left: clamp(720.900px, 75.094vw, 1441.800px);
+    top: clamp(239.000px, 24.896vw, 478.000px);
     background: #A578C7;
 }
 
@@ -235,17 +235,17 @@ body {
 
 .hero-title-block {
     position: absolute;
-    width: 687px;
-    left: 210px;
-    top: 390px;
+    width: clamp(343.500px, 35.781vw, 687.000px);
+    left: clamp(105.000px, 10.938vw, 210.000px);
+    top: clamp(195.000px, 20.312vw, 390.000px);
     z-index: 10;
 }
 
 .hero-title-block__subtitle {
     display: block;
     font-family: 'Cramaten', sans-serif;
-    font-size: 100px;
-    line-height: 110px;
+    font-size: clamp(50.000px, 5.208vw, 100.000px);
+    line-height: clamp(55.000px, 5.729vw, 110.000px);
     letter-spacing: -0.02em;
     color: #A578C7;
 }
@@ -253,7 +253,7 @@ body {
 .hero-title-block__main {
     font-family: 'Cramaten', sans-serif;
     font-weight: 400;
-    font-size: 465px;
+    font-size: clamp(232.500px, 24.219vw, 465.000px);
     background: linear-gradient(91.17deg, #79EFFF -4.01%, #FD3CE3 36.14%, #912BFF 77.44%, #0095FF 106.11%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -264,10 +264,10 @@ body {
 
 .hero-title-cosmos {
     position: absolute;
-    width: 653px;
-    height: 400.51px;
-    left: 1080px;
-    top: 500px;
+    width: clamp(326.500px, 34.010vw, 653.000px);
+    height: clamp(200.255px, 20.860vw, 400.510px);
+    left: clamp(540.000px, 56.250vw, 1080.000px);
+    top: clamp(250.000px, 26.042vw, 500.000px);
     z-index: 20;
 }
 
@@ -276,7 +276,7 @@ body {
     position: absolute;
     font-family: 'Cramaten', sans-serif;
     font-weight: 400;
-    font-size: 390px;
+    font-size: clamp(195.000px, 20.312vw, 390.000px);
     line-height: 90%;
     letter-spacing: -0.04em;
 }
@@ -292,18 +292,18 @@ body {
 .hero-title-cosmos__stroke {
     -webkit-text-stroke: 1px rgba(255, 240, 251, 0.75);
     color: transparent;
-    top: 8px;
-    left: 5px;
+    top: clamp(4.000px, 0.417vw, 8.000px);
+    left: clamp(2.500px, 0.260vw, 5.000px);
     z-index: 1;
 }
 
 .hero-description {
     position: absolute;
-    width: 287px;
-    left: 1423px;
-    top: 388px;
+    width: clamp(143.500px, 14.948vw, 287.000px);
+    left: clamp(711.500px, 74.115vw, 1423.000px);
+    top: clamp(194.000px, 20.208vw, 388.000px);
     font-family: 'Vela Sans', sans-serif;
-    font-size: 20px;
+    font-size: clamp(10.000px, 1.042vw, 20.000px);
     line-height: 120%;
     text-align: right;
     color: #F7F3F8;
@@ -312,16 +312,16 @@ body {
 
 .hero-signature {
     position: absolute;
-    width: 206px;
-    height: 138px;
-    left: 1355px;
-    top: 720px;
+    width: clamp(103.000px, 10.729vw, 206.000px);
+    height: clamp(69.000px, 7.187vw, 138.000px);
+    left: clamp(677.500px, 70.573vw, 1355.000px);
+    top: clamp(360.000px, 37.500vw, 720.000px);
     font-family: 'Great Vibes', cursive;
-    font-size: 110px;
-    line-height: 138px;
+    font-size: clamp(55.000px, 5.729vw, 110.000px);
+    line-height: clamp(69.000px, 7.187vw, 138.000px);
     letter-spacing: -0.04em;
     color: #FFF0FB;
-    text-shadow: 2px 3px 0px rgba(46, 9, 74, 0.35);
+    text-shadow: clamp(1.000px, 0.104vw, 2.000px) 3px 0px rgba(46, 9, 74, 0.35);
     transform: rotate(-30deg);
     z-index: 20;
 }
@@ -335,10 +335,10 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 142px;
-    height: 142px;
-    left: 757px;
-    top: 793.2px;
+    width: clamp(71.000px, 7.396vw, 142.000px);
+    height: clamp(71.000px, 7.396vw, 142.000px);
+    left: clamp(378.500px, 39.427vw, 757.000px);
+    top: clamp(396.600px, 41.312vw, 793.200px);
     background: linear-gradient(136.68deg, #79EFFF -6.83%, #FD3CE3 13.92%, #912BFF 63.7%, #0095FF 101.57%);
     border: 2px solid #FCEEF9;
     border-radius: 50%;
@@ -351,7 +351,7 @@ body {
 .hero-cta-button span {
     font-family: 'Vela Sans', sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: clamp(8.000px, 0.833vw, 16.000px);
     line-height: 110%;
     text-align: center;
     letter-spacing: -0.03em;
@@ -379,10 +379,10 @@ body {
 
 .hero-images__bottle-shadow {
     position: absolute;
-    width: 304px;
-    height: 148px;
-    left: 800px;
-    top: 780px;
+    width: clamp(152.000px, 15.833vw, 304.000px);
+    height: clamp(74.000px, 7.708vw, 148.000px);
+    left: clamp(400.000px, 41.667vw, 800.000px);
+    top: clamp(390.000px, 40.625vw, 780.000px);
     background: rgba(53, 16, 95, 0.65);
     filter: blur(75px);
     z-index: 14;
@@ -390,19 +390,19 @@ body {
 
 .hero-images__bottle {
     position: absolute;
-    height: 715px;
-    width: 294.79px;
-    left: 812.6px;
-    top: 209px;
+    height: clamp(357.500px, 37.240vw, 715.000px);
+    width: clamp(147.395px, 15.354vw, 294.790px);
+    left: clamp(406.300px, 42.323vw, 812.600px);
+    top: clamp(104.500px, 10.885vw, 209.000px);
     transform: rotate(-16.46deg);
     z-index: 15;
 }
 
 .hero-images__balloons {
     position: absolute;
-    height: 835.4px;
-    left: 664.6px;
-    top: 45px;
+    height: clamp(417.700px, 43.510vw, 835.400px);
+    left: clamp(332.300px, 34.615vw, 664.600px);
+    top: clamp(22.500px, 2.344vw, 45.000px);
     z-index: 25;
 }
 
@@ -413,16 +413,16 @@ body {
 
 .site-header {
     position: fixed;
-    top: 20px;
+    top: clamp(10.000px, 1.042vw, 20.000px);
     left: 50%;
     transform: translateX(-50%);
-    width: 1500px;
-    height: 80px;
+    width: clamp(750.000px, 78.125vw, 1500.000px);
+    height: clamp(40.000px, 4.167vw, 80.000px);
     background: rgba(95, 38, 138, 0.1);
     box-shadow: 0px 4px 6px rgba(19, 3, 32, 0.08);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-radius: 15px;
+    border-radius: clamp(7.500px, 0.781vw, 15.000px);
     z-index: 1000;
     padding: 0 20px;
 }
@@ -437,20 +437,20 @@ body {
 .header-nav__group {
     display: flex;
     align-items: center;
-    gap: 17px;
+    gap: clamp(8.500px, 0.885vw, 17.000px);
 }
 
 .nav-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 12px 22px;
-    height: 43px;
+    gap: clamp(4.000px, 0.417vw, 8.000px);
+    padding: clamp(6.000px, 0.625vw, 12.000px) 22px;
+    height: clamp(21.500px, 2.240vw, 43.000px);
     border: 1px solid #A578C7;
-    border-radius: 200px;
+    border-radius: clamp(100.000px, 10.417vw, 200.000px);
     font-family: 'Vela Sans', sans-serif;
-    font-size: 15px;
+    font-size: clamp(7.500px, 0.781vw, 15.000px);
     font-weight: 400;
     color: #A578C7;
     text-transform: uppercase;
@@ -460,12 +460,12 @@ body {
 }
 
 .arrow-down {
-    width: 9.93px;
-    height: 9px;
+    width: clamp(4.965px, 0.517vw, 9.930px);
+    height: clamp(4.500px, 0.469vw, 9.000px);
 }
 
 .nav-button--icon {
-    width: 43px;
+    width: clamp(21.500px, 2.240vw, 43.000px);
     padding: 0;
 }
 
@@ -476,8 +476,8 @@ body {
 }
 
 .nav-separator img {
-    width: 12px;
-    height: 12px;
+    width: clamp(6.000px, 0.625vw, 12.000px);
+    height: clamp(6.000px, 0.625vw, 12.000px);
     filter: invert(72%) sepia(10%) saturate(1007%) hue-rotate(193deg) brightness(97%) contrast(88%);
 }
 
@@ -486,7 +486,7 @@ body {
 }
 
 .header-logo img {
-    height: 54px;
+    height: clamp(27.000px, 2.812vw, 54.000px);
 }
 
 /* === НОВЫЕ СТИЛИ ДЛЯ ИКОНОК === */
@@ -494,8 +494,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 42px;
-    height: 42px;
+    width: clamp(21.000px, 2.188vw, 42.000px);
+    height: clamp(21.000px, 2.188vw, 42.000px);
     border-radius: 50%;
     border: 1px solid #A578C7;
     /* Обводка добавлена для всех иконок */
@@ -503,15 +503,15 @@ body {
 }
 
 .nav-icon-button img {
-    width: 24px;
-    height: 24px;
+    width: clamp(12.000px, 1.250vw, 24.000px);
+    height: clamp(12.000px, 1.250vw, 24.000px);
 }
 
 /* === Стили для корзины с эффектом смены изображения === */
 .cart-button {
     background-image: url('../img/icons/bag-hover.svg');
     /* Подгружаем hover-изображение в фон */
-    background-size: 24px 24px;
+    background-size: clamp(12.000px, 1.250vw, 24.000px) 24px;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -550,9 +550,9 @@ body {
     padding: 0;
     border: none;
     background: none;
-    width: 158px;
+    width: clamp(79.000px, 8.229vw, 158.000px);
     /* Ширина из макета */
-    height: 43px;
+    height: clamp(21.500px, 2.240vw, 43.000px);
     /* Высота из макета */
 }
 
@@ -579,28 +579,28 @@ body {
     justify-content: left;
     width: 100%;
     height: 100%;
-    padding-left: 15px;
+    padding-left: clamp(7.500px, 0.781vw, 15.000px);
 }
 
 /* Стилизация текста и иконок внутри */
 .nav-button__text {
     font-family: 'Vela Sans', sans-serif;
-    font-size: 15px;
+    font-size: clamp(7.500px, 0.781vw, 15.000px);
     text-transform: uppercase;
     color: #A578C7;
     transition: color 0.3s ease;
-    padding-left: 33px;
+    padding-left: clamp(16.500px, 1.719vw, 33.000px);
 }
 
 .nav-button__icon {
-    width: 16px;
+    width: clamp(8.000px, 0.833vw, 16.000px);
     /* Размер иконки грида */
-    height: 16px;
+    height: clamp(8.000px, 0.833vw, 16.000px);
 }
 
 .nav-button__arrow {
-    width: 9.93px;
-    height: 9px;
-    margin-left: 3px;
+    width: clamp(4.965px, 0.517vw, 9.930px);
+    height: clamp(4.500px, 0.469vw, 9.000px);
+    margin-left: clamp(1.500px, 0.156vw, 3.000px);
 
 }
