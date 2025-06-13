@@ -21,7 +21,6 @@
     font-family: 'Vela Sans';
     src: url('../fonts/VelaSans-GX.ttf') format('truetype');
     font-weight: 400;
-    /* Можно настроить для вариативного шрифта */
     font-style: normal;
 }
 
@@ -36,11 +35,8 @@
 }
 
 body {
-    background-color: #ffffff;
-    /* Основной фон страницы */
+    background-color: #F7F3F8;
     overflow-x: hidden;
-    /* Предотвращаем горизонтальный скролл */
-    /* Установим высоту, чтобы был виден скролл для будущей анимации */
     height: 2500px;
 }
 
@@ -50,15 +46,10 @@ body {
 
 .hero-section {
     position: relative;
-    /* Используем relative для позиционирования дочерних элементов */
     width: 1920px;
-    /* Фиксированная ширина макета */
     height: 1080px;
-    /* Фиксированная высота первого экрана */
     margin: 0 auto;
-    /* Центрируем макет на странице */
     overflow: hidden;
-    /* Скрываем все, что выходит за пределы */
 }
 
 /* ==========================================================================
@@ -97,21 +88,9 @@ body {
     height: 1047.06px;
     left: calc(50% - 1047.06px/2);
     top: 226.47px;
-
-    background: linear-gradient(101deg,
-            rgba(95, 38, 138, 1) 0%,
-            rgba(145, 58, 212, 0.1) 100%);
+    background: linear-gradient(101.31deg, #5F268A 56.09%, rgba(145, 58, 212, 0.1) 170.31%);
     border-radius: 50%;
     z-index: 3;
-    /* Круг2 */
-
-    position: absolute;
-    width: 1047.06px;
-    height: 1047.06px;
-    left: calc(50% - 1047.06px/2);
-    top: 226.47px;
-
-    background: linear-gradient(101.31deg, #5F268A 56.09%, rgba(145, 58, 212, 0.1) 170.31%);
 }
 
 /* ==========================================================================
@@ -155,13 +134,10 @@ body {
 }
 
 .planet--1 {
-
-    position: absolute;
     width: 35.29px;
     height: 35.29px;
     left: 111px;
     top: 618.63px;
-
     background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
 }
 
@@ -275,7 +251,6 @@ body {
 }
 
 .hero-title-block__main {
-
     font-family: 'Cramaten', sans-serif;
     font-weight: 400;
     font-size: 465px;
@@ -318,7 +293,6 @@ body {
     -webkit-text-stroke: 1px rgba(255, 240, 251, 0.75);
     color: transparent;
     top: 8px;
-    /* Сдвиг для эффекта обводки */
     left: 5px;
     z-index: 1;
 }
@@ -382,15 +356,14 @@ body {
     text-align: center;
     letter-spacing: -0.03em;
     text-transform: uppercase;
-    color: #FFFFFF;
-    /* transform: rotate(-22deg); /* Текст уже повернут вместе с кнопкой */
+    color: #F7F3F8;
 }
 
 .hero-cta-button:hover {
     background: linear-gradient(96.29deg, #FF03B5 18.76%, #EC05AF 63.37%, #B20A9B 102.94%);
     transform: rotate(-22deg) scale(1.05);
-    /* Немного увеличиваем кнопку при наведении */
 }
+
 
 /* ==========================================================================
    Изображения (лак, шары)
@@ -409,9 +382,7 @@ body {
     width: 304px;
     height: 148px;
     left: 800px;
-    /* Скорректировано */
     top: 780px;
-    /* Скорректировано */
     background: rgba(53, 16, 95, 0.65);
     filter: blur(75px);
     z-index: 14;
@@ -432,6 +403,234 @@ body {
     height: 835.4px;
     left: 664.6px;
     top: 45px;
-    /*  transform: rotate(15.32deg);*/
     z-index: 25;
 }
+
+
+/* ==========================================================================
+   Шапка сайта (Header)
+   ========================================================================== */
+
+.site-header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1500px;
+    height: 80px;
+    background: rgba(95, 38, 138, 0.1);
+    box-shadow: 0px 4px 6px rgba(19, 3, 32, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header-nav__group {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
+    height: 43px;
+    border: 1px solid #A578C7;
+    border-radius: 200px;
+    font-family: 'Vela Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #A578C7;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #F7F3F8;
+    color: #F7F3F8;
+}
+
+.arrow-down {
+    width: 9.93px;
+    height: 9px;
+}
+
+.nav-button--icon {
+    width: 43px;
+    padding: 0;
+}
+
+.nav-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-separator img {
+    width: 12px;
+    height: 12px;
+    filter: invert(72%) sepia(10%) saturate(1007%) hue-rotate(193deg) brightness(97%) contrast(88%);
+}
+
+.header-logo {
+    margin: 0 20px;
+}
+
+.header-logo img {
+    height: 54px;
+}
+
+/* === НОВЫЕ СТИЛИ ДЛЯ ИКОНОК === */
+.nav-icon-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #A578C7;
+    /* Обводка добавлена для всех иконок */
+    transition: border-color 0.3s ease;
+}
+
+.nav-icon-button:hover {
+    border-color: #2D0E45;
+    /* Единый цвет обводки при наведении */
+}
+
+.nav-icon-button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* === Стили для корзины с эффектом смены изображения === */
+.cart-button {
+    background-image: url('../img/icons/bag-hover.svg');
+    /* Подгружаем hover-изображение в фон */
+    background-size: 24px 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cart-button img {
+    transition: opacity 0.3s ease;
+    /* Плавное исчезновение для default-иконки */
+}
+
+.cart-button:hover img {
+    opacity: 0;
+    /* При наведении скрываем default-иконку, показывая фон */
+}
+
+/* Состояния корзины */
+.cart-button.has-items {
+    background-color: #A578C7;
+    border-color: #A578C7;
+}
+
+.cart-button.has-items:hover {
+    background-color: #8e5fad;
+    border-color: #8e5fad;
+}
+
+.cart-button.is-disabled {
+    border-color: #909090;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+.nav-button--svg {
+    position: relative;
+    /* Обязательно для позиционирования контента */
+    padding: 0;
+    border: none;
+    background: none;
+    width: 158px;
+    /* Ширина из макета */
+    height: 43px;
+    /* Высота из макета */
+}
+
+/* Отключаем стандартный hover-эффект для этого типа кнопки */
+.nav-button--svg:hover {
+    background: none;
+    border: none;
+}
+
+/* Стили для SVG-фигуры (которую мы используем как фон) */
+.nav-button__shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Фон должен быть под контентом */
+}
+
+/* Контейнер для текста и иконок */
+.nav-button__content {
+    position: relative;
+    z-index: 2;
+    /* Контент должен быть над фоном */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    /* Подбираем отступ между иконкой и текстом */
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    /* Сдвигаем контент чуть вправо, чтобы он не заезжал на круг */
+}
+
+/* Стилизация текста и иконок внутри */
+.nav-button__text {
+    font-family: 'Vela Sans', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #A578C7;
+    /* Цвет текста для активного состояния */
+    transition: color 0.3s ease;
+    padding-left: 33px;
+}
+
+.nav-button__icon {
+    width: 16px;
+    /* Размер иконки грида */
+    height: 16px;
+
+}
+
+.nav-button__arrow {
+    width: 9.93px;
+    height: 9px;
+    margin-left: 3px;
+
+}
+
+/* Эффект при наведении на всю кнопку */
+.nav-button--svg:hover .nav-button__text {
+    color: #2D0E45;
+    /* Меняем цвет текста при наведении */
+}
+
+/* Здесь можно добавить смену цвета обводки SVG при наведении, если потребуется,
+   но для этого SVG нужно будет встраивать прямо в HTML (inline), что чуть усложнит код.
+   Пока оставим так для простоты. */
