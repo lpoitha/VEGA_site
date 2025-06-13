@@ -459,13 +459,6 @@ body {
     transition: all 0.3s ease;
 }
 
-
-.nav-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: #F7F3F8;
-    color: #F7F3F8;
-}
-
 .arrow-down {
     width: 9.93px;
     height: 9px;
@@ -507,11 +500,6 @@ body {
     border: 1px solid #A578C7;
     /* Обводка добавлена для всех иконок */
     transition: border-color 0.3s ease;
-}
-
-.nav-icon-button:hover {
-    border-color: #2D0E45;
-    /* Единый цвет обводки при наведении */
 }
 
 .nav-icon-button img {
@@ -568,13 +556,11 @@ body {
     /* Высота из макета */
 }
 
-/* Отключаем стандартный hover-эффект для этого типа кнопки */
 .nav-button--svg:hover {
     background: none;
     border: none;
 }
 
-/* Стили для SVG-фигуры (которую мы используем как фон) */
 .nav-button__shape {
     position: absolute;
     top: 0;
@@ -585,19 +571,15 @@ body {
     /* Фон должен быть под контентом */
 }
 
-/* Контейнер для текста и иконок */
 .nav-button__content {
     position: relative;
     z-index: 2;
-    /* Контент должен быть над фоном */
     display: flex;
     align-items: center;
     justify-content: left;
-    /* Подбираем отступ между иконкой и текстом */
     width: 100%;
     height: 100%;
     padding-left: 15px;
-    /* Сдвигаем контент чуть вправо, чтобы он не заезжал на круг */
 }
 
 /* Стилизация текста и иконок внутри */
@@ -606,7 +588,6 @@ body {
     font-size: 15px;
     text-transform: uppercase;
     color: #A578C7;
-    /* Цвет текста для активного состояния */
     transition: color 0.3s ease;
     padding-left: 33px;
 }
@@ -615,7 +596,6 @@ body {
     width: 16px;
     /* Размер иконки грида */
     height: 16px;
-
 }
 
 .nav-button__arrow {
@@ -624,13 +604,3 @@ body {
     margin-left: 3px;
 
 }
-
-/* Эффект при наведении на всю кнопку */
-.nav-button--svg:hover .nav-button__text {
-    color: #2D0E45;
-    /* Меняем цвет текста при наведении */
-}
-
-/* Здесь можно добавить смену цвета обводки SVG при наведении, если потребуется,
-   но для этого SVG нужно будет встраивать прямо в HTML (inline), что чуть усложнит код.
-   Пока оставим так для простоты. */
