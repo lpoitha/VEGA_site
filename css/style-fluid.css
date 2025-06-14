@@ -123,8 +123,8 @@ body {
 .orbit--inner {
     width: clamp(631.375px, 65.768vw, 1262.750px);
     height: clamp(631.375px, 65.768vw, 1262.750px);
-    left: clamp(164.300px, 17.115vw, 328.600px);
-    top: clamp(164.300px, 17.115vw, 328.600px);
+    left: 6.15vw;
+    top: 6.15vw;
     border: 1px solid rgba(165, 120, 199, 0.4);
 }
 
@@ -400,9 +400,10 @@ body {
 
 .hero-images__balloons {
     position: absolute;
-    height: clamp(417.700px, 43.510vw, 835.400px);
-    left: clamp(332.300px, 34.615vw, 664.600px);
-    top: clamp(22.500px, 2.344vw, 45.000px);
+    transform: rotate(15.32deg);
+    width: clamp(417.700px, 30.83vw, 835.400px);
+    left: 38vw;
+    top: -7vh;
     z-index: 25;
 }
 
