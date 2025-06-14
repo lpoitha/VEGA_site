@@ -1,5 +1,31 @@
 /* ==========================================================================
-   Подключение шрифтов
+   1. НАСТРОЙКИ И ПЕРЕМЕННЫЕ
+   ========================================================================== */
+
+:root {
+    /* Цвета */
+    --color-primary: #A578C7;
+    --color-primary-dark: #633786;
+    --color-primary-darker: #3A1755;
+    --color-primary-darkest: #2D0E45;
+    --color-bg-light: #F7F3F8;
+    --color-bg-dark: #0F011D;
+    --color-white: #FFFFFF;
+    --color-border: rgba(165, 120, 199, 0.4);
+    --color-border-light: rgba(165, 120, 199, 0.25);
+    --color-planet-gray: #895EB1;
+
+    /* Градиенты */
+    --gradient-title-main: linear-gradient(91.17deg, #79EFFF -4.01%, #FD3CE3 36.14%, #912BFF 77.44%, #0095FF 106.11%);
+    --gradient-title-secondary: linear-gradient(91.17deg, #0095FF -4.01%, #912BFF 24.67%, #FD3CE3 65.97%, #79EFFF 106.11%);
+    --gradient-planet: linear-gradient(101.31deg, #5F268A 56.09%, rgba(145, 58, 212, 0.1) 170.31%);
+    --gradient-planet-small: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
+    --gradient-btn-default: linear-gradient(136.68deg, #79EFFF -6.83%, #FD3CE3 13.92%, #912BFF 63.7%, #0095FF 101.57%);
+    --gradient-btn-hover: linear-gradient(96.29deg, #FF03B5 18.76%, #EC05AF 63.37%, #B20A9B 102.94%);
+}
+
+/* ==========================================================================
+   2. БАЗОВЫЕ СТИЛИ И ШРИФТЫ
    ========================================================================== */
 
 @font-face {
@@ -24,10 +50,6 @@
     font-style: normal;
 }
 
-/* ==========================================================================
-   Базовые стили
-   ========================================================================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -35,383 +57,116 @@
 }
 
 body {
-    background-color: #F7F3F8;
+    background-color: var(--color-bg-light);
     overflow-x: hidden;
     height: clamp(1250.000px, 130.208vw, 2500.000px);
-}
-
-/* ==========================================================================
-   Основной контейнер
-   ========================================================================== */
-
-.hero-section {
-    position: relative;
-    width: clamp(960.000px, 100.000vw, 1920.000px);
-    height: clamp(540.000px, 56.250vw, 1080.000px);
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-/* ==========================================================================
-   Фоновые элементы
-   ========================================================================== */
-
-.hero-background {
-    position: absolute;
-    width: clamp(480.000px, 50.000vw, 960.000px);
-    height: clamp(540.000px, 56.250vw, 1080.000px);
-    right: 0;
-    top: 0;
-}
-
-.hero-background__dark-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #3A1755;
-    z-index: 1;
-}
-
-.hero-background__image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url('../img/fon-cosmos.png') no-repeat center center/cover;
-    mix-blend-mode: overlay;
-    opacity: 0.8;
-    z-index: 2;
-}
-
-.hero-planet-bg {
-    position: absolute;
-    width: clamp(523.530px, 54.534vw, 1047.060px);
-    height: clamp(523.530px, 54.534vw, 1047.060px);
-    left: clamp(218.250px, 22.734vw, 436.500px);
-    top: clamp(113.235px, 11.795vw, 226.470px);
-    background: linear-gradient(101.31deg, #5F268A 56.09%, rgba(145, 58, 212, 0.1) 170.31%);
-    border-radius: 50%;
-    z-index: 3;
-}
-
-/* ==========================================================================
-   Орбиты и планеты
-   ========================================================================== */
-
-.orbits {
-    position: absolute;
-    width: clamp(750.000px, 78.125vw, 1500.000px);
-    height: clamp(750.000px, 78.125vw, 1500.000px);
-    left: clamp(105.000px, 10.938vw, 210.000px);
-    top: 0;
-    z-index: 2;
-}
-
-.orbit {
-    box-sizing: border-box;
-    position: absolute;
-    border-radius: 50%;
-}
-
-.orbit--outer {
-    width: clamp(750.000px, 78.125vw, 1500.000px);
-    height: clamp(750.000px, 78.125vw, 1500.000px);
-    left: 0;
-    top: 0;
-    border: 1px solid rgba(165, 120, 199, 0.25);
-}
-
-.orbit--inner {
-    width: clamp(631.375px, 65.768vw, 1262.750px);
-    height: clamp(631.375px, 65.768vw, 1262.750px);
-    left: 6.15vw;
-    top: 6.15vw;
-    border: 1px solid rgba(165, 120, 199, 0.4);
-}
-
-.planet {
-    position: absolute;
-    border-radius: 50%;
-}
-
-.planet--1 {
-    width: clamp(17.645px, 1.838vw, 35.290px);
-    height: clamp(17.645px, 1.838vw, 35.290px);
-    left: clamp(55.500px, 5.781vw, 111.000px);
-    top: clamp(309.315px, 32.220vw, 618.630px);
-    background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
-}
-
-.planet--2 {
-    width: clamp(10.785px, 1.123vw, 21.570px);
-    height: clamp(10.785px, 1.123vw, 21.570px);
-    left: clamp(182.500px, 19.010vw, 365.000px);
-    top: clamp(115.800px, 12.062vw, 231.600px);
-    background: #A578C7;
-}
-
-.planet--3 {
-    width: clamp(10.785px, 1.123vw, 21.570px);
-    height: clamp(10.785px, 1.123vw, 21.570px);
-    left: clamp(605.000px, 63.021vw, 1210.000px);
-    top: clamp(608.335px, 63.368vw, 1216.670px);
-    background: #A578C7;
-}
-
-.planet--4 {
-    width: clamp(8.825px, 0.919vw, 17.650px);
-    height: clamp(8.825px, 0.919vw, 17.650px);
-    left: clamp(533.430px, 55.566vw, 1066.860px);
-    top: clamp(33.300px, 3.469vw, 66.600px);
-    background: #895EB1;
-}
-
-.planet--5 {
-    width: clamp(7.150px, 0.745vw, 14.300px);
-    height: clamp(7.150px, 0.745vw, 14.300px);
-    left: clamp(31.400px, 3.271vw, 62.800px);
-    top: clamp(216.300px, 22.531vw, 432.600px);
-    background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
-}
-
-.planet--6 {
-    width: clamp(7.845px, 0.817vw, 15.690px);
-    height: clamp(7.845px, 0.817vw, 15.690px);
-    left: clamp(170.000px, 17.708vw, 340.000px);
-    top: clamp(55.000px, 5.729vw, 110.000px);
-    background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
-}
-
-.planet--7 {
-    width: clamp(7.845px, 0.817vw, 15.690px);
-    height: clamp(7.845px, 0.817vw, 15.690px);
-    left: clamp(156.470px, 16.299vw, 312.940px);
-    top: clamp(590.135px, 61.472vw, 1180.270px);
-    background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
-}
-
-.planet--8 {
-    width: clamp(15.685px, 1.634vw, 31.370px);
-    height: clamp(15.685px, 1.634vw, 31.370px);
-    left: clamp(554.350px, 57.745vw, 1108.700px);
-    top: clamp(43.625px, 4.544vw, 87.250px);
-    background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
-}
-
-.planet--9 {
-    width: clamp(15.685px, 1.634vw, 31.370px);
-    height: clamp(15.685px, 1.634vw, 31.370px);
-    left: clamp(512.355px, 53.370vw, 1024.710px);
-    top: clamp(632.845px, 65.921vw, 1265.690px);
-    background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
-}
-
-.planet--10 {
-    width: clamp(6.865px, 0.715vw, 13.730px);
-    height: clamp(6.865px, 0.715vw, 13.730px);
-    left: clamp(679.900px, 70.823vw, 1359.800px);
-    top: clamp(309.805px, 32.271vw, 619.610px);
-    background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
-}
-
-.planet--11 {
-    width: clamp(5.880px, 0.613vw, 11.760px);
-    height: clamp(5.880px, 0.613vw, 11.760px);
-    left: clamp(639.315px, 66.595vw, 1278.630px);
-    top: clamp(107.845px, 11.234vw, 215.690px);
-    background: #A578C7;
-}
-
-.planet--12 {
-    width: clamp(8.825px, 0.919vw, 17.650px);
-    height: clamp(8.825px, 0.919vw, 17.650px);
-    left: clamp(720.900px, 75.094vw, 1441.800px);
-    top: clamp(239.000px, 24.896vw, 478.000px);
-    background: #A578C7;
-}
-
-/* ==========================================================================
-   Текстовые блоки
-   ========================================================================== */
-
-.hero-title-block {
-    position: absolute;
-    width: clamp(343.500px, 35.781vw, 687.000px);
-    left: clamp(105.000px, 10.938vw, 210.000px);
-    top: clamp(195.000px, 20.312vw, 390.000px);
-    z-index: 10;
-}
-
-.hero-title-block__subtitle {
-    display: block;
-    font-family: 'Cramaten', sans-serif;
-    font-size: clamp(50.000px, 5.208vw, 100.000px);
-    line-height: clamp(55.000px, 5.729vw, 110.000px);
-    letter-spacing: -0.02em;
-    color: #A578C7;
-}
-
-.hero-title-block__main {
-    font-family: 'Cramaten', sans-serif;
-    font-weight: 400;
-    font-size: clamp(232.500px, 24.219vw, 465.000px);
-    background: linear-gradient(91.17deg, #79EFFF -4.01%, #FD3CE3 36.14%, #912BFF 77.44%, #0095FF 106.11%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    line-height: 90%;
-    letter-spacing: -0.04em;
-}
-
-.hero-title-cosmos {
-    position: absolute;
-    width: clamp(326.500px, 34.010vw, 653.000px);
-    height: clamp(200.255px, 20.860vw, 400.510px);
-    left: clamp(540.000px, 56.250vw, 1080.000px);
-    top: clamp(250.000px, 26.042vw, 500.000px);
-    z-index: 20;
-}
-
-.hero-title-cosmos__fill,
-.hero-title-cosmos__stroke {
-    position: absolute;
-    font-family: 'Cramaten', sans-serif;
-    font-weight: 400;
-    font-size: clamp(195.000px, 20.312vw, 390.000px);
-    line-height: 90%;
-    letter-spacing: -0.04em;
-}
-
-.hero-title-cosmos__fill {
-    background: linear-gradient(91.17deg, #0095FF -4.01%, #912BFF 24.67%, #FD3CE3 65.97%, #79EFFF 106.11%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    z-index: 2;
-}
-
-.hero-title-cosmos__stroke {
-    -webkit-text-stroke: 1px rgba(255, 240, 251, 0.75);
-    color: transparent;
-    top: clamp(4.000px, 0.417vw, 8.000px);
-    left: clamp(2.500px, 0.260vw, 5.000px);
-    z-index: 1;
-}
-
-.hero-description {
-    position: absolute;
-    width: clamp(143.500px, 14.948vw, 287.000px);
-    left: clamp(711.500px, 74.115vw, 1423.000px);
-    top: clamp(194.000px, 20.208vw, 388.000px);
     font-family: 'Vela Sans', sans-serif;
-    font-size: clamp(10.000px, 1.042vw, 20.000px);
-    line-height: 120%;
-    text-align: right;
-    color: #F7F3F8;
-    z-index: 10;
-}
-
-.hero-signature {
-    position: absolute;
-    width: clamp(103.000px, 10.729vw, 206.000px);
-    height: clamp(69.000px, 7.187vw, 138.000px);
-    left: clamp(677.500px, 70.573vw, 1355.000px);
-    top: clamp(360.000px, 37.500vw, 720.000px);
-    font-family: 'Great Vibes', cursive;
-    font-size: clamp(55.000px, 5.729vw, 110.000px);
-    line-height: clamp(69.000px, 7.187vw, 138.000px);
-    letter-spacing: -0.04em;
-    color: #FFF0FB;
-    text-shadow: clamp(1.000px, 0.104vw, 2.000px) 3px 0px rgba(46, 9, 74, 0.35);
-    transform: rotate(-30deg);
-    z-index: 20;
 }
 
 /* ==========================================================================
-   Кнопка "ДО КАТАЛОГУ"
+   3. УТИЛИТАРНЫЕ КЛАССЫ
    ========================================================================== */
 
-.hero-cta-button {
+.text-gradient {
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent !important;
+    /* !important для переопределения базовых цветов */
+}
+
+/* ==========================================================================
+   4. КОМПОНЕНТЫ
+   ========================================================================== */
+
+/* --- Компонент: Заголовок --- */
+.title {
+    font-family: 'Cramaten', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    background-clip: text !important;
+    /* line-height убран отсюда и будет задаваться конкретным элементам */
+}
+
+/* --- Компонент: Кнопка --- */
+.btn {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'Vela Sans', sans-serif;
+    font-weight: 400;
+    font-size: clamp(7.500px, 0.781vw, 15.000px);
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn--outline {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    width: clamp(71.000px, 7.396vw, 142.000px);
-    height: clamp(71.000px, 7.396vw, 142.000px);
-    left: clamp(378.500px, 39.427vw, 757.000px);
-    top: clamp(396.600px, 41.312vw, 793.200px);
-    background: linear-gradient(136.68deg, #79EFFF -6.83%, #FD3CE3 13.92%, #912BFF 63.7%, #0095FF 101.57%);
+    padding: 12px 22px;
+    gap: 10px;
+    width: 125px;
+    height: 42px;
+    border-radius: 200px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /*
+    gap: clamp(4.000px, 0.417vw, 8.000px);
+    padding: clamp(6.000px, 0.625vw, 12.000px) 22px;
+    height: clamp(21.500px, 2.240vw, 43.000px);    
+    border-radius: clamp(100.000px, 10.417vw, 200.000px);
+    */
+}
+
+.btn--primary {
+    background: var(--gradient-btn-default);
     border: 2px solid #FCEEF9;
+    color: var(--color-white);
     border-radius: 50%;
-    transform: rotate(-22deg);
-    z-index: 20;
-    text-decoration: none;
-    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.hero-cta-button span {
-    font-family: 'Vela Sans', sans-serif;
-    font-weight: 600;
-    font-size: clamp(8.000px, 0.833vw, 16.000px);
-    line-height: 110%;
-    text-align: center;
-    letter-spacing: -0.03em;
-    color: #FFFFFF;
-
-}
-
-.hero-cta-button:hover {
-    background: linear-gradient(96.29deg, #FF03B5 18.76%, #EC05AF 63.37%, #B20A9B 102.94%);
+.btn--primary:hover {
+    background: var(--gradient-btn-hover);
     transform: rotate(-22deg) scale(1.05);
 }
 
+.btn--primary span {
+    font-weight: 600;
+    font-size: clamp(8.000px, 0.833vw, 16.000px);
+}
+
+.btn--icon {
+    width: clamp(21.000px, 2.188vw, 42.000px);
+    height: clamp(21.000px, 2.188vw, 42.000px);
+    border-radius: 50%;
+    border: 1px solid var(--color-primary);
+    transition: border-color 0.3s ease;
+}
+
+.btn--icon:hover {
+    border-color: var(--color-primary-darkest);
+}
+
+.btn--icon img {
+    width: clamp(12.000px, 1.250vw, 24.000px);
+    height: clamp(12.000px, 1.250vw, 24.000px);
+}
 
 /* ==========================================================================
-   Изображения (лак, шары)
+   5. СТИЛИ СЕКЦИЙ
    ========================================================================== */
 
-.hero-images {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.hero-images__bottle-shadow {
-    position: absolute;
-    width: clamp(152.000px, 15.833vw, 304.000px);
-    height: clamp(74.000px, 7.708vw, 148.000px);
-    left: clamp(400.000px, 41.667vw, 800.000px);
-    top: clamp(390.000px, 40.625vw, 780.000px);
-    background: rgba(53, 16, 95, 0.65);
-    filter: blur(75px);
-    z-index: 14;
-}
-
-.hero-images__bottle {
-    position: absolute;
-    height: clamp(357.500px, 37.240vw, 715.000px);
-    width: clamp(147.395px, 15.354vw, 294.790px);
-    left: clamp(406.300px, 42.323vw, 812.600px);
-    top: clamp(104.500px, 10.885vw, 209.000px);
-    transform: rotate(-16.46deg);
-    z-index: 15;
-}
-
-.hero-images__balloons {
-    position: absolute;
-    transform: rotate(15.32deg);
-    width: clamp(417.700px, 30.83vw, 835.400px);
-    left: 38vw;
-    top: -7vh;
-    z-index: 25;
-}
-
-
-/* ==========================================================================
-   Шапка сайта (Header)
-   ========================================================================== */
-
+/* --- Шапка --- */
 .site-header {
     position: fixed;
     top: clamp(10.000px, 1.042vw, 20.000px);
@@ -441,33 +196,12 @@ body {
     gap: clamp(8.500px, 0.885vw, 17.000px);
 }
 
-.nav-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(4.000px, 0.417vw, 8.000px);
-    padding: clamp(6.000px, 0.625vw, 12.000px) 22px;
-    height: clamp(21.500px, 2.240vw, 43.000px);
-    border: 1px solid #A578C7;
-    border-radius: clamp(100.000px, 10.417vw, 200.000px);
-    font-family: 'Vela Sans', sans-serif;
-    font-size: clamp(7.500px, 0.781vw, 15.000px);
-    font-weight: 400;
-    color: #A578C7;
-    text-transform: uppercase;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: all 0.3s ease;
+.header-logo {
+    margin: 0 20px;
 }
 
-.arrow-down {
-    width: clamp(4.965px, 0.517vw, 9.930px);
-    height: clamp(4.500px, 0.469vw, 9.000px);
-}
-
-.nav-button--icon {
-    width: clamp(21.500px, 2.240vw, 43.000px);
-    padding: 0;
+.header-logo img {
+    height: clamp(27.000px, 2.812vw, 54.000px);
 }
 
 .nav-separator {
@@ -482,79 +216,19 @@ body {
     filter: invert(72%) sepia(10%) saturate(1007%) hue-rotate(193deg) brightness(97%) contrast(88%);
 }
 
-.header-logo {
-    margin: 0 20px;
+.arrow-down {
+    width: clamp(4.965px, 0.517vw, 9.930px);
+    height: clamp(4.500px, 0.469vw, 9.000px);
 }
 
-.header-logo img {
-    height: clamp(27.000px, 2.812vw, 54.000px);
-}
-
-/* === НОВЫЕ СТИЛИ ДЛЯ ИКОНОК === */
-.nav-icon-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: clamp(21.000px, 2.188vw, 42.000px);
-    height: clamp(21.000px, 2.188vw, 42.000px);
-    border-radius: 50%;
-    border: 1px solid #A578C7;
-    /* Обводка добавлена для всех иконок */
-    transition: border-color 0.3s ease;
-}
-
-.nav-icon-button img {
-    width: clamp(12.000px, 1.250vw, 24.000px);
-    height: clamp(12.000px, 1.250vw, 24.000px);
-}
-
-/* === Стили для корзины с эффектом смены изображения === */
-.cart-button {
-    background-image: url('../img/icons/bag-hover.svg');
-    /* Подгружаем hover-изображение в фон */
-    background-size: clamp(12.000px, 1.250vw, 24.000px) 24px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.cart-button img {
-    transition: opacity 0.3s ease;
-    /* Плавное исчезновение для default-иконки */
-}
-
-.cart-button:hover img {
-    opacity: 0;
-    /* При наведении скрываем default-иконку, показывая фон */
-}
-
-/* Состояния корзины */
-.cart-button.has-items {
-    background-color: #A578C7;
-    border-color: #A578C7;
-}
-
-.cart-button.has-items:hover {
-    background-color: #8e5fad;
-    border-color: #8e5fad;
-}
-
-.cart-button.is-disabled {
-    border-color: #909090;
-    pointer-events: none;
-    opacity: 0.5;
-}
-
-
+/* Сложная кнопка каталога */
 .nav-button--svg {
     position: relative;
-    /* Обязательно для позиционирования контента */
     padding: 0;
     border: none;
     background: none;
     width: clamp(79.000px, 8.229vw, 158.000px);
-    /* Ширина из макета */
     height: clamp(21.500px, 2.240vw, 43.000px);
-    /* Высота из макета */
 }
 
 .nav-button--svg:hover {
@@ -569,7 +243,6 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1;
-    /* Фон должен быть под контентом */
 }
 
 .nav-button__content {
@@ -583,19 +256,17 @@ body {
     padding-left: clamp(7.500px, 0.781vw, 15.000px);
 }
 
-/* Стилизация текста и иконок внутри */
 .nav-button__text {
     font-family: 'Vela Sans', sans-serif;
     font-size: clamp(7.500px, 0.781vw, 15.000px);
     text-transform: uppercase;
-    color: #A578C7;
+    color: var(--color-primary-dark);
     transition: color 0.3s ease;
     padding-left: clamp(16.500px, 1.719vw, 33.000px);
 }
 
 .nav-button__icon {
     width: clamp(8.000px, 0.833vw, 16.000px);
-    /* Размер иконки грида */
     height: clamp(8.000px, 0.833vw, 16.000px);
 }
 
@@ -603,5 +274,346 @@ body {
     width: clamp(4.965px, 0.517vw, 9.930px);
     height: clamp(4.500px, 0.469vw, 9.000px);
     margin-left: clamp(1.500px, 0.156vw, 3.000px);
+}
 
+/* Состояния иконки корзины */
+.cart-button {
+    background-image: url('../img/icons/bag-hover.svg');
+    background-size: clamp(12.000px, 1.250vw, 24.000px) 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cart-button img {
+    transition: opacity 0.3s ease;
+}
+
+.cart-button:hover img {
+    opacity: 0;
+}
+
+.cart-button.has-items {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.cart-button.has-items:hover {
+    background-color: #8e5fad;
+    border-color: #8e5fad;
+}
+
+.cart-button.is-disabled {
+    border-color: #909090;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* --- Основная секция (Hero) --- */
+.hero-section {
+    position: relative;
+    width: clamp(960.000px, 100.000vw, 1920.000px);
+    height: clamp(540.000px, 56.250vw, 1080.000px);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    width: clamp(480.000px, 50.000vw, 960.000px);
+    height: clamp(540.000px, 56.250vw, 1080.000px);
+    right: 0;
+    top: 0;
+}
+
+.hero-background__dark-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary-darker);
+    z-index: 1;
+}
+
+.hero-background__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../img/fon-cosmos.png') no-repeat center center/cover;
+    mix-blend-mode: overlay;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.hero-planet-bg {
+    position: absolute;
+    width: clamp(523.530px, 54.534vw, 1047.060px);
+    height: clamp(523.530px, 54.534vw, 1047.060px);
+    left: clamp(218.250px, 22.734vw, 436.500px);
+    top: clamp(113.235px, 11.795vw, 226.470px);
+    background: var(--gradient-planet);
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.orbits {
+    position: absolute;
+    width: clamp(750.000px, 78.125vw, 1500.000px);
+    height: clamp(750.000px, 78.125vw, 1500.000px);
+    left: clamp(105.000px, 10.938vw, 210.000px);
+    top: 0;
+    z-index: 2;
+}
+
+.orbit {
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.orbit--outer {
+    width: clamp(750.000px, 78.125vw, 1500.000px);
+    height: clamp(750.000px, 78.125vw, 1500.000px);
+    left: 0;
+    top: 0;
+    border: 1px solid var(--color-border-light);
+}
+
+.orbit--inner {
+    width: clamp(631.375px, 65.768vw, 1262.750px);
+    height: clamp(631.375px, 65.768vw, 1262.750px);
+    left: 6.15vw;
+    top: 6.15vw;
+    border: 1px solid var(--color-border);
+}
+
+.planet {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.planet--1 {
+    width: clamp(17.645px, 1.838vw, 35.290px);
+    height: clamp(17.645px, 1.838vw, 35.290px);
+    left: clamp(55.500px, 5.781vw, 111.000px);
+    top: clamp(309.315px, 32.220vw, 618.630px);
+    background: var(--gradient-planet-small);
+}
+
+.planet--2 {
+    width: clamp(10.785px, 1.123vw, 21.570px);
+    height: clamp(10.785px, 1.123vw, 21.570px);
+    left: clamp(182.500px, 19.010vw, 365.000px);
+    top: clamp(115.800px, 12.062vw, 231.600px);
+    background: var(--color-primary);
+}
+
+.planet--3 {
+    width: clamp(10.785px, 1.123vw, 21.570px);
+    height: clamp(10.785px, 1.123vw, 21.570px);
+    left: clamp(605.000px, 63.021vw, 1210.000px);
+    top: clamp(608.335px, 63.368vw, 1216.670px);
+    background: var(--color-primary);
+}
+
+.planet--4 {
+    width: clamp(8.825px, 0.919vw, 17.650px);
+    height: clamp(8.825px, 0.919vw, 17.650px);
+    left: clamp(533.430px, 55.566vw, 1066.860px);
+    top: clamp(33.300px, 3.469vw, 66.600px);
+    background: var(--color-planet-gray);
+}
+
+.planet--5 {
+    width: clamp(7.150px, 0.745vw, 14.300px);
+    height: clamp(7.150px, 0.745vw, 14.300px);
+    left: clamp(31.400px, 3.271vw, 62.800px);
+    top: clamp(216.300px, 22.531vw, 432.600px);
+    background: var(--gradient-planet-small);
+}
+
+.planet--6 {
+    width: clamp(7.845px, 0.817vw, 15.690px);
+    height: clamp(7.845px, 0.817vw, 15.690px);
+    left: clamp(170.000px, 17.708vw, 340.000px);
+    top: clamp(55.000px, 5.729vw, 110.000px);
+    background: var(--gradient-planet-small);
+}
+
+.planet--7 {
+    width: clamp(7.845px, 0.817vw, 15.690px);
+    height: clamp(7.845px, 0.817vw, 15.690px);
+    left: clamp(156.470px, 16.299vw, 312.940px);
+    top: clamp(590.135px, 61.472vw, 1180.270px);
+    background: var(--gradient-planet-small);
+}
+
+.planet--8 {
+    width: clamp(15.685px, 1.634vw, 31.370px);
+    height: clamp(15.685px, 1.634vw, 31.370px);
+    left: clamp(554.350px, 57.745vw, 1108.700px);
+    top: clamp(43.625px, 4.544vw, 87.250px);
+    background: var(--gradient-planet-small);
+}
+
+.planet--9 {
+    width: clamp(15.685px, 1.634vw, 31.370px);
+    height: clamp(15.685px, 1.634vw, 31.370px);
+    left: clamp(512.355px, 53.370vw, 1024.710px);
+    top: clamp(632.845px, 65.921vw, 1265.690px);
+    background: var(--gradient-planet-small);
+}
+
+.planet--10 {
+    width: clamp(6.865px, 0.715vw, 13.730px);
+    height: clamp(6.865px, 0.715vw, 13.730px);
+    left: clamp(679.900px, 70.823vw, 1359.800px);
+    top: clamp(309.805px, 32.271vw, 619.610px);
+    background: var(--gradient-planet-small);
+}
+
+.planet--11 {
+    width: clamp(5.880px, 0.613vw, 11.760px);
+    height: clamp(5.880px, 0.613vw, 11.760px);
+    left: clamp(639.315px, 66.595vw, 1278.630px);
+    top: clamp(107.845px, 11.234vw, 215.690px);
+    background: var(--color-primary);
+}
+
+.planet--12 {
+    width: clamp(8.825px, 0.919vw, 17.650px);
+    height: clamp(8.825px, 0.919vw, 17.650px);
+    left: clamp(720.900px, 75.094vw, 1441.800px);
+    top: clamp(239.000px, 24.896vw, 478.000px);
+    background: var(--color-primary);
+}
+
+.hero-title-block {
+    position: absolute;
+    width: clamp(343.500px, 35.781vw, 687.000px);
+    left: clamp(105.000px, 10.938vw, 210.000px);
+    top: clamp(195.000px, 20.312vw, 390.000px);
+    z-index: 10;
+}
+
+.hero-title-block__subtitle {
+    font-size: clamp(50.000px, 5.208vw, 100.000px);
+    line-height: 110%;
+    /* Отдельный line-height для этого элемента */
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+}
+
+.hero-title-block__main {
+    background-clip: text !important;
+    font-size: clamp(232.500px, 24.219vw, 465.000px);
+    background: var(--gradient-title-main);
+    line-height: 90%;
+    /* ИСПРАВЛЕНИЕ: Возвращаем line-height 80% */
+}
+
+.hero-title-cosmos {
+    position: absolute;
+    width: clamp(326.500px, 34.010vw, 653.000px);
+    height: clamp(200.255px, 20.860vw, 400.510px);
+    left: clamp(540.000px, 56.250vw, 1080.000px);
+    top: clamp(250.000px, 26.042vw, 500.000px);
+    z-index: 20;
+}
+
+.hero-title-cosmos__fill {
+    font-size: clamp(195.000px, 20.312vw, 390.000px);
+    background: var(--gradient-title-secondary);
+    z-index: 2;
+    line-height: 90%;
+    position: absolute;
+    /* ИСПРАВЛЕНИЕ: Возвращаем line-height 80% */
+}
+
+.hero-title-cosmos__stroke {
+    font-size: clamp(195.000px, 20.312vw, 390.000px);
+    -webkit-text-stroke: 1px rgba(255, 240, 251, 0.75);
+    color: transparent;
+    top: clamp(4.000px, 0.417vw, 8.000px);
+    left: clamp(2.500px, 0.260vw, 5.000px);
+    z-index: 1;
+    line-height: 90%;
+    position: absolute;
+    /* ИСПРАВЛЕНИЕ: Возвращаем line-height 80% */
+}
+
+.hero-description {
+    position: absolute;
+    width: clamp(143.500px, 14.948vw, 287.000px);
+    left: clamp(711.500px, 74.115vw, 1423.000px);
+    top: clamp(194.000px, 20.208vw, 388.000px);
+    font-size: clamp(10.000px, 1.042vw, 20.000px);
+    line-height: 120%;
+    text-align: right;
+    color: var(--color-bg-light);
+    z-index: 10;
+}
+
+.hero-signature {
+    position: absolute;
+    width: clamp(103.000px, 10.729vw, 206.000px);
+    height: clamp(69.000px, 7.187vw, 138.000px);
+    left: clamp(677.500px, 70.573vw, 1355.000px);
+    top: clamp(360.000px, 37.500vw, 720.000px);
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(55.000px, 5.729vw, 110.000px);
+    line-height: clamp(69.000px, 7.187vw, 138.000px);
+    letter-spacing: -0.04em;
+    color: #FFF0FB;
+    text-shadow: clamp(1.000px, 0.104vw, 2.000px) 3px 0px rgba(46, 9, 74, 0.35);
+    transform: rotate(-30deg);
+    z-index: 20;
+}
+
+.hero-cta-button {
+    position: absolute;
+    width: clamp(71.000px, 7.396vw, 142.000px);
+    height: clamp(71.000px, 7.396vw, 142.000px);
+    left: clamp(378.500px, 39.427vw, 757.000px);
+    top: clamp(396.600px, 41.312vw, 793.200px);
+    transform: rotate(-22deg);
+    z-index: 20;
+}
+
+.hero-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Чтобы картинки не мешали кликам */
+}
+
+.hero-images__bottle-shadow {
+    position: absolute;
+    width: clamp(152.000px, 15.833vw, 304.000px);
+    height: clamp(74.000px, 7.708vw, 148.000px);
+    left: 50vw;
+    top: 37.29vw;
+    background: rgba(53, 16, 95, 0.65);
+    filter: blur(75px);
+    z-index: 14;
+}
+
+.hero-images__bottle {
+    position: absolute;
+    height: clamp(357.500px, 37.240vw, 715.000px);
+    width: clamp(147.395px, 15.354vw, 294.790px);
+    left: clamp(406.300px, 42.323vw, 812.600px);
+    top: clamp(104.500px, 10.885vw, 209.000px);
+    transform: rotate(-16.46deg);
+    z-index: 15;
+}
+
+.hero-images__balloons {
+    position: absolute;
+    transform: rotate(15.32deg);
+    width: 30.83vw;
+    left: 38vw;
+    top: -3.94vw;
+    z-index: 25;
 }
