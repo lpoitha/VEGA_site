@@ -1,5 +1,33 @@
 /* ==========================================================================
-   Подключение шрифтов
+   1. НАСТРОЙКИ И ПЕРЕМЕННЫЕ
+   ========================================================================== */
+
+:root {
+    /* Цвета */
+    --color-primary: #A578C7;
+    --color-primary-dark: #633786;
+    --color-primary-darker: #3A1755;
+    --color-primary-darkest: #2D0E45;
+    --color-bg-light: #F7F3F8;
+    --color-bg-dark: #0F011D;
+    --color-white: #FFFFFF;
+    --color-border: rgba(165, 120, 199, 0.4);
+    --color-border-light: rgba(165, 120, 199, 0.25);
+    --color-planet-gray: #895EB1;
+
+    /* Градиенты */
+    --gradient-title-main: linear-gradient(91.17deg, #79EFFF -4.01%, #FD3CE3 36.14%, #912BFF 77.44%, #0095FF 106.11%);
+    --gradient-title-secondary: linear-gradient(91.17deg, #0095FF -4.01%, #912BFF 24.67%, #FD3CE3 65.97%, #79EFFF 106.11%);
+    --gradient-planet: linear-gradient(101.31deg, #5F268A 56.09%, rgba(145, 58, 212, 0.1) 170.31%);
+    --gradient-planet-small: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
+    --gradient-btn-default: linear-gradient(136.68deg, #79EFFF -6.83%, #FD3CE3 13.92%, #912BFF 63.7%, #0095FF 101.57%);
+    --gradient-btn-hover: linear-gradient(96.29deg, #FF03B5 18.76%, #EC05AF 63.37%, #B20A9B 102.94%);
+    --gradient-btn-hover: linear-gradient(96.29deg, #FF03B5 18.76%, #EC05AF 63.37%, #B20A9B 102.94%);
+    --gradient-price: linear-gradient(262.71deg, #0095FF -37.92%, #912BFF 0.41%, #FD3CE3 55.62%, #79EFFF 109.28%);
+}
+
+/* ==========================================================================
+   2. БАЗОВЫЕ СТИЛИ И ШРИФТЫ
    ========================================================================== */
 
 @font-face {
@@ -24,10 +52,6 @@
     font-style: normal;
 }
 
-/* ==========================================================================
-   Базовые стили
-   ========================================================================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -35,31 +59,274 @@
 }
 
 body {
-    background-color: #F7F3F8;
+    background-color: var(--color-bg-light);
     overflow-x: hidden;
-    height: 2500px;
+    height: clamp(1250.000px, 130.208vw, 2500.000px);
+    font-family: 'Vela Sans', sans-serif;
 }
 
 /* ==========================================================================
-   Основной контейнер
+   3. УТИЛИТАРНЫЕ КЛАССЫ
    ========================================================================== */
 
+.text-gradient {
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent !important;
+    /* !important для переопределения базовых цветов */
+}
+
+/* ==========================================================================
+   4. КОМПОНЕНТЫ
+   ========================================================================== */
+
+/* --- Компонент: Заголовок --- */
+.title {
+    font-family: 'Cramaten', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    background-clip: text !important;
+    /* line-height убран отсюда и будет задаваться конкретным элементам */
+}
+
+/* --- Компонент: Кнопка --- */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'Vela Sans', sans-serif;
+    font-weight: 400;
+    font-size: clamp(7.500px, 0.781vw, 15.000px);
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn--outline {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 22px;
+    gap: 10px;
+    width: 125px;
+    height: 42px;
+    border-radius: 200px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    /*
+    gap: clamp(4.000px, 0.417vw, 8.000px);
+    padding: clamp(6.000px, 0.625vw, 12.000px) 22px;
+    height: clamp(21.500px, 2.240vw, 43.000px);    
+    border-radius: clamp(100.000px, 10.417vw, 200.000px);
+    */
+}
+
+.btn--primary {
+    background: var(--gradient-btn-default);
+    border: 2px solid #FCEEF9;
+    color: var(--color-white);
+    border-radius: 50%;
+}
+
+.btn--primary:hover {
+    background: var(--gradient-btn-hover);
+    transform: rotate(-22deg) scale(1.05);
+}
+
+.btn--primary span {
+    font-weight: 600;
+    font-size: clamp(8.000px, 0.833vw, 16.000px);
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.btn--icon {
+    width: clamp(21.000px, 2.188vw, 42.000px);
+    height: clamp(21.000px, 2.188vw, 42.000px);
+    border-radius: 50%;
+    border: 1px solid var(--color-primary);
+    transition: border-color 0.3s ease;
+}
+
+.btn--icon:hover {
+    border-color: var(--color-primary-darkest);
+}
+
+.btn--icon img {
+    width: clamp(12.000px, 1.250vw, 24.000px);
+    height: clamp(12.000px, 1.250vw, 24.000px);
+}
+
+/* ==========================================================================
+   5. СТИЛИ СЕКЦИЙ
+   ========================================================================== */
+
+/* --- Шапка --- */
+.site-header {
+    position: fixed;
+    top: clamp(10.000px, 1.042vw, 20.000px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(750.000px, 78.125vw, 1500.000px);
+    height: clamp(40.000px, 4.167vw, 80.000px);
+    background: rgba(95, 38, 138, 0.1);
+    box-shadow: 0px 4px 6px rgba(19, 3, 32, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: clamp(7.500px, 0.781vw, 15.000px);
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header-nav__group {
+    display: flex;
+    align-items: center;
+    gap: clamp(8.500px, 0.885vw, 17.000px);
+}
+
+.header-logo {
+    margin: 0 20px;
+}
+
+.header-logo img {
+    height: clamp(27.000px, 2.812vw, 54.000px);
+}
+
+.nav-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-separator img {
+    width: clamp(6.000px, 0.625vw, 12.000px);
+    height: clamp(6.000px, 0.625vw, 12.000px);
+    filter: invert(72%) sepia(10%) saturate(1007%) hue-rotate(193deg) brightness(97%) contrast(88%);
+}
+
+.arrow-down {
+    width: clamp(4.965px, 0.517vw, 9.930px);
+    height: clamp(4.500px, 0.469vw, 9.000px);
+}
+
+/* Сложная кнопка каталога */
+.nav-button--svg {
+    position: relative;
+    padding: 0;
+    border: none;
+    background: none;
+    width: clamp(79.000px, 8.229vw, 158.000px);
+    height: clamp(21.500px, 2.240vw, 43.000px);
+}
+
+.nav-button--svg:hover {
+    background: none;
+    border: none;
+}
+
+.nav-button__shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.nav-button__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    height: 100%;
+    padding-left: clamp(7.500px, 0.781vw, 15.000px);
+}
+
+.nav-button__text {
+    font-family: 'Vela Sans', sans-serif;
+    font-size: clamp(7.500px, 0.781vw, 15.000px);
+    text-transform: uppercase;
+    color: var(--color-primary-dark);
+    transition: color 0.3s ease;
+    padding-left: clamp(16.500px, 1.719vw, 33.000px);
+}
+
+.nav-button__icon {
+    width: clamp(8.000px, 0.833vw, 16.000px);
+    height: clamp(8.000px, 0.833vw, 16.000px);
+}
+
+.nav-button__arrow {
+    width: clamp(4.965px, 0.517vw, 9.930px);
+    height: clamp(4.500px, 0.469vw, 9.000px);
+    margin-left: clamp(1.500px, 0.156vw, 3.000px);
+}
+
+/* Состояния иконки корзины */
+.cart-button {
+    background-image: url('../img/icons/bag-hover.svg');
+    background-size: clamp(12.000px, 1.250vw, 24.000px) 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cart-button img {
+    transition: opacity 0.3s ease;
+}
+
+.cart-button:hover img {
+    opacity: 0;
+}
+
+.cart-button.has-items {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.cart-button.has-items:hover {
+    background-color: #8e5fad;
+    border-color: #8e5fad;
+}
+
+.cart-button.is-disabled {
+    border-color: #909090;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* --- Основная секция (Hero) --- */
 .hero-section {
     position: relative;
-    width: 1920px;
-    height: 1080px;
+    width: clamp(960.000px, 100.000vw, 1920.000px);
+    height: clamp(540.000px, 58.33vw, 1120.000px);
     margin: 0 auto;
     overflow: hidden;
 }
 
-/* ==========================================================================
-   Фоновые элементы
-   ========================================================================== */
-
 .hero-background {
     position: absolute;
-    width: 960px;
-    height: 1080px;
+    width: clamp(480.000px, 50.000vw, 960.000px);
+    height: 100%;
     right: 0;
     top: 0;
 }
@@ -68,7 +335,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #3A1755;
+    background: var(--color-primary-darker);
     z-index: 1;
 }
 
@@ -84,24 +351,20 @@ body {
 
 .hero-planet-bg {
     position: absolute;
-    width: 1047.06px;
-    height: 1047.06px;
-    left: 436.5px;
-    top: 226.47px;
-    background: linear-gradient(101.31deg, #5F268A 56.09%, rgba(145, 58, 212, 0.1) 170.31%);
+    width: clamp(523.530px, 54.534vw, 1047.060px);
+    height: clamp(523.530px, 54.534vw, 1047.060px);
+    left: clamp(218.250px, 22.734vw, 436.500px);
+    top: clamp(113.235px, 11.795vw, 226.470px);
+    background: var(--gradient-planet);
     border-radius: 50%;
     z-index: 3;
 }
 
-/* ==========================================================================
-   Орбиты и планеты
-   ========================================================================== */
-
 .orbits {
     position: absolute;
-    width: 1500px;
-    height: 1500px;
-    left: 210px;
+    width: clamp(750.000px, 78.125vw, 1500.000px);
+    height: clamp(750.000px, 78.125vw, 1500.000px);
+    left: clamp(105.000px, 10.938vw, 210.000px);
     top: 0;
     z-index: 2;
 }
@@ -113,19 +376,19 @@ body {
 }
 
 .orbit--outer {
-    width: 1500px;
-    height: 1500px;
+    width: clamp(750.000px, 78.125vw, 1500.000px);
+    height: clamp(750.000px, 78.125vw, 1500.000px);
     left: 0;
     top: 0;
-    border: 1px solid rgba(165, 120, 199, 0.25);
+    border: 1px solid var(--color-border-light);
 }
 
 .orbit--inner {
-    width: 1262.75px;
-    height: 1262.75px;
-    left: 328.6px;
-    top: 328.6px;
-    border: 1px solid rgba(165, 120, 199, 0.4);
+    width: clamp(631.375px, 65.768vw, 1262.750px);
+    height: clamp(631.375px, 65.768vw, 1262.750px);
+    left: 6.15vw;
+    top: 6.15vw;
+    border: 1px solid var(--color-border);
 }
 
 .planet {
@@ -134,240 +397,192 @@ body {
 }
 
 .planet--1 {
-    width: 35.29px;
-    height: 35.29px;
-    left: 111px;
-    top: 618.63px;
-    background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
+    width: clamp(17.645px, 1.838vw, 35.290px);
+    height: clamp(17.645px, 1.838vw, 35.290px);
+    left: clamp(55.500px, 5.781vw, 111.000px);
+    top: clamp(309.315px, 32.220vw, 618.630px);
+    background: var(--gradient-planet-small);
 }
 
 .planet--2 {
-    width: 21.57px;
-    height: 21.57px;
-    left: 365px;
-    top: 231.6px;
-    background: #A578C7;
+    width: clamp(10.785px, 1.123vw, 21.570px);
+    height: clamp(10.785px, 1.123vw, 21.570px);
+    left: clamp(182.500px, 19.010vw, 365.000px);
+    top: clamp(115.800px, 12.062vw, 231.600px);
+    background: var(--color-primary);
 }
 
 .planet--3 {
-    width: 21.57px;
-    height: 21.57px;
-    left: 1210px;
-    top: 1216.67px;
-    background: #A578C7;
+    width: clamp(10.785px, 1.123vw, 21.570px);
+    height: clamp(10.785px, 1.123vw, 21.570px);
+    left: clamp(605.000px, 63.021vw, 1210.000px);
+    top: clamp(608.335px, 63.368vw, 1216.670px);
+    background: var(--color-primary);
 }
 
 .planet--4 {
-    width: 17.65px;
-    height: 17.65px;
-    left: 1066.86px;
-    top: 66.6px;
-    background: #895EB1;
+    width: clamp(8.825px, 0.919vw, 17.650px);
+    height: clamp(8.825px, 0.919vw, 17.650px);
+    left: clamp(533.430px, 55.566vw, 1066.860px);
+    top: clamp(33.300px, 3.469vw, 66.600px);
+    background: var(--color-planet-gray);
 }
 
 .planet--5 {
-    width: 14.3px;
-    height: 14.3px;
-    left: 62.8px;
-    top: 432.6px;
-    background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
+    width: clamp(7.150px, 0.745vw, 14.300px);
+    height: clamp(7.150px, 0.745vw, 14.300px);
+    left: clamp(31.400px, 3.271vw, 62.800px);
+    top: clamp(216.300px, 22.531vw, 432.600px);
+    background: var(--gradient-planet-small);
 }
 
 .planet--6 {
-    width: 15.69px;
-    height: 15.69px;
-    left: 340px;
-    top: 110px;
-    background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
+    width: clamp(7.845px, 0.817vw, 15.690px);
+    height: clamp(7.845px, 0.817vw, 15.690px);
+    left: clamp(170.000px, 17.708vw, 340.000px);
+    top: clamp(55.000px, 5.729vw, 110.000px);
+    background: var(--gradient-planet-small);
 }
 
 .planet--7 {
-    width: 15.69px;
-    height: 15.69px;
-    left: 312.94px;
-    top: 1180.27px;
-    background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
+    width: clamp(7.845px, 0.817vw, 15.690px);
+    height: clamp(7.845px, 0.817vw, 15.690px);
+    left: clamp(156.470px, 16.299vw, 312.940px);
+    top: clamp(590.135px, 61.472vw, 1180.270px);
+    background: var(--gradient-planet-small);
 }
 
 .planet--8 {
-    width: 31.37px;
-    height: 31.37px;
-    left: 1108.7px;
-    top: 87.25px;
-    background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
+    width: clamp(15.685px, 1.634vw, 31.370px);
+    height: clamp(15.685px, 1.634vw, 31.370px);
+    left: clamp(554.350px, 57.745vw, 1108.700px);
+    top: clamp(43.625px, 4.544vw, 87.250px);
+    background: var(--gradient-planet-small);
 }
 
 .planet--9 {
-    width: 31.37px;
-    height: 31.37px;
-    left: 1024.71px;
-    top: 1265.69px;
-    background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
+    width: clamp(15.685px, 1.634vw, 31.370px);
+    height: clamp(15.685px, 1.634vw, 31.370px);
+    left: clamp(512.355px, 53.370vw, 1024.710px);
+    top: clamp(632.845px, 65.921vw, 1265.690px);
+    background: var(--gradient-planet-small);
 }
 
 .planet--10 {
-    width: 13.73px;
-    height: 13.73px;
-    left: 1359.8px;
-    top: 619.61px;
-    background: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
+    width: clamp(6.865px, 0.715vw, 13.730px);
+    height: clamp(6.865px, 0.715vw, 13.730px);
+    left: clamp(679.900px, 70.823vw, 1359.800px);
+    top: clamp(309.805px, 32.271vw, 619.610px);
+    background: var(--gradient-planet-small);
 }
 
 .planet--11 {
-    width: 11.76px;
-    height: 11.76px;
-    left: 1278.63px;
-    top: 215.69px;
-    background: #A578C7;
+    width: clamp(5.880px, 0.613vw, 11.760px);
+    height: clamp(5.880px, 0.613vw, 11.760px);
+    left: clamp(639.315px, 66.595vw, 1278.630px);
+    top: clamp(107.845px, 11.234vw, 215.690px);
+    background: var(--color-primary);
 }
 
 .planet--12 {
-    width: 17.65px;
-    height: 17.65px;
-    left: 1441.8px;
-    top: 478px;
-    background: #A578C7;
+    width: clamp(8.825px, 0.919vw, 17.650px);
+    height: clamp(8.825px, 0.919vw, 17.650px);
+    left: clamp(720.900px, 75.094vw, 1441.800px);
+    top: clamp(239.000px, 24.896vw, 478.000px);
+    background: var(--color-primary);
 }
-
-/* ==========================================================================
-   Текстовые блоки
-   ========================================================================== */
 
 .hero-title-block {
     position: absolute;
-    width: 687px;
-    left: 210px;
-    top: 390px;
+    width: clamp(343.500px, 35.781vw, 687.000px);
+    left: clamp(105.000px, 10.938vw, 210.000px);
+    top: clamp(195.000px, 20.312vw, 390.000px);
     z-index: 10;
 }
 
 .hero-title-block__subtitle {
-    display: block;
-    font-family: 'Cramaten', sans-serif;
-    font-size: 100px;
-    line-height: 110px;
+    font-size: clamp(50.000px, 5.208vw, 100.000px);
+    line-height: 110%;
+    /* Отдельный line-height для этого элемента */
     letter-spacing: -0.02em;
-    color: #A578C7;
+    color: var(--color-primary);
 }
 
 .hero-title-block__main {
-    font-family: 'Cramaten', sans-serif;
-    font-weight: 400;
-    font-size: 465px;
-    background: linear-gradient(91.17deg, #79EFFF -4.01%, #FD3CE3 36.14%, #912BFF 77.44%, #0095FF 106.11%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    background-clip: text !important;
+    font-size: clamp(232.500px, 24.219vw, 465.000px);
+    background: var(--gradient-title-main);
     line-height: 90%;
-    letter-spacing: -0.04em;
+    /* ИСПРАВЛЕНИЕ: Возвращаем line-height 80% */
 }
 
 .hero-title-cosmos {
     position: absolute;
-    width: 653px;
-    height: 400.51px;
-    left: 1080px;
-    top: 500px;
+    width: clamp(326.500px, 34.010vw, 653.000px);
+    height: clamp(200.255px, 20.860vw, 400.510px);
+    left: clamp(540.000px, 56.250vw, 1080.000px);
+    top: clamp(250.000px, 26.042vw, 500.000px);
     z-index: 20;
 }
 
-.hero-title-cosmos__fill,
-.hero-title-cosmos__stroke {
-    position: absolute;
-    font-family: 'Cramaten', sans-serif;
-    font-weight: 400;
-    font-size: 390px;
-    line-height: 90%;
-    letter-spacing: -0.04em;
-}
-
 .hero-title-cosmos__fill {
-    background: linear-gradient(91.17deg, #0095FF -4.01%, #912BFF 24.67%, #FD3CE3 65.97%, #79EFFF 106.11%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    font-size: clamp(195.000px, 20.312vw, 390.000px);
+    background: var(--gradient-title-secondary);
     z-index: 2;
+    line-height: 90%;
+    position: absolute;
+    /* ИСПРАВЛЕНИЕ: Возвращаем line-height 80% */
 }
 
 .hero-title-cosmos__stroke {
+    font-size: clamp(195.000px, 20.312vw, 390.000px);
     -webkit-text-stroke: 1px rgba(255, 240, 251, 0.75);
     color: transparent;
-    top: 8px;
-    left: 5px;
+    top: clamp(4.000px, 0.417vw, 8.000px);
+    left: clamp(2.500px, 0.260vw, 5.000px);
     z-index: 1;
+    line-height: 90%;
+    position: absolute;
+    /* ИСПРАВЛЕНИЕ: Возвращаем line-height 80% */
 }
 
 .hero-description {
     position: absolute;
-    width: 287px;
-    left: 1423px;
-    top: 388px;
-    font-family: 'Vela Sans', sans-serif;
-    font-size: 20px;
+    width: clamp(143.500px, 14.948vw, 287.000px);
+    left: clamp(711.500px, 74.115vw, 1423.000px);
+    top: clamp(194.000px, 20.208vw, 388.000px);
+    font-size: clamp(10.000px, 1.042vw, 20.000px);
     line-height: 120%;
     text-align: right;
-    color: #F7F3F8;
+    color: var(--color-bg-light);
     z-index: 10;
 }
 
 .hero-signature {
     position: absolute;
-    width: 206px;
-    height: 138px;
-    left: 1355px;
-    top: 720px;
+    width: clamp(103.000px, 10.729vw, 206.000px);
+    height: clamp(69.000px, 7.187vw, 138.000px);
+    left: clamp(677.500px, 70.573vw, 1355.000px);
+    top: clamp(360.000px, 37.500vw, 720.000px);
     font-family: 'Great Vibes', cursive;
-    font-size: 110px;
-    line-height: 138px;
+    font-size: clamp(55.000px, 5.729vw, 110.000px);
+    line-height: clamp(69.000px, 7.187vw, 138.000px);
     letter-spacing: -0.04em;
     color: #FFF0FB;
-    text-shadow: 2px 3px 0px rgba(46, 9, 74, 0.35);
+    text-shadow: clamp(1.000px, 0.104vw, 2.000px) 3px 0px rgba(46, 9, 74, 0.35);
     transform: rotate(-30deg);
     z-index: 20;
 }
 
-/* ==========================================================================
-   Кнопка "ДО КАТАЛОГУ"
-   ========================================================================== */
-
 .hero-cta-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
-    width: 142px;
-    height: 142px;
-    left: 757px;
-    top: 793.2px;
-    background: linear-gradient(136.68deg, #79EFFF -6.83%, #FD3CE3 13.92%, #912BFF 63.7%, #0095FF 101.57%);
-    border: 2px solid #FCEEF9;
-    border-radius: 50%;
+    width: clamp(71.000px, 7.396vw, 142.000px);
+    height: clamp(71.000px, 7.396vw, 142.000px);
+    left: clamp(378.500px, 39.427vw, 757.000px);
+    top: clamp(396.600px, 41.312vw, 793.200px);
     transform: rotate(-22deg);
     z-index: 20;
-    text-decoration: none;
-    transition: transform 0.3s ease, background 0.3s ease;
 }
-
-.hero-cta-button span {
-    font-family: 'Vela Sans', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 110%;
-    text-align: center;
-    letter-spacing: -0.03em;
-    color: #FFFFFF;
-
-}
-
-.hero-cta-button:hover {
-    background: linear-gradient(96.29deg, #FF03B5 18.76%, #EC05AF 63.37%, #B20A9B 102.94%);
-    transform: rotate(-22deg) scale(1.05);
-}
-
-
-/* ==========================================================================
-   Изображения (лак, шары)
-   ========================================================================== */
 
 .hero-images {
     position: absolute;
@@ -375,14 +590,16 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    pointer-events: none;
+    /* Чтобы картинки не мешали кликам */
 }
 
 .hero-images__bottle-shadow {
     position: absolute;
-    width: 304px;
-    height: 148px;
-    left: 800px;
-    top: 780px;
+    width: clamp(152.000px, 15.833vw, 304.000px);
+    height: clamp(74.000px, 7.708vw, 148.000px);
+    left: 50vw;
+    top: 37.29vw;
     background: rgba(53, 16, 95, 0.65);
     filter: blur(75px);
     z-index: 14;
@@ -390,217 +607,378 @@ body {
 
 .hero-images__bottle {
     position: absolute;
-    height: 715px;
-    width: 294.79px;
-    left: 812.6px;
-    top: 209px;
+    height: clamp(357.500px, 37.240vw, 715.000px);
+    width: clamp(147.395px, 15.354vw, 294.790px);
+    left: clamp(406.300px, 42.323vw, 812.600px);
+    top: clamp(104.500px, 10.885vw, 209.000px);
     transform: rotate(-16.46deg);
     z-index: 15;
 }
 
 .hero-images__balloons {
     position: absolute;
-    height: 835.4px;
-    left: 664.6px;
-    top: 45px;
+    transform: rotate(15.32deg);
+    width: 30.83vw;
+    left: 38vw;
+    top: -3.94vw;
     z-index: 25;
 }
 
-
 /* ==========================================================================
-   Шапка сайта (Header)
+   6. СЕКЦИЯ "БЕСТСЕЛЛЕР"
    ========================================================================== */
 
-.site-header {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1500px;
-    height: 80px;
-    background: rgba(95, 38, 138, 0.1);
-    box-shadow: 0px 4px 6px rgba(19, 3, 32, 0.08);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 15px;
-    z-index: 1000;
-    padding: 0 20px;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
-
-.header-nav__group {
-    display: flex;
-    align-items: center;
-    gap: 17px;
-}
-
-.nav-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 12px 22px;
-    height: 43px;
-    border: 1px solid #A578C7;
-    border-radius: 200px;
-    font-family: 'Vela Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    color: #A578C7;
-    text-transform: uppercase;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: all 0.3s ease;
-}
-
-.arrow-down {
-    width: 9.93px;
-    height: 9px;
-}
-
-.nav-button--icon {
-    width: 43px;
-    padding: 0;
-}
-
-.nav-separator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-separator img {
-    width: 12px;
-    height: 12px;
-    filter: invert(72%) sepia(10%) saturate(1007%) hue-rotate(193deg) brightness(97%) contrast(88%);
-}
-
-.header-logo {
-    margin: 0 20px;
-}
-
-.header-logo img {
-    height: 54px;
-}
-
-/* === НОВЫЕ СТИЛИ ДЛЯ ИКОНОК === */
-.nav-icon-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    border: 1px solid #A578C7;
-    /* Обводка добавлена для всех иконок */
-    transition: border-color 0.3s ease;
-}
-
-.nav-icon-button img {
-    width: 24px;
-    height: 24px;
-}
-
-/* === Стили для корзины с эффектом смены изображения === */
-.cart-button {
-    background-image: url('../img/icons/bag-hover.svg');
-    /* Подгружаем hover-изображение в фон */
-    background-size: 24px 24px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.cart-button img {
-    transition: opacity 0.3s ease;
-    /* Плавное исчезновение для default-иконки */
-}
-
-.cart-button:hover img {
-    opacity: 0;
-    /* При наведении скрываем default-иконку, показывая фон */
-}
-
-/* Состояния корзины */
-.cart-button.has-items {
-    background-color: #A578C7;
-    border-color: #A578C7;
-}
-
-.cart-button.has-items:hover {
-    background-color: #8e5fad;
-    border-color: #8e5fad;
-}
-
-.cart-button.is-disabled {
-    border-color: #909090;
-    pointer-events: none;
-    opacity: 0.5;
-}
-
-
-.nav-button--svg {
+.section {
     position: relative;
-    /* Обязательно для позиционирования контента */
-    padding: 0;
-    border: none;
-    background: none;
-    width: 158px;
-    /* Ширина из макета */
-    height: 43px;
-    /* Высота из макета */
+    width: clamp(960px, 100vw, 1920px);
+    margin: 0 auto;
+    /* Убираем общие padding'и, так как позиционирование абсолютное */
 }
 
-.nav-button--svg:hover {
-    background: none;
-    border: none;
+.bestseller-section {
+    height: clamp(450px, 46.875vw, 900px);
+    background-color: var(--color-bg-light);
+    border-radius: clamp(22.5px, 2.344vw, 45px);
+    margin-top: clamp(-40px, -4.167vw, -80px);
+    /* Небольшой нахлест на hero-секцию */
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
 }
 
-.nav-button__shape {
+.bestseller-section__bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
     z-index: 1;
-    /* Фон должен быть под контентом */
 }
 
-.nav-button__content {
+/* --- Абсолютное позиционирование основных блоков --- */
+
+.bestseller-text-block {
+    position: absolute;
+    z-index: 10;
+    left: clamp(105px, 10.938vw, 210px);
+    top: clamp(75px, 7.813vw, 150px);
+    width: clamp(205.5px, 21.406vw, 411px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(10px, 1.042vw, 20px);
+}
+
+.bestseller-center-piece {
+    position: absolute;
+    z-index: 5;
+    width: clamp(390px, 40.625vw, 780px);
+    height: clamp(390px, 40.625vw, 780px);
+    left: 50%;
+    top: 464px;
+    transform: translate(-50%, -50%);
+}
+
+.bestseller-info-card {
+    position: absolute;
+    z-index: 10;
+    left: clamp(664.5px, 69.219vw, 1329px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* --- Внутренние стили элементов (остаются почти такими же) --- */
+
+.bestseller-section__pre-title {
+    font-size: clamp(8px, 0.833vw, 16px);
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--color-bg-light);
+}
+
+.bestseller-section__title {
+    font-size: clamp(50px, 5.208vw, 100px);
+    line-height: 90%;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
     position: relative;
-    z-index: 2;
+}
+
+.title-decoration {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(21px, 2.188vw, 42px);
+    line-height: 125%;
+    color: var(--color-bg-light);
+    text-shadow: 1.25px 1.87px 0px rgba(46, 9, 74, 0.1);
+    transform: rotate(-22deg);
+    position: absolute;
+    left: 183px;
+    top: 113.3px;
+}
+
+.bestseller-section__description {
+    font-size: clamp(9px, 0.938vw, 18px);
+    line-height: 130%;
+    color: var(--color-bg-light);
+    width: 353px;
+    height: 92px;
+}
+
+.bestseller-price-block {
     display: flex;
     align-items: center;
-    justify-content: left;
+    gap: clamp(15px, 1.563vw, 30px);
+    position: relative;
+    height: clamp(71px, 7.396vw, 142px);
+    width: 100%;
+}
+
+.bestseller-price {
+    font-size: clamp(36px, 3.75vw, 72px);
+    line-height: 90%;
+    background: var(--gradient-price);
+}
+
+.bestseller-cta-button {
+    position: absolute;
+    left: clamp(100px, 10.417vw, 200px);
+    top: 0;
+    width: clamp(71px, 7.396vw, 142px);
+    height: clamp(71px, 7.396vw, 142px);
+    transform: rotate(-22deg);
+}
+
+.bestseller-planet-bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(275px, 28.646vw, 550px);
+    height: clamp(275px, 28.646vw, 550px);
+    background: linear-gradient(101.31deg, rgba(255, 255, 255, 0.85) 56.09%, #F1DFFF 170.31%);
+    backdrop-filter: blur(8.5px);
+    border-radius: 50%;
+}
+
+.bestseller-orbits {
+    position: absolute;
     width: 100%;
     height: 100%;
-    padding-left: 15px;
+    left: 0;
+    top: 0;
 }
 
-/* Стилизация текста и иконок внутри */
-.nav-button__text {
-    font-family: 'Vela Sans', sans-serif;
-    font-size: 15px;
-    text-transform: uppercase;
-    color: #A578C7;
-    transition: color 0.3s ease;
-    padding-left: 33px;
+.bestseller-orbits .orbit--outer {
+    width: 780px;
+    height: 780px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.nav-button__icon {
+.bestseller-orbits .orbit--inner {
+    width: clamp(328px, 34.167vw, 656px);
+    height: clamp(328px, 34.167vw, 656px);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* --- Планеты для секции "Бестселлер" --- */
+/* Позиционирование планет относительно .bestseller-orbits (780px) */
+
+.bestseller-orbits .planet {
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* --- Планеты для секции "Бестселлер" (Фиксированное позиционирование) --- */
+
+.bestseller-orbits .planet {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.bestseller-orbits .planet--b1 {
+    /* Ellipse 1070 */
+    width: 18px;
+    height: 18px;
+    left: 59px;
+    /* 629 - 570 */
+    top: 322px;
+    /* 396 - 74 */
+    background: var(--gradient-planet-small);
+}
+
+.bestseller-orbits .planet--b2 {
+    /* Ellipse 1075 */
+    width: 8px;
+    height: 8px;
+    left: 195px;
+    /* 765 - 570 */
+    top: 46px;
+    /* 120 - 74 */
+    background: var(--gradient-planet-small);
+}
+
+.bestseller-orbits .planet--b3 {
+    /* Ellipse 1079 */
+    width: 8px;
+    height: 8px;
+    left: 634px;
+    /* 1204 - 570 */
+    top: 600px;
+    /* 674 - 74 */
+    background: var(--gradient-planet-small);
+}
+
+.bestseller-orbits .planet--b4 {
+    /* Ellipse 1070 */
     width: 16px;
-    /* Размер иконки грида */
     height: 16px;
+    left: 580px;
+    /* 1150 - 570 */
+    top: 45px;
+    /* 119 - 74 */
+    background: var(--gradient-planet-small);
 }
 
-.nav-button__arrow {
-    width: 9.93px;
-    height: 9px;
-    margin-left: 3px;
+.bestseller-orbits .planet--b5 {
+    /* Ellipse 1076 */
+    width: 16px;
+    height: 16px;
+    left: 596px;
+    /* 1166 - 570 */
+    top: 707px;
+    /* 781 - 74 */
+    background: var(--gradient-planet-small);
+}
 
+.bestseller-orbits .planet--b6 {
+    /* Ellipse 1073 */
+    width: 8px;
+    height: 8px;
+    left: 708px;
+    /* 1278 - 570 */
+    top: 322px;
+    /* 396 - 74 */
+    background: var(--gradient-planet-small);
+}
+
+.bestseller-orbits .planet--b7 {
+    /* Ellipse 1072 */
+    width: 8px;
+    height: 8px;
+    left: 556px;
+    /* 1126 - 570 */
+    top: 112px;
+    /* 186 - 74 */
+    background: var(--color-primary);
+}
+
+.bestseller-orbits .planet--b8 {
+    /* Ellipse 1074 */
+    width: 8px;
+    height: 8px;
+    left: 759px;
+    /* 1329 - 570 */
+    top: 286px;
+    /* 360 - 74 */
+    background: var(--color-primary);
+}
+
+.bestseller-orbits .planet--b9 {
+    /* Ellipse 1077 */
+    width: 12px;
+    height: 12px;
+    left: 90px;
+    /* 660 - 570 */
+    top: 649px;
+    /* 723 - 74 */
+    background: var(--color-primary);
+}
+
+.bestseller-orbits .planet--b10 {
+    /* Ellipse 1078 */
+    width: 8px;
+    height: 8px;
+    left: 344px;
+    /* 914 - 570 */
+    top: 711px;
+    /* 794 - 74 */
+    background: var(--color-primary);
+}
+
+.bestseller-section__bottle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: clamp(342.795px, 35.708vw, 685.59px);
+    width: auto;
+    z-index: 10;
+}
+
+.info-card {
+    width: clamp(190.5px, 19.844vw, 381px);
+    height: clamp(226.5px, 23.594vw, 453px);
+    border: 2px solid rgba(247, 243, 248, 0.6);
+    border-radius: clamp(15px, 1.563vw, 30px);
+    padding-top: clamp(20px, 4.17vw, 80px);
+    padding-left: clamp(20px, 2.08vw, 40px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12.5px, 1.302vw, 25px);
+}
+
+.info-card__title {
+    font-weight: 600;
+    font-size: clamp(10px, 1.042vw, 20px);
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #737373;
+}
+
+.info-card__item {
+    margin-top: clamp(12.5px, 1vw, 25px);
+    padding-top: clamp(12.5px, .302vw, 25px);
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(10px, 1.042vw, 20px);
+}
+
+.info-card__volume {
+    font-size: clamp(36px, 3.75vw, 72px);
+    line-height: 100%;
+    color: var(--color-primary);
+    letter-spacing: -0.02em;
+    width: 89px;
+    height: 50px;
+}
+
+.info-card__text {
+    font-size: clamp(8.5px, 0.885vw, 17px);
+    line-height: 120%;
+    color: var(--color-bg-light);
+}
+
+.info-card__item .info-card__text {
+
+    width: 209px;
+    height: 63px;
+}
+
+.info-card__item.line .info-card__text {
+    width: 309px;
+    height: 63px;
+}
+
+.info-card__item.line {
+    border-top: 1px solid rgba(247, 243, 248, 0.25);
+    border-bottom: 1px solid rgba(247, 243, 248, 0.25);
+    padding-bottom: clamp(12.5px, .302vw, 25px);
 }

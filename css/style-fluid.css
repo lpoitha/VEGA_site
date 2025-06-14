@@ -22,6 +22,8 @@
     --gradient-planet-small: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
     --gradient-btn-default: linear-gradient(136.68deg, #79EFFF -6.83%, #FD3CE3 13.92%, #912BFF 63.7%, #0095FF 101.57%);
     --gradient-btn-hover: linear-gradient(96.29deg, #FF03B5 18.76%, #EC05AF 63.37%, #B20A9B 102.94%);
+    --gradient-btn-hover: linear-gradient(96.29deg, #FF03B5 18.76%, #EC05AF 63.37%, #B20A9B 102.94%);
+    --gradient-price: linear-gradient(262.71deg, #0095FF -37.92%, #912BFF 0.41%, #FD3CE3 55.62%, #79EFFF 109.28%);
 }
 
 /* ==========================================================================
@@ -112,11 +114,11 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 12px 22px;
-    gap: 10px;
-    width: 125px;
-    height: 42px;
-    border-radius: 200px;
+    padding: clamp(6.000px, 0.625vw, 12.000px) 22px;
+    gap: clamp(5.000px, 0.521vw, 10.000px);
+    width: clamp(62.500px, 6.510vw, 125.000px);
+    height: clamp(21.000px, 2.188vw, 42.000px);
+    border-radius: clamp(100.000px, 10.417vw, 200.000px);
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -143,6 +145,10 @@ body {
 .btn--primary span {
     font-weight: 600;
     font-size: clamp(8.000px, 0.833vw, 16.000px);
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .btn--icon {
@@ -312,7 +318,7 @@ body {
 .hero-section {
     position: relative;
     width: clamp(960.000px, 100.000vw, 1920.000px);
-    height: clamp(540.000px, 56.250vw, 1080.000px);
+    height: clamp(540.000px, 58.33vw, 1120.000px);
     margin: 0 auto;
     overflow: hidden;
 }
@@ -320,7 +326,7 @@ body {
 .hero-background {
     position: absolute;
     width: clamp(480.000px, 50.000vw, 960.000px);
-    height: clamp(540.000px, 56.250vw, 1080.000px);
+    height: 100%;
     right: 0;
     top: 0;
 }
@@ -616,4 +622,363 @@ body {
     left: 38vw;
     top: -3.94vw;
     z-index: 25;
+}
+
+/* ==========================================================================
+   6. СЕКЦИЯ "БЕСТСЕЛЛЕР"
+   ========================================================================== */
+
+.section {
+    position: relative;
+    width: clamp(960px, 100vw, 1920px);
+    margin: 0 auto;
+    /* Убираем общие padding'и, так как позиционирование абсолютное */
+}
+
+.bestseller-section {
+    height: clamp(450px, 46.875vw, 900px);
+    background-color: var(--color-bg-light);
+    border-radius: clamp(22.5px, 2.344vw, 45px);
+    margin-top: clamp(-40px, -4.167vw, -80px);
+    /* Небольшой нахлест на hero-секцию */
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.bestseller-section__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/* --- Абсолютное позиционирование основных блоков --- */
+
+.bestseller-text-block {
+    position: absolute;
+    z-index: 10;
+    left: clamp(105px, 10.938vw, 210px);
+    top: clamp(75px, 7.813vw, 150px);
+    width: clamp(205.5px, 21.406vw, 411px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(10px, 1.042vw, 20px);
+}
+
+.bestseller-center-piece {
+    position: absolute;
+    z-index: 5;
+    width: clamp(390px, 40.625vw, 780px);
+    height: clamp(390px, 40.625vw, 780px);
+    left: 50%;
+    top: clamp(232.000px, 24.167vw, 464.000px);
+    transform: translate(-50%, -50%);
+}
+
+.bestseller-info-card {
+    position: absolute;
+    z-index: 10;
+    left: clamp(664.5px, 69.219vw, 1329px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* --- Внутренние стили элементов (остаются почти такими же) --- */
+
+.bestseller-section__pre-title {
+    font-size: clamp(8px, 0.833vw, 16px);
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--color-bg-light);
+}
+
+.bestseller-section__title {
+    font-size: clamp(50px, 5.208vw, 100px);
+    line-height: 90%;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+    position: relative;
+}
+
+.title-decoration {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(21px, 2.188vw, 42px);
+    line-height: 125%;
+    color: var(--color-bg-light);
+    text-shadow: clamp(0.625px, 0.065vw, 1.250px) 1.87px 0px rgba(46, 9, 74, 0.1);
+    transform: rotate(-22deg);
+    position: absolute;
+    left: clamp(91.500px, 9.531vw, 183.000px);
+    top: clamp(56.650px, 5.901vw, 113.300px);
+}
+
+.bestseller-section__description {
+    font-size: clamp(9px, 0.938vw, 18px);
+    line-height: 130%;
+    color: var(--color-bg-light);
+    width: clamp(176.500px, 18.385vw, 353.000px);
+    height: clamp(46.000px, 4.792vw, 92.000px);
+}
+
+.bestseller-price-block {
+    display: flex;
+    align-items: center;
+    gap: clamp(15px, 1.563vw, 30px);
+    position: relative;
+    height: clamp(71px, 7.396vw, 142px);
+    width: 100%;
+}
+
+.bestseller-price {
+    font-size: clamp(36px, 3.75vw, 72px);
+    line-height: 90%;
+    background: var(--gradient-price);
+}
+
+.bestseller-cta-button {
+    position: absolute;
+    left: clamp(100px, 10.417vw, 200px);
+    top: 0;
+    width: clamp(71px, 7.396vw, 142px);
+    height: clamp(71px, 7.396vw, 142px);
+    transform: rotate(-22deg);
+}
+
+.bestseller-planet-bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(275px, 28.646vw, 550px);
+    height: clamp(275px, 28.646vw, 550px);
+    background: linear-gradient(101.31deg, rgba(255, 255, 255, 0.85) 56.09%, #F1DFFF 170.31%);
+    backdrop-filter: blur(8.5px);
+    border-radius: 50%;
+}
+
+.bestseller-orbits {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.bestseller-orbits .orbit--outer {
+    width: clamp(390.000px, 40.625vw, 780.000px);
+    height: clamp(390.000px, 40.625vw, 780.000px);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bestseller-orbits .orbit--inner {
+    width: clamp(328px, 34.167vw, 656px);
+    height: clamp(328px, 34.167vw, 656px);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* --- Планеты для секции "Бестселлер" --- */
+/* Позиционирование планет относительно .bestseller-orbits (780px) */
+
+.bestseller-orbits .planet {
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* --- Планеты для секции "Бестселлер" (Фиксированное позиционирование) --- */
+
+.bestseller-orbits .planet {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.bestseller-orbits .planet--b1 {
+    /* Ellipse 1070 */
+    width: clamp(9.000px, 0.938vw, 18.000px);
+    height: clamp(9.000px, 0.938vw, 18.000px);
+    left: clamp(29.500px, 3.073vw, 59.000px);
+    /* 629 - 570 */
+    top: clamp(161.000px, 16.771vw, 322.000px);
+    /* 396 - 74 */
+    background: var(--gradient-planet-small);
+}
+
+.bestseller-orbits .planet--b2 {
+    /* Ellipse 1075 */
+    width: clamp(4.000px, 0.417vw, 8.000px);
+    height: clamp(4.000px, 0.417vw, 8.000px);
+    left: clamp(97.500px, 10.156vw, 195.000px);
+    /* 765 - 570 */
+    top: clamp(23.000px, 2.396vw, 46.000px);
+    /* 120 - 74 */
+    background: var(--gradient-planet-small);
+}
+
+.bestseller-orbits .planet--b3 {
+    /* Ellipse 1079 */
+    width: clamp(4.000px, 0.417vw, 8.000px);
+    height: clamp(4.000px, 0.417vw, 8.000px);
+    left: clamp(317.000px, 33.021vw, 634.000px);
+    /* 1204 - 570 */
+    top: clamp(300.000px, 31.250vw, 600.000px);
+    /* 674 - 74 */
+    background: var(--gradient-planet-small);
+}
+
+.bestseller-orbits .planet--b4 {
+    /* Ellipse 1070 */
+    width: clamp(8.000px, 0.833vw, 16.000px);
+    height: clamp(8.000px, 0.833vw, 16.000px);
+    left: clamp(290.000px, 30.208vw, 580.000px);
+    /* 1150 - 570 */
+    top: clamp(22.500px, 2.344vw, 45.000px);
+    /* 119 - 74 */
+    background: var(--gradient-planet-small);
+}
+
+.bestseller-orbits .planet--b5 {
+    /* Ellipse 1076 */
+    width: clamp(8.000px, 0.833vw, 16.000px);
+    height: clamp(8.000px, 0.833vw, 16.000px);
+    left: clamp(298.000px, 31.042vw, 596.000px);
+    /* 1166 - 570 */
+    top: clamp(353.500px, 36.823vw, 707.000px);
+    /* 781 - 74 */
+    background: var(--gradient-planet-small);
+}
+
+.bestseller-orbits .planet--b6 {
+    /* Ellipse 1073 */
+    width: clamp(4.000px, 0.417vw, 8.000px);
+    height: clamp(4.000px, 0.417vw, 8.000px);
+    left: clamp(354.000px, 36.875vw, 708.000px);
+    /* 1278 - 570 */
+    top: clamp(161.000px, 16.771vw, 322.000px);
+    /* 396 - 74 */
+    background: var(--gradient-planet-small);
+}
+
+.bestseller-orbits .planet--b7 {
+    /* Ellipse 1072 */
+    width: clamp(4.000px, 0.417vw, 8.000px);
+    height: clamp(4.000px, 0.417vw, 8.000px);
+    left: clamp(278.000px, 28.958vw, 556.000px);
+    /* 1126 - 570 */
+    top: clamp(56.000px, 5.833vw, 112.000px);
+    /* 186 - 74 */
+    background: var(--color-primary);
+}
+
+.bestseller-orbits .planet--b8 {
+    /* Ellipse 1074 */
+    width: clamp(4.000px, 0.417vw, 8.000px);
+    height: clamp(4.000px, 0.417vw, 8.000px);
+    left: clamp(379.500px, 39.531vw, 759.000px);
+    /* 1329 - 570 */
+    top: clamp(143.000px, 14.896vw, 286.000px);
+    /* 360 - 74 */
+    background: var(--color-primary);
+}
+
+.bestseller-orbits .planet--b9 {
+    /* Ellipse 1077 */
+    width: clamp(6.000px, 0.625vw, 12.000px);
+    height: clamp(6.000px, 0.625vw, 12.000px);
+    left: clamp(45.000px, 4.688vw, 90.000px);
+    /* 660 - 570 */
+    top: clamp(324.500px, 33.802vw, 649.000px);
+    /* 723 - 74 */
+    background: var(--color-primary);
+}
+
+.bestseller-orbits .planet--b10 {
+    /* Ellipse 1078 */
+    width: clamp(4.000px, 0.417vw, 8.000px);
+    height: clamp(4.000px, 0.417vw, 8.000px);
+    left: clamp(172.000px, 17.917vw, 344.000px);
+    /* 914 - 570 */
+    top: clamp(355.500px, 37.031vw, 711.000px);
+    /* 794 - 74 */
+    background: var(--color-primary);
+}
+
+.bestseller-section__bottle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: clamp(342.795px, 35.708vw, 685.59px);
+    width: auto;
+    z-index: 10;
+}
+
+.info-card {
+    width: clamp(190.5px, 19.844vw, 381px);
+    height: clamp(226.5px, 23.594vw, 453px);
+    border: 2px solid rgba(247, 243, 248, 0.6);
+    border-radius: clamp(15px, 1.563vw, 30px);
+    padding-top: clamp(20px, 4.17vw, 80px);
+    padding-left: clamp(20px, 2.08vw, 40px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12.5px, 1.302vw, 25px);
+}
+
+.info-card__title {
+    font-weight: 600;
+    font-size: clamp(10px, 1.042vw, 20px);
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #737373;
+}
+
+.info-card__item {
+    margin-top: clamp(12.5px, 1vw, 25px);
+    padding-top: clamp(12.5px, .302vw, 25px);
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(10px, 1.042vw, 20px);
+}
+
+.info-card__volume {
+    font-size: clamp(36px, 3.75vw, 72px);
+    line-height: 100%;
+    color: var(--color-primary);
+    letter-spacing: -0.02em;
+    width: clamp(44.500px, 4.635vw, 89.000px);
+    height: clamp(25.000px, 2.604vw, 50.000px);
+}
+
+.info-card__text {
+    font-size: clamp(8.5px, 0.885vw, 17px);
+    line-height: 120%;
+    color: var(--color-bg-light);
+}
+
+.info-card__item .info-card__text {
+
+    width: clamp(104.500px, 10.885vw, 209.000px);
+    height: clamp(31.500px, 3.281vw, 63.000px);
+}
+
+.info-card__item.line .info-card__text {
+    width: clamp(154.500px, 16.094vw, 309.000px);
+    height: clamp(31.500px, 3.281vw, 63.000px);
+}
+
+.info-card__item.line {
+    border-top: 1px solid rgba(247, 243, 248, 0.25);
+    border-bottom: 1px solid rgba(247, 243, 248, 0.25);
+    padding-bottom: clamp(12.5px, .302vw, 25px);
 }
