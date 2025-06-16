@@ -22,7 +22,6 @@
     --gradient-planet-small: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
     --gradient-btn-default: linear-gradient(136.68deg, #79EFFF -6.83%, #FD3CE3 13.92%, #912BFF 63.7%, #0095FF 101.57%);
     --gradient-btn-hover: linear-gradient(96.29deg, #FF03B5 18.76%, #EC05AF 63.37%, #B20A9B 102.94%);
-    --gradient-btn-hover: linear-gradient(96.29deg, #FF03B5 18.76%, #EC05AF 63.37%, #B20A9B 102.94%);
     --gradient-price: linear-gradient(262.71deg, #0095FF -37.92%, #912BFF 0.41%, #FD3CE3 55.62%, #79EFFF 109.28%);
 }
 
@@ -75,6 +74,11 @@ body {
 
     color: transparent !important;
     /* !important для переопределения базовых цветов */
+}
+
+.cta-button {
+    width: clamp(71px, 7.396vw, 142px);
+    height: clamp(71px, 7.396vw, 142px);
 }
 
 /* ==========================================================================
@@ -135,6 +139,8 @@ body {
     border: 2px solid #FCEEF9;
     color: var(--color-white);
     border-radius: 50%;
+    width: clamp(71px, 7.396vw, 142px);
+    height: clamp(71px, 7.396vw, 142px);
 }
 
 .btn--primary:hover {
@@ -981,4 +987,356 @@ body {
     border-top: 1px solid rgba(247, 243, 248, 0.25);
     border-bottom: 1px solid rgba(247, 243, 248, 0.25);
     padding-bottom: clamp(12.5px, .302vw, 25px);
+}
+
+/* ==========================================================================
+   7. СЕКЦИЯ "КАТЕГОРИИ"
+   ========================================================================== */
+
+.categories-section {
+    position: relative;
+    width: clamp(960.000px, 100.000vw, 1920.000px);
+    height: clamp(973.500px, 101.406vw, 1947.000px);
+    /* Высота из макета */
+    margin: clamp(75.000px, 7.812vw, 150.000px) auto 0 auto;
+    /* Нахлест на предыдущую секцию */
+    background-color: var(--color-bg-light);
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* --- Фоновые элементы --- */
+.categories-bg-text {
+    position: absolute;
+    width: clamp(750.000px, 78.125vw, 1500.000px);
+    height: clamp(305.000px, 31.771vw, 610.000px);
+    left: clamp(7.500px, 0.781vw, 15.000px);
+    top: clamp(124.500px, 12.969vw, 249.000px);
+    background: linear-gradient(91.25deg, rgba(121, 239, 255, 0.14) -4.28%, rgba(253, 60, 227, 0.14) 38.62%, rgba(145, 43, 255, 0.14) 82.74%, rgba(0, 149, 255, 0.14) 113.38%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: clamp(400.000px, 41.667vw, 800.000px);
+    line-height: .9;
+    font-weight: 900;
+    z-index: 1;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    transform: scaleX(1.99);
+    transform-origin: center;
+    white-space: nowrap;
+}
+
+.categories-bg-blur--left,
+.categories-bg-blur--right {
+    position: absolute;
+    width: clamp(243.000px, 25.312vw, 486.000px);
+    height: clamp(243.000px, 25.312vw, 486.000px);
+    background: var(--gradient-title-main);
+    filter: blur(1000px);
+    z-index: 1;
+    border-radius: 50%;
+    opacity: .2;
+
+}
+
+.categories-bg-blur--left {
+    left: clamp(-6.000px, -0.625vw, -12.000px);
+    top: clamp(327.500px, 34.115vw, 655.000px);
+    /* Скорректировано */
+}
+
+.categories-bg-blur--right {
+    left: clamp(812.500px, 84.635vw, 1625.000px);
+    top: clamp(682.000px, 71.042vw, 1364.000px);
+    /* Скорректировано */
+    filter: blur(375px);
+}
+
+.categories-list-bg {
+    position: absolute;
+    width: clamp(370.000px, 38.542vw, 740.000px);
+    height: clamp(370.000px, 38.542vw, 740.000px);
+    left: clamp(426.500px, 44.427vw, 853.000px);
+    top: clamp(367.000px, 38.229vw, 734.000px);
+    /* Скорректировано */
+    background: #A578C7;
+    border-radius: 50%;
+    z-index: 5;
+
+}
+
+.categories-section__bottle {
+    position: absolute;
+    width: clamp(147.500px, 15.365vw, 295.000px);
+    height: clamp(330.000px, 34.375vw, 660.000px);
+    left: calc(50% - 295px / 2 + 0.5px);
+    top: 0;
+    z-index: 10;
+}
+
+/* --- Карточки категорий --- */
+.category-card {
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: clamp(6.000px, 0.625vw, 12.000px) 12px 20px;
+    gap: clamp(10.000px, 1.042vw, 20.000px);
+    background: var(--color-white);
+    border: 1px solid var(--color-primary);
+    border-radius: clamp(18.500px, 1.927vw, 37.000px);
+    z-index: 15;
+    text-decoration: none;
+    color: var(--color-primary-darkest);
+}
+
+.category-card__image {
+    width: 100%;
+    height: clamp(141.000px, 14.688vw, 282.000px);
+    border-radius: clamp(15.000px, 1.562vw, 30.000px);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card__content-wrapper {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: clamp(41.000px, 4.271vw, 82.000px);
+    padding-bottom: clamp(5.000px, 0.521vw, 10.000px);
+    padding-left: clamp(11.000px, 1.146vw, 22.000px);
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(5.5px);
+    border-radius: 0px 0px 30px 30px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.category-card__content-wrapper--large {
+    height: clamp(69.000px, 7.187vw, 138.000px);
+    /* Скорректировано */
+}
+
+.category-card__title {
+    font-family: 'Cramaten', sans-serif;
+    font-weight: 400;
+    font-size: clamp(26.500px, 2.760vw, 53.000px);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--color-primary-darkest);
+}
+
+.category-card__description {
+    font-family: 'Vela Sans', sans-serif;
+    font-size: clamp(9.000px, 0.938vw, 18.000px);
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+}
+
+.category-card--gellaki p.category-card__description {
+    width: clamp(132.000px, 13.750vw, 264.000px);
+    height: clamp(57.500px, 5.990vw, 115.000px);
+}
+
+/* Позиционирование карточек */
+.category-card--bases {
+    left: clamp(105.000px, 10.938vw, 210.000px);
+    top: clamp(137.000px, 14.271vw, 274.000px);
+    width: clamp(138.000px, 14.375vw, 276.000px);
+    height: clamp(213.000px, 22.188vw, 426.000px);
+}
+
+.category-card--glitter {
+    left: clamp(105.000px, 10.938vw, 210.000px);
+    top: clamp(758.000px, 78.958vw, 1516.000px);
+    width: clamp(138.000px, 14.375vw, 276.000px);
+    height: clamp(213.000px, 22.188vw, 426.000px);
+}
+
+.category-card--decor {
+    left: clamp(253.000px, 26.354vw, 506.000px);
+    top: clamp(760.500px, 79.219vw, 1521.000px);
+    width: clamp(138.000px, 14.375vw, 276.000px);
+    height: clamp(213.000px, 22.188vw, 426.000px);
+}
+
+.category-card--gels {
+    left: clamp(258.000px, 26.875vw, 516.000px);
+    top: clamp(395.000px, 41.146vw, 790.000px);
+    width: clamp(138.000px, 14.375vw, 276.000px);
+    height: clamp(283.000px, 29.479vw, 566.000px);
+}
+
+.category-card--gellaki {
+    left: clamp(564.000px, 58.750vw, 1128.000px);
+    top: 0;
+    width: clamp(291.000px, 30.312vw, 582.000px);
+    height: clamp(350.000px, 36.458vw, 700.000px);
+    align-items: flex-end;
+}
+
+.category-card--care {
+    left: clamp(564.000px, 58.750vw, 1128.000px);
+    top: clamp(758.000px, 78.958vw, 1516.000px);
+    width: clamp(291.000px, 30.312vw, 582.000px);
+    height: clamp(213.000px, 22.188vw, 426.000px);
+    align-items: flex-end;
+}
+
+/* Уникальные стили для карточек */
+.category-card--gels .category-card__image {
+    height: clamp(220.000px, 22.917vw, 440.000px);
+}
+
+.category-card--gellaki .category-card__image {
+    width: clamp(279.000px, 29.063vw, 558.000px);
+    height: clamp(266.500px, 27.760vw, 533.000px);
+}
+
+.category-card--care .category-card__image {
+    width: clamp(279.000px, 29.063vw, 558.000px);
+    height: clamp(150.000px, 15.625vw, 300.000px);
+}
+
+.category-card__bottle-in-image {
+    position: absolute;
+    height: clamp(179.000px, 18.646vw, 358.000px);
+    width: auto;
+    left: 50%;
+    top: clamp(19.500px, 2.031vw, 39.000px);
+    transform: translateX(-50%);
+}
+
+/* --- Левый блок с текстом --- */
+.categories-intro {
+    position: absolute;
+    width: clamp(138.000px, 14.375vw, 276.000px);
+    left: clamp(105.000px, 10.938vw, 210.000px);
+    top: 0px;
+    z-index: 20;
+}
+
+.categories-intro__pre-title {
+    font-size: clamp(8.000px, 0.833vw, 16.000px);
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.title.categories-intro__title {
+    font-size: clamp(50.000px, 5.208vw, 100.000px);
+    line-height: 100%;
+    color: var(--color-primary);
+    letter-spacing: -0.02em;
+    height: clamp(35.000px, 3.646vw, 70.000px);
+    padding-top: clamp(5.000px, 0.521vw, 10.000px);
+}
+
+.categories-intro__description {
+    font-size: clamp(9.000px, 0.938vw, 18.000px);
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+    margin-top: clamp(18.000px, 1.875vw, 36.000px);
+}
+
+.categories-intro__decoration-wrapper {
+    position: absolute;
+    left: clamp(35.000px, 3.646vw, 70.000px);
+    top: clamp(49.000px, 5.104vw, 98.000px);
+    transform: rotate(-20deg);
+    z-index: 1;
+    pointer-events: none;
+    /* Чтобы текст не перекрывал клики */
+}
+
+.categories-intro__decoration {
+    position: absolute;
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(21.000px, 2.188vw, 42.000px);
+    text-shadow: clamp(0.625px, 0.065vw, 1.250px) 1.87px 0px rgba(46, 9, 74, 0.1);
+}
+
+.categories-intro__decoration.stroke {
+    color: transparent;
+    -webkit-text-stroke: clamp(1.000px, 0.104vw, 2.000px) #FF03B5;
+    z-index: 1;
+}
+
+.categories-intro__decoration.fill {
+    color: var(--color-bg-light);
+    z-index: 2;
+}
+
+/* --- Правый список категорий --- */
+.category-list-wrapper {
+    position: absolute;
+    width: clamp(291.000px, 30.312vw, 582.000px);
+    left: clamp(564.000px, 58.750vw, 1128.000px);
+    top: clamp(395.000px, 41.146vw, 790.000px);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20.000px, 2.083vw, 40.000px);
+}
+
+.category-list__main-title {
+    font-size: clamp(50.000px, 5.208vw, 100.000px);
+    line-height: 80%;
+    color: var(--color-white);
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(10.000px, 1.042vw, 20.000px);
+    width: 100%;
+}
+
+.category-list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(45, 14, 69, 0.4);
+    padding-top: clamp(10.000px, 1.042vw, 20.000px);
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    height: clamp(35.645px, 3.713vw, 71.290px);
+    flex: none;
+}
+
+.category-list:last-child {
+    border-bottom: 1px solid rgba(45, 14, 69, 0.4);
+    padding-bottom: clamp(5.000px, 0.521vw, 10.000px);
+}
+
+.category-list__item-title {
+    font-family: 'Cramaten', sans-serif;
+    font-size: clamp(26.500px, 2.760vw, 53.000px);
+    line-height: 105%;
+    text-transform: uppercase;
+    color: var(--color-white);
+}
+
+/* --- Кнопка внизу --- */
+.categories-cta-button {
+    position: absolute;
+    width: clamp(71.000px, 7.396vw, 142.000px);
+    height: clamp(71.000px, 7.396vw, 142.000px);
+    left: clamp(444.715px, 46.324vw, 889.430px);
+    top: clamp(786.000px, 81.875vw, 1572.000px);
+    /* Скорректировано */
+    transform: rotate(-22deg);
+    z-index: 20;
+}
+
+.categories-cta-button span {
+    text-align: center;
 }
