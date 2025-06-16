@@ -64,6 +64,10 @@ body {
     font-family: 'Vela Sans', sans-serif;
 }
 
+section {
+    ma
+}
+
 /* ==========================================================================
    3. УТИЛИТАРНЫЕ КЛАССЫ
    ========================================================================== */
@@ -80,6 +84,15 @@ body {
     width: clamp(71px, 7.396vw, 142px);
     height: clamp(71px, 7.396vw, 142px);
 }
+
+
+.section-divider {
+    border: none;
+    height: 1px;
+    background-color: var(--color-primary);
+    margin: 75px 210px;
+}
+
 
 /* ==========================================================================
    4. КОМПОНЕНТЫ
@@ -126,12 +139,6 @@ body {
     flex: none;
     order: 0;
     flex-grow: 0;
-    /*
-    gap: clamp(4.000px, 0.417vw, 8.000px);
-    padding: clamp(6.000px, 0.625vw, 12.000px) 22px;
-    height: clamp(21.500px, 2.240vw, 43.000px);    
-    border-radius: clamp(100.000px, 10.417vw, 200.000px);
-    */
 }
 
 .btn--primary {
@@ -795,8 +802,6 @@ body {
 }
 
 /* --- Планеты для секции "Бестселлер" --- */
-/* Позиционирование планет относительно .bestseller-orbits (780px) */
-
 .bestseller-orbits .planet {
     position: absolute;
     border-radius: 50%;
@@ -810,46 +815,34 @@ body {
 }
 
 .bestseller-orbits .planet--b1 {
-    /* Ellipse 1070 */
     width: clamp(9.000px, 0.938vw, 18.000px);
     height: clamp(9.000px, 0.938vw, 18.000px);
     left: clamp(29.500px, 3.073vw, 59.000px);
-    /* 629 - 570 */
     top: clamp(161.000px, 16.771vw, 322.000px);
-    /* 396 - 74 */
     background: var(--gradient-planet-small);
 }
 
 .bestseller-orbits .planet--b2 {
-    /* Ellipse 1075 */
     width: clamp(4.000px, 0.417vw, 8.000px);
     height: clamp(4.000px, 0.417vw, 8.000px);
     left: clamp(97.500px, 10.156vw, 195.000px);
-    /* 765 - 570 */
     top: clamp(23.000px, 2.396vw, 46.000px);
-    /* 120 - 74 */
     background: var(--gradient-planet-small);
 }
 
 .bestseller-orbits .planet--b3 {
-    /* Ellipse 1079 */
     width: clamp(4.000px, 0.417vw, 8.000px);
     height: clamp(4.000px, 0.417vw, 8.000px);
     left: clamp(317.000px, 33.021vw, 634.000px);
-    /* 1204 - 570 */
     top: clamp(300.000px, 31.250vw, 600.000px);
-    /* 674 - 74 */
     background: var(--gradient-planet-small);
 }
 
 .bestseller-orbits .planet--b4 {
-    /* Ellipse 1070 */
     width: clamp(8.000px, 0.833vw, 16.000px);
     height: clamp(8.000px, 0.833vw, 16.000px);
     left: clamp(290.000px, 30.208vw, 580.000px);
-    /* 1150 - 570 */
     top: clamp(22.500px, 2.344vw, 45.000px);
-    /* 119 - 74 */
     background: var(--gradient-planet-small);
 }
 
@@ -858,64 +851,47 @@ body {
     width: clamp(8.000px, 0.833vw, 16.000px);
     height: clamp(8.000px, 0.833vw, 16.000px);
     left: clamp(298.000px, 31.042vw, 596.000px);
-    /* 1166 - 570 */
     top: clamp(353.500px, 36.823vw, 707.000px);
-    /* 781 - 74 */
     background: var(--gradient-planet-small);
 }
 
 .bestseller-orbits .planet--b6 {
-    /* Ellipse 1073 */
     width: clamp(4.000px, 0.417vw, 8.000px);
     height: clamp(4.000px, 0.417vw, 8.000px);
     left: clamp(354.000px, 36.875vw, 708.000px);
-    /* 1278 - 570 */
     top: clamp(161.000px, 16.771vw, 322.000px);
-    /* 396 - 74 */
     background: var(--gradient-planet-small);
 }
 
 .bestseller-orbits .planet--b7 {
-    /* Ellipse 1072 */
     width: clamp(4.000px, 0.417vw, 8.000px);
     height: clamp(4.000px, 0.417vw, 8.000px);
     left: clamp(278.000px, 28.958vw, 556.000px);
-    /* 1126 - 570 */
     top: clamp(56.000px, 5.833vw, 112.000px);
-    /* 186 - 74 */
     background: var(--color-primary);
 }
 
 .bestseller-orbits .planet--b8 {
-    /* Ellipse 1074 */
     width: clamp(4.000px, 0.417vw, 8.000px);
     height: clamp(4.000px, 0.417vw, 8.000px);
     left: clamp(379.500px, 39.531vw, 759.000px);
-    /* 1329 - 570 */
     top: clamp(143.000px, 14.896vw, 286.000px);
-    /* 360 - 74 */
     background: var(--color-primary);
 }
 
 .bestseller-orbits .planet--b9 {
-    /* Ellipse 1077 */
     width: clamp(6.000px, 0.625vw, 12.000px);
     height: clamp(6.000px, 0.625vw, 12.000px);
     left: clamp(45.000px, 4.688vw, 90.000px);
-    /* 660 - 570 */
     top: clamp(324.500px, 33.802vw, 649.000px);
-    /* 723 - 74 */
     background: var(--color-primary);
 }
 
 .bestseller-orbits .planet--b10 {
-    /* Ellipse 1078 */
     width: clamp(4.000px, 0.417vw, 8.000px);
     height: clamp(4.000px, 0.417vw, 8.000px);
     left: clamp(172.000px, 17.917vw, 344.000px);
-    /* 914 - 570 */
     top: clamp(355.500px, 37.031vw, 711.000px);
-    /* 794 - 74 */
     background: var(--color-primary);
 }
 
@@ -997,11 +973,7 @@ body {
     position: relative;
     width: clamp(960.000px, 100.000vw, 1920.000px);
     height: clamp(973.500px, 101.406vw, 1947.000px);
-    /* Высота из макета */
-    margin: clamp(75.000px, 7.812vw, 150.000px) auto 0 auto;
-    /* Нахлест на предыдущую секцию */
-    background-color: var(--color-bg-light);
-    z-index: 1;
+    margin: clamp(75.000px, 7.812vw, 150.000px) auto clamp(30.000px, 3.65vw, 70.000px) auto;
     overflow: hidden;
 }
 
@@ -1028,8 +1000,7 @@ body {
     white-space: nowrap;
 }
 
-.categories-bg-blur--left,
-.categories-bg-blur--right {
+.bg-blur {
     position: absolute;
     width: clamp(243.000px, 25.312vw, 486.000px);
     height: clamp(243.000px, 25.312vw, 486.000px);
@@ -1044,13 +1015,11 @@ body {
 .categories-bg-blur--left {
     left: clamp(-6.000px, -0.625vw, -12.000px);
     top: clamp(327.500px, 34.115vw, 655.000px);
-    /* Скорректировано */
 }
 
 .categories-bg-blur--right {
     left: clamp(812.500px, 84.635vw, 1625.000px);
     top: clamp(682.000px, 71.042vw, 1364.000px);
-    /* Скорректировано */
     filter: blur(375px);
 }
 
@@ -1060,7 +1029,6 @@ body {
     height: clamp(370.000px, 38.542vw, 740.000px);
     left: clamp(426.500px, 44.427vw, 853.000px);
     top: clamp(367.000px, 38.229vw, 734.000px);
-    /* Скорректировано */
     background: #A578C7;
     border-radius: 50%;
     z-index: 5;
@@ -1121,7 +1089,6 @@ body {
 
 .category-card__content-wrapper--large {
     height: clamp(69.000px, 7.187vw, 138.000px);
-    /* Скорректировано */
 }
 
 .category-card__title {
@@ -1332,11 +1299,238 @@ body {
     height: clamp(71.000px, 7.396vw, 142.000px);
     left: clamp(444.715px, 46.324vw, 889.430px);
     top: clamp(786.000px, 81.875vw, 1572.000px);
-    /* Скорректировано */
     transform: rotate(-22deg);
     z-index: 20;
 }
 
 .categories-cta-button span {
     text-align: center;
+}
+
+/* ==========================================================================
+   8. СЕКЦИЯ "НОВИНКИ"
+   ========================================================================== */
+
+.new-arrivals-section {
+    position: relative;
+    width: 1920px;
+    height: 1345px;
+    margin: 0 auto;
+}
+
+/* --- Фоновые элементы --- */
+.new-arrivals-bg-blur {
+    position: absolute;
+    width: 486px;
+    height: 486px;
+    left: 14px;
+    top: 717px;
+    background: var(--gradient-title-main);
+    filter: blur(450px);
+    z-index: 1;
+}
+
+.new-arrivals-line-separator {
+    position: absolute;
+    width: 1500px;
+    height: 1px;
+    left: calc(50% - 1500px / 2);
+    top: 1345px;
+    background-color: var(--color-primary);
+}
+
+/* --- Заголовок секции --- */
+.new-arrivals-intro {
+    position: absolute;
+    width: 484px;
+    height: 285px;
+    left: 210px;
+    top: 0;
+    z-index: 10;
+}
+
+.new-arrivals-intro__pre-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.new-arrivals-intro__title {
+    font-size: 100px;
+    line-height: 90%;
+    color: var(--color-primary);
+    margin-top: 20px;
+    letter-spacing: -0.02em;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.new-arrivals-intro__description {
+    font-size: 18px;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+    width: 353px;
+}
+
+.new-arrivals-intro__decoration-wrapper {
+    position: absolute;
+    left: 116px;
+    top: 125px;
+    transform: rotate(-20deg);
+    z-index: 1;
+}
+
+.new-arrivals-intro__decoration {
+    position: absolute;
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    text-shadow: 1.25px 1.87px 0px rgba(46, 9, 74, 0.1);
+}
+
+.new-arrivals-intro__decoration.stroke {
+    color: transparent;
+    -webkit-text-stroke: 2px #FF03B5;
+    z-index: 1;
+}
+
+.new-arrivals-intro__decoration.fill {
+    color: var(--color-bg-light);
+    z-index: 2;
+}
+
+
+/* --- Карточка товара --- */
+.product-card {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    border-radius: 35px;
+    text-decoration: none;
+    z-index: 5;
+    overflow: hidden;
+    /* Чтобы скруглить изображение внутри */
+}
+
+.product-card__image {
+    width: 100%;
+    height: 562px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 35px;
+}
+
+.product-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 15px 0 15px;
+}
+
+.product-card__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.product-card__category {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #909090;
+    padding-top: 4px;
+}
+
+.product-card__volume {
+    font-size: 18px;
+    color: var(--color-primary-darkest);
+}
+
+.product-card__name {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--color-primary-darkest);
+}
+
+.product-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px 15px 15px;
+    margin-top: auto;
+    /* Прижимаем футер к низу */
+}
+
+.product-card__price {
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--color-primary);
+    letter-spacing: -0.01em;
+}
+
+.product-card__actions {
+    display: flex;
+    gap: 20px;
+}
+
+/* Модификаторы для карточек */
+.product-card--large {
+    width: 582px;
+    height: 727px;
+}
+
+.product-card--small {
+    width: 276px;
+    height: 494px;
+}
+
+.product-card--small .product-card__image {
+    height: 296px;
+}
+
+/* Позиционирование карточек */
+.product-card--blush-cloud {
+    left: 210px;
+    top: 368px;
+    /* 4480 - 4112 */
+}
+
+.product-card--latte-nude-set {
+    left: 1128px;
+    top: 0;
+}
+
+.product-card--latte-nude-solo {
+    left: 1128px;
+    top: 776px;
+    /* 4888 - 4112 */
+}
+
+/* Переиспользование класса кнопки с иконкой */
+.btn.btn--icon-not-round {
+    width: 48px;
+    height: 48px;
+    border: none;
+    background-color: transparent;
+}
+
+.btn--icon-round:hover {
+    border-color: var(--color-primary-dark);
+}
+
+.btn--primary-fill {
+    background-color: var(--color-primary);
+    width: 48px;
+    height: 48px;
+    border: 1.5px solid var(--color-primary);
+    border-radius: 50%;
+}
+
+.btn--primary-fill:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
 }
