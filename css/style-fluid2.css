@@ -1547,14 +1547,13 @@ body {
 /* --- Фоновые элементы --- */
 .catalog-section__bg-wave {
     position: absolute;
-    width: clamp(1497.000px, 155.938vw, 2994.000px);
-    height: clamp(1130.000px, 117.708vw, 2260.000px);
-    left: clamp(-433.500px, -45.156vw, -867.000px);
-    top: clamp(119.000px, 12.396vw, 238.000px);
+    width: clamp(1073.500px, 111.823vw, 2147.000px);
+    height: clamp(1500.000px, 156.250vw, 3000.000px);
+    left: clamp(8.000px, 0.833vw, 16.000px);
+    top: -34.062vw;
     /* 5770 - 5532 */
     background: url('../img/background-wave.png') no-repeat;
     background-size: contain;
-    transform: rotate(-16.15deg);
     z-index: -1;
 }
 
