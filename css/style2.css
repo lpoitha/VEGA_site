@@ -13,15 +13,7 @@
     --color-white: #FFFFFF;
     --color-border: rgba(165, 120, 199, 0.4);
     --color-border-light: rgba(165, 120, 199, 0.25);
-    --color-border-dark: rgba(45, 14, 69, 0.4);
     --color-planet-gray: #895EB1;
-    --color-accent-pink: #FF03B5;
-    --color-hero-stroke: rgba(255, 240, 251, 0.75);
-    --color-signature: #FFF0FB;
-    --color-shadow-deep: rgba(53, 16, 95, 0.65);
-    --color-text-medium-gray: #737373;
-    --color-text-light-gray: #909090;
-
 
     /* Градиенты */
     --gradient-title-main: linear-gradient(91.17deg, #79EFFF -4.01%, #FD3CE3 36.14%, #912BFF 77.44%, #0095FF 106.11%);
@@ -31,7 +23,6 @@
     --gradient-btn-default: linear-gradient(136.68deg, #79EFFF -6.83%, #FD3CE3 13.92%, #912BFF 63.7%, #0095FF 101.57%);
     --gradient-btn-hover: linear-gradient(96.29deg, #FF03B5 18.76%, #EC05AF 63.37%, #B20A9B 102.94%);
     --gradient-price: linear-gradient(262.71deg, #0095FF -37.92%, #912BFF 0.41%, #FD3CE3 55.62%, #79EFFF 109.28%);
-    --gradient-bestseller-planet: linear-gradient(101.31deg, rgba(255, 255, 255, 0.85) 56.09%, #F1DFFF 170.31%);
 }
 
 /* ==========================================================================
@@ -81,7 +72,9 @@ body {
 .text-gradient {
     -webkit-background-clip: text;
     background-clip: text;
+
     color: transparent !important;
+    /* !important для переопределения базовых цветов */
 }
 
 .cta-button {
@@ -89,19 +82,12 @@ body {
     height: clamp(71px, 7.396vw, 142px);
 }
 
+
 .section-divider {
     border: none;
     height: 1px;
     background-color: var(--color-primary);
-    margin: clamp(37.500px, 3.906vw, 75.000px) auto;
-    width: clamp(750.000px, 78.125vw, 1500.000px);
-}
-
-.pre-title {
-    font-size: clamp(8px, 0.833vw, 16px);
-    line-height: 100%;
-    text-transform: uppercase;
-    color: var(--color-primary);
+    margin: 75px 210px;
 }
 
 
@@ -115,6 +101,7 @@ body {
     font-weight: 400;
     letter-spacing: -0.04em;
     background-clip: text !important;
+    /* line-height убран отсюда и будет задаваться конкретным элементам */
 }
 
 /* --- Компонент: Кнопка --- */
@@ -135,11 +122,20 @@ body {
 .btn--outline {
     border: 1px solid var(--color-primary);
     color: var(--color-primary);
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     padding: clamp(6.000px, 0.625vw, 12.000px) 22px;
     gap: clamp(5.000px, 0.521vw, 10.000px);
     width: clamp(62.500px, 6.510vw, 125.000px);
     height: clamp(21.000px, 2.188vw, 42.000px);
     border-radius: clamp(100.000px, 10.417vw, 200.000px);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
 
 .btn--primary {
@@ -181,54 +177,6 @@ body {
     width: clamp(12.000px, 1.250vw, 24.000px);
     height: clamp(12.000px, 1.250vw, 24.000px);
 }
-
-/* --- Компонент: Заголовочный блок секции --- */
-.section-intro {
-    position: absolute;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    gap: clamp(10px, 1.042vw, 20px);
-}
-
-.section-intro__title {
-    font-size: clamp(50px, 5.208vw, 100px);
-    line-height: 90%;
-    letter-spacing: -0.02em;
-    color: var(--color-primary);
-}
-
-.section-intro__description {
-    font-size: clamp(9px, 0.938vw, 18px);
-    line-height: 130%;
-    color: var(--color-primary-darkest);
-    width: clamp(176.500px, 18.385vw, 353.000px);
-}
-
-/* --- Компонент: Рукописное украшение заголовка --- */
-.title-decoration {
-    position: absolute;
-    pointer-events: none;
-}
-
-.title-decoration__text {
-    position: absolute;
-    font-family: 'Great Vibes', cursive;
-    font-size: clamp(21px, 2.188vw, 42px);
-    text-shadow: clamp(0.625px, 0.065vw, 1.250px) 1.87px 0px rgba(46, 9, 74, 0.1);
-}
-
-.title-decoration__text.stroke {
-    color: transparent;
-    -webkit-text-stroke: clamp(1.000px, 0.104vw, 2.000px) var(--color-accent-pink);
-    z-index: 1;
-}
-
-.title-decoration__text.fill {
-    color: var(--color-bg-light);
-    z-index: 2;
-}
-
 
 /* ==========================================================================
    5. СТИЛИ СЕКЦИЙ
@@ -289,6 +237,7 @@ body {
     height: clamp(4.500px, 0.469vw, 9.000px);
 }
 
+/* Сложная кнопка каталога */
 .nav-button--svg {
     position: relative;
     padding: 0;
@@ -343,6 +292,7 @@ body {
     margin-left: clamp(1.500px, 0.156vw, 3.000px);
 }
 
+/* Состояния иконки корзины */
 .cart-button {
     background-image: url('../img/icons/bag-hover.svg');
     background-size: clamp(12.000px, 1.250vw, 24.000px) 24px;
@@ -369,7 +319,7 @@ body {
 }
 
 .cart-button.is-disabled {
-    border-color: var(--color-text-light-gray);
+    border-color: #909090;
     pointer-events: none;
     opacity: 0.5;
 }
@@ -563,6 +513,7 @@ body {
 .hero-title-block__subtitle {
     font-size: clamp(50.000px, 5.208vw, 100.000px);
     line-height: 110%;
+    /* Отдельный line-height для этого элемента */
     letter-spacing: -0.02em;
     color: var(--color-primary);
 }
@@ -572,6 +523,7 @@ body {
     font-size: clamp(232.500px, 24.219vw, 465.000px);
     background: var(--gradient-title-main);
     line-height: 90%;
+    /* ИСПРАВЛЕНИЕ: Возвращаем line-height 80% */
 }
 
 .hero-title-cosmos {
@@ -589,17 +541,19 @@ body {
     z-index: 2;
     line-height: 90%;
     position: absolute;
+    /* ИСПРАВЛЕНИЕ: Возвращаем line-height 80% */
 }
 
 .hero-title-cosmos__stroke {
     font-size: clamp(195.000px, 20.312vw, 390.000px);
-    -webkit-text-stroke: 1px var(--color-hero-stroke);
+    -webkit-text-stroke: 1px rgba(255, 240, 251, 0.75);
     color: transparent;
     top: clamp(4.000px, 0.417vw, 8.000px);
     left: clamp(2.500px, 0.260vw, 5.000px);
     z-index: 1;
     line-height: 90%;
     position: absolute;
+    /* ИСПРАВЛЕНИЕ: Возвращаем line-height 80% */
 }
 
 .hero-description {
@@ -624,7 +578,7 @@ body {
     font-size: clamp(55.000px, 5.729vw, 110.000px);
     line-height: clamp(69.000px, 7.187vw, 138.000px);
     letter-spacing: -0.04em;
-    color: var(--color-signature);
+    color: #FFF0FB;
     text-shadow: clamp(1.000px, 0.104vw, 2.000px) 3px 0px rgba(46, 9, 74, 0.35);
     transform: rotate(-30deg);
     z-index: 20;
@@ -647,6 +601,7 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
+    /* Чтобы картинки не мешали кликам */
 }
 
 .hero-images__bottle-shadow {
@@ -655,7 +610,7 @@ body {
     height: clamp(74.000px, 7.708vw, 148.000px);
     left: 50vw;
     top: 37.29vw;
-    background: var(--color-shadow-deep);
+    background: rgba(53, 16, 95, 0.65);
     filter: blur(75px);
     z-index: 14;
 }
@@ -687,6 +642,7 @@ body {
     position: relative;
     width: clamp(960px, 100vw, 1920px);
     margin: 0 auto;
+    /* Убираем общие padding'и, так как позиционирование абсолютное */
 }
 
 .bestseller-section {
@@ -694,6 +650,7 @@ body {
     background-color: var(--color-bg-light);
     border-radius: clamp(22.5px, 2.344vw, 45px);
     margin-top: clamp(-40px, -4.167vw, -80px);
+    /* Небольшой нахлест на hero-секцию */
     position: relative;
     z-index: 3;
     overflow: hidden;
@@ -711,28 +668,19 @@ body {
     z-index: 1;
 }
 
-/* --- Абсолютное позиционирование блоков --- */
-.bestseller-intro {
+/* --- Абсолютное позиционирование основных блоков --- */
+
+.bestseller-text-block {
+    position: absolute;
+    z-index: 10;
     left: clamp(105px, 10.938vw, 210px);
     top: clamp(75px, 7.813vw, 150px);
     width: clamp(205.5px, 21.406vw, 411px);
-}
 
-.bestseller-intro .pre-title {
-    color: var(--color-bg-light);
-}
-
-.bestseller-intro .section-intro__description {
-    color: var(--color-bg-light);
-    width: clamp(176.500px, 18.385vw, 353.000px);
-    height: clamp(46.000px, 4.792vw, 92.000px);
-}
-
-.bestseller-intro .title-decoration {
-    left: clamp(91.500px, 9.531vw, 183.000px);
-    top: clamp(56.650px, 5.901vw, 113.300px);
-    transform: rotate(-22deg);
-    line-height: 125%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(10px, 1.042vw, 20px);
 }
 
 .bestseller-center-piece {
@@ -753,6 +701,43 @@ body {
     transform: translateY(-50%);
 }
 
+/* --- Внутренние стили элементов (остаются почти такими же) --- */
+
+.bestseller-section__pre-title {
+    font-size: clamp(8px, 0.833vw, 16px);
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--color-bg-light);
+}
+
+.bestseller-section__title {
+    font-size: clamp(50px, 5.208vw, 100px);
+    line-height: 90%;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+    position: relative;
+}
+
+.title-decoration {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(21px, 2.188vw, 42px);
+    line-height: 125%;
+    color: var(--color-bg-light);
+    text-shadow: clamp(0.625px, 0.065vw, 1.250px) 1.87px 0px rgba(46, 9, 74, 0.1);
+    transform: rotate(-22deg);
+    position: absolute;
+    left: clamp(91.500px, 9.531vw, 183.000px);
+    top: clamp(56.650px, 5.901vw, 113.300px);
+}
+
+.bestseller-section__description {
+    font-size: clamp(9px, 0.938vw, 18px);
+    line-height: 130%;
+    color: var(--color-bg-light);
+    width: clamp(176.500px, 18.385vw, 353.000px);
+    height: clamp(46.000px, 4.792vw, 92.000px);
+}
+
 .bestseller-price-block {
     display: flex;
     align-items: center;
@@ -760,7 +745,6 @@ body {
     position: relative;
     height: clamp(71px, 7.396vw, 142px);
     width: 100%;
-    margin-top: clamp(10px, 1.042vw, 20px);
 }
 
 .bestseller-price {
@@ -785,7 +769,7 @@ body {
     transform: translate(-50%, -50%);
     width: clamp(275px, 28.646vw, 550px);
     height: clamp(275px, 28.646vw, 550px);
-    background: var(--gradient-bestseller-planet);
+    background: linear-gradient(101.31deg, rgba(255, 255, 255, 0.85) 56.09%, #F1DFFF 170.31%);
     backdrop-filter: blur(8.5px);
     border-radius: 50%;
 }
@@ -813,6 +797,14 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* --- Планеты для секции "Бестселлер" --- */
+.bestseller-orbits .planet {
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* --- Планеты для секции "Бестселлер" (Фиксированное позиционирование) --- */
 
 .bestseller-orbits .planet {
     position: absolute;
@@ -852,6 +844,7 @@ body {
 }
 
 .bestseller-orbits .planet--b5 {
+    /* Ellipse 1076 */
     width: clamp(8.000px, 0.833vw, 16.000px);
     height: clamp(8.000px, 0.833vw, 16.000px);
     left: clamp(298.000px, 31.042vw, 596.000px);
@@ -926,7 +919,7 @@ body {
     font-size: clamp(10px, 1.042vw, 20px);
     line-height: 120%;
     text-transform: uppercase;
-    color: var(--color-text-medium-gray);
+    color: #737373;
 }
 
 .info-card__item {
@@ -953,6 +946,7 @@ body {
 }
 
 .info-card__item .info-card__text {
+
     width: clamp(104.500px, 10.885vw, 209.000px);
     height: clamp(31.500px, 3.281vw, 63.000px);
 }
@@ -980,6 +974,7 @@ body {
     overflow: hidden;
 }
 
+/* --- Фоновые элементы --- */
 .categories-bg-text {
     position: absolute;
     width: clamp(750.000px, 78.125vw, 1500.000px);
@@ -1011,6 +1006,7 @@ body {
     z-index: 1;
     border-radius: 50%;
     opacity: .2;
+
 }
 
 .categories-bg-blur--left {
@@ -1033,6 +1029,7 @@ body {
     background: #A578C7;
     border-radius: 50%;
     z-index: 5;
+
 }
 
 .categories-section__bottle {
@@ -1044,30 +1041,7 @@ body {
     z-index: 10;
 }
 
-.categories-intro {
-    width: clamp(138.000px, 14.375vw, 276.000px);
-    left: clamp(105.000px, 10.938vw, 210.000px);
-    top: 0px;
-    z-index: 20;
-    gap: 0;
-}
-
-.categories-intro .section-intro__title {
-    height: clamp(35.000px, 3.646vw, 70.000px);
-    padding-top: clamp(5.000px, 0.521vw, 10.000px);
-}
-
-.categories-intro .section-intro__description {
-    margin-top: clamp(18.000px, 1.875vw, 36.000px);
-}
-
-.categories-intro .title-decoration {
-    left: clamp(35.000px, 3.646vw, 70.000px);
-    top: clamp(49.000px, 5.104vw, 98.000px);
-    transform: rotate(-20deg);
-    z-index: 1;
-}
-
+/* --- Карточки категорий --- */
 .category-card {
     position: absolute;
     box-sizing: border-box;
@@ -1105,7 +1079,7 @@ body {
     background: rgba(255, 255, 255, 0.6);
     border: 1px solid rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(5.5px);
-    border-radius: 0px 0px 1.56vw 1.56vw;
+    border-radius: 0px 0px 30px 30px;
     display: flex;
     align-items: flex-end;
 }
@@ -1136,6 +1110,7 @@ body {
     height: clamp(57.500px, 5.990vw, 115.000px);
 }
 
+/* Позиционирование карточек */
 .category-card--bases {
     left: clamp(105.000px, 10.938vw, 210.000px);
     top: clamp(137.000px, 14.271vw, 274.000px);
@@ -1180,6 +1155,7 @@ body {
     align-items: flex-end;
 }
 
+/* Уникальные стили для карточек */
 .category-card--gels .category-card__image {
     height: clamp(220.000px, 22.917vw, 440.000px);
 }
@@ -1203,6 +1179,66 @@ body {
     transform: translateX(-50%);
 }
 
+/* --- Левый блок с текстом --- */
+.categories-intro {
+    position: absolute;
+    width: clamp(138.000px, 14.375vw, 276.000px);
+    left: clamp(105.000px, 10.938vw, 210.000px);
+    top: 0px;
+    z-index: 20;
+}
+
+.categories-intro__pre-title {
+    font-size: clamp(8.000px, 0.833vw, 16.000px);
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.title.categories-intro__title {
+    font-size: clamp(50.000px, 5.208vw, 100.000px);
+    line-height: 100%;
+    color: var(--color-primary);
+    letter-spacing: -0.02em;
+    height: clamp(35.000px, 3.646vw, 70.000px);
+    padding-top: clamp(5.000px, 0.521vw, 10.000px);
+}
+
+.categories-intro__description {
+    font-size: clamp(9.000px, 0.938vw, 18.000px);
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+    margin-top: clamp(18.000px, 1.875vw, 36.000px);
+}
+
+.categories-intro__decoration-wrapper {
+    position: absolute;
+    left: clamp(35.000px, 3.646vw, 70.000px);
+    top: clamp(49.000px, 5.104vw, 98.000px);
+    transform: rotate(-20deg);
+    z-index: 1;
+    pointer-events: none;
+    /* Чтобы текст не перекрывал клики */
+}
+
+.categories-intro__decoration {
+    position: absolute;
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(21.000px, 2.188vw, 42.000px);
+    text-shadow: clamp(0.625px, 0.065vw, 1.250px) 1.87px 0px rgba(46, 9, 74, 0.1);
+}
+
+.categories-intro__decoration.stroke {
+    color: transparent;
+    -webkit-text-stroke: clamp(1.000px, 0.104vw, 2.000px) #FF03B5;
+    z-index: 1;
+}
+
+.categories-intro__decoration.fill {
+    color: var(--color-bg-light);
+    z-index: 2;
+}
+
+/* --- Правый список категорий --- */
 .category-list-wrapper {
     position: absolute;
     width: clamp(291.000px, 30.312vw, 582.000px);
@@ -1231,7 +1267,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid var(--color-border-dark);
+    border-top: 1px solid rgba(45, 14, 69, 0.4);
     padding-top: clamp(10.000px, 1.042vw, 20.000px);
     text-decoration: none;
     display: flex;
@@ -1241,7 +1277,7 @@ body {
 }
 
 .category-list:last-child {
-    border-bottom: 1px solid var(--color-border-dark);
+    border-bottom: 1px solid rgba(45, 14, 69, 0.4);
     padding-bottom: clamp(5.000px, 0.521vw, 10.000px);
 }
 
@@ -1253,6 +1289,7 @@ body {
     color: var(--color-white);
 }
 
+/* --- Кнопка внизу --- */
 .categories-cta-button {
     position: absolute;
     width: clamp(71.000px, 7.396vw, 142.000px);
@@ -1273,35 +1310,93 @@ body {
 
 .new-arrivals-section {
     position: relative;
-    width: clamp(960.000px, 100.000vw, 1920.000px);
-    height: clamp(634.500px, 66.094vw, 1269.000px);
+    width: 1920px;
+    height: 1269px;
     margin: 0 auto;
 }
 
+/* --- Фоновые элементы --- */
 .new-arrivals-bg-blur {
     position: absolute;
-    width: clamp(243.000px, 25.312vw, 486.000px);
-    height: clamp(243.000px, 25.312vw, 486.000px);
-    left: clamp(7.000px, 0.729vw, 14.000px);
-    top: clamp(358.500px, 37.344vw, 717.000px);
+    width: 486px;
+    height: 486px;
+    left: 14px;
+    top: 717px;
     background: var(--gradient-title-main);
     filter: blur(450px);
     z-index: 1;
 }
 
-.new-arrivals-intro {
-    width: clamp(242.000px, 25.208vw, 484.000px);
-    height: clamp(142.500px, 14.844vw, 285.000px);
-    left: clamp(105.000px, 10.938vw, 210.000px);
-    top: 0;
+.new-arrivals-line-separator {
+    position: absolute;
+    width: 1500px;
+    height: 1px;
+    left: calc(50% - 1500px / 2);
+    top: 1345px;
+    background-color: var(--color-primary);
 }
 
-.new-arrivals-intro .title-decoration {
-    left: clamp(58.000px, 6.042vw, 116.000px);
-    top: clamp(62.500px, 6.510vw, 125.000px);
+/* --- Заголовок секции --- */
+.new-arrivals-intro {
+    position: absolute;
+    width: 484px;
+    height: 285px;
+    left: 210px;
+    top: 0;
+    z-index: 10;
+}
+
+.new-arrivals-intro__pre-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.new-arrivals-intro__title {
+    font-size: 100px;
+    line-height: 90%;
+    color: var(--color-primary);
+    margin-top: 20px;
+    letter-spacing: -0.02em;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.new-arrivals-intro__description {
+    font-size: 18px;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+    width: 353px;
+}
+
+.new-arrivals-intro__decoration-wrapper {
+    position: absolute;
+    left: 116px;
+    top: 125px;
     transform: rotate(-20deg);
     z-index: 1;
 }
+
+.new-arrivals-intro__decoration {
+    position: absolute;
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    text-shadow: 1.25px 1.87px 0px rgba(46, 9, 74, 0.1);
+}
+
+.new-arrivals-intro__decoration.stroke {
+    color: transparent;
+    -webkit-text-stroke: 2px #FF03B5;
+    z-index: 1;
+}
+
+.new-arrivals-intro__decoration.fill {
+    color: var(--color-bg-light);
+    z-index: 2;
+}
+
 
 /* --- Карточка товара --- */
 .product-card {
@@ -1309,25 +1404,26 @@ body {
     display: flex;
     flex-direction: column;
     background: var(--color-white);
-    border-radius: clamp(17.500px, 1.823vw, 35.000px);
+    border-radius: 35px;
     text-decoration: none;
     z-index: 5;
     overflow: hidden;
+    /* Чтобы скруглить изображение внутри */
 }
 
 .product-card__image {
     width: 100%;
-    height: clamp(281.000px, 29.271vw, 562.000px);
+    height: 562px;
     background-size: cover;
     background-position: center;
-    border-radius: clamp(17.500px, 1.823vw, 35.000px);
+    border-radius: 35px;
 }
 
 .product-card__info {
     display: flex;
     flex-direction: column;
-    gap: clamp(10.000px, 1.042vw, 20.000px);
-    padding: clamp(10.000px, 1.042vw, 20.000px) 15px 0 15px;
+    gap: 20px;
+    padding: 20px 15px 0 15px;
 }
 
 .product-card__header {
@@ -1337,20 +1433,20 @@ body {
 }
 
 .product-card__category {
-    font-size: clamp(7.500px, 0.781vw, 15.000px);
+    font-size: 15px;
     font-weight: 500;
     text-transform: uppercase;
-    color: var(--color-text-light-gray);
-    padding-top: clamp(2.000px, 0.208vw, 4.000px);
+    color: #909090;
+    padding-top: 4px;
 }
 
 .product-card__volume {
-    font-size: clamp(9.000px, 0.938vw, 18.000px);
+    font-size: 18px;
     color: var(--color-primary-darkest);
 }
 
 .product-card__name {
-    font-size: clamp(13.000px, 1.354vw, 26.000px);
+    font-size: 26px;
     font-weight: 600;
     line-height: 100%;
     text-transform: uppercase;
@@ -1361,12 +1457,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: clamp(10.000px, 1.042vw, 20.000px) 15px 15px 15px;
+    padding: 20px 15px 15px 15px;
     margin-top: auto;
+    /* Прижимаем футер к низу */
 }
 
 .product-card__price {
-    font-size: clamp(16.000px, 1.667vw, 32.000px);
+    font-size: 32px;
     font-weight: 400;
     color: var(--color-primary);
     letter-spacing: -0.01em;
@@ -1374,51 +1471,48 @@ body {
 
 .product-card__actions {
     display: flex;
-    gap: clamp(10.000px, 1.042vw, 20.000px);
+    gap: 20px;
 }
 
 /* Модификаторы для карточек */
 .product-card--large {
-    width: clamp(291.000px, 30.312vw, 582.000px);
-    height: clamp(363.500px, 37.865vw, 727.000px);
+    width: 582px;
+    height: 727px;
 }
 
 .product-card--small {
-    width: clamp(138.000px, 14.375vw, 276.000px);
-    height: clamp(247.000px, 25.729vw, 494.000px);
+    width: 276px;
+    height: 494px;
 }
 
 .product-card--small .product-card__image {
-    height: clamp(148.000px, 15.417vw, 296.000px);
+    height: 296px;
 }
 
 /* Позиционирование карточек */
 .product-card--blush-cloud {
-    left: clamp(105.000px, 10.938vw, 210.000px);
-    top: clamp(184.000px, 19.167vw, 368.000px);
+    left: 210px;
+    top: 368px;
+    /* 4480 - 4112 */
 }
 
 .product-card--latte-nude-set {
-    left: clamp(564.000px, 58.750vw, 1128.000px);
+    left: 1128px;
     top: 0;
 }
 
 .product-card--latte-nude-solo {
-    left: clamp(564.000px, 58.750vw, 1128.000px);
-    top: clamp(388.000px, 40.417vw, 776.000px);
+    left: 1128px;
+    top: 776px;
+    /* 4888 - 4112 */
 }
 
-/* Унифицированные кнопки для карточек товаров */
-.btn--icon-round {
-    width: clamp(24.000px, 2.500vw, 48.000px);
-    height: clamp(24.000px, 2.500vw, 48.000px);
+/* Переиспользование класса кнопки с иконкой */
+.btn.btn--icon-not-round {
+    width: 48px;
+    height: 48px;
     border: none;
     background-color: transparent;
-    border-radius: 50%;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .btn--icon-round:hover {
@@ -1427,7 +1521,10 @@ body {
 
 .btn--primary-fill {
     background-color: var(--color-primary);
+    width: 48px;
+    height: 48px;
     border: 1.5px solid var(--color-primary);
+    border-radius: 50%;
 }
 
 .btn--primary-fill:hover {
@@ -1441,108 +1538,159 @@ body {
 
 .catalog-section {
     position: relative;
-    width: clamp(960.000px, 100.000vw, 1920.000px);
-    height: clamp(1165.000px, 121.354vw, 2330.000px);
+    width: 1920px;
+    height: 2330px;
     overflow: hidden;
     z-index: 1;
 }
 
+/* --- Фоновые элементы --- */
 .catalog-section__bg-wave {
     position: absolute;
-    width: clamp(1073.500px, 111.823vw, 2147.000px);
-    height: clamp(1500.000px, 156.250vw, 3000.000px);
-    left: clamp(8.000px, 0.833vw, 16.000px);
-    top: -34.062vw;
+    width: 2147px;
+    height: 3000px;
+    left: 16px;
+    top: -654px;
     background: url('../img/background-wave.png') no-repeat;
     background-size: contain;
     z-index: -1;
 }
 
 .catalog-bg-blur--right {
-    left: clamp(552.000px, 57.500vw, 1104.000px);
-    top: clamp(740.500px, 77.135vw, 1481.000px);
-    width: clamp(313.000px, 32.604vw, 626.000px);
-    height: clamp(313.000px, 32.604vw, 626.000px);
+    left: 1104px;
+    top: 1481px;
+    width: 626px;
+    height: 626px;
     background: #A578C7;
     filter: blur(350px);
     opacity: 0.2;
 }
 
+/* --- Заголовок секции --- */
 .catalog-intro {
-    width: clamp(212.000px, 22.083vw, 424.000px);
-    left: clamp(105.000px, 10.938vw, 210.000px);
+    position: absolute;
+    width: 424px;
+    left: 210px;
     top: 0;
+    z-index: 10;
 }
 
-.catalog-intro .title-decoration {
+.catalog-intro__pre-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.catalog-intro__title {
+    font-size: 100px;
+    line-height: 90%;
+    color: var(--color-primary);
+    margin-top: 20px;
+}
+
+.catalog-intro__description {
+    font-size: 18px;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+    margin-top: 20px;
+    width: 353px;
+}
+
+.catalog-intro__decoration-wrapper {
     position: absolute;
-    left: clamp(76.500px, 7.969vw, 153.000px);
-    top: clamp(65.000px, 6.771vw, 130.000px);
+    left: 153px;
+    top: 130px;
     transform: rotate(-20deg);
     z-index: 2;
-    width: clamp(100.000px, 10.417vw, 200.000px);
+    width: 200px;
 }
 
+.catalog-intro__decoration {
+    position: absolute;
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    text-shadow: 1.25px 1.87px 0px rgba(46, 9, 74, 0.1);
+}
+
+/* Стили для обводки и заливки текста "у зірках" */
+.catalog-intro__decoration.stroke {
+    color: transparent;
+    -webkit-text-stroke: 2px #FF03B5;
+    z-index: 1;
+}
+
+.catalog-intro__decoration.fill {
+    color: var(--color-bg-light);
+    z-index: 2;
+}
+
+
+/* --- Сетка товаров --- */
 .catalog-grid {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
+/* Позиционирование карточек товаров внутри секции */
 .product-card--milky-way {
-    left: clamp(105.000px, 10.938vw, 210.000px);
-    top: clamp(161.000px, 16.771vw, 322.000px);
+    left: 210px;
+    top: 322px;
 }
 
 .product-card--peach-glow {
-    left: clamp(258.000px, 26.875vw, 516.000px);
-    top: clamp(161.000px, 16.771vw, 322.000px);
+    left: 516px;
+    top: 322px;
 }
 
 .product-card--vega-placeholder {
     position: absolute;
-    left: clamp(411.000px, 42.812vw, 822.000px);
-    top: clamp(161.000px, 16.771vw, 322.000px);
-    width: clamp(138.000px, 14.375vw, 276.000px);
-    height: clamp(247.000px, 25.729vw, 494.000px);
-    border-radius: clamp(17.500px, 1.823vw, 35.000px);
+    left: 822px;
+    top: 322px;
+    width: 276px;
+    height: 494px;
+    border-radius: 35px;
 }
 
 .product-card--crystal-nude {
-    left: clamp(717.000px, 74.688vw, 1434.000px);
-    top: clamp(161.000px, 16.771vw, 322.000px);
+    left: 1434px;
+    top: 322px;
 }
 
 .product-card--latte-nude-catalog {
-    left: clamp(258.000px, 26.875vw, 516.000px);
-    top: clamp(423.000px, 44.062vw, 846.000px);
+    left: 516px;
+    top: 846px;
 }
 
 .product-card--blush-cloud-catalog {
-    left: clamp(411.000px, 42.812vw, 822.000px);
-    top: clamp(423.000px, 44.062vw, 846.000px);
+    left: 822px;
+    top: 846px;
 }
 
 .product-card--berry-chic {
-    left: clamp(258.000px, 26.875vw, 516.000px);
-    top: clamp(801.500px, 83.490vw, 1603.000px);
+    left: 516px;
+    top: 1603px;
 }
 
 .product-card--unicorn-pearl {
-    left: clamp(564.000px, 58.750vw, 1128.000px);
-    top: clamp(801.500px, 83.490vw, 1603.000px);
+    left: 1128px;
+    top: 1603px;
 }
 
+
+/* --- Кнопка внизу --- */
 .catalog-cta-button {
     position: absolute;
-    width: clamp(71.000px, 7.396vw, 142.000px);
-    height: clamp(71.000px, 7.396vw, 142.000px);
+    width: 142px;
+    height: 142px;
     left: calc(50% - 142px / 2 + 575px);
-    top: clamp(859.000px, 89.479vw, 1718.000px);
+    top: 1718px;
+    /* 7250 - 5532 */
     transform: rotate(-22deg);
     z-index: 20;
 }
 
 .catalog-cta-button span {
     transform: rotate(22deg);
+    /* Компенсируем наклон */
 }
