@@ -32,6 +32,7 @@
     --gradient-btn-hover: linear-gradient(96.29deg, #FF03B5 18.76%, #EC05AF 63.37%, #B20A9B 102.94%);
     --gradient-price: linear-gradient(262.71deg, #0095FF -37.92%, #912BFF 0.41%, #FD3CE3 55.62%, #79EFFF 109.28%);
     --gradient-bestseller-planet: linear-gradient(101.31deg, rgba(255, 255, 255, 0.85) 56.09%, #F1DFFF 170.31%);
+    --gradient-bg-text: linear-gradient(91.25deg, rgba(121, 239, 255, 0.14) -4.28%, rgba(253, 60, 227, 0.14) 38.62%, rgba(145, 43, 255, 0.14) 82.74%, rgba(0, 149, 255, 0.14) 113.38%);
 }
 
 /* ==========================================================================
@@ -96,6 +97,12 @@ body {
     margin: clamp(37.500px, 3.906vw, 75.000px) auto;
     width: clamp(750.000px, 78.125vw, 1500.000px);
 }
+
+.section-divider-invisible {
+    border: none;
+    height: 3.906vw;
+}
+
 
 .pre-title {
     font-size: clamp(8px, 0.833vw, 16px);
@@ -209,6 +216,7 @@ body {
 .title-decoration {
     position: absolute;
     pointer-events: none;
+    white-space: nowrap;
 }
 
 .title-decoration__text {
@@ -986,7 +994,7 @@ body {
     height: clamp(305.000px, 31.771vw, 610.000px);
     left: clamp(7.500px, 0.781vw, 15.000px);
     top: clamp(124.500px, 12.969vw, 249.000px);
-    background: linear-gradient(91.25deg, rgba(121, 239, 255, 0.14) -4.28%, rgba(253, 60, 227, 0.14) 38.62%, rgba(145, 43, 255, 0.14) 82.74%, rgba(0, 149, 255, 0.14) 113.38%);
+    background: var(--gradient-bg-text);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -1537,12 +1545,788 @@ body {
     position: absolute;
     width: clamp(71.000px, 7.396vw, 142.000px);
     height: clamp(71.000px, 7.396vw, 142.000px);
-    left: calc(50% - 142px / 2 + 575px);
+    left: 79.95vw;
     top: clamp(859.000px, 89.479vw, 1718.000px);
     transform: rotate(-22deg);
     z-index: 20;
 }
 
-.catalog-cta-button span {
-    transform: rotate(22deg);
+/* ==========================================================================
+   11. СЕКЦИЯ "ПРО КОМПАНИЮ"
+   ========================================================================== */
+
+.about-section {
+    position: relative;
+    width: 1710px;
+    height: 760px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 122px;
+    left: clamp(105.000px, 10.938vw, 210.000px);
+}
+
+.about-section__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 486px;
+    flex-shrink: 0;
+    /* Чтобы блок не сжимался */
+}
+
+.about-intro {
+    position: relative;
+    /* Чтобы декорация позиционировалась относительно него */
+    gap: 20px;
+}
+
+.about-intro .section-intro__title {
+    background: var(--gradient-title-main);
+    width: 424px;
+    height: 164px;
+}
+
+.about-title-decoration {
+    left: 52px;
+    top: 179px;
+    transform: rotate(-20deg);
+    z-index: 5;
+}
+
+.about-section__main-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-section__main-text p {
+    font-size: 18px;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+}
+
+.about-section__link {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    text-decoration: none;
+    align-self: flex-start;
+}
+
+.about-section__link span {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--color-primary-darkest);
+}
+
+.about-section__link::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.about-section__link:hover::after {
+    width: 50%;
+}
+
+.about-section__image-wrapper {
+    position: relative;
+    width: 1101px;
+    height: 760px;
+    flex-shrink: 0;
+}
+
+.about-section__image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 35px 0px 35px 35px;
+}
+
+.about-section__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 147px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0px 0px 35px 35px;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.about-section__caption-content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.about-section__caption-name {
+    font-family: 'Cramaten', sans-serif;
+    font-size: 53px;
+    font-weight: 400;
+    line-height: 50%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--color-primary-darkest);
+}
+
+.about-section__caption-title {
+    font-size: 18px;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+}
+
+/* ==========================================================================
+   11. СЕКЦИЯ "ЧОМУ САМЕ МИ?"
+   ========================================================================== */
+
+.why-us-section {
+    position: relative;
+    width: 1920px;
+    height: 1622px;
+    overflow: hidden;
+    color: var(--color-white);
+    /* Боковые отступы как у других секций */
+}
+
+/* --- Заголовок секции --- */
+.why-us-intro {
+    position: absolute;
+    left: 210px;
+    top: 0;
+    width: 424px;
+}
+
+.why-us-intro .section-intro__title {
+    color: var(--color-primary);
+}
+
+/* --- Блок с преимуществами --- */
+.advantages-block {
+    position: absolute;
+    left: 822px;
+    top: 0;
+    width: 888px;
+}
+
+.advantages-main-feature {
+    position: relative;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(165, 120, 199, 0.35);
+    padding-bottom: 30px;
+}
+
+.advantages-main-feature__number {
+    font-size: 300px;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+    height: 210px;
+}
+
+.advantages-main-feature__text {
+    position: absolute;
+    left: 306px;
+    bottom: 41px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+}
+
+.advantages-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.advantages-list__item {
+    display: flex;
+    gap: 30px;
+    padding: 26px 0 20px 0;
+    border-bottom: 1px solid rgba(165, 120, 199, 0.35);
+    width: 721px;
+}
+
+.advantages-list__title {
+    font-family: 'Cramaten', sans-serif;
+    font-weight: 400;
+    font-size: 53px;
+    line-height: 105%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    flex-basis: 276px;
+    /* Фиксированная ширина левой колонки */
+    flex-shrink: 0;
+}
+
+.advantages-list__description {
+    font-family: 'Vela Sans', sans-serif;
+    font-size: 18px;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+    flex-grow: 1;
+}
+
+/* --- Видеоплеер --- */
+.videoplayer {
+    position: absolute;
+    width: 1500px;
+    height: 630px;
+    left: calc(50% - 1500px/2);
+    top: 992px;
+    /* 9914 - 8922 */
+    display: block;
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+.videoplayer-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+}
+
+.videoplayer:hover .videoplayer-bg {
+    transform: scale(1.05);
+}
+
+.videoplayer-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 125px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.videoplayer:hover .videoplayer-button {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.videoplayer-icon {
+    width: 0;
+    height: 0;
+    border-top: 28px solid transparent;
+    border-bottom: 28px solid transparent;
+    border-left: 45px solid var(--color-white);
+    margin-left: 10px;
+    /* Небольшая коррекция для визуального центрирования */
+}
+
+/* ==========================================================================
+   12. СЕКЦИЯ "ЧАСТІ ЗАПИТАННЯ"
+   ========================================================================== */
+
+.faq-section {
+    position: relative;
+    color: var(--color-white);
+    padding: 0 210px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* --- Заголовок секции --- */
+.faq-intro {
+    position: relative;
+    /* Чтобы не наследовал абсолютное позиционирование */
+    top: 0;
+    left: 0;
+    width: 424px;
+}
+
+.faq-intro .section-intro__title,
+.faq-intro .pre-title {
+    color: var(--color-primary);
+}
+
+/* --- Список вопросов --- */
+.faq-list {
+    width: 888px;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.faq-item__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    cursor: pointer;
+}
+
+.faq-item__question {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+    max-width: 580px;
+}
+
+.faq-item__icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.4s ease;
+    flex-shrink: 0;
+}
+
+.faq-item.is-active .faq-item__icon {
+    transform: rotate(45deg);
+}
+
+.faq-item__answer-wrapper {
+    max-height: 0;
+    /* Изначально ответ скрыт */
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding-bottom 0.4s ease-out;
+}
+
+.faq-item__answer {
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+    max-width: 581px;
+    padding-bottom: 0;
+}
+
+.faq-item.is-active .faq-item__answer-wrapper {
+    max-height: 150px;
+    /* Достаточная высота для отображения текста */
+    padding-bottom: 24px;
+    /* Отступ снизу для открытого ответа */
+}
+
+/* ==========================================================================
+   12. СЕКЦИЯ "КОНТАКТЫ"
+   ========================================================================== */
+
+.contacts-section {
+    position: relative;
+    width: 1500px;
+    height: 600px;
+    padding: 0 auto 75px auto;
+    display: flex;
+    gap: 40px;
+}
+
+/* --- Левый блок --- */
+.contact-info {
+    position: relative;
+    width: 728px;
+    height: 600px;
+    background-color: var(--color-primary);
+    border-radius: 35px;
+    padding: 60px;
+    overflow: hidden;
+    color: var(--color-white);
+}
+
+.contact-info__bg {
+    position: absolute;
+    width: 100%;
+    height: 523px;
+    left: 0;
+    top: 90px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    mix-blend-mode: luminosity;
+}
+
+.contact-info__intro {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-info__intro .pre-title,
+.contact-info__intro .section-intro__title {
+    color: var(--color-bg-light);
+}
+
+.contact-info__intro .section-intro__title {
+    width: 424px;
+}
+
+.contact-info__details {
+    position: absolute;
+    left: 60px;
+    top: 305px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 2;
+}
+
+/* ... после стилей для .contact-info__socials ... */
+
+.contact-info__schedule {
+    position: absolute;
+    top: 90px;
+    right: 35px;
+    /* Прижимаем к правому краю блока */
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 130%;
+    color: var(--color-white);
+    z-index: 2;
+}
+
+.contact-info__details a {
+    font-family: 'Vela Sans', sans-serif;
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info__details a[href^="tel"] {
+    font-size: 53px;
+    line-height: 105%;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+}
+
+.contact-info__details a[href^="mailto"] {
+    font-size: 26px;
+    line-height: 125%;
+    text-transform: uppercase;
+}
+
+.contact-info__socials {
+    position: absolute;
+    left: 60px;
+    top: 479px;
+    display: flex;
+    gap: 22px;
+    z-index: 2;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 61px;
+    height: 61px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    box-shadow: 0px 0px 6.5px rgba(180, 174, 167, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon img {
+    height: 32px;
+    width: auto;
+}
+
+/* --- Правый блок --- */
+.contact-form-wrapper {
+    width: 732px;
+    height: 600px;
+    background-color: var(--color-white);
+    border-radius: 35px;
+    padding: 60px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.contact-form__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+    width: 235px;
+}
+
+.form-fields {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+}
+
+.form-group {
+    position: relative;
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.form-group input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Vela Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--color-primary-darkest);
+    text-transform: uppercase;
+}
+
+.form-group input::placeholder {
+    color: var(--color-primary-darkest);
+    opacity: 1;
+    letter-spacing: -0.45px;
+}
+
+.form-label-icon {
+    position: absolute;
+    right: 0;
+    bottom: 6px;
+    height: 20px;
+}
+
+.form-group-checkbox {
+    margin-top: 20px;
+    display: flex;
+    gap: 8px;
+}
+
+.form-group-checkbox input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--color-text-light-gray);
+    position: relative;
+    cursor: pointer;
+}
+
+.form-group-checkbox input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-primary);
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 15%, 80% 0%, 43% 62%);
+    transition: transform 0.1s ease-in-out;
+}
+
+.form-group-checkbox input[type="checkbox"]:checked::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.form-group-checkbox label {
+    font-size: 14px;
+    color: var(--color-text-light-gray);
+    width: 314px;
+}
+
+.contact-form-button {
+    margin-top: auto;
+    align-self: flex-start;
+    transform: rotate(-22deg);
+    margin-left: 15px;
+}
+
+#consent {
+    margin: 4px;
+}
+
+/* ==========================================================================
+   13. ПОДВАЛ (ФУТЕР)
+   ========================================================================== */
+
+.site-footer-main {
+    position: relative;
+    width: 1920px;
+    height: 820px;
+    margin: 75px auto 0 auto;
+    padding: 74px 210px 0 210px;
+    background-color: var(--color-bg-light);
+    overflow: hidden;
+}
+
+/* --- Фоновые элементы --- */
+.site-footer__bg {
+    position: absolute;
+    width: 100%;
+    height: 872px;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 35px 35px 0px 0px;
+    z-index: 1;
+}
+
+.site-footer__bg-text {
+    position: absolute;
+    left: clamp(7.500px, 0.781vw, 15.000px);
+    top: 374px;
+    width: 100%;
+    height: 540px;
+    text-align: center;
+    background: var(--gradient-bg-text);
+    color: transparent;
+    z-index: 2;
+    font-size: clamp(400.000px, 41.667vw, 800.000px);
+    line-height: .9;
+    font-weight: 900;
+    display: inline-block;
+    transform: scaleX(1.99);
+    transform-origin: center;
+    white-space: nowrap;
+}
+
+
+/* --- Контейнер и колонки --- */
+.site-footer__container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Позволяем переноситься на новую строку */
+    gap: 134px;
+    /* 20px по вертикали, 100px по горизонтали */
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-column .pre-title {
+    color: var(--color-primary);
+    font-weight: 400;
+}
+
+.footer-column--info .pre-title {
+    color: var(--color-primary-darkest);
+}
+
+.footer-column--info {
+    width: 276px;
+}
+
+.footer-column--info p {
+    font-size: 18px;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+}
+
+/* --- Способы оплаты --- */
+.footer-column--payment {
+    margin-left: auto;
+    /* Прижимаем колонку к правому краю */
+    align-items: flex-start;
+}
+
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 215px;
+    /* 100px + 100px + 15px */
+}
+
+.payment-methods__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 54px;
+    background: var(--color-white);
+    border-radius: 15px;
+}
+
+/* --- Копирайт --- */
+.footer-credits {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 100px;
+}
+
+.footer-credits span {
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--color-primary);
+}
+
+.footer-credits a {
+    display: inline-flex;
+    flex-direction: column;
+    align-self: flex-start;
+    text-decoration: none;
+    color: var(--color-primary-darkest);
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.footer-credits a::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.footer-credits a:hover::after {
+    width: 50%;
 }
