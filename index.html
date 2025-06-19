@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VEGA - Бренд из Космоса</title>
-    <link rel="stylesheet" href="css/style-fluid.css">
+    <link rel="stylesheet" href="css/style-fluid-vw.css">
 </head>
 
 <body>
@@ -14,7 +14,11 @@
         <nav class="header-container">
             <!-- Левая часть навигации -->
             <div class="header-nav__group">
-                <a href="#" class="btn btn--outline nav-button--svg">
+                <a href="#" class="btn btn--icon btn--burger">
+                    <img src="img/icons/menu-lines.svg" alt="Открыть меню">
+                </a>
+
+                <a href="#" class="btn nav-button--svg">
                     <img src="img/icons/catalog-button-shape.svg" alt="" class="nav-button__shape">
                     <div class="nav-button__content">
                         <img src="img/icons/grid.svg" alt="Категории" class="nav-button__icon">
@@ -41,7 +45,7 @@
             <!-- Правая часть навигации -->
             <div class="header-nav__group">
                 <a href="#" class="btn btn--outline">
-                    Зв’язатись <img src="img/icons/arrow-down.svg" alt="" class="arrow-down">
+                    Зв’язатись
                 </a>
                 <span class="nav-separator">
                     <img src="img/icons/game-icons_polar-star.svg" alt="Разделитель">
@@ -117,7 +121,10 @@
         </p>
 
         <!-- Подпись Vega -->
-        <span class="hero-signature">Vega</span>
+        <span class="title-decoration hero-signature">
+            <span class="title-decoration__text stroke ">Vega</span>
+            <span class="title-decoration__text fill">Vega</span>
+        </span>
 
         <!-- Кнопка "До каталогу" -->
         <a href="#" class="btn btn--primary hero-cta-button">
@@ -204,7 +211,7 @@
         <!-- Фоновые элементы -->
         <div class="categories-bg-blur--left bg-blur"></div>
         <div class="categories-bg-blur--right bg-blur"></div>
-        <div class="categories-bg-text title">vega</div>
+        <div class="categories-bg-text"><img src="img/icons/vega-bg.svg"></div>
         <div class="categories-list-bg"></div>
 
         <!-- Центральная бутылочка лака -->
@@ -295,27 +302,27 @@
             <div class="category-list">
                 <a href="#" class="category-list__item">
                     <span class="category-list__item-title">Гель-лаки</span>
-                    <img src="img/icons/arrow-right.png" alt="Перейти">
+                    <img src="img/icons/arrow-right.svg" alt="Перейти">
                 </a>
                 <a href="#" class="category-list__item">
                     <span class="category-list__item-title">Бази</span>
-                    <img src="img/icons/arrow-right.png" alt="Перейти">
+                    <img src="img/icons/arrow-right.svg" alt="Перейти">
                 </a>
                 <a href="#" class="category-list__item">
                     <span class="category-list__item-title">Топи</span>
-                    <img src="img/icons/arrow-right.png" alt="Перейти">
+                    <img src="img/icons/arrow-right.svg" alt="Перейти">
                 </a>
                 <a href="#" class="category-list__item">
                     <span class="category-list__item-title">Гелі для нарощування</span>
-                    <img src="img/icons/arrow-right.png" alt="Перейти">
+                    <img src="img/icons/arrow-right.svg" alt="Перейти">
                 </a>
                 <a href="#" class="category-list__item">
                     <span class="category-list__item-title">Засоби для догляду</span>
-                    <img src="img/icons/arrow-right.png" alt="Перейти">
+                    <img src="img/icons/arrow-right.svg" alt="Перейти">
                 </a>
                 <a href="#" class="category-list__item">
                     <span class="category-list__item-title">Блистки</span>
-                    <img src="img/icons/arrow-right.png" alt="Перейти">
+                    <img src="img/icons/arrow-right.svg" alt="Перейти">
                 </a>
             </div>
         </div>
@@ -803,22 +810,27 @@
 
                 <div class="form-fields">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" required placeholder="Введіть ім'я*">
-                        <img class="form-label-icon" src="img/icons/arrow-right.png" alt="Перейти">
+                        <input type="text" id="name" name="name" required placeholder="Введіть ім'я *">
+                        <img class="form-label-icon" src="img/icons/arrow-right.svg" alt="Перейти">
                     </div>
                     <div class="form-group">
-                        <input type="tel" id="phone" name="phone" required placeholder="Введіть телефон*">
-                        <img class="form-label-icon" src="img/icons/arrow-right.png" alt="Перейти">
+                        <input type="tel" id="phone" name="phone" required placeholder="Введіть телефон *">
+                        <img class="form-label-icon" src="img/icons/arrow-right.svg" alt="Перейти">
                     </div>
                     <div class="form-group">
                         <input type="email" id="email" name="email" required placeholder="Введіть пошту">
-                        <img class="form-label-icon" src="img/icons/arrow-right.png" alt="Перейти">
+                        <img class="form-label-icon" src="img/icons/arrow-right.svg" alt="Перейти">
                     </div>
                 </div>
 
                 <div class="form-group-checkbox">
-                    <input type="checkbox" id="consent" name="consent" required>
-                    <label for="consent">Я погоджуюся на обробку персональних даних</label>
+                    <input type="checkbox" id="consent" name="consent" required class="form-group-checkbox__input">
+                    <label for="consent" class="form-group-checkbox__label">
+                        <span class="form-group-checkbox__box">
+                            <img src="img/icons/check-mark.svg" alt="галочка" class="form-group-checkbox__icon">
+                        </span>
+                        Я погоджуюся на обробку персональних даних
+                    </label>
                 </div>
 
                 <button type="submit" class="btn btn--primary contact-form-button">
@@ -833,7 +845,7 @@
          ====================================================================== -->
     <footer class="site-footer-main">
         <div class="site-footer__bg" style="background-image: url('img/footer-bg.png');"></div>
-        <div class="site-footer__bg-text title">vega</div>
+        <div class="site-footer__bg-text"><img src="img/icons/vega-bg.svg"></div>
 
         <div class="site-footer__container">
             <!-- Колонка 1: Онлайн-магазин -->

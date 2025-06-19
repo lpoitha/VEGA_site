@@ -20,3 +20,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+const heartButtons = document.querySelectorAll('.product-card__actions .btn:first-child');
+
+heartButtons.forEach(button => {
+    const heartIcon = button.querySelector('img');
+    const originalSrc = heartIcon.src;
+    const hoverSrc = 'img/icons/heart-white.svg'; // Убедитесь, что этот путь правильный
+
+    button.addEventListener('mouseenter', () => {
+        heartIcon.src = hoverSrc;
+    });
+
+    button.addEventListener('mouseleave', () => {
+        heartIcon.src = originalSrc;
+    });
+});
