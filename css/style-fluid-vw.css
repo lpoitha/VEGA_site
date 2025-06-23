@@ -2188,6 +2188,16 @@ body {
     margin-left: 0.781vw;
 }
 
+.btn.btn--icon-round.btn--primary-fill img {
+    width: 1.04vw;
+}
+
+.btn.btn--icon-round img {
+    width: 1.3vw;
+    height: 1.25vw;
+}
+
+
 #consent {
     margin: 0.208vw;
 }
@@ -2309,6 +2319,11 @@ body {
     height: 2.812vw;
     background: var(--color-white);
     border-radius: 0.781vw;
+}
+
+.payment-methods__item img {
+    width: 5.208vw;
+    height: 2.812vw;
 }
 
 /* --- Копирайт --- */

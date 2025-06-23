@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VEGA - Бренд из Космоса</title>
-    <link rel="stylesheet" href="css/style-fluid-vw.css">
+    <link rel="stylesheet" href="css/style-fixed.css">
 </head>
 
 <body>
@@ -201,6 +201,13 @@
             </div>
         </div>
 
+        <div class="bestseller-price-block-mob">
+            <div class="title bestseller-price text-gradient">200 ₴</div>
+            <a href="#" class="btn btn--primary bestseller-cta-button">
+                <span>Придбати <br> зараз</span>
+            </a>
+        </div>
+
     </section>
 
     <!-- ======================================================================
@@ -212,6 +219,7 @@
         <div class="categories-bg-blur--left bg-blur"></div>
         <div class="categories-bg-blur--right bg-blur"></div>
         <div class="categories-bg-text"><img src="img/icons/vega-bg.svg"></div>
+        <div class="categories-bg-text-mobile"><img src="img/icons/vega-mob.svg"></div>
         <div class="categories-list-bg"></div>
 
         <!-- Центральная бутылочка лака -->
@@ -227,74 +235,78 @@
                 <span class="title-decoration__text fill">Категорії</span>
             </span>
         </div>
-
-        <!-- Карточки товаров (позиционируются абсолютно) -->
-        <a href="#" class="category-card category-card--bases">
-            <div class="category-card__image" style="background-image: url('img/bazi-ta-topi.jpg');">
-                <div class="category-card__content-wrapper">
-                    <h3 class="category-card__title">Бази та топи</h3>
+        <div class="category-card-wrapper">
+            <!-- Карточки товаров (позиционируются абсолютно) -->
+            <a href="#" class="category-card category-card--bases">
+                <div class="category-card__image" style="background-image: url('img/bazi-ta-topi.jpg');">
+                    <div class="category-card__content-wrapper">
+                        <h3 class="category-card__title">Бази та топи</h3>
+                    </div>
                 </div>
-            </div>
 
-            <p class="category-card__description">Для ідеального покриття та міцності. Каучукові, камуфлюючі, вирівнюючі
-                —
-                обирай під свій стиль роботи</p>
-        </a>
+                <p class="category-card__description">Для ідеального покриття та міцності. Каучукові, камуфлюючі,
+                    вирівнюючі
+                    —
+                    обирай під свій стиль роботи</p>
+            </a>
 
-        <a href="#" class="category-card category-card--glitter">
-            <div class="category-card__image" style="background-image: url('img/blestki.jpg');">
-                <div class="category-card__content-wrapper">
-                    <h3 class="category-card__title">Блистки</h3>
+            <a href="#" class="category-card category-card--glitter">
+                <div class="category-card__image" style="background-image: url('img/blestki.jpg');">
+                    <div class="category-card__content-wrapper">
+                        <h3 class="category-card__title">Блистки</h3>
+                    </div>
                 </div>
-            </div>
-            <p class="category-card__description">Блискітки VEGA — це сяйво, яке перетворює кожне покриття на витвір
-                мистецтва</p>
-        </a>
+                <p class="category-card__description">Блискітки VEGA — це сяйво, яке перетворює кожне покриття на витвір
+                    мистецтва</p>
+            </a>
 
-        <a href="#" class="category-card category-card--decor">
-            <div class="category-card__image" style="background-image: url('img/blestki.jpg');">
-                <div class="category-card__content-wrapper">
-                    <h3 class="category-card__title">Декор </h3>
+            <a href="#" class="category-card category-card--decor">
+                <div class="category-card__image" style="background-image: url('img/blestki.jpg');">
+                    <div class="category-card__content-wrapper">
+                        <h3 class="category-card__title">Декор </h3>
+                    </div>
                 </div>
-            </div>
-            <p class="category-card__description">Для ідеального покриття та міцності. Каучукові, камуфлюючі, вирівнюючі
-                — обирай під свій стиль роботи </p>
-        </a>
+                <p class="category-card__description">Для ідеального покриття та міцності. Каучукові, камуфлюючі,
+                    вирівнюючі
+                    — обирай під свій стиль роботи </p>
+            </a>
 
-        <a href="#" class="category-card category-card--gels">
-            <div class="category-card__image" style="background-image: url('img/geli-naroshuvanya.jpg');">
-                <img src="img/butylka-lak.png" alt="" class="category-card__bottle-in-image">
-                <div class="category-card__content-wrapper category-card__content-wrapper--large">
-                    <h3 class="category-card__title">Гелі для нарощування</h3>
+            <a href="#" class="category-card category-card--gels">
+                <div class="category-card__image" style="background-image: url('img/geli-naroshuvanya.jpg');">
+                    <img src="img/butylka-lak.png" alt="" class="category-card__bottle-in-image">
+                    <div class="category-card__content-wrapper category-card__content-wrapper--large">
+                        <h3 class="category-card__title">Гелі для нарощування</h3>
+                    </div>
                 </div>
-            </div>
 
-            <p class="category-card__description">Масла, рідини для зняття, антисептики, ремувери — для турботи про
-                нігті й
-                руки</p>
-        </a>
+                <p class="category-card__description">Масла, рідини для зняття, антисептики, ремувери — для турботи про
+                    нігті й
+                    руки</p>
+            </a>
 
-        <a href="#" class="category-card category-card--gellaki">
-            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
-                <div class="category-card__content-wrapper">
-                    <h3 class="category-card__title">Гель-лаки</h3>
+            <a href="#" class="category-card category-card--gellaki">
+                <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
+                    <div class="category-card__content-wrapper">
+                        <h3 class="category-card__title">Гель-лаки</h3>
+                    </div>
                 </div>
-            </div>
 
-            <p class="category-card__description">Великий вибір відтінків і брендів — від класики до трендових кольорів.
-                Насичені пігменти, стійкість до 3 тижнів і легке нанесення</p>
-        </a>
+                <p class="category-card__description">Великий вибір відтінків і брендів — від класики до трендових
+                    кольорів.
+                    Насичені пігменти, стійкість до 3 тижнів і легке нанесення</p>
+            </a>
 
-        <a href="#" class="category-card category-card--care">
-            <div class="category-card__image" style="background-image: url('img/zasobi-dlya-doglyadu.jpg');">
-                <div class="category-card__content-wrapper">
-                    <h3 class="category-card__title">Засоби для догляду</h3>
+            <a href="#" class="category-card category-card--care">
+                <div class="category-card__image" style="background-image: url('img/zasobi-dlya-doglyadu.jpg');">
+                    <div class="category-card__content-wrapper">
+                        <h3 class="category-card__title">Засоби для догляду</h3>
+                    </div>
                 </div>
-            </div>
-
-            <p class="category-card__description">Міцність, легкість у роботі та бездоганний результат з першого шару
-            </p>
-        </a>
+                <p class="category-card__description">Міцність, легкість у роботі та бездоганний результат з першого
+                    шару
+                </p>
+            </a>
+        </div>
 
         <!-- Правый блок со списком категорий -->
         <div class="category-list-wrapper">
@@ -345,7 +357,7 @@
         <!-- Унифицированный заголовок секции -->
         <div class="section-intro new-arrivals-intro">
             <span class="pre-title">Новинки</span>
-            <h2 class="title section-intro__title">Гарячі новинки та приємні</h2>
+            <h2 class="title section-intro__title">Гарячі новинки та </br> приємні</h2>
             <p class="section-intro__description">свіжі кольори, трендові текстури та формули, які закохують з
                 першого
                 нанесення</p>
@@ -356,62 +368,64 @@
         </div>
 
         <!-- Карточки товаров -->
-        <a href="#" class="product-card product-card--large product-card--blush-cloud">
-            <div class="product-card__image" style="background-image: url('img/product-blush-cloud.jpg');"></div>
-            <div class="product-card__info">
-                <div class="product-card__header">
-                    <span class="product-card__category">Гель-лаки</span>
-                    <span class="product-card__volume">15 мл</span>
+        <div class="product-card-wrapper">
+            <a href="#" class="product-card product-card--large product-card--blush-cloud">
+                <div class="product-card__image" style="background-image: url('img/product-blush-cloud.jpg');"></div>
+                <div class="product-card__info">
+                    <div class="product-card__header">
+                        <span class="product-card__category">Гель-лаки</span>
+                        <span class="product-card__volume">15 мл</span>
+                    </div>
+                    <h3 class="product-card__name">Гель-лак “Blush Cloud”</h3>
                 </div>
-                <h3 class="product-card__name">Гель-лак “Blush Cloud”</h3>
-            </div>
-            <div class="product-card__footer">
-                <span class="product-card__price">315 грн</span>
-                <div class="product-card__actions">
-                    <button class="btn btn--icon-round"><img src="img/icons/heart.svg" alt="В избранное"></button>
-                    <button class="btn btn--icon-round btn--primary-fill"><img src="img/icons/bag-white.svg"
-                            alt="В корзину"></button>
+                <div class="product-card__footer">
+                    <span class="product-card__price">315 грн</span>
+                    <div class="product-card__actions">
+                        <button class="btn btn--icon-round"><img src="img/icons/heart.svg" alt="В избранное"></button>
+                        <button class="btn btn--icon-round btn--primary-fill"><img src="img/icons/bag-white.svg"
+                                alt="В корзину"></button>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
-        <a href="#" class="product-card product-card--large product-card--latte-nude-set">
-            <div class="product-card__image" style="background-image: url('img/product-latte-nude-set.jpg');"></div>
-            <div class="product-card__info">
-                <div class="product-card__header">
-                    <span class="product-card__category">Гель-лаки</span>
-                    <span class="product-card__volume">15 мл</span>
+            <a href="#" class="product-card product-card--large product-card--latte-nude-set">
+                <div class="product-card__image" style="background-image: url('img/product-latte-nude-set.jpg');"></div>
+                <div class="product-card__info">
+                    <div class="product-card__header">
+                        <span class="product-card__category">Гель-лаки</span>
+                        <span class="product-card__volume">15 мл</span>
+                    </div>
+                    <h3 class="product-card__name">Камуфлюючий гель “Latte Nude”</h3>
                 </div>
-                <h3 class="product-card__name">Камуфлюючий гель “Latte Nude”</h3>
-            </div>
-            <div class="product-card__footer">
-                <span class="product-card__price"><strong>255</strong> грн</span>
-                <div class="product-card__actions">
-                    <button class="btn btn--icon-round"><img src="img/icons/heart.svg" alt="В избранное"></button>
-                    <button class="btn btn--icon-round btn--primary-fill"><img src="img/icons/bag-white.svg"
-                            alt="В корзину"></button>
+                <div class="product-card__footer">
+                    <span class="product-card__price"><strong>255</strong> грн</span>
+                    <div class="product-card__actions">
+                        <button class="btn btn--icon-round"><img src="img/icons/heart.svg" alt="В избранное"></button>
+                        <button class="btn btn--icon-round btn--primary-fill"><img src="img/icons/bag-white.svg"
+                                alt="В корзину"></button>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
-        <a href="#" class="product-card product-card--small product-card--latte-nude-solo">
-            <div class="product-card__image" style="background-image: url('img/bazi-ta-topi.jpg');"></div>
-            <div class="product-card__info">
-                <div class="product-card__header">
-                    <span class="product-card__category">Блистики</span>
-                    <span class="product-card__volume">15 мл</span>
+            <a href="#" class="product-card product-card--small product-card--latte-nude-solo">
+                <div class="product-card__image" style="background-image: url('img/bazi-ta-topi.jpg');"></div>
+                <div class="product-card__info">
+                    <div class="product-card__header">
+                        <span class="product-card__category">Блистики</span>
+                        <span class="product-card__volume">15 мл</span>
+                    </div>
+                    <h3 class="product-card__name">Камуфлюючий гель “Latte Nude”</h3>
                 </div>
-                <h3 class="product-card__name">Камуфлюючий гель “Latte Nude”</h3>
-            </div>
-            <div class="product-card__footer">
-                <span class="product-card__price">255 грн</span>
-                <div class="product-card__actions">
-                    <button class="btn btn--icon-round"><img src="img/icons/heart.svg" alt="В избранное"></button>
-                    <button class="btn btn--icon-round btn--primary-fill"><img src="img/icons/bag-white.svg"
-                            alt="В корзину"></button>
+                <div class="product-card__footer">
+                    <span class="product-card__price">255 грн</span>
+                    <div class="product-card__actions">
+                        <button class="btn btn--icon-round"><img src="img/icons/heart.svg" alt="В избранное"></button>
+                        <button class="btn btn--icon-round btn--primary-fill"><img src="img/icons/bag-white.svg"
+                                alt="В корзину"></button>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
 
     </section>
 
@@ -439,6 +453,22 @@
         <!-- Сетка товаров -->
         <div class="catalog-grid">
             <!-- Ряд 1 -->
+
+            <a href="#" class="product-card product-card--small product-card--vega-placeholder">
+                <div class="product-card__image" style="background-image: url('img/vega.jpg');"></div>
+                <div class="product-card__info">
+                    <div class="product-card__header"><span class="product-card__category">Гель-лак</span><span
+                            class="product-card__volume">15 мл</span></div>
+                    <h3 class="product-card__name">Гель-лак “VEGA”</h3>
+                </div>
+                <div class="product-card__footer"><span class="product-card__price">255 грн</span>
+                    <div class="product-card__actions">
+                        <button class="btn btn--icon-round"><img src="img/icons/heart.svg" alt="В избранное"></button>
+                        <button class="btn btn--icon-round btn--primary-fill"><img src="img/icons/bag-white.svg"
+                                alt="В корзину"></button>
+                    </div>
+                </div>
+            </a>
             <a href="#" class="product-card product-card--small product-card--milky-way">
                 <div class="product-card__image" style="background-image: url('img/product-Milky Way.jpg');"></div>
                 <div class="product-card__info">
@@ -469,21 +499,7 @@
                     </div>
                 </div>
             </a>
-            <a href="#" class="product-card product-card--small product-card--vega-placeholder">
-                <div class="product-card__image" style="background-image: url('img/vega.jpg');"></div>
-                <div class="product-card__info">
-                    <div class="product-card__header"><span class="product-card__category">Гель-лак</span><span
-                            class="product-card__volume">15 мл</span></div>
-                    <h3 class="product-card__name">Гель-лак “VEGA”</h3>
-                </div>
-                <div class="product-card__footer"><span class="product-card__price">255 грн</span>
-                    <div class="product-card__actions">
-                        <button class="btn btn--icon-round"><img src="img/icons/heart.svg" alt="В избранное"></button>
-                        <button class="btn btn--icon-round btn--primary-fill"><img src="img/icons/bag-white.svg"
-                                alt="В корзину"></button>
-                    </div>
-                </div>
-            </a>
+
 
 
             <a href="#" class="product-card product-card--small product-card--crystal-nude">
@@ -583,10 +599,21 @@
         <div class="about-section__text-block">
             <div class="section-intro about-intro">
                 <span class="pre-title">Про компанію</span>
-                <h2 class="title section-intro__title text-gradient">VEGA — манікюр, що сяє,</h2>
+                <h2 class="title section-intro__title text-gradient">VEGA — манікюр, що сяє</h2>
                 <div class="title-decoration about-title-decoration">
                     <span class="title-decoration__text stroke">Як Всесвіт</span>
                     <span class="title-decoration__text fill">Як Всесвіт</span>
+                </div>
+            </div>
+
+            <!-- ИЗОБРАЖЕНИЕ ПЕРЕМЕЩЕНО СЮДА (для мобильной версии) -->
+            <div class="about-section__image-wrapper about-section__image-wrapper--mobile-only">
+                <div class="about-section__image" style="background-image: url('img/nataliya.jpg');"></div>
+                <div class="about-section__caption">
+                    <div class="about-section__caption-content">
+                        <h3 class="about-section__caption-name">Наталія Бобренко</h3>
+                        <p class="about-section__caption-title">Засновниця інтернет </br> магазину “Vega”</p>
+                    </div>
                 </div>
             </div>
 
@@ -610,8 +637,8 @@
             </a>
         </div>
 
-        <!-- Правый блок с изображением -->
-        <div class="about-section__image-wrapper">
+        <!-- ИЗОБРАЖЕНИЕ ДЛЯ ДЕСКТОПА И ПЛАНШЕТА (остается здесь) -->
+        <div class="about-section__image-wrapper about-section__image-wrapper--desktop-only">
             <div class="about-section__image" style="background-image: url('img/nataliya.jpg');"></div>
             <div class="about-section__caption">
                 <div class="about-section__caption-content">
@@ -843,24 +870,32 @@
     <!-- ======================================================================
          ПОДВАЛ САЙТА (ФУТЕР)
          ====================================================================== -->
+    <!-- ======================================================================
+     ПОДВАЛ САЙТА (ФУТЕР) - ОБНОВЛЕННАЯ СТРУКТУРА
+     ====================================================================== -->
     <footer class="site-footer-main">
         <div class="site-footer__bg" style="background-image: url('img/footer-bg.png');"></div>
-        <div class="site-footer__bg-text"><img src="img/icons/vega-bg.svg"></div>
+
 
         <div class="site-footer__container">
             <!-- Колонка 1: Онлайн-магазин -->
             <div class="footer-column footer-column--info">
                 <h4 class="pre-title">Онлайн-магазин</h4>
                 <p>Матеріали для манікюру, створені під зорями — для тих, хто хоче сяяти щодня, 2025 ©</p>
-                <!-- Блок "Дизайн и разработка" -->
-                <div class="footer-credits">
-                    <span>Дизайн та розробка</span>
-                    <a href="#">kruglov.design</a>
+
+                <!-- Мобильная версия способов оплаты -->
+                <div class="payment-methods payment-methods--mobile">
+                    <div class="payment-methods__item"><img src="img/payment/visa.png" alt="Visa"></div>
+                    <div class="payment-methods__item"><img src="img/payment/mastercard.png" alt="Mastercard"></div>
+                    <div class="payment-methods__item"><img src="img/payment/gpay.png" alt="Google Pay"></div>
+                    <div class="payment-methods__item"><img src="img/payment/applepay.png" alt="Apple Pay"></div>
                 </div>
+
+
             </div>
 
             <!-- Колонка 2: Продукция -->
-            <div class="footer-column">
+            <div class="footer-column footer-column--products">
                 <h4 class="pre-title">Продукція</h4>
                 <ul class="footer-links">
                     <li><a href="#">Гель-лаки</a></li>
@@ -875,7 +910,7 @@
             </div>
 
             <!-- Колонка 3: Компания -->
-            <div class="footer-column">
+            <div class="footer-column footer-column--company">
                 <h4 class="pre-title">Компанія</h4>
                 <ul class="footer-links">
                     <li><a href="#">Про компанію</a></li>
@@ -888,7 +923,7 @@
             </div>
 
             <!-- Колонка 4: Тех. информ. -->
-            <div class="footer-column">
+            <div class="footer-column footer-column--tech">
                 <h4 class="pre-title">Техн. iнформ.</h4>
                 <ul class="footer-links">
                     <li><a href="#">Доставка та оплата</a></li>
@@ -898,18 +933,25 @@
                 </ul>
             </div>
 
-            <!-- Колонка 5: Способы оплаты -->
-            <div class="footer-column footer-column--payment">
+            <!-- Колонка 5: Способы оплаты (для десктопа и планшета) -->
+            <div class="footer-column footer-column--payment payment-methods--desktop">
                 <div class="payment-methods">
-                    <div class="payment-methods__item"><img src="img/payment/Visa.png" alt="Visa"></div>
-                    <div class="payment-methods__item"><img src="img/payment/Mastercard.png" alt="Mastercard"></div>
-                    <div class="payment-methods__item"><img src="img/payment/Gpay.png" alt="Google Pay"></div>
+                    <div class="payment-methods__item"><img src="img/payment/visa.png" alt="Visa"></div>
+                    <div class="payment-methods__item"><img src="img/payment/mastercard.png" alt="Mastercard"></div>
+                    <div class="payment-methods__item"><img src="img/payment/gpay.png" alt="Google Pay"></div>
                     <div class="payment-methods__item"><img src="img/payment/applepay.png" alt="Apple Pay"></div>
                 </div>
             </div>
 
+            <!-- Блок "Дизайн и разработка" (для десктопа и планшета) -->
+            <div class="footer-credits footer-credits--desktop">
+                <span>Дизайн та розробка</span>
+                <a href="#">kruglov.design</a>
+            </div>
+
 
         </div>
+        <div class="site-footer__bg-text"><img src="img/icons/vega-bg.svg" alt=""></div>
     </footer>
     <script src="js/script.js"></script>
 </body>

@@ -21,6 +21,7 @@
     --color-shadow-deep: rgba(53, 16, 95, 0.65);
     --color-text-medium-gray: #737373;
     --color-text-light-gray: #909090;
+    --color-border-white: rgba(255, 255, 255, 0.4);
 
 
     /* Градиенты */
@@ -236,6 +237,51 @@ body {
 .title-decoration__text.fill {
     color: var(--color-bg-light);
     z-index: 2;
+}
+
+.btn.btn--icon-round.btn--primary-fill img {
+    width: 1.04vw;
+}
+
+.btn.btn--icon-round img {
+    width: 1.3vw;
+    height: 1.25vw;
+}
+
+@media (max-width: 960px) {
+    h2.section-intro__title {
+        font-size: 68px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .btn.btn--icon-round.btn--primary-fill img {
+        width: 24px;
+    }
+
+    .btn.btn--icon-round img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .title-decoration .stroke,
+    .title-decoration .fill {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .btn.btn--icon-round.btn--primary-fill img {
+        width: 20px;
+    }
+
+    .btn.btn--icon-round img {
+        width: 22px;
+        height: 23px;
+    }
 }
 
 
@@ -989,6 +1035,434 @@ body {
     padding-bottom: 12.500px;
 }
 
+.bestseller-price-block-mob {
+    display: none;
+}
+
+/* ==========================================================================
+   АДАПТИВНЫЕ СТИЛИ ДЛЯ СЕКЦИИ "БЕСТСЕЛЛЕР"
+   ========================================================================== */
+
+/*
+ * Планшетная версия (до 960px)
+ * --------------------------------------------------------------------------
+ */
+@media (max-width: 960px) {
+    .bestseller-section {
+        width: 100%;
+        height: 600px;
+        margin-top: 0;
+        border-radius: 0 0 45px 45px;
+    }
+
+    /* Адаптация левого текстового блока */
+    .bestseller-intro {
+        left: 17px;
+        top: 95px;
+        width: 309px;
+    }
+
+    .bestseller-intro .section-intro__title {
+        font-size: 68px;
+    }
+
+    .bestseller-intro .title-decoration {
+        left: 116px;
+        top: 138px;
+        font-size: 32px;
+    }
+
+    .bestseller-intro .title-decoration__text {
+        font-size: 32px;
+    }
+
+    .bestseller-intro .section-intro__description {
+        width: 272px;
+        font-size: 16px;
+    }
+
+    /* Адаптация блока с ценой */
+    .bestseller-price-block {
+        margin-top: -10px;
+        height: auto;
+    }
+
+    .bestseller-price {
+        font-size: 68px;
+    }
+
+    .bestseller-cta-button {
+        position: relative;
+        /* Возвращаем в поток */
+        left: auto;
+        top: auto;
+        width: 115px;
+        height: 115px;
+    }
+
+    /* Адаптация центрального элемента */
+    .bestseller-center-piece {
+        width: 424px;
+        height: 424px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .bestseller-orbits .orbit--outer {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bestseller-orbits .orbit--inner {
+        width: 356px;
+        height: 356px;
+    }
+
+    .bestseller-planet-bg {
+        width: 299px;
+        height: 299px;
+    }
+
+    .bestseller-section__bottle {
+        height: 378px;
+    }
+
+    .bestseller-orbits .planet--b1 {
+        width: 9.78px;
+        height: 9.78px;
+        left: 32.07px;
+        top: 175.00px;
+    }
+
+    .bestseller-orbits .planet--b2 {
+        width: 4.35px;
+        height: 4.35px;
+        left: 105.98px;
+        top: 25.00px;
+    }
+
+    .bestseller-orbits .planet--b3 {
+        width: 4.35px;
+        height: 4.35px;
+        left: 344.57px;
+        top: 326.09px;
+    }
+
+    .bestseller-orbits .planet--b4 {
+        width: 8.69px;
+        height: 8.69px;
+        left: 315.21px;
+        top: 24.46px;
+    }
+
+    .bestseller-orbits .planet--b5 {
+        width: 8.69px;
+        height: 8.69px;
+        left: 323.91px;
+        top: 384.24px;
+    }
+
+    .bestseller-orbits .planet--b6 {
+        width: 4.35px;
+        height: 4.35px;
+        left: 384.78px;
+        top: 175.00px;
+    }
+
+    .bestseller-orbits .planet--b7 {
+        width: 4.35px;
+        height: 4.35px;
+        left: 302.17px;
+        top: 60.87px;
+    }
+
+    .bestseller-orbits .planet--b8 {
+        width: 4.35px;
+        height: 4.35px;
+        left: 412.50px;
+        top: 155.43px;
+    }
+
+    .bestseller-orbits .planet--b9 {
+        width: 6.52px;
+        height: 6.52px;
+        left: 48.91px;
+        top: 352.72px;
+    }
+
+    .bestseller-orbits .planet--b10 {
+        width: 4.35px;
+        height: 4.35px;
+        left: 186.96px;
+        top: 386.41px;
+    }
+
+    /* Адаптация правой инфо-карточки */
+    .bestseller-info-card {
+        left: auto;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 358px;
+        height: 408px;
+        gap: 15px;
+        background: rgba(247, 243, 248, 0.2);
+        backdrop-filter: blur(7.5px);
+    }
+
+    .info-card__item.line .info-card__text {
+        width: 221px;
+    }
+
+    .info-card__title {
+        margin-bottom: 20px;
+    }
+
+    .info-card__item {
+        margin-top: 0;
+        padding-top: 15px;
+    }
+
+    .info-card__item.line {
+        padding-bottom: 15px;
+    }
+
+    .info-card__volume {
+        font-size: 64px;
+    }
+
+    .info-card__text {
+        font-size: 16px;
+    }
+}
+
+
+/*
+ * Мобильная версия (до 767px)
+ * --------------------------------------------------------------------------
+ */
+@media (max-width: 767px) {
+    .bestseller-section {
+        height: 942px;
+        border-radius: 35px;
+        margin: -40px 0 0 0;
+        width: auto;
+        /* Перестраиваем в колонку */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 45px 15px;
+        box-sizing: border-box;
+    }
+
+    .bestseller-section__bg {
+        border-radius: 35px;
+    }
+
+    /* Все дочерние элементы теперь в потоке, убираем абсолютное позиционирование */
+    .bestseller-intro,
+    .bestseller-center-piece,
+    .bestseller-info-card {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+    }
+
+    /* Стили для текстового блока */
+    .bestseller-intro {
+        order: 1;
+        /* Порядок в flex-контейнере */
+        text-align: left;
+    }
+
+    .bestseller-intro .section-intro__title {
+        font-size: 51px;
+    }
+
+    .bestseller-intro .title-decoration {
+        left: 83px;
+        top: 104px;
+    }
+
+    .bestseller-intro .title-decoration__text {
+        font-size: 25px;
+    }
+
+    .bestseller-intro .section-intro__description {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Стили для центрального блока с продуктом */
+    .bestseller-center-piece {
+        order: 2;
+        width: 260px;
+        height: 260px;
+        margin-top: 40px;
+        /* Немного наезжает на текст */
+    }
+
+    .bestseller-orbits .orbit--inner {
+        width: 218px;
+        height: 218px;
+    }
+
+    .bestseller-orbits .orbit--outer {
+        width: 260px;
+        height: 260px;
+    }
+
+    .bestseller-planet-bg {
+        width: 183px;
+        height: 183px;
+    }
+
+    .bestseller-section__bottle {
+        height: 232px;
+    }
+
+    /* Стили для инфо-карточки */
+    .bestseller-info-card {
+        order: 3;
+        width: 100%;
+        max-width: 290px;
+        height: 315px;
+        padding: 27px;
+        border: 1px solid rgba(247, 243, 248, 0.6);
+        gap: 5px;
+        left: 0px;
+    }
+
+    .info-card__title {
+        margin-bottom: 0;
+    }
+
+    .info-card__item {
+        gap: 12px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .info-card__item.line {
+        padding: 18px 0;
+    }
+
+    .info-card__volume {
+        font-size: 40px;
+        width: 49px;
+    }
+
+    .info-card__item .info-card__text,
+    .info-card__item.line .info-card__text {
+        width: 173px;
+        height: auto;
+    }
+
+    .info-card__text {
+        color: #F7F3F8;
+        font-family: "Vela Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        /* 19.2px */
+    }
+
+    /* Стили для блока с ценой */
+    .bestseller-price-block {
+        display: none;
+    }
+
+    .bestseller-price-block-mob {
+        display: flex;
+        width: 100%;
+        max-width: 290px;
+        margin-top: 20px;
+        z-index: 4;
+        order: 4;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bestseller-price {
+        font-size: 51px;
+        line-height: 100%;
+    }
+
+    .bestseller-orbits .planet--b1 {
+        width: 6.00px;
+        height: 6.00px;
+        left: 19.67px;
+        top: 107.33px;
+    }
+
+    .bestseller-orbits .planet--b2 {
+        width: 2.67px;
+        height: 2.67px;
+        left: 65.00px;
+        top: 0;
+    }
+
+    .bestseller-orbits .planet--b3 {
+        width: 2.67px;
+        height: 2.67px;
+        left: 211.33px;
+        top: 200.00px;
+    }
+
+    .bestseller-orbits .planet--b4 {
+        width: 5.33px;
+        height: 5.33px;
+        left: 193.33px;
+        top: 1px;
+    }
+
+    .bestseller-orbits .planet--b5 {
+        width: 5.33px;
+        height: 5.33px;
+        left: 198.67px;
+        top: 185.67px;
+    }
+
+    .bestseller-orbits .planet--b6 {
+        width: 2.67px;
+        height: 2.67px;
+        left: 236.00px;
+        top: 107.33px;
+    }
+
+    .bestseller-orbits .planet--b7 {
+        width: 2.67px;
+        height: 2.67px;
+        left: 185.33px;
+        top: -30px;
+    }
+
+    .bestseller-orbits .planet--b8 {
+        width: 2.67px;
+        height: 2.67px;
+        left: 258.00px;
+        top: 95.33px;
+    }
+
+    .bestseller-orbits .planet--b9 {
+        width: 4.00px;
+        height: 4.00px;
+        left: 30.00px;
+        top: 211.33px;
+    }
+
+    .bestseller-orbits .planet--b10 {
+        width: 2.67px;
+        height: 2.67px;
+        left: 114.67px;
+        top: 237.00px;
+    }
+}
+
 /* ==========================================================================
    7. СЕКЦИЯ "КАТЕГОРИИ"
    ========================================================================== */
@@ -1015,9 +1489,9 @@ body {
     height: 485.990px;
     background: var(--gradient-title-main);
     filter: blur(1000px);
-    z-index: 1;
+    z-index: 2;
     border-radius: 50%;
-    opacity: .2;
+    opacity: .45 !important;
 }
 
 .categories-bg-blur--left {
@@ -1110,7 +1584,7 @@ body {
     padding-bottom: 10.000px;
     padding-left: 22.000px;
     background: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(5.5px);
     display: flex;
     align-items: flex-end;
@@ -1270,6 +1744,415 @@ body {
 
 .categories-cta-button span {
     text-align: center;
+}
+
+.categories-bg-text-mobile {
+    display: none;
+}
+
+/* ==========================================================================
+   АДАПТИВНЫЕ СТИЛИ ДЛЯ СЕКЦИИ "КАТЕГОРИИ"
+   ========================================================================== */
+
+/*
+ * Планшетная версия (до 960px)
+ * --------------------------------------------------------------------------
+ */
+@media (max-width: 960px) {
+    .categories-section {
+        width: 100%;
+        height: 1780px;
+        margin: 100px 0;
+    }
+
+    /* Скрываем фоновые пятна и текстовый фон */
+    .categories-bg-blur--left,
+    .categories-bg-blur--right,
+    .categories-bg-text {
+        display: none;
+    }
+
+    /* Адаптация центрального круга и бутылки */
+    .categories-list-bg {
+        width: 740px;
+        height: 740px;
+        left: -235px;
+        top: 638px;
+    }
+
+    .categories-section__bottle {
+        width: 201px;
+        height: auto;
+        top: 142px;
+    }
+
+    /* Адаптация левого интро-блока */
+    .categories-intro {
+        left: 15px;
+        top: 0;
+        width: 276px;
+    }
+
+    .categories-intro .section-intro__title {
+        font-size: 68px;
+        height: auto;
+    }
+
+    .categories-intro .section-intro__description {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .categories-intro .title-decoration {
+        left: 40px;
+        top: 45px;
+    }
+
+    .categories-intro .title-decoration__text {
+        font-size: 32px;
+    }
+
+    /* Адаптация карточек категорий */
+    .category-card {
+        padding: 8px 8px 12px;
+        border-radius: 25px;
+    }
+
+    .category-card__description {
+        font-size: 16px;
+    }
+
+    .category-card__image {
+        border-radius: 20px;
+    }
+
+    .category-card__content-wrapper {
+        border-radius: 0px 0px 20px 20px;
+        padding-left: 15px;
+        height: 62px;
+    }
+
+    .category-card__title {
+        font-size: 45px;
+    }
+
+    /* Новые позиции и размеры для карточек */
+    .category-card--bases {
+        left: 15px;
+        top: 193px;
+        width: 276px;
+        height: 418px;
+    }
+
+    .category-card--gellaki {
+        left: 585px;
+        top: 0;
+        width: 360px;
+        height: 489px;
+    }
+
+    .category-card--gellaki .category-card__image {
+        height: 353px;
+    }
+
+    .category-card--gellaki p.category-card__description {
+        width: 100%;
+        height: auto;
+    }
+
+    .category-card--gels {
+        left: 669px;
+        top: 617px;
+        width: 276px;
+        height: 566px;
+    }
+
+    .category-card--gels .category-card__image {
+        height: 440px;
+    }
+
+    .category-card__bottle-in-image {
+        display: none;
+        /* Скрываем бутылку в гелях */
+    }
+
+    .category-card--glitter {
+        left: 15px;
+        top: 1356px;
+        width: 254px;
+        height: 404px;
+    }
+
+    .category-card--decor {
+        left: 309px;
+        top: 1356px;
+        width: 254px;
+        height: 422px;
+    }
+
+    .category-card--care {
+        left: auto;
+        right: 15px;
+        top: 1366px;
+        width: 170px;
+        height: 371px;
+    }
+
+    .category-card--care .category-card__image {
+        width: 100%;
+        height: 209px;
+    }
+
+    .category-card--care .category-card__content-wrapper {
+        height: 108px;
+    }
+
+    /* Адаптация правого списка категорий */
+    .category-list-wrapper {
+        left: 15px;
+        top: 677px;
+        width: 547px;
+    }
+
+    .category-list__main-title {
+        font-size: 68px;
+    }
+
+    .category-list__item-title {
+        font-size: 53px;
+    }
+
+    /* Адаптация кнопки */
+    .categories-cta-button {
+        left: 590px;
+        top: 1400px;
+    }
+}
+
+
+/*
+ * Мобильная версия (до 767px)
+ * --------------------------------------------------------------------------
+ */
+@media (max-width: 767px) {
+    .section-divider {
+        margin: 40px 15px;
+    }
+
+    .categories-section {
+        height: auto;
+        margin: 75px 0 0 0;
+        padding: 0 15px;
+        display: block;
+    }
+
+    .category-card--care {
+        right: 0;
+    }
+
+    .category-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 9px;
+    }
+
+    /* Скрываем все фоновые и декоративные элементы */
+    .categories-list-bg,
+    .categories-section__bottle,
+    .category-list-wrapper {
+        display: none;
+    }
+
+    /* Интро блок занимает всю ширину */
+    .categories-intro {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .categories-intro .section-intro__title {
+        font-size: 51px;
+    }
+
+    .categories-intro .title-decoration__text {
+        font-size: 25px;
+    }
+
+    /* Убираем абсолютное позиционирование у карточек */
+    .category-card {
+        position: relative;
+        left: 0 !important;
+        top: 0 !important;
+        width: 140px;
+        height: 205px;
+        padding: 0;
+        border-radius: 18px;
+        border: 0;
+    }
+
+    .category-card--care .category-card__content-wrapper {
+        height: auto;
+    }
+
+    .category-card__description {
+        display: none;
+        /* Скрываем описание на мобильной версии */
+    }
+
+    .category-card__image {
+        border-radius: 18px;
+        border: 1px solid var(--color-primary);
+    }
+
+    .category-card__content-wrapper {
+        height: auto;
+        padding: 10px;
+        border-radius: 0 0 12px 12px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .category-card__title {
+        font-size: 38px;
+        line-height: 0.8;
+    }
+
+    /* Специальные стили для карточек, чтобы заголовки помещались */
+    .category-card--gels .category-card__title {
+        line-height: 0.8;
+        font-size: 34px;
+        /* Чуть меньше шрифт */
+    }
+
+    .category-card--care .category-card__title {
+        line-height: 0.8;
+        font-size: 34px;
+        /* Чуть меньше шрифт */
+    }
+
+    .categories-cta-button {
+        position: relative;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%) rotate(-22deg);
+        margin-top: 40px;
+        /* Отступ сверху от сетки */
+        width: 115px;
+        height: 115px;
+    }
+
+
+
+    /* Скрываем ненужные элементы */
+    .categories-list-bg,
+    .categories-section__bottle {
+        /* Скрываем все карточки */
+        display: none;
+    }
+
+    /* Фоновый текст VEGA */
+    .categories-bg-text-mobile {
+        position: absolute;
+        left: 15px;
+        bottom: 0px;
+        width: 288px;
+        height: 237px;
+        flex-shrink: 0;
+        z-index: 15;
+        display: block;
+    }
+
+    .categories-bg-text img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Интро блок */
+    .categories-intro {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .categories-intro .section-intro__title {
+        font-size: 51px;
+    }
+
+    .categories-intro .title-decoration__text {
+        font-size: 25px;
+    }
+
+    .categories-intro .title-decoration {
+        left: 48px;
+        top: 48px;
+    }
+
+    /* Показываем и стилизуем блок со списком */
+    .category-list-wrapper {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: -203px;
+        top: 0;
+        width: 696px;
+        height: 696px;
+        background-color: var(--color-primary);
+        margin-top: -40px;
+        border-radius: 100%;
+        gap: 20px;
+        padding: 90px 203px;
+    }
+
+    .category-list__main-title {
+        font-size: 51px;
+        line-height: 1;
+        text-align: left;
+        width: 100%;
+    }
+
+    .category-list {
+        gap: 15px;
+    }
+
+    .category-list__item {
+        padding-top: 20px;
+        border-color: var(--color-border-white);
+        height: auto;
+        align-items: center;
+    }
+
+    .category-list:last-child {
+        border-bottom: 1px solid var(--color-border-white);
+        padding-bottom: 15px;
+    }
+
+    .category-list__item-title {
+        font-size: 38px;
+        line-height: 1;
+    }
+
+    .category-list__item img {
+        filter: brightness(0) invert(1);
+        /* Делаем стрелку белой */
+    }
+
+    /* Кнопка */
+    .categories-cta-button {
+        position: relative;
+        left: 70px;
+        top: auto;
+        bottom: 65px;
+        transform: rotate(-22deg);
+        margin: 0 0 20px 0;
+        width: 142px;
+        height: 142px;
+    }
 }
 
 /* ==========================================================================
@@ -1451,6 +2334,210 @@ body {
 }
 
 /* ==========================================================================
+   АДАПТИВНЫЕ СТИЛИ ДЛЯ СЕКЦИИ "НОВИНКИ"
+   ========================================================================== */
+
+/*
+ * Планшетная версия (до 960px)
+ * --------------------------------------------------------------------------
+ */
+@media (max-width: 960px) {
+    .new-arrivals-section {
+        width: 100%;
+        height: auto;
+        padding: 0px 15px;
+        position: relative;
+    }
+
+    .new-arrivals-intro {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 344px;
+        /* Ширина по макету планшета */
+        height: auto;
+    }
+
+    .new-arrivals-intro .section-intro__title {
+        font-size: 68px;
+        width: 100%;
+        height: auto;
+    }
+
+    .new-arrivals-intro .title-decoration {
+        left: 85px;
+        /* 100px - 15px */
+        top: 116px;
+        /* 3429 - 3313 */
+    }
+
+    .new-arrivals-intro .section-intro__description {
+        width: 353px;
+    }
+
+    .new-arrivals-bg-blur {
+        left: -133px;
+        top: 294px;
+        /* 3607 - 3313 */
+        width: 368px;
+        height: 368px;
+    }
+
+    .product-card-wrapper {
+        display: block;
+        /* Убираем грид, используем абсолютное позиционирование */
+        position: relative;
+        width: 100%;
+        height: 849px;
+        margin-top: -248px;
+    }
+
+    .product-card {
+        position: absolute;
+        /* Возвращаем абсолютное позиционирование */
+    }
+
+    .product-card--large {
+        width: 360px;
+        height: 527px;
+    }
+
+    .product-card--blush-cloud {
+        left: 0;
+        top: 274px;
+        /* 3587 - 3313 */
+    }
+
+    .product-card--latte-nude-set {
+        left: 571px;
+        /* 586 - 15 */
+        top: 0;
+        width: 360px;
+        height: 558px;
+        /* Уникальная высота для этой карточки */
+    }
+
+    .product-card--latte-nude-solo {
+        display: flex;
+        /* Показываем карточку */
+        position: absolute;
+        width: 547px;
+        height: 214px;
+        flex-direction: row;
+        /* Горизонтальное расположение */
+        left: 380px;
+        /* 395-15 */
+        top: 587px;
+        /* 3900-3313 */
+    }
+
+    /* Стили для горизонтальной карточки */
+    .product-card--latte-nude-solo .product-card__image {
+        width: 233px;
+        height: 100%;
+        border-radius: 30px;
+    }
+
+    .product-card--latte-nude-solo .product-card__info {
+        padding: 15px 13px;
+        width: 276px;
+        gap: 20px;
+    }
+
+    .product-card--latte-nude-solo .product-card__footer {
+        padding: 0;
+    }
+}
+
+
+/*
+ * Мобильная версия (до 767px)
+ * --------------------------------------------------------------------------
+ */
+@media (max-width: 767px) {
+
+
+
+    .new-arrivals-section {
+        padding: 30px 15px;
+        gap: 15px;
+        height: 1130px;
+    }
+
+    .new-arrivals-intro {
+        height: 201.000px;
+    }
+
+    .new-arrivals-intro .section-intro__title {
+        font-size: 51px;
+    }
+
+    .new-arrivals-intro .title-decoration {
+        top: 30px;
+        top: 112px;
+        left: 66px;
+    }
+
+    .new-arrivals-intro .title-decoration__text {
+        font-size: 25px;
+    }
+
+    .new-arrivals-intro .section-intro__description {
+        font-size: 16px;
+    }
+
+    .product-card-wrapper {
+        grid-template-columns: 1fr;
+        display: grid;
+        gap: 20px;
+        width: 100%;
+        margin-top: 0px;
+    }
+
+
+    .product-card--latte-nude-set {
+        grid-column: auto;
+        grid-row: auto;
+        /* Сбрасываем rowspan */
+    }
+
+    .product-card {
+        border-radius: 25px;
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        height: 438px;
+    }
+
+    .product-card--latte-nude-solo {
+        display: none;
+    }
+
+    .product-card__image {
+        height: 270px;
+        border-radius: 25px;
+    }
+
+    .product-card__info {
+        gap: 14px;
+    }
+
+    .product-card__name {
+        font-size: 22px;
+    }
+
+    .product-card__price {
+        font-size: 25px;
+    }
+
+    .btn--icon-round {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+/* ==========================================================================
    10. СЕКЦИЯ "КАТАЛОГ"
    ========================================================================== */
 
@@ -1480,7 +2567,7 @@ body {
     height: 625.997px;
     background: #A578C7;
     filter: blur(350px);
-    opacity: 0.2;
+    opacity: 0.5;
 }
 
 .catalog-intro {
@@ -1558,20 +2645,305 @@ body {
     z-index: 20;
 }
 
+/*
+ * Адаптация секции "Каталог" для планшетов
+ * --------------------------------------------------------------------------
+ */
+
+@media (max-width: 960px) {
+    .catalog-section {
+        width: 100%;
+        height: 2100px;
+        padding: 0 15px;
+        /* Боковые отступы для планшета */
+        margin-top: 50px;
+    }
+
+    .catalog-section .section-intro {
+        top: 0;
+        left: 15px;
+    }
+
+    .catalog-section .section-intro__title {
+        font-size: 68px;
+        height: auto;
+    }
+
+    .catalog-section .title-decoration {
+        left: 214px;
+        top: 49px;
+    }
+
+    .catalog-section .title-decoration__text {
+        font-size: 32px;
+    }
+
+    .catalog-section__bg-wave {
+        width: 1954px;
+        height: 1475px;
+        left: -763px;
+        top: 207px;
+        /* 4449 - 4242 */
+        transform: rotate(-22.69deg);
+    }
+
+    .catalog-bg-blur--right {
+        left: 565px;
+        top: 1433px;
+        /* 5675 - 4242 */
+        width: 486px;
+        height: 486px;
+        filter: blur(375px);
+    }
+
+    /* Новые позиции для карточек */
+    .product-card--milky-way {
+        left: 0px;
+        top: 178px;
+        /* 4420 - 4242 */
+    }
+
+    .product-card--peach-glow,
+    .product-card--unicorn-pearl {
+        display: none;
+    }
+
+    .product-card--vega-placeholder {
+        left: 325px;
+        top: 179px;
+        /* 4421 - 4242 */
+    }
+
+    .product-card--crystal-nude {
+        left: 650px;
+        top: 178px;
+        /* Скрыта на планшетной версии */
+    }
+
+    .product-card--latte-nude-catalog {
+        left: 0px;
+        top: 727px;
+        /* 4969 - 4242 */
+    }
+
+    .product-card--blush-cloud-catalog {
+        width: 582px;
+        height: 494px;
+        left: 348px;
+        top: 727px;
+        /* 4969 - 4242 */
+    }
+
+    .product-card--blush-cloud-catalog .product-card__image {
+        height: 296px;
+    }
+
+    .product-card--berry-chic {
+        width: 582px;
+        height: 727px;
+        left: 0px;
+        top: 1275px;
+        /* 5517 - 4242 */
+    }
+
+
+    .catalog-cta-button {
+        left: calc(50% - 142px / 2 + 278px);
+        top: 1639px;
+        /* 5881 - 4242 */
+    }
+}
+
+/*
+ * Адаптация секции "Каталог" для мобильных устройств
+ * --------------------------------------------------------------------------
+ */
+
+@media (max-width: 767px) {
+    .catalog-section {
+        height: 2040px;
+        /* Высота теперь зависит от контента, а не фиксированная */
+        padding: 0 15px;
+        /* Боковые отступы */
+        margin-top: 50px;
+    }
+
+    /* Скрываем ненужные фоновые элементы и кнопку внизу */
+    .catalog-section__bg-wave,
+    .catalog-bg-blur--right,
+    .catalog-cta-button {}
+
+
+    .catalog-cta-button {
+        position: initial;
+        margin: 10px auto;
+    }
+
+    /* Адаптируем заголовок */
+    .catalog-intro {
+        position: relative;
+        /* Убираем абсолютное позиционирование */
+        width: 100%;
+        left: 0;
+        top: 0;
+        margin-bottom: 30px;
+    }
+
+    .catalog-intro .section-intro__title {
+        font-size: 51px;
+    }
+
+    .catalog-intro .section-intro__description {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .catalog-intro .title-decoration {
+        left: 157px;
+        top: 40px;
+    }
+
+    .catalog-intro .title-decoration__text {
+        font-size: 25px;
+    }
+
+    /* Создаем сетку для карточек */
+    .catalog-grid {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Две равные колонки */
+        gap: 20px 15px;
+        /* Отступы между карточками (20px по вертикали, 15px по горизонтали) */
+    }
+
+    /* Сбрасываем абсолютное позиционирование для ВСЕХ карточек */
+    .catalog-grid .product-card {
+        position: static;
+        left: auto;
+        top: auto;
+        width: 100%;
+        /* Карточка занимает всю ширину ячейки грида */
+    }
+
+    /* Устанавливаем размеры для маленьких и больших карточек */
+    .product-card--small {
+        height: 301px;
+    }
+
+    .product-card--small .product-card__image {
+        height: 138px;
+    }
+
+    .product-card--small .product-card__info {
+        padding: 20px 8px;
+        gap: 10px;
+    }
+
+    .product-card--small .product-card__name {
+        font-size: 18px;
+    }
+
+    .product-card--small .product-card__price {
+        font-size: 25px;
+    }
+
+    .product-card--small .btn--icon-round {
+        width: 26px;
+        height: 26px;
+        display: none;
+    }
+
+    .product-card--vega-placeholder .btn--icon-round {
+        display: block;
+    }
+
+    .product-card--large {
+        height: 438px;
+    }
+
+    .product-card--peach-glow {
+        display: block;
+    }
+
+    .product-card--small .product-card__footer {
+        padding: 0px 15px 15px 15px;
+        margin-top: 0;
+    }
+
+    .product-card--vega-placeholder .product-card__footer {
+        padding: 20.000px 15px 15px 15px;
+    }
+
+    .product-card--large .product-card__image,
+    .product-card--vega-placeholder .product-card__image {
+        height: 270px;
+    }
+
+    .product-card--large .product-card__info,
+    .product-card--vega-placeholder .product-card__image {
+        padding: 15px;
+        gap: 14px;
+    }
+
+    .product-card--large .product-card__name,
+    .product-card--vega-placeholder .product-card__name {
+        font-size: 22px;
+    }
+
+    .product-card--large .product-card__price,
+    .product-card--vega-placeholder .product-card__price {
+        font-size: 25px;
+    }
+
+    .product-card--large .btn--icon-round,
+    .product-card--vega-placeholder .btn--icon-round {
+        width: 38px;
+        height: 38px;
+    }
+
+    /* Управляем расположением конкретных карточек в сетке */
+    .product-card--vega-placeholder {
+        /* Эта карточка остается на своем месте */
+    }
+
+    .product-card--blush-cloud-catalog,
+    .product-card--vega-placeholder,
+    .product-card--berry-chic {
+        grid-column: 1 / -1;
+        height: 438px;
+    }
+
+    /* Скрываем лишние карточки, которых нет на мобильном макете */
+    .product-card--crystal-nude,
+    .product-card--latte-nude-catalog,
+    .product-card--unicorn-pearl {
+        display: none;
+    }
+}
+
+
+
 /* ==========================================================================
-   11. СЕКЦИЯ "ПРО КОМПАНИЮ"
+   11. СЕКЦИЯ "ПРО КОМПАНИЮ" (ОБНОВЛЕННЫЕ СТИЛИ)
    ========================================================================== */
 
 .about-section {
     position: relative;
     width: 1710px;
-    height: 760px;
-    margin: 0;
+    margin: 75px 0 0 0;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 122px;
-    left: 210.000px;
+    left: 210px;
+}
+
+/* Скрываем мобильную картинку на десктопе */
+.about-section__image-wrapper--mobile-only {
+    display: none;
 }
 
 .about-section__text-block {
@@ -1580,12 +2952,10 @@ body {
     gap: 40px;
     width: 486px;
     flex-shrink: 0;
-    /* Чтобы блок не сжимался */
 }
 
 .about-intro {
     position: relative;
-    /* Чтобы декорация позиционировалась относительно него */
     gap: 20px;
 }
 
@@ -1696,6 +3066,117 @@ body {
     color: var(--color-primary-darkest);
 }
 
+/*
+ * Адаптация секции "Про компанію"
+ * --------------------------------------------------------------------------
+ */
+
+@media (max-width: 960px) {
+    .about-section {
+        width: calc(100% - 30px);
+        height: auto;
+        gap: 20px;
+        margin: 75px auto 0 auto;
+        padding: 0;
+        left: 0;
+    }
+
+    .about-section__image-wrapper--mobile-only .about-section__caption {
+        border-radius: 0 0 25px 25px;
+    }
+
+    .about-section__image-wrapper--mobile-only .about-section__image {
+        background-position: left;
+        border-radius: 25px 25px 28px 28px;
+    }
+
+    .about-section__text-block {
+        width: 459px;
+        gap: 25px;
+        padding-left: 15px;
+    }
+
+    .about-intro .section-intro__title {
+        height: auto;
+        font-size: 68px;
+    }
+
+    .section-intro__title {
+
+        font-size: 25px;
+        line-height: 100%;
+        letter-spacing: -1%;
+    }
+
+    .about-title-decoration {
+        left: 166px;
+        top: 76px;
+    }
+
+    .about-title-decoration__text {
+        font-size: 32px;
+    }
+
+    .about-section__image-wrapper {
+        width: 100%;
+        height: 482px;
+    }
+
+    .about-section__caption {
+        height: 132px;
+    }
+
+    .about-section__caption-name {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-section {
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    /* Скрываем десктопную картинку */
+    .about-section__image-wrapper--desktop-only {
+        display: none;
+    }
+
+    /* Показываем мобильную картинку */
+    .about-section__image-wrapper--mobile-only {
+        display: block;
+        width: 100%;
+        height: 380px;
+    }
+
+    .about-section__text-block {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .about-intro .section-intro__title {
+        font-size: 51px;
+    }
+
+    .about-section__main-text p {
+        font-size: 16px;
+    }
+
+    .about-section__caption {
+        height: 100px;
+    }
+
+    .about-section__caption-name {
+        font-size: 38px;
+    }
+
+    .about-section__caption-title {
+        font-size: 16px;
+    }
+}
+
 /* ==========================================================================
    11. СЕКЦИЯ "ЧОМУ САМЕ МИ?"
    ========================================================================== */
@@ -1769,7 +3250,7 @@ body {
     gap: 30px;
     padding: 26px 0 20px 0;
     border-bottom: 1px solid rgba(165, 120, 199, 0.35);
-    width: 721px;
+    width: 888px;
 }
 
 .advantages-list__title {
@@ -1845,6 +3326,117 @@ body {
     border-left: 45px solid var(--color-white);
     margin-left: 10px;
     /* Небольшая коррекция для визуального центрирования */
+}
+
+/*
+ * Адаптация секции "Почему мы?"
+ * --------------------------------------------------------------------------
+ */
+
+@media (max-width: 960px) {
+    .why-us-intro {
+        left: 15px;
+    }
+
+    .advantages-block {
+        left: 480px;
+    }
+
+    .advantages-list__item,
+    .advantages-main-feature {
+        width: 465px;
+    }
+
+    .videoplayer {
+        left: 15px;
+        width: 930px;
+        width: 930;
+        height: 1526;
+
+    }
+}
+
+
+
+/*
+ * Адаптація секції "Чому ми?" для мобільних пристроїв
+ * --------------------------------------------------------------------------
+ */
+@media (max-width: 767px) {
+
+    /* --- Загальний контейнер секції --- */
+    .why-us-section {
+        width: 100%;
+        height: auto;
+        padding: 0px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    /* --- Заголовок секції --- */
+    .why-us-intro {
+        position: static;
+        width: 100%;
+    }
+
+    /* --- Блок з перевагами --- */
+    .advantages-block {
+        /* Скидаємо абсолютне позиціонування */
+        position: static;
+        width: 100%;
+    }
+
+    /* --- Головна перевага "13+" --- */
+    .advantages-main-feature {
+        /* Розташовуємо цифру і текст в колонку */
+        flex-direction: column;
+        align-items: left;
+        align-items: normal !important;
+        height: auto;
+        padding-bottom: 20px;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .advantages-main-feature__number {
+        /* Значно зменшуємо розмір шрифту */
+        font-size: 160px;
+        height: auto;
+        line-height: .7;
+        /* Для щільного прилягання */
+    }
+
+    .advantages-main-feature__text {
+        /* Скидаємо абсолютне позиціонування */
+        position: static;
+        font-size: 16px;
+    }
+
+    /* --- Список переваг --- */
+    .advantages-list__item {
+        /* Розташовуємо заголовок і опис в колонку */
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+        /* Зменшуємо відстань */
+        padding: 20px 0;
+    }
+
+    .advantages-list__title {
+        /* Зменшуємо шрифт і прибираємо фіксовану ширину */
+        font-size: 36px;
+        flex-basis: auto;
+    }
+
+    .advantages-list__description {
+        font-size: 16px;
+    }
+
+    /* --- Відеоплеєр --- */
+    .videoplayer {
+        display: none;
+    }
 }
 
 /* ==========================================================================
@@ -1932,6 +3524,57 @@ body {
     /* Достаточная высота для отображения текста */
     padding-bottom: 24px;
     /* Отступ снизу для открытого ответа */
+}
+
+/*
+ * Адаптация секции FAQ для планшетов
+ * --------------------------------------------------------------------------
+ */
+
+@media (max-width: 960px) {
+    .faq-section {
+        width: 100%;
+        height: auto;
+        padding: 0px 15px;
+        gap: 30px;
+    }
+
+    .faq-intro {
+        width: 424px;
+        flex-shrink: 0;
+        /* Чтобы колонка не сжималась */
+    }
+
+    .faq-intro .section-intro__title {
+        font-size: 68px;
+    }
+
+    .faq-list {
+        width: 100%;
+        /* Занимает оставшееся пространство */
+    }
+
+    .faq-item__question {
+        font-size: 18px;
+        /* Уменьшаем шрифт вопроса */
+        max-width: 90%;
+        /* Ограничиваем ширину, чтобы текст не прилипал к иконке */
+    }
+
+    .faq-item__answer {
+        font-size: 15px;
+        /* Уменьшаем шрифт ответа */
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width:767px) {
+
+    .faq-section,
+    .section-divider-invisible {
+        display: none;
+    }
 }
 
 /* ==========================================================================
@@ -2192,6 +3835,201 @@ body {
     margin: 4px;
 }
 
+/*
+ * Адаптація секції "Контакти"
+ * --------------------------------------------------------------------------
+ */
+
+/* --- Планшетна версія (до 960px) --- */
+@media (max-width: 960px) {
+    .contacts-section {
+        /* Робимо секцію гнучкою, залишаючи 2 колонки */
+        width: 100%;
+        height: auto;
+        padding: 40px 15px;
+        gap: 20px;
+    }
+
+    /* Робимо обидва блоки гнучкими, щоб вони ділили простір */
+    .contact-info,
+    .contact-form-wrapper {
+        flex: 1;
+        /* Кожен блок займає однакову частину простору */
+        min-width: 0;
+        /* Важлива властивість, щоб flex-елементи могли стискатися */
+        width: 50%;
+        height: auto;
+    }
+
+    .contact-info {
+        padding: 40px;
+        /* Важливо: залишаємо position: relative для фону */
+        display: flex;
+        /* Переходимо на flex для внутрішнього компонування */
+        flex-direction: column;
+        gap: 30px;
+        /* Відстань між логічними блоками всередині */
+    }
+
+    /* ГОЛОВНА ЗМІНА ДЛЯ ФОНУ: робимо його гнучким */
+    .contact-info__bg {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        /* 'cover' заповнить весь блок, зберігаючи пропорції (може обрізати краї) */
+        background-size: cover;
+        background-position: center;
+        /* Центруємо зображення */
+        opacity: 0.5;
+        /* Трохи зменшимо яскравість для кращої читабельності тексту */
+    }
+
+    /* Скидаємо абсолютне позиціонування для всіх дочірніх елементів */
+    .contact-info__intro,
+    .contact-info__schedule,
+    .contact-info__details,
+    .contact-info__socials {
+        position: static;
+        /* Повертаємо в потік документа */
+        z-index: 2;
+        /* Щоб контент був над фоном */
+    }
+
+    /* Створюємо контейнер для заголовку і розкладу за допомогою Grid */
+    .contact-info {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        /* Перша колонка гнучка, друга - по контенту */
+        grid-template-areas:
+            "intro    schedule"
+            "details  details"
+            "socials  socials";
+        align-items: start;
+        column-gap: 15px;
+        row-gap: 30px;
+    }
+
+    /* Розміщуємо елементи по їх областях в сітці */
+    .contact-info__intro {
+        grid-area: intro;
+    }
+
+    .contact-info__schedule {
+        grid-area: schedule;
+        margin-top: 35px;
+    }
+
+    .contact-info__details {
+        grid-area: details;
+    }
+
+    .contact-info__socials {
+        grid-area: socials;
+    }
+
+
+    .contact-info__intro .section-intro__title {
+        width: auto;
+        /* Дозволяємо заголовку бути гнучким */
+        font-size: 42px;
+        /* Трохи зменшуємо шрифт */
+    }
+
+    .contact-info__details a[href^="tel"] {
+        font-size: 38px;
+    }
+
+    .contact-info__details a[href^="mailto"] {
+        font-size: 20px;
+    }
+
+    .contact-form-wrapper {
+        padding: 40px;
+    }
+}
+
+
+/* --- Мобільна версія (до 767px) --- */
+@media (max-width: 767px) {
+    .contacts-section {
+        /* Складаємо блоки в одну колонку */
+        flex-direction: column;
+        gap: 15px;
+        padding: 0;
+    }
+
+    /* На мобільних блоки займають всю ширину */
+    .contact-info,
+    .contact-form-wrapper {
+        width: 100%;
+    }
+
+    .contact-info {
+        padding: 30px 20px;
+        /* Grid-розмітка для заголовку/розкладу працює тут ідеально */
+        row-gap: 25px;
+        /* Зменшуємо вертикальні відступи */
+    }
+
+    /* Зменшуємо шрифти для мобільної версії */
+    .contact-info__intro .section-intro__title {
+        font-size: 36px;
+    }
+
+    .contact-info__schedule {
+        font-size: 14px;
+        text-align: right;
+        margin-top: 35px;
+
+    }
+
+    .contact-info__details {
+        gap: 10px;
+    }
+
+    .contact-info__details a[href^="tel"] {
+        font-size: 28px;
+    }
+
+    .contact-info__details a[href^="mailto"] {
+        font-size: 18px;
+    }
+
+    .contact-info__socials {
+        justify-content: center;
+        /* Центруємо іконки */
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .social-icon img {
+        height: 26px;
+    }
+
+    /* --- Форма на мобільних --- */
+    .contact-form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .contact-form__title {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .contact-form-button {
+        /* Прибираємо поворот і центруємо кнопку для зручності */
+        transform: rotate(0);
+        margin: 40px auto 0 auto;
+        align-self: center;
+    }
+}
+
+
 /* ==========================================================================
    13. ПОДВАЛ (ФУТЕР)
    ========================================================================== */
@@ -2210,7 +4048,7 @@ body {
 .site-footer__bg {
     position: absolute;
     width: 100%;
-    height: 872px;
+    height: 100%;
     left: 0;
     top: 0;
     background-size: cover;
@@ -2220,24 +4058,27 @@ body {
 }
 
 .site-footer__bg-text {
-    position: absolute;
-    left: 210px;
-    top: 374px;
+    position: relative;
     width: 100%;
-    height: 540px;
+    height: auto;
+    z-index: 2;
+    margin-top: 40px;
 }
 
+.site-footer__bg-text img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
 /* --- Контейнер и колонки --- */
 .site-footer__container {
     position: relative;
     z-index: 10;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    /* Позволяем переноситься на новую строку */
-    gap: 134px;
-    /* 20px по вертикали, 100px по горизонтали */
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 100px;
 }
 
 .footer-column {
@@ -2251,18 +4092,19 @@ body {
     font-weight: 400;
 }
 
-.footer-column--info .pre-title {
-    color: var(--color-primary-darkest);
+.footer-column--info {
+
+    color: var(--color-white);
 }
 
-.footer-column--info {
-    width: 276px;
+.footer-column--info .pre-title {
+    color: var(--color-primary);
 }
 
 .footer-column--info p {
     font-size: 18px;
     line-height: 130%;
-    color: var(--color-primary-darkest);
+    width: 276px;
 }
 
 .footer-links {
@@ -2278,7 +4120,7 @@ body {
     text-decoration: none;
     font-size: 16px;
     line-height: 130%;
-    color: var(--color-primary-darkest);
+    color: var(--color-white);
     transition: color 0.3s;
 }
 
@@ -2288,9 +4130,13 @@ body {
 
 /* --- Способы оплаты --- */
 .footer-column--payment {
-    margin-left: auto;
-    /* Прижимаем колонку к правому краю */
+    margin-left: 0;
     align-items: flex-start;
+}
+
+.payment-methods--mobile {
+    display: none;
+    /* Скрываем по умолчанию */
 }
 
 .payment-methods {
@@ -2298,17 +4144,21 @@ body {
     flex-wrap: wrap;
     gap: 15px;
     width: 215px;
-    /* 100px + 100px + 15px */
 }
 
 .payment-methods__item {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100px;
     height: 54px;
-    background: var(--color-white);
-    border-radius: 15px;
+}
+
+.payment-methods__item img {
+    height: 100%;
+    width: auto;
+}
+
+.payment-methods--mobile {
+    display: none;
 }
 
 /* --- Копирайт --- */
@@ -2316,7 +4166,16 @@ body {
     display: flex;
     flex-direction: column;
     gap: 7px;
-    margin-top: 100px;
+}
+
+.footer-credits--desktop {
+    position: absolute;
+    top: 225px;
+}
+
+.footer-credits--mobile {
+    display: none;
+    /* Скрываем по умолчанию */
 }
 
 .footer-credits span {
@@ -2330,7 +4189,7 @@ body {
     flex-direction: column;
     align-self: flex-start;
     text-decoration: none;
-    color: var(--color-primary-darkest);
+    color: var(--color-white);
     font-size: 16px;
     line-height: 130%;
 }
@@ -2347,6 +4206,142 @@ body {
 .footer-credits a:hover::after {
     width: 50%;
 }
+
+
+/* ==========================================================================
+   АДАПТАЦИЯ ФУТЕРА
+   ========================================================================== */
+
+@media (max-width: 960px) {
+    .site-footer-main {
+        width: 100%;
+        height: 650px;
+        padding: 48px 15px;
+        margin-top: 48px;
+    }
+
+    .payment-methods--mobile {
+        display: flex;
+    }
+
+    .payment-methods__item img {
+        width: 55px;
+        height: 28px;
+    }
+
+    .payment-methods {
+        flex-wrap: initial;
+    }
+
+    .site-footer__container {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        /* 3 колонки с разной шириной */
+        gap: 50px 30px;
+    }
+
+    .footer-column--info {
+        grid-column: 1 / 2;
+    }
+
+    .footer-column--products {
+        grid-column: 2 / 3;
+    }
+
+    .footer-column--company {
+        grid-column: 3 / 4;
+    }
+
+    .footer-column--tech {
+        grid-column: 4 / 4;
+    }
+
+    .payment-methods--desktop {
+        display: none;
+    }
+
+    .footer-credits--desktop {
+        grid-column: 1 / 4;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-footer-main {
+        width: 100%;
+        height: auto;
+        padding: 45px 15px;
+        margin: 0;
+    }
+
+    .site-footer__bg-text {
+        display: none;
+    }
+
+    .site-footer__container {
+        grid-template-columns: 1fr 1fr;
+        /* 2 колонки */
+        gap: 40px 0px;
+    }
+
+    /* Явное указание порядка с помощью grid-area для мобильных */
+    .footer-column--info {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    /* Строка 1, колонки 1-2 */
+    .footer-column--products {
+        grid-area: 2 / 1 / 3 / 3;
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: 20px;
+        margin-bottom: -20px;
+        margin-top: -15px;
+    }
+
+    /* Строка 2, колонки 1-2 */
+    .footer-column--company {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+
+    /* Строка 3, колонка 1 */
+    .footer-column--tech {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+
+    /* Строка 3, колонка 2 */
+
+    /* Разбиваем список "Продукция" на две колонки */
+    .footer-column--products .footer-links {
+        columns: 2;
+        column-gap: 15px;
+    }
+
+    /* Скрываем десктопные элементы и показываем мобильные */
+    .payment-methods--desktop {
+        display: none;
+    }
+
+    .footer-credits--desktop {
+        display: inline-flex;
+        position: sticky;
+        border-top: 1px solid var(--color-border);
+        padding-top: 20px;
+        margin-top: -20px;
+    }
+
+    .payment-methods--mobile {
+        display: flex;
+    }
+
+    .footer-credits--mobile {
+        display: inline;
+        position: static;
+    }
+
+    .footer-column--info {
+        border-bottom: 1px solid var(--color-border);
+    }
+}
+
 
 /* ==========================================================================
    АДАПТИВНЫЕ СТИЛИ ДЛЯ ШАПКИ
@@ -2523,10 +4518,6 @@ body {
         transform: translateX(-50%);
     }
 
-    /* Скрываем мелкие планеты для упрощения вида */
-    .planet {
-        display: none;
-    }
 
     /* Адаптируем заголовки */
     .hero-title-block {
@@ -2542,7 +4533,6 @@ body {
 
     .hero-title-block__main {
         font-size: 266px;
-        line-height: 0.8;
     }
 
     .hero-title-cosmos {
@@ -2555,7 +4545,6 @@ body {
     .hero-title-cosmos__fill,
     .hero-title-cosmos__stroke {
         font-size: 260px;
-        line-height: 0.8;
     }
 
     .hero-title-cosmos__stroke {
@@ -2614,6 +4603,104 @@ body {
     .btn--primary span {
         font-size: 15px;
     }
+
+    .planet--1 {
+        width: 15.057px;
+        height: 15.057px;
+        left: 47.359px;
+        top: 263.946px;
+        background: var(--gradient-planet-small);
+    }
+
+    .planet--2 {
+        width: 9.199px;
+        height: 9.199px;
+        left: 155.732px;
+        top: 98.811px;
+        background: var(--color-primary);
+    }
+
+    .planet--3 {
+        width: 9.199px;
+        height: 9.199px;
+        left: 516.279px;
+        top: 563.1px;
+        background: var(--color-primary);
+    }
+
+    .planet--4 {
+        width: 7.529px;
+        height: 7.529px;
+        left: 455.201px;
+        top: 28.416px;
+        background: var(--color-planet-gray);
+    }
+
+    .planet--5 {
+        width: 6.101px;
+        height: 6.101px;
+        left: 26.795px;
+        top: 184.571px;
+        background: var(--gradient-planet-small);
+    }
+
+    .planet--6 {
+        width: 6.693px;
+        height: 6.693px;
+        left: 145.064px;
+        top: 46.932px;
+        background: var(--gradient-planet-small);
+    }
+
+    .planet--7 {
+        width: 6.693px;
+        height: 6.693px;
+        left: 133.522px;
+        top: 513.6px;
+        background: var(--gradient-planet-small);
+    }
+
+    .planet--8 {
+        width: 13.385px;
+        height: 13.385px;
+        left: 473.053px;
+        top: 37.225px;
+        background: var(--gradient-planet-small);
+    }
+
+    .planet--9 {
+        width: 13.385px;
+        height: 13.385px;
+        left: 437.210px;
+        top: 550.0px;
+        background: var(--gradient-planet-small);
+    }
+
+    .planet--10 {
+        width: 5.857px;
+        height: 5.857px;
+        left: 580.197px;
+        top: 264.364px;
+        background: var(--gradient-planet-small);
+    }
+
+    .planet--11 {
+        width: 5.018px;
+        height: 5.018px;
+        left: 545.549px;
+        top: 92.028px;
+        background: var(--color-primary);
+    }
+
+    .planet--12 {
+        width: 7.529px;
+        height: 7.529px;
+        left: 597.2px;
+        top: 165.0px;
+        background: var(--color-primary);
+    }
+
+
 }
 
 
@@ -2623,47 +4710,22 @@ body {
  */
 @media (max-width: 767px) {
     .hero-section {
-        height: 942px;
-        /* Фиксированная высота для мобильной версии */
+        height: 860px;
         overflow: hidden;
     }
 
     /* Фон занимает весь экран */
     .hero-background {
-        width: 100%;
+        width: 50%;
+        height: 517px;
     }
 
-    .hero-background__image {
-        background-image: url('../img/fon-cosmos-mobile.jpg');
-        /* Можно использовать отдельное моб. изображение */
-        mix-blend-mode: normal;
-        opacity: 1;
-    }
-
-    .hero-background__dark-overlay {
-        background: rgba(58, 23, 85, 0.4);
-        /* Делаем оверлей для читаемости текста */
-    }
-
-    /* Скрываем ненужные элементы */
-    .orbits,
-    .hero-planet-bg,
-    .hero-description,
-    .hero-signature,
-    .hero-images__balloons,
-    .hero-images__bottle-shadow {
-        display: none;
-    }
-
-    /* Центрируем и перестраиваем заголовки */
     .hero-title-block {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
         width: 100%;
-        left: 0;
-        top: 90px;
+        left: 16px;
+        top: 100px;
     }
 
     .hero-title-block__subtitle {
@@ -2671,37 +4733,66 @@ body {
     }
 
     .hero-title-block__main {
-        font-size: 140px;
+        font-size: 90px;
     }
 
     .hero-title-cosmos {
-        display: flex;
-        justify-content: center;
         width: 100%;
-        left: 0;
-        top: 270px;
+        left: 154px;
+        top: 156px;
         /* Позиционируем под "Бренд з" */
     }
 
     .hero-title-cosmos__fill,
     .hero-title-cosmos__stroke {
-        font-size: 140px;
-        position: relative;
-        /* Убираем абсолютное позиционирование для flex */
+        font-size: 90px;
     }
 
     .hero-title-cosmos__stroke {
-        display: none;
-        /* Скрываем обводку для упрощения */
+        top: 3px;
+        left: 2px;
+    }
+
+    .title-decoration.hero-signature {
+        left: 262px;
+        top: 155px;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -1px;
+    }
+
+    .title-decoration.hero-signature .title-decoration__text {
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        color: var(--color-primary-darkest);
+        left: 29px;
+        top: 568px;
+        width: 262px;
+        text-align: center;
+        font-size: 18px;
+        /* 21.6px */
+    }
+
+    .hero-images__balloons {
+        width: 312px;
+        left: 4px;
+        top: 175px;
     }
 
     /* Центральная бутылочка */
     .hero-images__bottle {
         width: 100px;
         height: auto;
-        left: 50%;
-        top: 410px;
-        transform: translateX(-50%) rotate(0deg);
+        left: 101px;
+        top: 302px;
         /* Выравниваем по центру */
     }
 
@@ -2709,9 +4800,111 @@ body {
     .hero-cta-button {
         width: 115px;
         height: 115px;
-        left: 50%;
-        top: auto;
-        bottom: 70px;
-        transform: translateX(-50%) rotate(-22deg);
+        left: 103px;
+        top: 655px;
+    }
+
+    .orbits {
+        width: 290px;
+        height: 290px;
+        top: 272px;
+    }
+
+    .orbit--inner {
+        width: 244px;
+        height: 244px;
+        left: 23px;
+        top: 23px;
+    }
+
+    .hero-planet-bg {
+        width: 202.431px;
+        height: 202.431px;
+        top: 315px;
+    }
+
+    .planet--1 {
+        width: 6.823px;
+        height: 6.823px;
+        left: 21.5px;
+        top: 119.605px;
+    }
+
+    .planet--2 {
+        width: 4.167px;
+        height: 4.167px;
+        left: 70.584px;
+        top: 44.778px;
+    }
+
+    .planet--3 {
+        width: 4.167px;
+        height: 4.167px;
+        left: 233.918px;
+        top: 255.3px;
+    }
+
+    .planet--4 {
+        width: 3.412px;
+        height: 3.412px;
+        left: 206.289px;
+        top: 12.875px;
+    }
+
+    .planet--5 {
+        width: 2.764px;
+        height: 2.764px;
+        left: 12.149px;
+        top: 83.693px;
+    }
+
+    .planet--6 {
+        width: 3.033px;
+        height: 3.033px;
+        left: 65.719px;
+        top: 21.272px;
+    }
+
+    .planet--7 {
+        width: 8px;
+        height: 8px;
+        left: 60.509px;
+        top: 233.2px;
+    }
+
+    .planet--8 {
+        width: 6.068px;
+        height: 6.068px;
+        left: 214.364px;
+        top: 16.861px;
+    }
+
+    .planet--9 {
+        width: 6.068px;
+        height: 6.068px;
+        left: 198.114px;
+        top: 249px;
+    }
+
+    .planet--10 {
+        width: 2.654px;
+        height: 2.654px;
+        left: 262.911px;
+        top: 119.824px;
+    }
+
+    .planet--11 {
+        width: 2.274px;
+        height: 2.274px;
+        left: 247.112px;
+        top: 41.696px;
+    }
+
+    .planet--12 {
+        width: 3.412px;
+        height: 3.412px;
+        left: 278.847px;
+        top: 92.406px;
+
     }
 }
