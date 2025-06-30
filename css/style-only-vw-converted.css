@@ -5444,12 +5444,6 @@ button {
     padding: 0;
 }
 
-a,
-a:visited {
-    text-decoration: none;
-    color: inherit;
-}
-
 .visually-hidden {
     position: absolute;
     width: 1px;
