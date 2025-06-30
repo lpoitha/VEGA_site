@@ -1,0 +1,5861 @@
+@charset "utf-8";
+
+/* ==========================================================================
+
+   1. НАСТРОЙКИ И ПЕРЕМЕННЫЕ
+
+   ========================================================================== */
+/* ==========================================================================
+
+   2. БАЗОВЫЕ СТИЛИ И ШРИФТЫ
+
+   ========================================================================== */
+@font-face {
+    font-family: "Cramaten";
+    src: url(../fonts/Cramaten.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "TRAP" 100
+}
+
+@font-face {
+    font-family: "Great Vibes";
+    src: url(../fonts/GreatVibes-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Vela Sans";
+    src: url(../fonts/VelaSans-GX.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+/* ==========================================================================
+
+   3. УТИЛИТАРНЫЕ КЛАССЫ
+
+   ========================================================================== */
+/* ==========================================================================
+
+   4. КОМПОНЕНТЫ
+
+   ========================================================================== */
+/* --- Компонент: Заголовок --- */
+/* --- Компонент: Кнопка --- */
+/* --- Компонент: Заголовочный блок секции --- */
+/* --- Компонент: Рукописное украшение заголовка --- */
+/* ==========================================================================
+
+   5. СТИЛИ СЕКЦИЙ
+
+   ========================================================================== */
+/* --- Шапка --- */
+/*.btn--catalog:hover .icone--fillstroke,*/
+/* ==========================================================================
+
+   АДАПТИВНЫЕ СТИЛИ ДЛЯ ШАПКИ
+
+   ========================================================================== */
+/*
+
+ * Планшетная версия (до 960px)
+
+ * --------------------------------------------------------------------------
+
+ */
+/*
+
+ * Планшетная версия (до 960px)
+
+ * --------------------------------------------------------------------------
+
+ */
+/*
+
+ * Мобильная версия (до 767px)
+
+ * --------------------------------------------------------------------------
+
+ */
+/* --- Основная секция (Hero) --- */
+/* ==========================================================================
+
+   АДАПТИВНЫЕ СТИЛИ ДЛЯ HERO-СЕКЦИИ
+
+   ========================================================================== */
+/*
+
+ * Планшетная версия (до 960px)
+
+ * --------------------------------------------------------------------------
+
+ */
+/*
+
+ * Мобильная версия (до 767px)
+
+ * --------------------------------------------------------------------------
+
+ */
+/* ==========================================================================
+
+   6. СЕКЦИЯ "БЕСТСЕЛЛЕР"
+
+   ========================================================================== */
+/* --- Абсолютное позиционирование блоков --- */
+/* ==========================================================================
+
+   АДАПТИВНЫЕ СТИЛИ ДЛЯ СЕКЦИИ "БЕСТСЕЛЛЕР"
+
+   ========================================================================== */
+/*
+
+ * Планшетная версия (до 960px)
+
+ * --------------------------------------------------------------------------
+
+ */
+/*
+
+ * Мобильная версия (до 767px)
+
+ * --------------------------------------------------------------------------
+
+ */
+/* ==========================================================================
+
+   7. СЕКЦИЯ "КАТЕГОРИИ"
+
+   ========================================================================== */
+/* ==========================================================================
+
+   АДАПТИВНЫЕ СТИЛИ ДЛЯ СЕКЦИИ "КАТЕГОРИИ"
+
+   ========================================================================== */
+/*
+
+ * Планшетная версия (до 960px)
+
+ * --------------------------------------------------------------------------
+
+ */
+/*
+
+ * Мобильная версия (до 767px)
+
+ * --------------------------------------------------------------------------
+
+ */
+/* ==========================================================================
+
+   8. СЕКЦИЯ "НОВИНКИ"
+
+   ========================================================================== */
+/* --- Карточка товара --- */
+/* Модификаторы для карточек */
+/* Позиционирование карточек */
+/* Унифицированные кнопки для карточек товаров */
+/* ==========================================================================
+
+   АДАПТИВНЫЕ СТИЛИ ДЛЯ СЕКЦИИ "НОВИНКИ"
+
+   ========================================================================== */
+/*
+
+ * Планшетная версия (до 960px)
+
+ * --------------------------------------------------------------------------
+
+ */
+/*
+
+ * Мобильная версия (до 767px)
+
+ * --------------------------------------------------------------------------
+
+ */
+/* ==========================================================================
+
+   10. СЕКЦИЯ "КАТАЛОГ"
+
+   ========================================================================== */
+/*
+
+ * Адаптация секции "Каталог" для планшетов
+
+ * --------------------------------------------------------------------------
+
+ */
+/*
+
+ * Адаптация секции "Каталог" для мобильных устройств
+
+ * --------------------------------------------------------------------------
+
+ */
+/* ==========================================================================
+
+   11. СЕКЦИЯ "ПРО КОМПАНИЮ" (ОБНОВЛЕННЫЕ СТИЛИ)
+
+   ========================================================================== */
+/* Скрываем мобильную картинку на десктопе */
+/*
+
+ * Адаптация секции "Про компанію"
+
+ * --------------------------------------------------------------------------
+
+ */
+/* ==========================================================================
+
+   11. СЕКЦИЯ "ЧОМУ САМЕ МИ?"
+
+   ========================================================================== */
+/* --- Заголовок секции --- */
+/* --- Блок с преимуществами --- */
+/* --- Видеоплеер --- */
+/*
+
+ * Адаптация секции "Почему мы?"
+
+ * --------------------------------------------------------------------------
+
+ */
+/*
+
+ * Адаптація секції "Чому ми?" для мобільних пристроїв
+
+ * --------------------------------------------------------------------------
+
+ */
+/* ==========================================================================
+
+   12. СЕКЦИЯ "ЧАСТІ ЗАПИТАННЯ"
+
+   ========================================================================== */
+/* --- Заголовок секции --- */
+/* --- Список вопросов --- */
+/*
+
+ * Адаптация секции FAQ для планшетов
+
+ * --------------------------------------------------------------------------
+
+ */
+/* ==========================================================================
+
+   12. СЕКЦИЯ "КОНТАКТЫ"
+
+   ========================================================================== */
+/* --- Левый блок --- */
+/* ... после стилей для .contact-info__socials ... */
+/* --- Правый блок --- */
+/* --- Стили для кастомного чекбокса с SVG-иконкой --- */
+/* 1. Прячем стандартный чекбокс, но оставляем его доступным для клавиатуры */
+/* 2. Стилизуем наш кастомный label, чтобы он был кликабельным */
+/* 3. Рисуем сам квадратик */
+/* 4. Стилизуем иконку-галочку внутри квадратика */
+/*
+
+ * Адаптація секції "Контакти"
+
+ * --------------------------------------------------------------------------
+
+ */
+/* --- Планшетна версія (до 960px) --- */
+/* --- Мобільна версія (до 767px) --- */
+/* ==========================================================================
+
+   13. ПОДВАЛ (ФУТЕР)
+
+   ========================================================================== */
+/* --- Фоновые элементы --- */
+/* --- Контейнер и колонки --- */
+/* --- Способы оплаты --- */
+/* --- Копирайт --- */
+/* ==========================================================================
+
+   АДАПТАЦИЯ ФУТЕРА
+
+   ========================================================================== */
+#consent {
+    margin: 0.2083vw
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.about-intro {
+    position: relative;
+    gap: 1.0417vw
+}
+
+.about-intro .section-intro__title {
+    background: var(--gradient-title-main);
+    width: 22.0833vw;
+    height: 8.5417vw
+}
+
+.about-section {
+    position: relative;
+    width: 89.0625vw;
+    margin: 3.9062vw 0 0 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6.3542vw;
+    left: 10.9375vw
+}
+
+.about-section__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7.6563vw;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0 0 1.8229vw 1.8229vw;
+    display: flex;
+    align-items: center;
+    padding: 0 1.3021vw
+}
+
+.about-section__caption-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7292vw
+}
+
+.about-section__caption-name {
+    font-family: "Cramaten", sans-serif;
+    font-size: 2.7604vw;
+    font-weight: 400;
+    line-height: 50%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--color-primary-darkest)
+}
+
+.about-section__caption-title {
+    font-size: 0.9375vw;
+    line-height: 130%;
+    color: var(--color-primary-darkest)
+}
+
+.about-section__image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.8229vw 0 1.8229vw 2.3438vw
+}
+
+.about-section__image-wrapper {
+    position: relative;
+    width: 57.3438vw;
+    height: 39.5833vw;
+    flex-shrink: 0
+}
+
+.about-section__image-wrapper--mobile-only {
+    display: none
+}
+
+.about-section__link {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.2083vw;
+    text-decoration: none;
+    align-self: flex-start
+}
+
+.about-section__link span {
+    font-weight: 600;
+    font-size: 0.8333vw;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--color-primary-darkest)
+}
+
+.about-section__link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.0521vw;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease
+}
+
+.about-section__link:hover::after {
+    width: 50%
+}
+
+.about-section__main-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0417vw
+}
+
+.about-section__main-text p {
+    font-size: 0.9375vw;
+    line-height: 130%;
+    color: var(--color-primary-darkest)
+}
+
+.about-section__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2.0833vw;
+    width: 25.3125vw;
+    flex-shrink: 0
+}
+
+.about-title-decoration {
+    left: 2.7083vw;
+    top: 9.3229vw;
+    transform: rotate(-20deg);
+    z-index: 5
+}
+
+.advantages-block {
+    position: absolute;
+    left: 42.8125vw;
+    top: 0;
+    width: 46.25vw
+}
+
+.advantages-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column
+}
+
+.advantages-list__description {
+    font-family: "Vela Sans", sans-serif;
+    font-size: 0.9375vw;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+    flex-grow: 1
+}
+
+.advantages-list__item {
+    display: flex;
+    gap: 1.5625vw;
+    padding: 1.3542vw 0 1.0417vw 0;
+    border-bottom: 1px solid rgba(165, 120, 199, 0.35);
+    width: 46.25vw
+}
+
+.advantages-list__title {
+    font-family: "Cramaten", sans-serif;
+    font-weight: 400;
+    font-size: 2.7604vw;
+    line-height: 105%;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    flex-basis: 14.375vw;
+    /* Фиксированная ширина левой колонки */
+    flex-shrink: 0
+}
+
+.advantages-main-feature {
+    position: relative;
+    height: 12.5vw;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(165, 120, 199, 0.35);
+    padding-bottom: 30px
+}
+
+.advantages-main-feature__number {
+    font-size: 15.625vw;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--color-primary);
+    height: 10.9375vw
+}
+
+.advantages-main-feature__text {
+    position: absolute;
+    left: 15.9375vw;
+    bottom: 2.1354vw;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9375vw;
+    line-height: 130%;
+    color: var(--color-primary-darkest)
+}
+
+.arrow-down {
+    width: 0.517vw;
+    height: 0.4688vw
+}
+
+.bestseller-center-piece {
+    position: absolute;
+    z-index: 5;
+    width: 40.625vw;
+    height: 40.625vw;
+    left: 50%;
+    top: 24.1667vw;
+    transform: translate(-50%, -50%)
+}
+
+.bestseller-cta-button {
+    position: absolute;
+    left: 10.4167vw;
+    top: 0;
+    width: 7.3958vw;
+    height: 7.3958vw;
+    transform: rotate(-22deg)
+}
+
+.bestseller-info-card {
+    position: absolute;
+    z-index: 10;
+    left: 69.2188vw;
+    top: 7.8125vw
+}
+
+.bestseller-intro {
+    left: 10.9375vw;
+    top: 7.8125vw;
+    width: 21.406vw
+}
+
+.bestseller-intro .pre-title {
+    color: var(--color-bg-light)
+}
+
+.bestseller-intro .section-intro__description {
+    color: var(--color-bg-light);
+    width: 18.385vw;
+    height: 4.7917vw
+}
+
+.bestseller-intro .title-decoration {
+    left: 9.531vw;
+    top: 5.901vw;
+    transform: rotate(-22deg);
+    line-height: 125%
+}
+
+.bestseller-orbits {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0
+}
+
+.bestseller-orbits .orbit--inner {
+    width: 34.1667vw;
+    height: 34.1667vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.bestseller-orbits .orbit--outer {
+    width: 40.625vw;
+    height: 40.625vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.bestseller-orbits .planet {
+    position: absolute;
+    border-radius: 50%
+}
+
+.bestseller-orbits .planet--b1 {
+    width: 0.9375vw;
+    height: 0.9375vw;
+    left: 3.0729vw;
+    top: 16.7708vw;
+    background: var(--gradient-planet-small)
+}
+
+.bestseller-orbits .planet--b10 {
+    width: 0.4167vw;
+    height: 0.4167vw;
+    left: 17.9167vw;
+    top: 37.031vw;
+    background: var(--color-primary)
+}
+
+.bestseller-orbits .planet--b2 {
+    width: 0.4167vw;
+    height: 0.4167vw;
+    left: 10.156vw;
+    top: 2.3958vw;
+    background: var(--gradient-planet-small)
+}
+
+.bestseller-orbits .planet--b3 {
+    width: 0.4167vw;
+    height: 0.4167vw;
+    left: 33.0208vw;
+    top: 31.25vw;
+    background: var(--gradient-planet-small)
+}
+
+.bestseller-orbits .planet--b4 {
+    width: 0.833vw;
+    height: 0.833vw;
+    left: 30.208vw;
+    top: 2.3438vw;
+    background: var(--gradient-planet-small)
+}
+
+.bestseller-orbits .planet--b5 {
+    width: 0.833vw;
+    height: 0.833vw;
+    left: 31.0417vw;
+    top: 36.8229vw;
+    background: var(--gradient-planet-small)
+}
+
+.bestseller-orbits .planet--b6 {
+    width: 0.4167vw;
+    height: 0.4167vw;
+    left: 36.875vw;
+    top: 16.7708vw;
+    background: var(--gradient-planet-small)
+}
+
+.bestseller-orbits .planet--b7 {
+    width: 0.4167vw;
+    height: 0.4167vw;
+    left: 28.958vw;
+    top: 5.833vw;
+    background: var(--color-primary)
+}
+
+.bestseller-orbits .planet--b8 {
+    width: 0.4167vw;
+    height: 0.4167vw;
+    left: 39.531vw;
+    top: 14.8958vw;
+    background: var(--color-primary)
+}
+
+.bestseller-orbits .planet--b9 {
+    width: 0.625vw;
+    height: 0.625vw;
+    left: 4.6875vw;
+    top: 33.802vw;
+    background: var(--color-primary)
+}
+
+.bestseller-planet-bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 28.6458vw;
+    height: 28.6458vw;
+    background: var(--gradient-bestseller-planet);
+    backdrop-filter: blur(8.5px);
+    border-radius: 50%
+}
+
+.bestseller-price {
+    font-size: 3.75vw;
+    line-height: 90%;
+    background: var(--gradient-price)
+}
+
+.bestseller-price-block {
+    display: flex;
+    align-items: center;
+    gap: 1.5625vw;
+    position: relative;
+    height: 7.3958vw;
+    width: 100%
+}
+
+.bestseller-price-block-mob {
+    display: none
+}
+
+.bestseller-section {
+    height: 46.875vw;
+    background-color: var(--color-bg-light);
+    border-radius: 2.3438vw;
+    margin-top: -40px;
+    position: relative;
+    z-index: 3;
+    overflow: hidden
+}
+
+.bestseller-section__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    z-index: 1
+}
+
+.bestseller-section__bottle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 35.7078vw;
+    width: auto;
+    z-index: 10
+}
+
+.bg-blur {
+    position: absolute;
+    width: 25.312vw;
+    height: 25.312vw;
+    background: var(--gradient-title-main);
+    filter: blur(1000px);
+    z-index: 2;
+    border-radius: 50%;
+    opacity: 0.45 !important
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: "Vela Sans", sans-serif;
+    font-weight: 400;
+    font-size: 0.781vw;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    cursor: pointer
+}
+
+.btn--burger {
+    display: none;
+    /* По умолчанию скрыта на десктопе */
+}
+
+.btn--icon {
+    width: 2.1875vw;
+    height: 2.1875vw;
+    border-radius: 50%;
+    border: 1px solid var(--color-primary);
+    transition: border-color 0.3s ease
+}
+
+.btn--icon img {
+    width: 1.25vw;
+    height: 1.25vw
+}
+
+.btn--icon-round {
+    width: 2.5vw;
+    height: 2.5vw;
+    border: none;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease
+}
+
+.btn--icon-round:hover {
+    border-color: var(--color-accent-pink);
+    background-color: var(--color-accent-pink)
+}
+
+.btn--icon-round:hover .icon-heart {
+    stroke: var(--color-white)
+}
+
+.btn--icon:hover .icone--fillstroke {
+    stroke: none;
+    fill: var(--color-white)
+}
+
+.btn--icon:hover .icone--strokefill {
+    stroke: var(--color-white);
+    fill: none
+}
+
+.btn--outline {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 0.625vw 1.1458vw;
+    gap: 0.5208vw;
+    width: 6.5104vw;
+    height: 2.1875vw;
+    border-radius: 10.4167vw
+}
+
+.btn--outline:hover,
+.btn--icon:hover {
+    background: var(--gradient-btn-hover);
+    color: var(--color-white)
+}
+
+.btn--primary {
+    background: var(--gradient-btn-default);
+    border: 2px solid #FCEEF9;
+    color: var(--color-white);
+    border-radius: 50%;
+    width: 7.3958vw;
+    height: 7.3958vw
+}
+
+.btn--primary span {
+    font-weight: 600;
+    font-size: 0.833vw;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-align: center
+}
+
+.btn--primary-fill {
+    background-color: var(--color-primary);
+    border: 1.5px solid var(--color-primary)
+}
+
+.btn--primary-fill .icone--bag {
+    stroke: var(--color-white)
+}
+
+.btn--primary-fill:hover {
+    background-color: var(--color-accent-pink);
+    border-color: var(--color-accent-pink)
+}
+
+.btn--primary:hover {
+    background: var(--gradient-btn-hover);
+    transform: rotate(-22deg) scale(1.05)
+}
+
+.btn.btn--icon-round img {
+    width: 1.3vw;
+    height: 1.25vw
+}
+
+.btn.btn--icon-round.btn--primary-fill img {
+    width: 1.04vw
+}
+
+.catalog-bg-blur--right {
+    left: 57.5vw;
+    top: 77.135vw;
+    width: 32.604vw;
+    height: 32.604vw;
+    background: #A578C7;
+    filter: blur(350px);
+    opacity: 0.5
+}
+
+.catalog-cta-button {
+    position: absolute;
+    width: 7.3958vw;
+    height: 7.3958vw;
+    left: 79.95vw;
+    top: 89.479vw;
+    transform: rotate(-22deg);
+    z-index: 20
+}
+
+.catalog-grid {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.catalog-intro {
+    width: 22.083vw;
+    left: 10.9375vw;
+    top: 0
+}
+
+.catalog-intro .title-decoration {
+    position: absolute;
+    left: 7.9687vw;
+    top: 6.7708vw;
+    transform: rotate(-20deg);
+    z-index: 2;
+    width: 10.4167vw
+}
+
+.catalog-section {
+    position: relative;
+    width: 100vw;
+    height: 121.354vw;
+    overflow: hidden;
+    z-index: 1
+}
+
+.catalog-section__bg-wave {
+    position: absolute;
+    width: 111.8229vw;
+    height: 156.25vw;
+    left: 0.833vw;
+    top: -34.062vw;
+    background: url(../img/background-wave.png) no-repeat;
+    background-size: contain;
+    z-index: -1
+}
+
+.categories-bg-blur--left {
+    left: -0.3125vw;
+    top: 34.1146vw
+}
+
+.categories-bg-blur--right {
+    left: 84.635vw;
+    top: 71.0417vw;
+    filter: blur(375px)
+}
+
+.categories-bg-text {
+    position: relative;
+    width: 78.125vw;
+    height: 31.7708vw;
+    left: 10.9893vw;
+    top: 12.9688vw;
+    opacity: 0.14
+}
+
+.categories-bg-text-mobile {
+    display: none
+}
+
+.categories-cta-button {
+    position: absolute;
+    width: 7.3958vw;
+    height: 7.3958vw;
+    left: 46.324vw;
+    top: 81.875vw;
+    transform: rotate(-22deg);
+    z-index: 20
+}
+
+.categories-cta-button span {
+    text-align: center
+}
+
+.categories-intro {
+    width: 14.375vw;
+    left: 10.9375vw;
+    top: 0;
+    z-index: 20;
+    gap: 0
+}
+
+.categories-intro .section-intro__description {
+    margin-top: 36px
+}
+
+.categories-intro .section-intro__title {
+    height: 3.6458vw;
+    padding-top: 10px
+}
+
+.categories-intro .title-decoration {
+    left: 3.6458vw;
+    top: 5.104vw;
+    transform: rotate(-20deg);
+    z-index: 1
+}
+
+.categories-list-bg {
+    position: absolute;
+    width: 38.5417vw;
+    height: 38.5417vw;
+    left: 44.427vw;
+    top: 38.229vw;
+    background: #A578C7;
+    border-radius: 50%;
+    z-index: 5
+}
+
+.categories-section {
+    position: relative;
+    width: 100vw;
+    height: 101.406vw;
+    margin: 7.812vw auto clamp(1.5625vw, 3.65vw, 3.6458vw) auto
+}
+
+.categories-section__bottle {
+    position: absolute;
+    width: 15.3646vw;
+    height: 34.375vw;
+    left: calc(50% - 15.3646vw / 2 + 0.026vw);
+    top: 0;
+    z-index: 10
+}
+
+.category-card {
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5208vw 0.5208vw 1.0417vw;
+    gap: 1.0417vw;
+    background: var(--color-white);
+    border: 1px solid var(--color-primary);
+    border-radius: 1.927vw;
+    z-index: 15;
+    text-decoration: none;
+    color: var(--color-primary-darkest)
+}
+
+.category-card--bases {
+    left: 10.9375vw;
+    top: 14.2708vw;
+    width: 14.375vw;
+    height: 22.1875vw
+}
+
+.category-card--care {
+    left: 58.75vw;
+    top: 78.958vw;
+    width: 30.312vw;
+    height: 22.1875vw;
+    align-items: flex-end
+}
+
+.category-card--care .category-card__image {
+    width: 29.0625vw;
+    height: 15.625vw
+}
+
+.category-card--decor {
+    left: 26.354vw;
+    top: 78.9062vw;
+    width: 14.375vw;
+    height: 22.1875vw
+}
+
+.category-card--gellaki {
+    left: 58.75vw;
+    top: 0;
+    width: 30.312vw;
+    height: 36.458vw;
+    align-items: flex-end
+}
+
+.category-card--gellaki .category-card__image {
+    height: 27.76vw
+}
+
+.category-card--gellaki p.category-card__description {
+    width: 13.75vw;
+    height: 5.9896vw
+}
+
+.category-card--gels {
+    left: 26.875vw;
+    top: 41.1458vw;
+    width: 14.375vw;
+    height: 29.479vw
+}
+
+.category-card--gels .category-card__image {
+    height: 22.9167vw
+}
+
+.category-card--glitter {
+    left: 10.9375vw;
+    top: 78.958vw;
+    width: 14.375vw;
+    height: 22.1875vw
+}
+
+.category-card__bottle-in-image {
+    position: absolute;
+    height: 18.6458vw;
+    width: auto;
+    left: 50%;
+    top: 2.031vw;
+    transform: translatex(-50%)
+}
+
+.category-card__content-wrapper {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4.2708vw;
+    padding-bottom: 10px;
+    padding-left: 22px;
+    background: rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(5.5px);
+    display: flex;
+    align-items: flex-end
+}
+
+.category-card__content-wrapper--large {
+    height: 7.187vw
+}
+
+.category-card__description {
+    font-family: "Vela Sans", sans-serif;
+    font-size: 0.9375vw;
+    line-height: 130%;
+    color: var(--color-primary-darkest)
+}
+
+.category-card__image {
+    width: 100%;
+    height: 14.6875vw;
+    border-radius: 1.562vw;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden
+}
+
+.category-card__title {
+    font-family: "Cramaten", sans-serif;
+    font-weight: 400;
+    font-size: 2.76vw;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: var(--color-primary-darkest)
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0417vw;
+    width: 100%
+}
+
+.category-list-wrapper {
+    position: absolute;
+    width: 30.312vw;
+    left: 58.75vw;
+    top: 41.1458vw;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 2.083vw
+}
+
+.category-list:last-child {
+    border-bottom: 1px solid var(--color-border-dark);
+    padding-bottom: 10px
+}
+
+.category-list__item {
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--color-border-dark);
+    padding-top: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
+    height: 3.713vw;
+    flex: none;
+    transition: all 0.3s ease
+}
+
+.category-list__item-title {
+    font-family: "Cramaten", sans-serif;
+    font-size: 2.76vw;
+    line-height: 105%;
+    text-transform: uppercase;
+    color: var(--color-white)
+}
+
+.category-list__item:hover {
+    margin-left: -50px;
+    margin-right: 50px
+}
+
+.category-list__main-title {
+    font-size: 5.208vw;
+    line-height: 80%;
+    color: var(--color-white)
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    height: 100%
+}
+
+.contact-form-button {
+    margin-top: auto;
+    align-self: flex-start;
+    transform: rotate(-22deg);
+    margin-left: 15px
+}
+
+.contact-form-wrapper {
+    width: 38.125vw;
+    height: 31.25vw;
+    background-color: var(--color-white);
+    border-radius: 1.8229vw;
+    padding: 3.125vw
+}
+
+.contact-form__title {
+    font-size: 1.0417vw;
+    font-weight: 600;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+    width: 12.2396vw
+}
+
+.contact-info {
+    position: relative;
+    width: 37.9167vw;
+    height: 31.25vw;
+    background-color: var(--color-primary);
+    border-radius: 1.8229vw;
+    padding: 3.125vw;
+    overflow: hidden;
+    color: var(--color-white)
+}
+
+.contact-info__bg {
+    position: absolute;
+    width: 100%;
+    height: 27.2396vw;
+    left: 0;
+    top: 4.6875vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    mix-blend-mode: luminosity
+}
+
+.contact-info__details {
+    position: absolute;
+    left: 3.125vw;
+    top: 15.8854vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7812vw;
+    z-index: 2
+}
+
+.contact-info__details a {
+    font-family: "Vela Sans", sans-serif;
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 600
+}
+
+.contact-info__details a[href^="mailto"] {
+    font-size: 1.3542vw;
+    line-height: 125%;
+    text-transform: uppercase
+}
+
+.contact-info__details a[href^="tel"] {
+    font-size: 2.7604vw;
+    line-height: 105%;
+    letter-spacing: -0.05em;
+    text-transform: uppercase
+}
+
+.contact-info__intro {
+    position: relative;
+    z-index: 2
+}
+
+.contact-info__intro .pre-title,
+.contact-info__intro .section-intro__title {
+    color: var(--color-bg-light)
+}
+
+.contact-info__intro .section-intro__title {
+    width: 22.0833vw
+}
+
+.contact-info__schedule {
+    position: absolute;
+    top: 4.6875vw;
+    right: 1.8229vw;
+    /* Прижимаем к правому краю блока */
+    font-size: 0.9375vw;
+    font-weight: 400;
+    line-height: 130%;
+    color: var(--color-white);
+    z-index: 2
+}
+
+.contact-info__socials {
+    position: absolute;
+    left: 3.125vw;
+    top: 24.9479vw;
+    display: flex;
+    gap: 1.1458vw;
+    z-index: 2
+}
+
+.section.faq-section,
+.section.contacts-section {
+    width: 78.125vw;
+}
+
+.section.contacts-section {
+    position: relative;
+    height: 31.25vw;
+    padding: 0 auto 3.9062vw auto;
+    display: flex;
+    gap: 2.0833vw
+}
+
+.cta-button {
+    width: 7.3958vw;
+    height: 7.3958vw
+}
+
+.faq-intro {
+    position: relative;
+    /* Чтобы не наследовал абсолютное позиционирование */
+    top: 0;
+    left: 0;
+    width: 22.0833vw
+}
+
+.faq-intro .section-intro__title,
+.faq-intro .pre-title {
+    color: var(--color-primary)
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--color-primary)
+}
+
+.faq-item.is-active .faq-item__answer-wrapper {
+    max-height: 7.8125vw;
+    /* Достаточная высота для отображения текста */
+    padding-bottom: 24px;
+    /* Отступ снизу для открытого ответа */
+}
+
+.faq-item.is-active .faq-item__icon {
+    transform: rotate(45deg)
+}
+
+.faq-item__answer {
+    font-size: 0.8333vw;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+    max-width: 30.2604vw;
+    padding-bottom: 0
+}
+
+.faq-item__answer-wrapper {
+    max-height: 0;
+    /* Изначально ответ скрыт */
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding-bottom 0.4s ease-out
+}
+
+.faq-item__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25vw 0;
+    cursor: pointer
+}
+
+.faq-item__icon {
+    width: 1.5625vw;
+    height: 1.5625vw;
+    transition: transform 0.4s ease;
+    flex-shrink: 0
+}
+
+.faq-item__question {
+    font-weight: 600;
+    font-size: 1.0417vw;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+    max-width: 30.2083vw
+}
+
+.faq-list {
+    width: 46.25vw;
+    display: flex;
+    flex-direction: column
+}
+
+.faq-section {
+    position: relative;
+    color: var(--color-white);
+    padding: 0 10.9375vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0417vw
+}
+
+.footer-column .pre-title {
+    color: var(--color-primary);
+    font-weight: 400
+}
+
+.footer-column--info {
+    color: var(--color-white)
+}
+
+.footer-column--info .pre-title {
+    color: var(--color-primary)
+}
+
+.footer-column--info p {
+    font-size: 0.9375vw;
+    line-height: 130%;
+    width: 14.375vw
+}
+
+.footer-column--payment {
+    margin-left: 0;
+    align-items: flex-start
+}
+
+.footer-credits {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3646vw
+}
+
+.footer-credits a {
+    display: inline-flex;
+    flex-direction: column;
+    align-self: flex-start;
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 0.8333vw;
+    line-height: 130%
+}
+
+.footer-credits a::after {
+    content: "";
+    display: block;
+    height: 0.0521vw;
+    width: 100%;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease
+}
+
+.footer-credits a:hover::after {
+    width: 50%
+}
+
+.footer-credits span {
+    font-size: 0.7292vw;
+    line-height: 100%;
+    color: var(--color-primary)
+}
+
+.footer-credits--desktop {
+    position: absolute;
+    top: 11.7188vw
+}
+
+.footer-credits--mobile {
+    display: none;
+    /* Скрываем по умолчанию */
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4167vw
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 0.8333vw;
+    line-height: 130%;
+    color: var(--color-white);
+    transition: color 0.3s
+}
+
+.footer-links a:hover {
+    color: var(--color-primary)
+}
+
+.form-fields {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.1875vw
+}
+
+.form-group {
+    position: relative;
+    border-bottom: 1px solid var(--color-primary)
+}
+
+.form-group input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: "Vela Sans", sans-serif;
+    font-weight: 500;
+    font-size: 0.7812vw;
+    line-height: 20px;
+    color: var(--color-primary-darkest);
+    text-transform: uppercase
+}
+
+.form-group input::placeholder {
+    color: var(--color-text-light-gray);
+    opacity: 1;
+    letter-spacing: -0.0234vw
+}
+
+.form-group-checkbox {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    /* Выравниваем по центру по вертикали */
+}
+
+.form-group-checkbox__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.0417vw;
+    height: 1.0417vw;
+    border: 1px solid var(--color-text-light-gray);
+    border-radius: 0.1562vw;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    /* Чтобы квадратик не сжимался */
+}
+
+.form-group-checkbox__icon {
+    width: 0.625vw;
+    height: 0.625vw;
+    opacity: 0;
+    /* Изначально иконка невидима */
+    transform: scale(0.5);
+    /* Изначально уменьшена */
+    transition: all 0.2s ease
+}
+
+.form-group-checkbox__input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0
+}
+
+.form-group-checkbox__input:checked+.form-group-checkbox__label .form-group-checkbox__box {
+    border-color: var(--color-primary)
+}
+
+.form-group-checkbox__input:checked+.form-group-checkbox__label .form-group-checkbox__icon {
+    opacity: 1;
+    transform: scale(1)
+}
+
+.form-group-checkbox__label {
+    display: flex;
+    align-items: center;
+    gap: 0.4167vw;
+    /* Отступ между квадратиком и текстом */
+    font-size: 0.7292vw;
+    color: var(--color-text-light-gray);
+    cursor: pointer
+}
+
+.form-label-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0.3125vw;
+    height: 1.0417vw
+}
+
+.game-icons_polar-star {
+    width: 0.5729vw
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%
+}
+
+.header-logo {
+    margin: 0 1.0417vw;
+    display: flex;
+    align-items: center
+}
+
+.header-logo img {
+    height: 2.812vw
+}
+
+.header-nav__group {
+    display: flex;
+    align-items: center;
+    gap: 0.885vw
+}
+
+.hero-background {
+    position: absolute;
+    width: 50vw;
+    height: 100%;
+    right: 0;
+    top: 0
+}
+
+.hero-background__dark-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary-darker);
+    z-index: 1
+}
+
+.hero-background__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/fon-cosmos.png) no-repeat center center/cover;
+    mix-blend-mode: overlay;
+    opacity: 0.8;
+    z-index: 2
+}
+
+.hero-cta-button {
+    position: absolute;
+    width: 7.3958vw;
+    height: 7.3958vw;
+    left: 39.427vw;
+    top: 41.312vw;
+    transform: rotate(-22deg);
+    z-index: 20
+}
+
+.hero-description {
+    position: absolute;
+    width: 14.9479vw;
+    left: 74.1146vw;
+    top: 20.208vw;
+    font-size: 1.0417vw;
+    line-height: 120%;
+    text-align: right;
+    color: var(--color-bg-light);
+    z-index: 10
+}
+
+.hero-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none
+}
+
+.hero-images__balloons {
+    position: absolute;
+    transform: rotate(15.32deg);
+    width: 30.83vw;
+    left: 38vw;
+    top: -3.94vw;
+    z-index: 25
+}
+
+.hero-images__bottle {
+    position: absolute;
+    height: 37.2396vw;
+    width: 15.3536vw;
+    left: 42.3229vw;
+    top: 10.885vw;
+    transform: rotate(-16.46deg);
+    z-index: 15
+}
+
+.hero-images__bottle-shadow {
+    position: absolute;
+    width: 15.833vw;
+    height: 7.708vw;
+    left: 50vw;
+    top: 37.29vw;
+    background: var(--color-shadow-deep);
+    filter: blur(75px);
+    z-index: 14
+}
+
+.hero-planet-bg {
+    position: absolute;
+    width: 54.534vw;
+    height: 54.534vw;
+    left: 22.734vw;
+    top: 11.795vw;
+    background: var(--gradient-planet);
+    border-radius: 50%;
+    z-index: 3
+}
+
+.hero-section {
+    position: relative;
+    width: 100vw;
+    height: 58.33vw;
+    margin: 0 auto;
+    overflow: hidden
+}
+
+.hero-title-block {
+    position: absolute;
+    width: 35.781vw;
+    left: 10.9375vw;
+    top: 20.312vw;
+    z-index: 10
+}
+
+.hero-title-block__main {
+    background-clip: text !important;
+    font-size: 24.2188vw;
+    background: var(--gradient-title-main);
+    line-height: 90%
+}
+
+.hero-title-block__subtitle {
+    font-size: 5.208vw;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    color: var(--color-primary)
+}
+
+.hero-title-cosmos {
+    position: absolute;
+    width: 34.01vw;
+    height: 20.8599vw;
+    left: 56.25vw;
+    top: 26.0417vw;
+    z-index: 20
+}
+
+.hero-title-cosmos__fill {
+    font-size: 20.312vw;
+    background: var(--gradient-title-secondary);
+    z-index: 2;
+    line-height: 90%;
+    position: absolute
+}
+
+.hero-title-cosmos__stroke {
+    font-size: 20.312vw;
+    -webkit-text-stroke: 0.0521vw var(--color-hero-stroke);
+    color: transparent;
+    top: 0.4167vw;
+    left: 0.26vw;
+    z-index: 1;
+    line-height: 90%;
+    position: absolute
+}
+
+.icon {
+    display: inline-block;
+    width: 1.25vw;
+    height: 1.25vw;
+    stroke-width: 0
+}
+
+.icone--fillstroke {
+    stroke: none;
+    fill: var(--color-primary)
+}
+
+.icone--strokefill {
+    stroke: var(--color-primary);
+    fill: none
+}
+
+.info-card {
+    width: 19.8438vw;
+    height: 23.5938vw;
+    border: 2px solid rgba(247, 243, 248, 0.6);
+    border-radius: 1.5625vw;
+    padding-top: 80px;
+    padding-left: 39.936px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.302vw
+}
+
+.info-card__item {
+    margin-top: 19.2px;
+    padding-top: 12.5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.0417vw
+}
+
+.info-card__item .info-card__text {
+    width: 10.885vw;
+    height: 3.281vw
+}
+
+.info-card__item.line {
+    border-top: 1px solid rgba(247, 243, 248, 0.25);
+    border-bottom: 1px solid rgba(247, 243, 248, 0.25);
+    padding-bottom: 12.5px
+}
+
+.info-card__item.line .info-card__text {
+    width: 16.0938vw;
+    height: 3.281vw
+}
+
+.info-card__text {
+    font-size: 0.885vw;
+    line-height: 120%;
+    color: var(--color-bg-light)
+}
+
+.info-card__title {
+    font-weight: 600;
+    font-size: 1.0417vw;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: var(--color-text-medium-gray)
+}
+
+.info-card__volume {
+    font-size: 3.75vw;
+    line-height: 100%;
+    color: var(--color-primary);
+    letter-spacing: -0.02em;
+    width: 4.635vw;
+    height: 2.604vw
+}
+
+.nav-button--svg {
+    position: relative;
+    padding: 0;
+    border: none;
+    background: none;
+    width: 8.2812vw;
+    height: 2.2396vw
+}
+
+.nav-button--svg:hover {
+    background: none;
+    border: none
+}
+
+.nav-button__arrow {
+    width: 0.517vw;
+    height: 0.4688vw;
+    margin-left: 2.995px
+}
+
+.nav-button__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    height: 100%;
+    padding-left: 15px
+}
+
+.nav-button__content .icon-arrow-down {
+    width: 0.5208vw;
+    height: 0.4688vw;
+    margin-left: 4px
+}
+
+.nav-button__content .icon-grid {
+    width: 0.8333vw;
+    height: 0.8333vw
+}
+
+.nav-button__icon {
+    width: 0.8333vw;
+    height: 0.8333vw
+}
+
+.nav-button__shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1
+}
+
+.nav-button__text {
+    font-family: "Vela Sans", sans-serif;
+    font-size: 0.7812vw;
+    text-transform: uppercase;
+    color: var(--color-primary-dark);
+    transition: color 0.3s ease;
+    padding-left: 33px
+}
+
+.nav-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.nav-separator img {
+    width: 0.625vw;
+    height: 0.625vw;
+    filter: invert(72%) sepia(10%) saturate(1007%) hue-rotate(193deg) brightness(97%) contrast(88%)
+}
+
+.new-arrivals-bg-blur {
+    position: absolute;
+    width: 25.312vw;
+    height: 25.312vw;
+    left: 0.729vw;
+    top: 37.3438vw;
+    background: var(--gradient-title-main);
+    filter: blur(450px);
+    z-index: 1
+}
+
+.new-arrivals-intro {
+    width: 25.208vw;
+    height: 14.8438vw;
+    left: 10.9375vw;
+    top: 0
+}
+
+.new-arrivals-intro .title-decoration {
+    left: 6.0417vw;
+    top: 6.51vw;
+    transform: rotate(-20deg);
+    z-index: 1
+}
+
+.new-arrivals-section {
+    position: relative;
+    width: 100vw;
+    height: 66.0938vw;
+    margin: 0 auto
+}
+
+.orbit {
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 50%
+}
+
+.orbit--inner {
+    width: 65.768vw;
+    height: 65.768vw;
+    left: 6.15vw;
+    top: 6.15vw;
+    border: 1px solid var(--color-border)
+}
+
+.orbit--outer {
+    width: 78.125vw;
+    height: 78.125vw;
+    left: 0;
+    top: 0;
+    border: 1px solid var(--color-border-light)
+}
+
+.orbits {
+    position: absolute;
+    width: 78.125vw;
+    height: 78.125vw;
+    left: 10.9375vw;
+    top: 0;
+    z-index: 2
+}
+
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7812vw;
+    width: 11.1979vw
+}
+
+.payment-methods--mobile {
+    display: none
+}
+
+.payment-methods__item {
+    display: flex;
+    width: 5.2083vw;
+    height: 2.8125vw
+}
+
+.payment-methods__item img {
+    height: 100%;
+    width: auto
+}
+
+.planet {
+    position: absolute;
+    border-radius: 50%
+}
+
+.planet--1 {
+    width: 1.838vw;
+    height: 1.838vw;
+    left: 5.781vw;
+    top: 32.22vw;
+    background: var(--gradient-planet-small)
+}
+
+.planet--10 {
+    width: 0.715vw;
+    height: 0.715vw;
+    left: 70.8229vw;
+    top: 32.271vw;
+    background: var(--gradient-planet-small)
+}
+
+.planet--11 {
+    width: 0.6125vw;
+    height: 0.6125vw;
+    left: 66.595vw;
+    top: 11.2339vw;
+    background: var(--color-primary)
+}
+
+.planet--12 {
+    width: 0.919vw;
+    height: 0.919vw;
+    left: 75.0937vw;
+    top: 24.8958vw;
+    background: var(--color-primary)
+}
+
+.planet--2 {
+    width: 1.123vw;
+    height: 1.123vw;
+    left: 19.01vw;
+    top: 12.062vw;
+    background: var(--color-primary)
+}
+
+.planet--3 {
+    width: 1.123vw;
+    height: 1.123vw;
+    left: 63.0208vw;
+    top: 63.368vw;
+    background: var(--color-primary)
+}
+
+.planet--4 {
+    width: 0.919vw;
+    height: 0.919vw;
+    left: 55.5656vw;
+    top: 3.4687vw;
+    background: var(--color-planet-gray)
+}
+
+.planet--5 {
+    width: 0.7448vw;
+    height: 0.7448vw;
+    left: 3.2708vw;
+    top: 22.531vw;
+    background: var(--gradient-planet-small)
+}
+
+.planet--6 {
+    width: 0.817vw;
+    height: 0.817vw;
+    left: 17.708vw;
+    top: 5.729vw;
+    background: var(--gradient-planet-small)
+}
+
+.planet--7 {
+    width: 0.817vw;
+    height: 0.817vw;
+    left: 16.299vw;
+    top: 61.472vw;
+    background: var(--gradient-planet-small)
+}
+
+.planet--8 {
+    width: 1.6339vw;
+    height: 1.6339vw;
+    left: 57.7448vw;
+    top: 4.544vw;
+    background: var(--gradient-planet-small)
+}
+
+.planet--9 {
+    width: 1.6339vw;
+    height: 1.6339vw;
+    left: 53.37vw;
+    top: 65.921vw;
+    background: var(--gradient-planet-small)
+}
+
+.pre-title {
+    font-size: 0.833vw;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--color-primary)
+}
+
+.product-card {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    border-radius: 1.8229vw;
+    text-decoration: none;
+    z-index: 5;
+    overflow: hidden
+}
+
+.product-card--berry-chic {
+    left: 26.875vw;
+    top: 83.4896vw
+}
+
+.product-card--blush-cloud {
+    left: 10.9375vw;
+    top: 19.1667vw
+}
+
+.product-card--blush-cloud-catalog {
+    left: 42.812vw;
+    top: 44.062vw
+}
+
+.product-card--crystal-nude {
+    left: 74.6875vw;
+    top: 16.7708vw
+}
+
+.product-card--large {
+    width: 30.312vw;
+    height: 37.8646vw
+}
+
+.product-card--latte-nude-catalog {
+    left: 26.875vw;
+    top: 44.062vw
+}
+
+.product-card--latte-nude-set {
+    left: 58.75vw;
+    top: 0
+}
+
+.product-card--latte-nude-solo {
+    left: 58.75vw;
+    top: 40.4167vw
+}
+
+.product-card--milky-way {
+    left: 10.9375vw;
+    top: 16.7708vw
+}
+
+.product-card--peach-glow {
+    left: 26.875vw;
+    top: 16.7708vw
+}
+
+.product-card--small {
+    width: 14.375vw;
+    height: 25.729vw
+}
+
+.product-card--small .product-card__image {
+    height: 15.4167vw
+}
+
+.product-card--unicorn-pearl {
+    left: 58.75vw;
+    top: 83.4896vw
+}
+
+.product-card--vega-placeholder {
+    position: absolute;
+    left: 42.812vw;
+    top: 16.7708vw;
+    width: 14.375vw;
+    height: 25.729vw;
+    border-radius: 1.8229vw
+}
+
+.product-card:hover .product-card__name {
+    color: var(--color-accent-pink)
+}
+
+.product-card__actions {
+    display: flex;
+    gap: 1.0417vw
+}
+
+.product-card__category {
+    font-size: 0.781vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-text-light-gray);
+    padding-top: 3.994px
+}
+
+.product-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.0417vw 0.7812vw 0.7812vw 0.7812vw;
+    margin-top: auto
+}
+
+.product-card__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.product-card__image {
+    width: 100%;
+    height: 29.2708vw;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.8229vw
+}
+
+.product-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0417vw;
+    padding: 1.0417vw 0.7812vw 0 0.7812vw
+}
+
+.product-card__name {
+    transition: color 0.3s ease
+}
+
+.product-card__price {
+    font-size: 1.6667vw;
+    font-weight: 400;
+    color: var(--color-primary);
+    letter-spacing: -0.01em
+}
+
+.product-card__volume {
+    font-size: 0.9375vw;
+    color: var(--color-primary-darkest)
+}
+
+.section {
+    position: relative;
+    width: 100vw;
+    margin: 0 auto
+}
+
+.section-divider {
+    border: none;
+    height: 0.0521vw;
+    background-color: var(--color-primary);
+    margin: 3.906vw 10.94vw
+}
+
+.section-divider-invisible {
+    border: none;
+    height: 3.906vw
+}
+
+.section-intro {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 1.0417vw
+}
+
+.section-intro__description {
+    font-size: 0.9375vw;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+    width: 18.385vw
+}
+
+.section-intro__title {
+    font-size: 5.208vw;
+    line-height: 90%;
+    letter-spacing: -0.02em;
+    color: var(--color-primary)
+}
+
+.site-footer-main {
+    position: relative;
+    width: 100vw;
+    height: 42.7083vw;
+    margin: 3.9062vw auto 0 auto;
+    padding: 3.8542vw 10.9375vw 0 10.9375vw;
+    background-color: var(--color-bg-light);
+    overflow: hidden
+}
+
+.site-footer__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.8229vw 1.8229vw 0 0;
+    z-index: 1
+}
+
+.site-footer__bg-text {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    margin-top: 40px
+}
+
+.site-footer__bg-text img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain
+}
+
+.site-footer__container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 5.2083vw
+}
+
+.site-header {
+    position: fixed;
+    top: 1.0417vw;
+    width: calc(100% - 2.0833vw);
+    /* Ширина с отступами по бокам */
+    max-width: 78.125vw;
+    /* Ограничение максимальной ширины */
+    left: 50%;
+    transform: translatex(-50%);
+    height: 4.1667vw;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(165, 120, 199, 0.35);
+    box-shadow: 0 4px 5px rgba(19, 3, 32, 0.06);
+    backdrop-filter: blur(6px);
+    border-radius: 0.7812vw;
+    z-index: 1000;
+    padding: 0 1.0417vw
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.1771vw;
+    height: 3.1771vw;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    box-shadow: 0 0 6.5px rgba(180, 174, 167, 0.25);
+    transition: transform 0.3s ease
+}
+
+.social-icon img {
+    height: 1.6667vw;
+    width: auto
+}
+
+.social-icon:hover {
+    transform: scale(1.1)
+}
+
+.text-gradient {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important
+}
+
+.title {
+    font-family: "Cramaten", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    background-clip: text !important
+}
+
+.title-decoration {
+    position: absolute;
+    pointer-events: none;
+    white-space: nowrap
+}
+
+.title-decoration.hero-signature {
+    position: absolute;
+    width: 10.729vw;
+    height: 7.187vw;
+    left: 70.5729vw;
+    top: 37.5vw;
+    font-family: "Great Vibes", cursive;
+    font-size: 5.729vw;
+    line-height: 137.99px;
+    letter-spacing: -0.04em;
+    color: var(--color-signature);
+    text-shadow: 0.104vw 0.1562vw 0 rgba(46, 9, 74, 0.35);
+    transform: rotate(-30deg);
+    z-index: 20
+}
+
+.title-decoration.hero-signature .title-decoration__text {
+    width: 10.729vw;
+    height: 7.187vw;
+    font-family: "Great Vibes", cursive;
+    font-size: 5.729vw;
+    line-height: 137.99px;
+    letter-spacing: -0.04em;
+    color: var(--color-signature);
+    text-shadow: 0.104vw 0.1562vw 0 rgba(46, 9, 74, 0.35);
+    z-index: 20
+}
+
+.title-decoration__text {
+    position: absolute;
+    font-family: "Great Vibes", cursive;
+    font-size: 2.1875vw;
+    text-shadow: 0.065vw 0.0974vw 0 rgba(46, 9, 74, 0.1)
+}
+
+.title-decoration__text.fill {
+    color: var(--color-bg-light);
+    z-index: 2
+}
+
+.title-decoration__text.stroke {
+    color: transparent;
+    -webkit-text-stroke: 0.104vw var(--color-accent-pink);
+    z-index: 1
+}
+
+.videoplayer {
+    position: absolute;
+    width: 78.125vw;
+    height: 32.8125vw;
+    left: calc(50% - 78.125vw / 2);
+    top: 51.6667vw;
+    /* 9914 - 8922 */
+    display: block;
+    border-radius: 1.8229vw;
+    overflow: hidden
+}
+
+.videoplayer-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease
+}
+
+.videoplayer-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 6.5104vw;
+    height: 6.5104vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transition: background-color 0.3s ease
+}
+
+.videoplayer-icon {
+    width: 0;
+    height: 0;
+    border-top: 28px solid transparent;
+    border-bottom: 28px solid transparent;
+    border-left: 45px solid var(--color-white);
+    margin-left: 10px;
+    /* Небольшая коррекция для визуального центрирования */
+}
+
+.videoplayer:hover .videoplayer-bg {
+    transform: scale(1.05)
+}
+
+.videoplayer:hover .videoplayer-button {
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+.why-us-intro {
+    position: absolute;
+    left: 10.9375vw;
+    top: 0;
+    width: 22.0833vw
+}
+
+.why-us-intro .section-intro__title,
+.title.section-intro__title.text-gradient span {
+    color: var(--color-primary)
+}
+
+.why-us-section {
+    position: relative;
+    width: 100vw;
+    height: 84.4792vw;
+    overflow: hidden;
+    color: var(--color-white);
+    /* Боковые отступы как у других секций */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary)
+}
+
+:root {
+    /* Цвета */
+    --color-primary: #A578C7;
+    --color-primary-dark: #633786;
+    --color-primary-darker: #3A1755;
+    --color-primary-darkest: #2D0E45;
+    --color-bg-light: #F7F3F8;
+    --color-bg-dark: #0F011D;
+    --color-white: #FFF;
+    --color-border: rgba(165, 120, 199, 0.4);
+    --color-border-light: rgba(165, 120, 199, 0.25);
+    --color-border-dark: rgba(45, 14, 69, 0.4);
+    --color-planet-gray: #895EB1;
+    --color-accent-pink: #FF03B5;
+    --color-hero-stroke: rgba(255, 240, 251, 0.75);
+    --color-signature: #FFF0FB;
+    --color-shadow-deep: rgba(53, 16, 95, 0.65);
+    --color-text-medium-gray: #737373;
+    --color-text-light-gray: #909090;
+    --color-border-white: rgba(255, 255, 255, 0.4);
+    /* Градиенты */
+    --gradient-title-main: linear-gradient(91.17deg, #79EFFF -4.01%, #FD3CE3 36.14%, #912BFF 77.44%, #0095FF 106.11%);
+    --gradient-title-secondary: linear-gradient(91.17deg, #0095FF -4.01%, #912BFF 24.67%, #FD3CE3 65.97%, #79EFFF 106.11%);
+    --gradient-planet: linear-gradient(101.31deg, #5F268A 56.09%, rgba(145, 58, 212, 0.1) 170.31%);
+    --gradient-planet-small: linear-gradient(75.75deg, #79EFFF 5.3%, #FD3CE3 81.8%, #912BFF 118.07%, #0095FF 157.78%);
+    --gradient-btn-default: linear-gradient(136.68deg, #79EFFF -6.83%, #FD3CE3 13.92%, #912BFF 63.7%, #0095FF 101.57%);
+    --gradient-btn-hover: linear-gradient(96.29deg, #FF03B5 18.76%, #EC05AF 63.37%, #B20A9B 102.94%);
+    --gradient-price: linear-gradient(262.71deg, #0095FF -37.92%, #912BFF 0.41%, #FD3CE3 55.62%, #79EFFF 109.28%);
+    --gradient-bestseller-planet: linear-gradient(101.31deg, rgba(255, 255, 255, 0.85) 56.09%, #F1DFFF 170.31%);
+    --gradient-bg-text: linear-gradient(91.25deg, rgba(121, 239, 255, 0.14) -4.28%, rgba(253, 60, 227, 0.14) 38.62%, rgba(145, 43, 255, 0.14) 82.74%, rgba(0, 149, 255, 0.14) 113.38%)
+}
+
+body {
+    background-color: var(--color-bg-light);
+    overflow-x: hidden;
+    height: 130.208vw;
+    font-family: "Vela Sans", sans-serif
+}
+
+html {
+    scrollbar-color: var(--color-primary) var(--color-bg-light)
+}
+
+@media (max-width: 960px) {
+    #consent {
+        margin: 0.4167vw
+    }
+
+    .about-intro {
+        gap: 2.0833vw
+    }
+
+    .about-intro .section-intro__title {
+        height: auto;
+        font-size: 7.0833vw;
+        width: 44.1667vw
+    }
+
+    .about-section {
+        width: calc(100% - 3.125vw);
+        height: auto;
+        gap: 2.0833vw;
+        margin: 7.8125vw auto 0 auto;
+        padding: 0;
+        left: 0
+    }
+
+    .about-section__caption {
+        height: 13.75vw;
+        border-radius: 0 0 3.6458vw 3.6458vw;
+        padding: 0 2.6042vw
+    }
+
+    .about-section__caption-content {
+        gap: 1.4583vw
+    }
+
+    .about-section__caption-name {
+        font-size: 4.6875vw
+    }
+
+    .about-section__caption-title {
+        font-size: 1.875vw
+    }
+
+    .about-section__image {
+        border-radius: 3.6458vw 0 3.6458vw 4.6875vw
+    }
+
+    .about-section__image-wrapper {
+        width: 100%;
+        height: 50.2083vw
+    }
+
+    .about-section__image-wrapper--mobile-only .about-section__caption {
+        border-radius: 0 0 2.6042vw 2.6042vw
+    }
+
+    .about-section__image-wrapper--mobile-only .about-section__image {
+        background-position: left;
+        border-radius: 2.6042vw 2.6042vw 2.9167vw 2.9167vw
+    }
+
+    .about-section__link {
+        gap: 0.4167vw
+    }
+
+    .about-section__link span {
+        font-size: 1.6667vw
+    }
+
+    .about-section__link::after {
+        height: 0.1042vw
+    }
+
+    .about-section__main-text {
+        gap: 2.0833vw
+    }
+
+    .about-section__main-text p {
+        font-size: 1.875vw
+    }
+
+    .about-section__text-block {
+        width: 47.8125vw;
+        gap: 2.6042vw;
+        padding-left: 15px
+    }
+
+    .about-title-decoration {
+        left: 17.2917vw;
+        top: 7.9167vw
+    }
+
+    .about-title-decoration__text {
+        font-size: 3.3333vw
+    }
+
+    .advantages-block {
+        left: 50vw;
+        width: 92.5vw
+    }
+
+    .advantages-list__description {
+        font-size: 1.875vw
+    }
+
+    .advantages-list__item {
+        gap: 3.125vw;
+        padding: 2.7083vw 0 2.0833vw 0;
+        width: 92.5vw
+    }
+
+    .advantages-list__item,
+    .advantages-main-feature {
+        width: 48.4375vw
+    }
+
+    .advantages-list__title {
+        font-size: 5.5208vw;
+        flex-basis: 28.75vw
+    }
+
+    .advantages-main-feature {
+        height: 25vw
+    }
+
+    .advantages-main-feature__number {
+        font-size: 31.25vw;
+        height: 21.875vw
+    }
+
+    .advantages-main-feature__text {
+        left: 31.875vw;
+        bottom: 4.2708vw;
+        font-size: 1.875vw
+    }
+
+    .arrow-down {
+        width: 1.034vw;
+        height: 0.9375vw
+    }
+
+    .bestseller-center-piece {
+        width: 44.1667vw;
+        height: 44.1667vw;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .bestseller-cta-button {
+        position: relative;
+        /* Возвращаем в поток */
+        left: auto;
+        top: auto;
+        width: 11.9792vw;
+        height: 11.9792vw
+    }
+
+    .bestseller-info-card {
+        left: auto;
+        right: 1.5625vw;
+        top: 50%;
+        transform: translatey(-50%);
+        width: 37.2917vw;
+        height: 42.5vw;
+        gap: 1.5625vw;
+        background: rgba(247, 243, 248, 0.2);
+        backdrop-filter: blur(7.5px)
+    }
+
+    .bestseller-intro {
+        left: 1.7708vw;
+        top: 9.8958vw;
+        width: 32.1875vw
+    }
+
+    .bestseller-intro .section-intro__description {
+        width: 28.3333vw;
+        font-size: 1.6667vw;
+        height: 9.5833vw
+    }
+
+    .bestseller-intro .section-intro__title {
+        font-size: 7.0833vw
+    }
+
+    .bestseller-intro .title-decoration {
+        left: 12.0833vw;
+        top: 14.375vw;
+        font-size: 3.3333vw
+    }
+
+    .bestseller-intro .title-decoration__text {
+        font-size: 3.3333vw
+    }
+
+    .bestseller-orbits .orbit--inner {
+        width: 37.0833vw;
+        height: 37.0833vw
+    }
+
+    .bestseller-orbits .orbit--outer {
+        width: 100%;
+        height: 100%
+    }
+
+    .bestseller-orbits .planet--b1 {
+        width: 1.0187vw;
+        height: 1.0187vw;
+        left: 3.3406vw;
+        top: 18.2292vw
+    }
+
+    .bestseller-orbits .planet--b10 {
+        width: 0.4531vw;
+        height: 0.4531vw;
+        left: 19.475vw;
+        top: 40.251vw
+    }
+
+    .bestseller-orbits .planet--b2 {
+        width: 0.4531vw;
+        height: 0.4531vw;
+        left: 11.0396vw;
+        top: 2.6042vw
+    }
+
+    .bestseller-orbits .planet--b3 {
+        width: 0.4531vw;
+        height: 0.4531vw;
+        left: 35.8927vw;
+        top: 33.9677vw
+    }
+
+    .bestseller-orbits .planet--b4 {
+        width: 0.9052vw;
+        height: 0.9052vw;
+        left: 32.8344vw;
+        top: 2.5479vw
+    }
+
+    .bestseller-orbits .planet--b5 {
+        width: 0.9052vw;
+        height: 0.9052vw;
+        left: 33.7406vw;
+        top: 40.025vw
+    }
+
+    .bestseller-orbits .planet--b6 {
+        width: 0.4531vw;
+        height: 0.4531vw;
+        left: 40.0812vw;
+        top: 18.2292vw
+    }
+
+    .bestseller-orbits .planet--b7 {
+        width: 0.4531vw;
+        height: 0.4531vw;
+        left: 31.476vw;
+        top: 6.3406vw
+    }
+
+    .bestseller-orbits .planet--b8 {
+        width: 0.4531vw;
+        height: 0.4531vw;
+        left: 42.9688vw;
+        top: 16.1906vw
+    }
+
+    .bestseller-orbits .planet--b9 {
+        width: 0.6792vw;
+        height: 0.6792vw;
+        left: 5.0948vw;
+        top: 36.7417vw
+    }
+
+    .bestseller-planet-bg {
+        width: 31.1458vw;
+        height: 31.1458vw
+    }
+
+    .bestseller-price {
+        font-size: 7.0833vw
+    }
+
+    .bestseller-price-block {
+        margin-top: -10px;
+        height: auto;
+        gap: 3.125vw
+    }
+
+    .bestseller-section {
+        width: 100%;
+        height: 62.5vw;
+        margin-top: 0;
+        border-radius: 0 0 4.6875vw 4.6875vw
+    }
+
+    .bestseller-section__bottle {
+        height: 39.375vw
+    }
+
+    .bg-blur {
+        width: 50.624vw;
+        height: 50.624vw
+    }
+
+    .btn {
+        font-size: 1.562vw
+    }
+
+    .btn--burger {
+        display: flex;
+        width: 4.4792vw;
+        height: 4.4792vw;
+        border: 1px solid var(--color-primary)
+    }
+
+    .btn--burger img {
+        width: 2.5vw;
+        height: 2.5vw
+    }
+
+    .btn--icon {
+        width: 4.375vw;
+        height: 4.375vw
+    }
+
+    .btn--icon img {
+        width: 2.5vw;
+        height: 2.5vw
+    }
+
+    .btn--icon-round {
+        width: 5vw;
+        height: 5vw
+    }
+
+    .btn--outline {
+        padding: 1.25vw 2.2917vw;
+        gap: 1.0417vw;
+        width: 13.0208vw;
+        height: 4.375vw;
+        border-radius: 20.8333vw
+    }
+
+    .btn--primary {
+        width: 14.7917vw;
+        height: 14.7917vw
+    }
+
+    .btn--primary span {
+        font-size: 1.5625vw
+    }
+
+    .btn.btn--icon-round img {
+        width: 2.5vw;
+        height: 2.5vw
+    }
+
+    .btn.btn--icon-round.btn--primary-fill img {
+        width: 2.5vw
+    }
+
+    .catalog-bg-blur--right {
+        left: 58.8542vw;
+        top: 149.2708vw;
+        /* 5675 - 4242 */
+        width: 50.625vw;
+        height: 50.625vw;
+        filter: blur(375px)
+    }
+
+    .catalog-cta-button {
+        left: calc(50% - 14.7917vw / 2 + 28.9583vw);
+        top: 170.7292vw;
+        /* 5881 - 4242 */
+        width: 14.7917vw;
+        height: 14.7917vw
+    }
+
+    .catalog-intro {
+        width: 44.166vw;
+        left: 21.875vw
+    }
+
+    .catalog-intro .title-decoration {
+        left: 15.9375vw;
+        top: 13.5417vw;
+        width: 20.8333vw
+    }
+
+    .catalog-section {
+        width: 100%;
+        height: 218.75vw;
+        padding: 0 1.5625vw;
+        /* Боковые отступы для планшета */
+        margin-top: 50px
+    }
+
+    .catalog-section .section-intro {
+        top: 0;
+        left: 1.5625vw
+    }
+
+    .catalog-section .section-intro__title {
+        font-size: 7.0833vw;
+        height: auto
+    }
+
+    .catalog-section .title-decoration {
+        left: 22.2917vw;
+        top: 5.1042vw
+    }
+
+    .catalog-section .title-decoration__text {
+        font-size: 3.3333vw
+    }
+
+    .catalog-section__bg-wave {
+        width: 203.5417vw;
+        height: 153.6458vw;
+        left: -79.4792vw;
+        top: 21.5625vw;
+        /* 4449 - 4242 */
+        transform: rotate(-22.69deg)
+    }
+
+    .categories-bg-blur--left {
+        left: -0.625vw;
+        top: 68.2292vw
+    }
+
+    .categories-bg-blur--left,
+    .categories-bg-blur--right,
+    .categories-bg-text {
+        display: none
+    }
+
+    .categories-bg-blur--right {
+        left: 169.27vw;
+        top: 142.0833vw
+    }
+
+    .categories-bg-text {
+        width: 156.25vw;
+        height: 63.5417vw;
+        left: 21.9786vw;
+        top: 25.9375vw
+    }
+
+    .categories-cta-button {
+        left: 61.4583vw;
+        top: 145.8333vw;
+        width: 14.7917vw;
+        height: 14.7917vw
+    }
+
+    .categories-intro {
+        left: 1.5625vw;
+        top: 0;
+        width: 28.75vw
+    }
+
+    .categories-intro .section-intro__description {
+        margin-top: 20px;
+        font-size: 1.6667vw
+    }
+
+    .categories-intro .section-intro__title {
+        font-size: 7.0833vw;
+        height: auto
+    }
+
+    .categories-intro .title-decoration {
+        left: 4.1667vw;
+        top: 4.6875vw
+    }
+
+    .categories-intro .title-decoration__text {
+        font-size: 3.3333vw
+    }
+
+    .categories-list-bg {
+        width: 77.0833vw;
+        height: 77.0833vw;
+        left: -24.4792vw;
+        top: 66.4583vw
+    }
+
+    .categories-section {
+        width: 100%;
+        height: 185.4167vw;
+        margin: 10.4167vw 0
+    }
+
+    .categories-section__bottle {
+        width: 20.9375vw;
+        height: auto;
+        top: 14.7917vw;
+        left: calc(50% - 30.7292vw / 2 + 0.0521vw)
+    }
+
+    .category-card {
+        padding: 0.8333vw 0.8333vw 1.25vw;
+        border-radius: 2.6042vw;
+        gap: 2.0833vw
+    }
+
+    .category-card--bases {
+        left: 1.5625vw;
+        top: 20.1042vw;
+        width: 28.75vw;
+        height: 43.5417vw
+    }
+
+    .category-card--care {
+        left: auto;
+        right: 1.5625vw;
+        top: 142.2917vw;
+        width: 17.7083vw;
+        height: 38.6458vw
+    }
+
+    .category-card--care .category-card__content-wrapper {
+        height: 11.25vw
+    }
+
+    .category-card--care .category-card__image {
+        width: 100%;
+        height: 21.7708vw
+    }
+
+    .category-card--decor {
+        left: 32.1875vw;
+        top: 141.25vw;
+        width: 26.4583vw;
+        height: 43.9583vw
+    }
+
+    .category-card--gellaki {
+        left: 60.9375vw;
+        top: 0;
+        width: 37.5vw;
+        height: 50.9375vw
+    }
+
+    .category-card--gellaki .category-card__image {
+        height: 36.7708vw
+    }
+
+    .category-card--gellaki p.category-card__description {
+        width: 100%;
+        height: auto
+    }
+
+    .category-card--gels {
+        left: 69.6875vw;
+        top: 64.2708vw;
+        width: 28.75vw;
+        height: 58.9583vw
+    }
+
+    .category-card--gels .category-card__image {
+        height: 45.8333vw
+    }
+
+    .category-card--glitter {
+        left: 1.5625vw;
+        top: 141.25vw;
+        width: 26.4583vw;
+        height: 42.0833vw
+    }
+
+    .category-card__bottle-in-image {
+        display: none;
+        /* Скрываем бутылку в гелях */
+        height: 37.2917vw;
+        top: 4.062vw
+    }
+
+    .category-card__content-wrapper {
+        border-radius: 0 0 2.0833vw 2.0833vw;
+        padding-left: 15px;
+        height: 6.4583vw
+    }
+
+    .category-card__content-wrapper--large {
+        height: 14.374vw
+    }
+
+    .category-card__description {
+        font-size: 1.6667vw
+    }
+
+    .category-card__image {
+        border-radius: 2.0833vw;
+        height: 29.375vw
+    }
+
+    .category-card__title {
+        font-size: 4.6875vw
+    }
+
+    .category-list {
+        gap: 2.0833vw
+    }
+
+    .category-list-wrapper {
+        left: 1.5625vw;
+        top: 70.5208vw;
+        width: 56.9792vw;
+        gap: 4.166vw
+    }
+
+    .category-list__item {
+        height: 7.426vw
+    }
+
+    .category-list__item-title {
+        font-size: 5.5208vw
+    }
+
+    .category-list__main-title {
+        font-size: 7.0833vw
+    }
+
+    .contact-form-wrapper {
+        padding: 4.1667vw;
+        width: 76.25vw;
+        height: 62.5vw;
+        border-radius: 3.6458vw
+    }
+
+    .contact-form__title {
+        font-size: 2.0833vw;
+        width: 24.4792vw
+    }
+
+    .contact-info {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        /* Перша колонка гнучка, друга - по контенту */
+        grid-template-areas: "intro    schedule" "details  details" "socials  socials";
+        align-items: start;
+        column-gap: 15px;
+        row-gap: 30px;
+        width: 75.8333vw;
+        height: 62.5vw;
+        border-radius: 3.6458vw;
+        padding: 6.25vw
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        flex: 1;
+        /* Кожен блок займає однакову частину простору */
+        min-width: 0;
+        /* Важлива властивість, щоб flex-елементи могли стискатися */
+        width: 50%;
+        height: auto
+    }
+
+    .contact-info__bg {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        /* 'cover' заповнить весь блок, зберігаючи пропорції (може обрізати краї) */
+        background-size: cover;
+        background-position: center;
+        /* Центруємо зображення */
+        opacity: 0.5;
+        /* Трохи зменшимо яскравість для кращої читабельності тексту */
+    }
+
+    .contact-info__details {
+        grid-area: details;
+        left: 6.25vw;
+        top: 31.7708vw;
+        gap: 1.5625vw
+    }
+
+    .contact-info__details a[href^="mailto"] {
+        font-size: 2.0833vw
+    }
+
+    .contact-info__details a[href^="tel"] {
+        font-size: 3.9583vw
+    }
+
+    .contact-info__intro {
+        grid-area: intro
+    }
+
+    .contact-info__intro .section-intro__title {
+        width: auto;
+        /* Дозволяємо заголовку бути гнучким */
+        font-size: 4.375vw;
+        /* Трохи зменшуємо шрифт */
+    }
+
+    .contact-info__intro,
+    .contact-info__schedule,
+    .contact-info__details,
+    .contact-info__socials {
+        position: static;
+        /* Повертаємо в потік документа */
+        z-index: 2;
+        /* Щоб контент був над фоном */
+    }
+
+    .contact-info__schedule {
+        grid-area: schedule;
+        margin-top: 35px;
+        top: 9.375vw;
+        right: 3.6458vw;
+        font-size: 1.875vw
+    }
+
+    .contact-info__socials {
+        grid-area: socials;
+        left: 6.25vw;
+        top: 49.8958vw;
+        gap: 2.2917vw
+    }
+
+    .contacts-section {
+        /* Робимо секцію гнучкою, залишаючи 2 колонки */
+        width: 100%;
+        height: auto;
+        padding: 4.1667vw 1.5625vw;
+        gap: 2.0833vw
+    }
+
+    .cta-button {
+        width: 14.7917vw;
+        height: 14.7917vw
+    }
+
+    .faq-intro {
+        width: 44.1667vw;
+        flex-shrink: 0;
+        /* Чтобы колонка не сжималась */
+    }
+
+    .faq-intro .section-intro__title {
+        font-size: 7.0833vw
+    }
+
+    .faq-item.is-active .faq-item__answer-wrapper {
+        max-height: 15.625vw
+    }
+
+    .faq-item__answer {
+        font-size: 1.5625vw;
+        /* Уменьшаем шрифт ответа */
+        max-width: 100%
+    }
+
+    .faq-item__header {
+        padding: 2.5vw 0
+    }
+
+    .faq-item__icon {
+        width: 3.125vw;
+        height: 3.125vw
+    }
+
+    .faq-item__question {
+        font-size: 1.875vw;
+        /* Уменьшаем шрифт вопроса */
+        max-width: 90%;
+        /* Ограничиваем ширину, чтобы текст не прилипал к иконке */
+    }
+
+    .faq-list {
+        width: 100%;
+        /* Занимает оставшееся пространство */
+    }
+
+    .faq-section {
+        width: 100%;
+        height: auto;
+        padding: 0 1.5625vw;
+        gap: 3.125vw
+    }
+
+    .footer-column {
+        gap: 2.0833vw
+    }
+
+    .footer-column--company {
+        grid-column: 3/4
+    }
+
+    .footer-column--info {
+        grid-column: 1/2
+    }
+
+    .footer-column--info p {
+        font-size: 1.875vw;
+        width: 28.75vw
+    }
+
+    .footer-column--products {
+        grid-column: 2/3
+    }
+
+    .footer-column--tech {
+        grid-column: 4/4
+    }
+
+    .footer-credits {
+        gap: 0.7292vw
+    }
+
+    .footer-credits a {
+        font-size: 1.6667vw
+    }
+
+    .footer-credits a::after {
+        height: 0.1042vw
+    }
+
+    .footer-credits span {
+        font-size: 1.4583vw
+    }
+
+    .footer-credits--desktop {
+        grid-column: 1/4;
+        top: 23.4375vw
+    }
+
+    .footer-links {
+        gap: 0.8333vw
+    }
+
+    .footer-links a {
+        font-size: 1.6667vw
+    }
+
+    .form-fields {
+        gap: 4.375vw
+    }
+
+    .form-group input {
+        font-size: 1.5625vw
+    }
+
+    .form-group input::placeholder {
+        letter-spacing: -0.0469vw
+    }
+
+    .form-group-checkbox__box {
+        width: 2.0833vw;
+        height: 2.0833vw;
+        border-radius: 0.3125vw
+    }
+
+    .form-group-checkbox__icon {
+        width: 1.25vw;
+        height: 1.25vw
+    }
+
+    .form-group-checkbox__label {
+        gap: 0.8333vw;
+        font-size: 1.4583vw
+    }
+
+    .form-label-icon {
+        bottom: 0.625vw;
+        height: 2.0833vw
+    }
+
+    .game-icons_polar-star {
+        width: 1.1458vw
+    }
+
+    .header-logo {
+        margin: 0
+    }
+
+    .header-logo img {
+        height: 4.375vw
+    }
+
+    .header-nav__group {
+        gap: 1.77vw
+    }
+
+    .header-nav__group:first-of-type>.btn--outline:not(.nav-button--svg) {
+        display: none
+    }
+
+    .hero-background {
+        width: 50%;
+        /* Правый фон занимает половину экрана */
+    }
+
+    .hero-cta-button {
+        width: 11.9792vw;
+        height: 11.9792vw;
+        left: 32.2917vw;
+        top: 60.7292vw
+    }
+
+    .hero-description {
+        left: auto;
+        right: 1.5625vw;
+        top: 27.9167vw;
+        width: 27.2917vw;
+        font-size: 1.875vw
+    }
+
+    .hero-images__balloons {
+        width: 33.5417vw;
+        left: 38.8542vw;
+        top: 5.7292vw;
+        transform: rotate(15.32deg)
+    }
+
+    .hero-images__bottle {
+        width: 16.6667vw;
+        height: auto;
+        left: 36.4583vw;
+        top: 28.5417vw;
+        transform: rotate(-16.46deg)
+    }
+
+    .hero-images__bottle-shadow {
+        left: 42.6042vw;
+        top: 55.9375vw;
+        width: 15.625vw;
+        height: 7.2917vw;
+        filter: blur(50px)
+    }
+
+    .hero-planet-bg {
+        width: 46.5625vw;
+        height: 46.5625vw;
+        left: 50%;
+        top: 27.8125vw;
+        transform: translatex(-50%)
+    }
+
+    .hero-section {
+        width: 100%;
+        height: 89.5833vw;
+        /* Уменьшаем высоту секции */
+    }
+
+    .hero-signature {
+        left: 70.8333vw;
+        top: 56.25vw;
+        font-size: 7.5vw;
+        line-height: 1.1
+    }
+
+    .hero-title-block {
+        left: 1.5625vw;
+        top: 30.1042vw;
+        width: auto
+    }
+
+    .hero-title-block__main {
+        font-size: 27.7083vw
+    }
+
+    .hero-title-block__subtitle {
+        font-size: 7.0833vw;
+        line-height: 1.1
+    }
+
+    .hero-title-cosmos {
+        left: 50vw;
+        /* Сдвигаем в соответствии с макетом */
+        top: 37.1875vw;
+        width: auto;
+        height: 41.7198vw
+    }
+
+    .hero-title-cosmos__fill {
+        font-size: 40.624vw
+    }
+
+    .hero-title-cosmos__fill,
+    .hero-title-cosmos__stroke {
+        font-size: 27.0833vw
+    }
+
+    .hero-title-cosmos__stroke {
+        top: 0.5208vw;
+        left: 0.3125vw;
+        font-size: 40.624vw;
+        -webkit-text-stroke: 0.1042vw var(--color-hero-stroke)
+    }
+
+    .icon {
+        width: 2.5vw;
+        height: 2.5vw
+    }
+
+    .info-card {
+        width: 39.6875vw;
+        height: 47.1875vw;
+        border-radius: 3.125vw;
+        gap: 2.604vw
+    }
+
+    .info-card__item {
+        margin-top: 0;
+        padding-top: 15px;
+        gap: 2.0833vw
+    }
+
+    .info-card__item .info-card__text {
+        width: 21.77vw;
+        height: 6.562vw
+    }
+
+    .info-card__item.line {
+        padding-bottom: 15px
+    }
+
+    .info-card__item.line .info-card__text {
+        width: 23.0208vw;
+        height: 6.562vw
+    }
+
+    .info-card__text {
+        font-size: 1.6667vw
+    }
+
+    .info-card__title {
+        margin-bottom: 20px;
+        font-size: 2.0833vw
+    }
+
+    .info-card__volume {
+        font-size: 6.6667vw;
+        width: 9.27vw;
+        height: 5.208vw
+    }
+
+    .nav-button--svg {
+        width: 16.5625vw;
+        height: 4.4792vw
+    }
+
+    .nav-button__arrow {
+        width: 1.034vw;
+        height: 0.9375vw
+    }
+
+    .nav-button__content .icon-arrow-down {
+        width: 1.0417vw;
+        height: 0.9375vw
+    }
+
+    .nav-button__content .icon-grid {
+        width: 1.6667vw;
+        height: 1.6667vw
+    }
+
+    .nav-button__icon {
+        width: 1.6667vw;
+        height: 1.6667vw
+    }
+
+    .nav-button__text {
+        font-size: 1.5625vw
+    }
+
+    .nav-separator {
+        display: none
+    }
+
+    .nav-separator img {
+        width: 1.25vw;
+        height: 1.25vw
+    }
+
+    .new-arrivals-bg-blur {
+        left: -13.8542vw;
+        top: 30.625vw;
+        /* 3607 - 3313 */
+        width: 38.3333vw;
+        height: 38.3333vw
+    }
+
+    .new-arrivals-intro {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 35.8333vw;
+        /* Ширина по макету планшета */
+        height: auto
+    }
+
+    .new-arrivals-intro .section-intro__description {
+        width: 36.7708vw
+    }
+
+    .new-arrivals-intro .section-intro__title {
+        font-size: 7.0833vw;
+        width: 100%;
+        height: auto
+    }
+
+    .new-arrivals-intro .title-decoration {
+        left: 8.8542vw;
+        /* 100px - 15px */
+        top: 12.0833vw;
+        /* 3429 - 3313 */
+    }
+
+    .new-arrivals-section {
+        width: 100%;
+        height: auto;
+        padding: 0 1.5625vw;
+        position: relative
+    }
+
+    .orbit--inner {
+        width: 56.0417vw;
+        height: 56.0417vw;
+        left: 5.3125vw;
+        top: 5.3125vw
+    }
+
+    .orbit--outer {
+        width: 100%;
+        height: 100%
+    }
+
+    .orbits {
+        width: 66.6667vw;
+        height: 66.6667vw;
+        left: 50%;
+        top: 17.8125vw;
+        transform: translatex(-50%)
+    }
+
+    .payment-methods {
+        flex-wrap: initial;
+        gap: 1.5625vw;
+        width: 22.3958vw
+    }
+
+    .payment-methods--desktop {
+        display: none
+    }
+
+    .payment-methods--mobile {
+        display: flex
+    }
+
+    .payment-methods__item {
+        width: 10.4167vw;
+        height: 5.625vw
+    }
+
+    .payment-methods__item img {
+        width: 5.7292vw;
+        height: 2.9167vw
+    }
+
+    .planet--1 {
+        width: 1.5684vw;
+        height: 1.5684vw;
+        left: 4.9332vw;
+        top: 27.4944vw;
+        background: var(--gradient-planet-small)
+    }
+
+    .planet--10 {
+        width: 0.6101vw;
+        height: 0.6101vw;
+        left: 60.4372vw;
+        top: 27.5379vw;
+        background: var(--gradient-planet-small)
+    }
+
+    .planet--11 {
+        width: 0.5227vw;
+        height: 0.5227vw;
+        left: 56.828vw;
+        top: 9.5862vw;
+        background: var(--color-primary)
+    }
+
+    .planet--12 {
+        width: 0.7843vw;
+        height: 0.7843vw;
+        left: 62.2083vw;
+        top: 17.1875vw;
+        background: var(--color-primary)
+    }
+
+    .planet--2 {
+        width: 0.9582vw;
+        height: 0.9582vw;
+        left: 16.2221vw;
+        top: 10.2928vw;
+        background: var(--color-primary)
+    }
+
+    .planet--3 {
+        width: 0.9582vw;
+        height: 0.9582vw;
+        left: 53.7791vw;
+        top: 58.6562vw;
+        background: var(--color-primary)
+    }
+
+    .planet--4 {
+        width: 0.7843vw;
+        height: 0.7843vw;
+        left: 47.4168vw;
+        top: 2.96vw;
+        background: var(--color-planet-gray)
+    }
+
+    .planet--5 {
+        width: 0.6355vw;
+        height: 0.6355vw;
+        left: 2.7911vw;
+        top: 19.2261vw;
+        background: var(--gradient-planet-small)
+    }
+
+    .planet--6 {
+        width: 0.6972vw;
+        height: 0.6972vw;
+        left: 15.1108vw;
+        top: 4.8887vw;
+        background: var(--gradient-planet-small)
+    }
+
+    .planet--7 {
+        width: 0.6972vw;
+        height: 0.6972vw;
+        left: 13.9085vw;
+        top: 53.5vw;
+        background: var(--gradient-planet-small)
+    }
+
+    .planet--8 {
+        width: 1.3943vw;
+        height: 1.3943vw;
+        left: 49.2764vw;
+        top: 3.8776vw;
+        background: var(--gradient-planet-small)
+    }
+
+    .planet--9 {
+        width: 1.3943vw;
+        height: 1.3943vw;
+        left: 45.5427vw;
+        top: 57.2917vw;
+        background: var(--gradient-planet-small)
+    }
+
+    .pre-title {
+        font-size: 1.666vw
+    }
+
+    .product-card {
+        position: absolute;
+        /* Возвращаем абсолютное позиционирование */
+        border-radius: 3.6458vw
+    }
+
+    .product-card--berry-chic {
+        width: 60.625vw;
+        height: 75.7292vw;
+        left: 0;
+        top: 132.8125vw;
+        /* 5517 - 4242 */
+    }
+
+    .product-card--blush-cloud {
+        left: 0;
+        top: 28.5417vw;
+        /* 3587 - 3313 */
+    }
+
+    .product-card--blush-cloud-catalog {
+        width: 60.625vw;
+        height: 51.4583vw;
+        left: 36.25vw;
+        top: 75.7292vw;
+        /* 4969 - 4242 */
+    }
+
+    .product-card--blush-cloud-catalog .product-card__image {
+        height: 30.8333vw
+    }
+
+    .product-card--crystal-nude {
+        left: 67.7083vw;
+        top: 18.5417vw;
+        /* Скрыта на планшетной версии */
+    }
+
+    .product-card--large {
+        width: 37.5vw;
+        height: 54.8958vw
+    }
+
+    .product-card--latte-nude-catalog {
+        left: 0;
+        top: 75.7292vw;
+        /* 4969 - 4242 */
+    }
+
+    .product-card--latte-nude-set {
+        left: 59.4792vw;
+        /* 586 - 15 */
+        top: 0;
+        width: 37.5vw;
+        height: 58.125vw;
+        /* Уникальная высота для этой карточки */
+    }
+
+    .product-card--latte-nude-solo {
+        display: flex;
+        /* Показываем карточку */
+        position: absolute;
+        width: 56.9792vw;
+        height: 22.2917vw;
+        flex-direction: row;
+        /* Горизонтальное расположение */
+        left: 39.5833vw;
+        /* 395-15 */
+        top: 61.1458vw;
+        /* 3900-3313 */
+    }
+
+    .product-card--latte-nude-solo .product-card__footer {
+        padding: 0
+    }
+
+    .product-card--latte-nude-solo .product-card__image {
+        width: 24.2708vw;
+        height: 100%;
+        border-radius: 3.125vw
+    }
+
+    .product-card--latte-nude-solo .product-card__info {
+        padding: 1.5625vw 1.3542vw;
+        width: 28.75vw;
+        gap: 2.0833vw
+    }
+
+    .product-card--milky-way {
+        left: 0;
+        top: 18.5417vw;
+        /* 4420 - 4242 */
+    }
+
+    .product-card--peach-glow {
+        left: 53.75vw;
+        top: 33.5417vw
+    }
+
+    .product-card--peach-glow,
+    .product-card--unicorn-pearl {
+        display: none
+    }
+
+    .product-card--small {
+        width: 28.75vw;
+        height: 51.458vw
+    }
+
+    .product-card--small .product-card__image {
+        height: 30.8333vw
+    }
+
+    .product-card--unicorn-pearl {
+        left: 117.5vw;
+        top: 166.9792vw
+    }
+
+    .product-card--vega-placeholder {
+        left: 33.8542vw;
+        top: 18.6458vw;
+        /* 4421 - 4242 */
+        width: 28.75vw;
+        height: 51.458vw;
+        border-radius: 3.6458vw
+    }
+
+    .product-card-wrapper {
+        display: block;
+        /* Убираем грид, используем абсолютное позиционирование */
+        position: relative;
+        width: 100%;
+        height: 88.4375vw;
+        margin-top: -248px
+    }
+
+    .product-card__actions {
+        gap: 2.0833vw
+    }
+
+    .product-card__category {
+        font-size: 1.562vw
+    }
+
+    .product-card__footer {
+        padding: 2.0833vw 1.5625vw 1.5625vw 1.5625vw
+    }
+
+    .product-card__image {
+        height: 58.5417vw;
+        border-radius: 3.6458vw
+    }
+
+    .product-card__info {
+        gap: 2.0833vw;
+        padding: 2.0833vw 1.5625vw 0 1.5625vw
+    }
+
+    .product-card__price {
+        font-size: 3.3333vw
+    }
+
+    .product-card__volume {
+        font-size: 1.875vw
+    }
+
+    .section {
+        width: 200vw
+    }
+
+    .section-divider {
+        height: 0.1042vw;
+        margin: 7.812vw 10.94vw
+    }
+
+    .section-divider-invisible {
+        height: 7.812vw
+    }
+
+    .section-intro {
+        gap: 2.0833vw
+    }
+
+    .section-intro__description {
+        font-size: 1.875vw;
+        width: 36.77vw
+    }
+
+    .section-intro__title {
+        font-size: 2.6042vw;
+        line-height: 100%;
+        letter-spacing: -1%
+    }
+
+    .site-footer-main {
+        width: 100%;
+        height: 67.7083vw;
+        padding: 5vw 1.5625vw;
+        margin-top: 48px;
+        margin: 7.8125vw auto 0 auto
+    }
+
+    .site-footer__bg {
+        border-radius: 3.6458vw 3.6458vw 0 0
+    }
+
+    .site-footer__container {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        /* 3 колонки с разной шириной */
+        gap: 5.2083vw 3.125vw
+    }
+
+    .site-header {
+        width: 100%;
+        max-width: 96.875vw;
+        top: 1.5625vw;
+        padding: 0 1.5625vw;
+        left: 1.5625vw;
+        height: 8.3333vw;
+        border-radius: 1.5625vw
+    }
+
+    .social-icon {
+        width: 6.3542vw;
+        height: 6.3542vw
+    }
+
+    .social-icon img {
+        height: 3.3333vw
+    }
+
+    .title-decoration .stroke,
+    .title-decoration .fill {
+        font-size: 2.6042vw
+    }
+
+    .title-decoration.hero-signature {
+        width: 21.458vw;
+        height: 14.374vw;
+        left: 141.1458vw;
+        top: 75vw;
+        font-size: 11.458vw;
+        text-shadow: 0.208vw 0.3125vw 0 rgba(46, 9, 74, 0.35)
+    }
+
+    .title-decoration.hero-signature .title-decoration__text {
+        width: 21.458vw;
+        height: 14.374vw;
+        font-size: 11.458vw;
+        text-shadow: 0.208vw 0.3125vw 0 rgba(46, 9, 74, 0.35)
+    }
+
+    .title-decoration__text {
+        font-size: 4.375vw;
+        text-shadow: 0.13vw 0.1948vw 0 rgba(46, 9, 74, 0.1)
+    }
+
+    .title-decoration__text.stroke {
+        -webkit-text-stroke: 0.208vw var(--color-accent-pink)
+    }
+
+    .videoplayer {
+        left: 1.5625vw;
+        width: 930px;
+        width: 930;
+        height: 1526;
+        top: 103.3333vw;
+        border-radius: 3.6458vw
+    }
+
+    .videoplayer-button {
+        width: 13.0208vw;
+        height: 13.0208vw
+    }
+
+    .why-us-intro {
+        left: 1.5625vw;
+        width: 44.1667vw
+    }
+
+    .why-us-section {
+        width: 200vw;
+        height: 168.9583vw
+    }
+
+    body {
+        height: 260.416vw
+    }
+
+    h2.section-intro__title {
+        font-size: 7.0833vw
+    }
+
+    p {
+        font-size: 1.6667vw
+    }
+}
+
+@media (max-width: 767px) {
+    #consent {
+        margin: 1.25vw
+    }
+
+    .about-intro {
+        gap: 6.25vw
+    }
+
+    .about-intro .section-intro__title {
+        font-size: 15.9375vw;
+        width: 132.5vw;
+        height: 51.25vw
+    }
+
+    .about-section {
+        flex-direction: column;
+        gap: 7.8125vw;
+        padding: 0 4.6875vw;
+        width: 100%;
+        margin: 23.4375vw 0 0 0;
+        left: 65.625vw
+    }
+
+    .about-section__caption {
+        height: 31.25vw;
+        border-radius: 0 0 10.9375vw 10.9375vw;
+        padding: 0 7.8125vw
+    }
+
+    .about-section__caption-content {
+        gap: 4.375vw
+    }
+
+    .about-section__caption-name {
+        font-size: 11.875vw
+    }
+
+    .about-section__caption-title {
+        font-size: 5vw
+    }
+
+    .about-section__image {
+        border-radius: 10.9375vw 0 10.9375vw 14.0625vw
+    }
+
+    .about-section__image-wrapper {
+        width: 344.0625vw;
+        height: 237.5vw
+    }
+
+    .about-section__image-wrapper--desktop-only {
+        display: none
+    }
+
+    .about-section__image-wrapper--mobile-only {
+        display: block;
+        width: 100%;
+        height: 118.75vw
+    }
+
+    .about-section__link {
+        gap: 1.25vw
+    }
+
+    .about-section__link span {
+        font-size: 5vw
+    }
+
+    .about-section__link::after {
+        height: 0.3125vw
+    }
+
+    .about-section__main-text {
+        gap: 6.25vw
+    }
+
+    .about-section__main-text p {
+        font-size: 5vw
+    }
+
+    .about-section__text-block {
+        width: 100%;
+        padding-left: 0;
+        gap: 12.5vw
+    }
+
+    .about-title-decoration {
+        left: 16.25vw;
+        top: 55.9375vw
+    }
+
+    .advantages-block {
+        /* Скидаємо абсолютне позиціонування */
+        position: static;
+        width: 100%;
+        left: 256.875vw
+    }
+
+    .advantages-list__description {
+        font-size: 5vw
+    }
+
+    .advantages-list__item {
+        /* Розташовуємо заголовок і опис в колонку */
+        flex-direction: column;
+        width: 100%;
+        gap: 2.5vw;
+        /* Зменшуємо відстань */
+        padding: 6.25vw 0
+    }
+
+    .advantages-list__title {
+        /* Зменшуємо шрифт і прибираємо фіксовану ширину */
+        font-size: 11.25vw;
+        flex-basis: auto
+    }
+
+    .advantages-main-feature {
+        /* Розташовуємо цифру і текст в колонку */
+        flex-direction: column;
+        align-items: left;
+        align-items: normal !important;
+        height: auto;
+        padding-bottom: 20px;
+        gap: 3.125vw;
+        width: 100%
+    }
+
+    .advantages-main-feature__number {
+        /* Значно зменшуємо розмір шрифту */
+        font-size: 50vw;
+        height: auto;
+        line-height: 0.7;
+        /* Для щільного прилягання */
+    }
+
+    .advantages-main-feature__text {
+        /* Скидаємо абсолютне позиціонування */
+        position: static;
+        font-size: 5vw;
+        left: 95.625vw;
+        bottom: 12.8125vw
+    }
+
+    .arrow-down {
+        width: 3.1019vw;
+        height: 2.8125vw
+    }
+
+    .bestseller-center-piece {
+        order: 2;
+        width: 81.25vw;
+        height: 81.25vw;
+        margin-top: 40px;
+        /* Немного наезжает на текст */
+        top: 145vw
+    }
+
+    .bestseller-cta-button {
+        left: 62.5vw;
+        width: 44.375vw;
+        height: 44.375vw
+    }
+
+    .bestseller-info-card {
+        order: 3;
+        width: 100%;
+        max-width: 90.625vw;
+        height: 98.4375vw;
+        padding: 8.4375vw;
+        border: 1px solid rgba(247, 243, 248, 0.6);
+        gap: 1.5625vw;
+        left: 0;
+        top: 46.875vw
+    }
+
+    .bestseller-intro {
+        order: 1;
+        /* Порядок в flex-контейнере */
+        text-align: left;
+        left: 65.625vw;
+        top: 46.875vw;
+        width: 128.4359vw
+    }
+
+    .bestseller-intro .section-intro__description {
+        width: 100%;
+        height: auto
+    }
+
+    .bestseller-intro .section-intro__title {
+        font-size: 15.9375vw
+    }
+
+    .bestseller-intro .title-decoration {
+        left: 25.9375vw;
+        top: 32.5vw
+    }
+
+    .bestseller-intro .title-decoration__text {
+        font-size: 7.8125vw
+    }
+
+    .bestseller-intro,
+    .bestseller-center-piece,
+    .bestseller-info-card {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 100%
+    }
+
+    .bestseller-orbits .orbit--inner {
+        width: 68.125vw;
+        height: 68.125vw
+    }
+
+    .bestseller-orbits .orbit--outer {
+        width: 81.25vw;
+        height: 81.25vw
+    }
+
+    .bestseller-orbits .planet--b1 {
+        width: 1.875vw;
+        height: 1.875vw;
+        left: 6.1469vw;
+        top: 33.5406vw
+    }
+
+    .bestseller-orbits .planet--b10 {
+        width: 0.8344vw;
+        height: 0.8344vw;
+        left: 35.8344vw;
+        top: 74.0625vw
+    }
+
+    .bestseller-orbits .planet--b2 {
+        width: 0.8344vw;
+        height: 0.8344vw;
+        left: 20.3125vw;
+        top: 0
+    }
+
+    .bestseller-orbits .planet--b3 {
+        width: 0.8344vw;
+        height: 0.8344vw;
+        left: 66.0406vw;
+        top: 62.5vw
+    }
+
+    .bestseller-orbits .planet--b4 {
+        width: 1.6656vw;
+        height: 1.6656vw;
+        left: 60.4156vw;
+        top: 0.3125vw
+    }
+
+    .bestseller-orbits .planet--b5 {
+        width: 1.6656vw;
+        height: 1.6656vw;
+        left: 62.0844vw;
+        top: 58.0219vw
+    }
+
+    .bestseller-orbits .planet--b6 {
+        width: 0.8344vw;
+        height: 0.8344vw;
+        left: 73.75vw;
+        top: 33.5406vw
+    }
+
+    .bestseller-orbits .planet--b7 {
+        width: 0.8344vw;
+        height: 0.8344vw;
+        left: 57.9156vw;
+        top: -9.375vw
+    }
+
+    .bestseller-orbits .planet--b8 {
+        width: 0.8344vw;
+        height: 0.8344vw;
+        left: 80.625vw;
+        top: 29.7906vw
+    }
+
+    .bestseller-orbits .planet--b9 {
+        width: 1.25vw;
+        height: 1.25vw;
+        left: 9.375vw;
+        top: 66.0406vw
+    }
+
+    .bestseller-planet-bg {
+        width: 57.1875vw;
+        height: 57.1875vw
+    }
+
+    .bestseller-price {
+        font-size: 15.9375vw;
+        line-height: 100%
+    }
+
+    .bestseller-price-block {
+        display: none;
+        gap: 9.375vw;
+        height: 44.375vw
+    }
+
+    .bestseller-price-block-mob {
+        display: flex;
+        width: 100%;
+        max-width: 90.625vw;
+        margin-top: 20px;
+        z-index: 4;
+        order: 4;
+        justify-content: space-between;
+        align-items: center
+    }
+
+    .bestseller-section {
+        height: 294.375vw;
+        border-radius: 10.9375vw;
+        margin: -12.5vw 0 0 0;
+        width: auto;
+        /* Перестраиваем в колонку */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 14.0625vw 4.6875vw;
+        box-sizing: border-box
+    }
+
+    .bestseller-section__bg {
+        border-radius: 10.9375vw
+    }
+
+    .bestseller-section__bottle {
+        height: 72.5vw
+    }
+
+    .bg-blur {
+        width: 151.8719vw;
+        height: 151.8719vw
+    }
+
+    .btn {
+        font-size: 4.6859vw
+    }
+
+    .btn--burger {
+        width: 10vw;
+        height: 10vw
+    }
+
+    .btn--burger img {
+        width: 6.875vw;
+        height: 6.875vw
+    }
+
+    .btn--icon {
+        width: 13.125vw;
+        height: 13.125vw
+    }
+
+    .btn--icon img {
+        width: 7.5vw;
+        height: 7.5vw
+    }
+
+    .btn--icon-round {
+        width: 11.875vw;
+        height: 11.875vw
+    }
+
+    .btn--outline {
+        padding: 3.75vw 6.875vw;
+        gap: 3.125vw;
+        width: 39.0625vw;
+        height: 13.125vw;
+        border-radius: 62.5vw
+    }
+
+    .btn--primary {
+        width: 44.375vw;
+        height: 44.375vw
+    }
+
+    .btn--primary span {
+        font-size: 4.9981vw
+    }
+
+    .btn.btn--icon-round img {
+        width: 6.875vw;
+        height: 7.1875vw
+    }
+
+    .btn.btn--icon-round.btn--primary-fill img {
+        width: 6.25vw
+    }
+
+    .catalog-bg-blur--right {
+        left: 345vw;
+        top: 462.81vw;
+        width: 195.6241vw;
+        height: 195.6241vw
+    }
+
+    .catalog-cta-button {
+        position: initial;
+        margin: 3.125vw auto;
+        width: 44.375vw;
+        height: 44.375vw;
+        left: 479.7vw;
+        top: 536.8741vw
+    }
+
+    .catalog-grid {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Две равные колонки */
+        gap: 6.25vw 4.6875vw;
+        /* Отступы между карточками (20px по вертикали, 15px по горизонтали) */
+    }
+
+    .catalog-grid .product-card {
+        position: static;
+        left: auto;
+        top: auto;
+        width: 100%;
+        /* Карточка занимает всю ширину ячейки грида */
+    }
+
+    .catalog-intro {
+        position: relative;
+        /* Убираем абсолютное позиционирование */
+        width: 100%;
+        left: 0;
+        top: 0;
+        margin-bottom: 30px
+    }
+
+    .catalog-intro .section-intro__description {
+        width: 100%;
+        font-size: 5vw
+    }
+
+    .catalog-intro .section-intro__title {
+        font-size: 15.9375vw
+    }
+
+    .catalog-intro .title-decoration {
+        left: 49.0625vw;
+        top: 12.5vw;
+        width: 62.5vw
+    }
+
+    .catalog-intro .title-decoration__text {
+        font-size: 7.8125vw
+    }
+
+    .catalog-section {
+        height: 637.5vw;
+        /* Высота теперь зависит от контента, а не фиксированная */
+        padding: 0 4.6875vw;
+        /* Боковые отступы */
+        margin-top: 50px;
+        width: 600vw
+    }
+
+    .catalog-section__bg-wave {
+        width: 670.9375vw;
+        height: 937.5vw;
+        left: 4.9981vw;
+        top: -204.3719vw
+    }
+
+    .categories-bg-blur--left {
+        left: -1.875vw;
+        top: 204.6875vw
+    }
+
+    .categories-bg-blur--right {
+        left: 507.81vw;
+        top: 426.25vw
+    }
+
+    .categories-bg-text {
+        width: 468.75vw;
+        height: 190.625vw;
+        left: 65.9359vw;
+        top: 77.8125vw
+    }
+
+    .categories-bg-text img {
+        width: 100%;
+        height: auto
+    }
+
+    .categories-bg-text-mobile {
+        position: absolute;
+        left: 4.6875vw;
+        bottom: 0;
+        width: 90vw;
+        height: 74.0625vw;
+        flex-shrink: 0;
+        z-index: 15;
+        display: block
+    }
+
+    .categories-cta-button {
+        position: relative;
+        left: 21.875vw;
+        top: auto;
+        bottom: 20.3125vw;
+        transform: rotate(-22deg);
+        margin: 0 0 6.25vw 0;
+        width: 44.375vw;
+        height: 44.375vw
+    }
+
+    .categories-intro {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%
+    }
+
+    .categories-intro .section-intro__title {
+        font-size: 15.9375vw;
+        height: 21.875vw
+    }
+
+    .categories-intro .title-decoration {
+        left: 15vw;
+        top: 15vw
+    }
+
+    .categories-intro .title-decoration__text {
+        font-size: 7.8125vw
+    }
+
+    .categories-list-bg {
+        width: 231.25vw;
+        height: 231.25vw;
+        left: 266.5619vw;
+        top: 229.3741vw
+    }
+
+    .categories-list-bg,
+    .categories-section__bottle {
+        /* Скрываем все карточки */
+        display: none
+    }
+
+    .categories-list-bg,
+    .categories-section__bottle,
+    .category-list-wrapper {
+        display: none
+    }
+
+    .categories-section {
+        height: auto;
+        margin: 23.4375vw 0 0 0;
+        padding: 0 4.6875vw;
+        display: block;
+        width: 600vw
+    }
+
+    .categories-section__bottle {
+        width: 92.1875vw;
+        height: 206.25vw;
+        left: calc(50% - 92.1875vw / 2 + 0.1562vw)
+    }
+
+    .category-card {
+        position: relative;
+        left: 0 !important;
+        top: 0 !important;
+        width: 43.75vw;
+        height: 64.0625vw;
+        padding: 0;
+        border-radius: 5.625vw;
+        border: 0;
+        gap: 6.25vw
+    }
+
+    .category-card--bases {
+        left: 65.625vw;
+        top: 85.625vw;
+        width: 86.25vw;
+        height: 133.125vw
+    }
+
+    .category-card--care {
+        right: 0;
+        left: 352.5vw;
+        top: 473.7481vw;
+        width: 181.8719vw;
+        height: 133.125vw
+    }
+
+    .category-card--care .category-card__content-wrapper {
+        height: auto
+    }
+
+    .category-card--care .category-card__image {
+        width: 174.375vw;
+        height: 93.75vw
+    }
+
+    .category-card--care .category-card__title {
+        line-height: 0.8;
+        font-size: 10.625vw;
+        /* Чуть меньше шрифт */
+    }
+
+    .category-card--decor {
+        left: 158.1241vw;
+        top: 473.4375vw;
+        width: 86.25vw;
+        height: 133.125vw
+    }
+
+    .category-card--gellaki {
+        left: 352.5vw;
+        width: 181.8719vw;
+        height: 218.7481vw
+    }
+
+    .category-card--gellaki .category-card__image {
+        height: 166.56vw
+    }
+
+    .category-card--gellaki p.category-card__description {
+        width: 82.5vw;
+        height: 35.9375vw
+    }
+
+    .category-card--gels {
+        left: 161.25vw;
+        top: 246.875vw;
+        width: 86.25vw;
+        height: 176.8741vw
+    }
+
+    .category-card--gels .category-card__image {
+        height: 137.5vw
+    }
+
+    .category-card--gels .category-card__title {
+        line-height: 0.8;
+        font-size: 10.625vw;
+        /* Чуть меньше шрифт */
+    }
+
+    .category-card--glitter {
+        left: 65.625vw;
+        top: 473.7481vw;
+        width: 86.25vw;
+        height: 133.125vw
+    }
+
+    .category-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.8125vw
+    }
+
+    .category-card__bottle-in-image {
+        height: 111.875vw;
+        top: 12.1859vw
+    }
+
+    .category-card__content-wrapper {
+        height: auto;
+        padding: 3.125vw;
+        border-radius: 0 0 3.75vw 3.75vw;
+        align-items: center;
+        justify-content: center;
+        text-align: center
+    }
+
+    .category-card__content-wrapper--large {
+        height: 43.1219vw
+    }
+
+    .category-card__description {
+        display: none;
+        /* Скрываем описание на мобильной версии */
+        font-size: 5.625vw
+    }
+
+    .category-card__image {
+        border-radius: 5.625vw;
+        border: 1px solid var(--color-primary);
+        height: 88.125vw
+    }
+
+    .category-card__title {
+        font-size: 11.875vw;
+        line-height: 0.8
+    }
+
+    .category-list {
+        gap: 4.6875vw
+    }
+
+    .category-list-wrapper {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: -63.4375vw;
+        top: 0;
+        width: 217.5vw;
+        height: 217.5vw;
+        background-color: var(--color-primary);
+        margin-top: -40px;
+        border-radius: 100%;
+        gap: 6.25vw;
+        padding: 28.125vw 63.4375vw
+    }
+
+    .category-list:last-child {
+        border-bottom: 1px solid var(--color-border-white);
+        padding-bottom: 15px
+    }
+
+    .category-list__item {
+        padding-top: 20px;
+        border-color: var(--color-border-white);
+        height: auto;
+        align-items: center
+    }
+
+    .category-list__item img {
+        filter: brightness(0) invert(1);
+        /* Делаем стрелку белой */
+    }
+
+    .category-list__item-title {
+        font-size: 11.875vw;
+        line-height: 1
+    }
+
+    .category-list__main-title {
+        font-size: 15.9375vw;
+        line-height: 1;
+        text-align: left;
+        width: 100%
+    }
+
+    .contact-form-button {
+        /* Прибираємо поворот і центруємо кнопку для зручності */
+        transform: rotate(0);
+        margin: 12.5vw auto 0 auto;
+        align-self: center
+    }
+
+    .contact-form-wrapper {
+        padding: 9.375vw 6.25vw;
+        width: 228.75vw;
+        height: 187.5vw;
+        border-radius: 10.9375vw
+    }
+
+    .contact-form__title {
+        width: 100%;
+        font-size: 5.625vw
+    }
+
+    .contact-info {
+        padding: 9.375vw 6.25vw;
+        /* Grid-розмітка для заголовку/розкладу працює тут ідеально */
+        row-gap: 25px;
+        /* Зменшуємо вертикальні відступи */
+        width: 227.5vw;
+        height: 187.5vw;
+        border-radius: 10.9375vw
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        width: 100%
+    }
+
+    .contact-info__bg {
+        height: 163.4375vw;
+        top: 28.125vw
+    }
+
+    .contact-info__details {
+        gap: 3.125vw;
+        left: 18.75vw;
+        top: 95.3125vw
+    }
+
+    .contact-info__details a[href^="mailto"] {
+        font-size: 5.625vw
+    }
+
+    .contact-info__details a[href^="tel"] {
+        font-size: 8.75vw
+    }
+
+    .contact-info__intro .section-intro__title {
+        font-size: 11.25vw;
+        width: 132.5vw
+    }
+
+    .contact-info__schedule {
+        font-size: 4.375vw;
+        text-align: right;
+        margin-top: 35px;
+        top: 28.125vw;
+        right: 10.9375vw
+    }
+
+    .contact-info__socials {
+        justify-content: center;
+        /* Центруємо іконки */
+        gap: 4.6875vw;
+        left: 18.75vw;
+        top: 149.6875vw
+    }
+
+    .contacts-section {
+        /* Складаємо блоки в одну колонку */
+        flex-direction: column;
+        gap: 4.6875vw;
+        padding: 0;
+        width: 468.75vw;
+        height: 187.5vw
+    }
+
+    .cta-button {
+        width: 44.375vw;
+        height: 44.375vw
+    }
+
+    .faq-intro {
+        width: 132.5vw
+    }
+
+    .faq-item.is-active .faq-item__answer-wrapper {
+        max-height: 46.875vw
+    }
+
+    .faq-item__answer {
+        font-size: 5vw;
+        max-width: 181.5625vw
+    }
+
+    .faq-item__header {
+        padding: 7.5vw 0
+    }
+
+    .faq-item__icon {
+        width: 9.375vw;
+        height: 9.375vw
+    }
+
+    .faq-item__question {
+        font-size: 6.25vw;
+        max-width: 181.25vw
+    }
+
+    .faq-list {
+        width: 277.5vw
+    }
+
+    .faq-section {
+        padding: 0 65.625vw
+    }
+
+    .faq-section,
+    .section-divider-invisible {
+        display: none
+    }
+
+    .footer-column {
+        gap: 6.25vw
+    }
+
+    .footer-column--company {
+        grid-area: 3/1/4/2
+    }
+
+    .footer-column--info {
+        border-bottom: 1px solid var(--color-border)
+    }
+
+    .footer-column--info p {
+        font-size: 5.625vw;
+        width: 86.25vw
+    }
+
+    .footer-column--products {
+        grid-area: 2/1/3/3;
+        border-bottom: 1px solid var(--color-border);
+        padding-bottom: 20px;
+        margin-bottom: -20px;
+        margin-top: -15px
+    }
+
+    .footer-column--products .footer-links {
+        columns: 2;
+        column-gap: 15px
+    }
+
+    .footer-column--tech {
+        grid-area: 3/2/4/3
+    }
+
+    .footer-credits {
+        gap: 2.1875vw
+    }
+
+    .footer-credits a {
+        font-size: 5vw
+    }
+
+    .footer-credits a::after {
+        height: 0.3125vw
+    }
+
+    .footer-credits span {
+        font-size: 4.375vw
+    }
+
+    .footer-credits--desktop {
+        display: inline-flex;
+        position: sticky;
+        border-top: 1px solid var(--color-border);
+        padding-top: 20px;
+        margin-top: -20px;
+        top: 70.3125vw
+    }
+
+    .footer-credits--mobile {
+        display: inline;
+        position: static
+    }
+
+    .footer-links {
+        gap: 2.5vw
+    }
+
+    .footer-links a {
+        font-size: 5vw
+    }
+
+    .form-fields {
+        gap: 13.125vw
+    }
+
+    .form-group input {
+        font-size: 4.6875vw
+    }
+
+    .form-group input::placeholder {
+        letter-spacing: -0.1406vw
+    }
+
+    .form-group-checkbox__box {
+        width: 6.25vw;
+        height: 6.25vw;
+        border-radius: 0.9375vw
+    }
+
+    .form-group-checkbox__icon {
+        width: 3.75vw;
+        height: 3.75vw
+    }
+
+    .form-group-checkbox__label {
+        gap: 2.5vw;
+        font-size: 4.375vw
+    }
+
+    .form-label-icon {
+        bottom: 1.875vw;
+        height: 6.25vw
+    }
+
+    .game-icons_polar-star {
+        width: 3.4375vw
+    }
+
+    .header-logo {
+        order: 2;
+        /* Логотип теперь справа */
+        margin: 0 6.25vw
+    }
+
+    .header-logo img {
+        height: 10vw
+    }
+
+    .header-nav__group {
+        gap: 2.5vw
+    }
+
+    .header-nav__group:first-of-type {
+        order: 1
+    }
+
+    .header-nav__group:last-of-type {
+        display: none
+    }
+
+    .hero-background {
+        width: 50%;
+        height: 161.5625vw
+    }
+
+    .hero-cta-button {
+        width: 35.9375vw;
+        height: 35.9375vw;
+        left: 32.1875vw;
+        top: 204.6875vw
+    }
+
+    .hero-description {
+        color: var(--color-primary-darkest);
+        left: 9.0625vw;
+        top: 177.5vw;
+        width: 81.875vw;
+        text-align: center;
+        font-size: 5.625vw;
+        /* 21.6px */
+    }
+
+    .hero-images__balloons {
+        width: 97.5vw;
+        left: 1.25vw;
+        top: 54.6875vw
+    }
+
+    .hero-images__bottle {
+        width: 31.25vw;
+        height: auto;
+        left: 31.5625vw;
+        top: 94.375vw;
+        /* Выравниваем по центру */
+    }
+
+    .hero-images__bottle-shadow {
+        width: 94.9981vw;
+        height: 46.2481vw;
+        left: 300vw;
+        top: 223.74vw
+    }
+
+    .hero-planet-bg {
+        width: 63.2597vw;
+        height: 63.2597vw;
+        top: 98.4375vw;
+        left: 136.4041vw
+    }
+
+    .hero-section {
+        height: 268.75vw;
+        overflow: hidden;
+        width: 600vw
+    }
+
+    .hero-title-block {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        left: 5vw;
+        top: 31.25vw
+    }
+
+    .hero-title-block__main {
+        font-size: 28.125vw
+    }
+
+    .hero-title-block__subtitle {
+        font-size: 15.9375vw
+    }
+
+    .hero-title-cosmos {
+        width: 100%;
+        left: 48.125vw;
+        top: 48.75vw;
+        /* Позиционируем под "Бренд з" */
+        height: 125.1594vw
+    }
+
+    .hero-title-cosmos__fill {
+        font-size: 121.8719vw
+    }
+
+    .hero-title-cosmos__fill,
+    .hero-title-cosmos__stroke {
+        font-size: 28.125vw
+    }
+
+    .hero-title-cosmos__stroke {
+        top: 0.9375vw;
+        left: 0.625vw;
+        font-size: 121.8719vw;
+        -webkit-text-stroke: 0.3125vw var(--color-hero-stroke)
+    }
+
+    .icon {
+        width: 7.5vw;
+        height: 7.5vw
+    }
+
+    .info-card {
+        width: 119.0625vw;
+        height: 141.5625vw;
+        border-radius: 9.375vw;
+        gap: 7.8119vw
+    }
+
+    .info-card__item {
+        gap: 3.75vw;
+        padding-top: 15px;
+        padding-bottom: 15px
+    }
+
+    .info-card__item .info-card__text {
+        width: 65.31vw;
+        height: 19.6859vw
+    }
+
+    .info-card__item .info-card__text,
+    .info-card__item.line .info-card__text {
+        width: 54.0625vw;
+        height: auto
+    }
+
+    .info-card__item.line {
+        padding: 5.625vw 0
+    }
+
+    .info-card__item.line .info-card__text {
+        width: 96.5625vw;
+        height: 19.6859vw
+    }
+
+    .info-card__text {
+        color: #F7F3F8;
+        font-family: "Vela Sans";
+        font-size: 5vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        /* 19.2px */
+    }
+
+    .info-card__title {
+        margin-bottom: 0;
+        font-size: 6.25vw
+    }
+
+    .info-card__volume {
+        font-size: 12.5vw;
+        width: 15.3125vw;
+        height: 15.6241vw
+    }
+
+    .nav-button--svg {
+        width: 39.6875vw;
+        height: 13.4375vw
+    }
+
+    .nav-button__arrow {
+        width: 3.1019vw;
+        height: 2.8125vw
+    }
+
+    .nav-button__content {
+        padding-left: 9px
+    }
+
+    .nav-button__content .icon-arrow-down {
+        width: 3.125vw;
+        height: 2.8125vw
+    }
+
+    .nav-button__content .icon-grid {
+        width: 5vw;
+        height: 5vw
+    }
+
+    .nav-button__icon {
+        width: 5vw;
+        height: 5vw
+    }
+
+    .nav-button__text {
+        padding-left: 17.5px;
+        font-size: 4.6875vw
+    }
+
+    .nav-separator img {
+        width: 3.75vw;
+        height: 3.75vw
+    }
+
+    .new-arrivals-bg-blur {
+        width: 151.8719vw;
+        height: 151.8719vw;
+        left: 4.3741vw;
+        top: 224.0625vw
+    }
+
+    .new-arrivals-intro {
+        height: 62.8125vw;
+        width: 151.2481vw;
+        left: 65.625vw
+    }
+
+    .new-arrivals-intro .section-intro__description {
+        font-size: 5vw
+    }
+
+    .new-arrivals-intro .section-intro__title {
+        font-size: 15.9375vw
+    }
+
+    .new-arrivals-intro .title-decoration {
+        top: 30px;
+        top: 35vw;
+        left: 20.625vw
+    }
+
+    .new-arrivals-intro .title-decoration__text {
+        font-size: 7.8125vw
+    }
+
+    .new-arrivals-section {
+        padding: 9.375vw 4.6875vw;
+        gap: 4.6875vw;
+        height: 353.125vw;
+        width: 600vw
+    }
+
+    .orbit--inner {
+        width: 76.25vw;
+        height: 76.25vw;
+        left: 7.1875vw;
+        top: 7.1875vw
+    }
+
+    .orbit--outer {
+        width: 468.75vw;
+        height: 468.75vw
+    }
+
+    .orbits {
+        width: 90.625vw;
+        height: 90.625vw;
+        top: 85vw;
+        left: 65.625vw
+    }
+
+    .payment-methods {
+        gap: 4.6875vw;
+        width: 67.1875vw
+    }
+
+    .payment-methods--desktop {
+        display: none
+    }
+
+    .payment-methods--mobile {
+        display: flex
+    }
+
+    .payment-methods__item {
+        width: 31.25vw;
+        height: 16.875vw
+    }
+
+    .planet--1 {
+        width: 2.1322vw;
+        height: 2.1322vw;
+        left: 6.7188vw;
+        top: 37.3766vw
+    }
+
+    .planet--10 {
+        width: 0.8294vw;
+        height: 0.8294vw;
+        left: 82.1597vw;
+        top: 37.445vw
+    }
+
+    .planet--11 {
+        width: 0.7106vw;
+        height: 0.7106vw;
+        left: 77.2225vw;
+        top: 13.03vw
+    }
+
+    .planet--12 {
+        width: 1.0662vw;
+        height: 1.0662vw;
+        left: 87.1397vw;
+        top: 28.8769vw
+    }
+
+    .planet--2 {
+        width: 1.3022vw;
+        height: 1.3022vw;
+        left: 22.0575vw;
+        top: 13.9931vw
+    }
+
+    .planet--3 {
+        width: 1.3022vw;
+        height: 1.3022vw;
+        left: 73.0994vw;
+        top: 79.7812vw
+    }
+
+    .planet--4 {
+        width: 1.0662vw;
+        height: 1.0662vw;
+        left: 64.4653vw;
+        top: 4.0234vw
+    }
+
+    .planet--5 {
+        width: 0.8637vw;
+        height: 0.8637vw;
+        left: 3.7966vw;
+        top: 26.1541vw
+    }
+
+    .planet--6 {
+        width: 0.9478vw;
+        height: 0.9478vw;
+        left: 20.5372vw;
+        top: 6.6475vw
+    }
+
+    .planet--7 {
+        width: 2.5vw;
+        height: 2.5vw;
+        left: 18.9091vw;
+        top: 72.875vw
+    }
+
+    .planet--8 {
+        width: 1.8962vw;
+        height: 1.8962vw;
+        left: 66.9887vw;
+        top: 5.2691vw
+    }
+
+    .planet--9 {
+        width: 1.8962vw;
+        height: 1.8962vw;
+        left: 61.9106vw;
+        top: 77.8125vw
+    }
+
+    .pre-title {
+        font-size: 4.9981vw
+    }
+
+    .product-card {
+        border-radius: 7.8125vw;
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        height: 136.875vw
+    }
+
+    .product-card--berry-chic {
+        left: 161.25vw;
+        top: 500.9375vw
+    }
+
+    .product-card--blush-cloud {
+        left: 65.625vw;
+        top: 115vw
+    }
+
+    .product-card--blush-cloud-catalog {
+        left: 256.8719vw;
+        top: 264.3719vw
+    }
+
+    .product-card--blush-cloud-catalog,
+    .product-card--vega-placeholder,
+    .product-card--berry-chic {
+        grid-column: 1/-1;
+        height: 136.875vw
+    }
+
+    .product-card--crystal-nude {
+        left: 448.125vw;
+        top: 100.625vw
+    }
+
+    .product-card--crystal-nude,
+    .product-card--latte-nude-catalog,
+    .product-card--unicorn-pearl {
+        display: none
+    }
+
+    .product-card--large {
+        height: 136.875vw;
+        width: 181.8719vw
+    }
+
+    .product-card--large .btn--icon-round,
+    .product-card--vega-placeholder .btn--icon-round {
+        width: 11.875vw;
+        height: 11.875vw
+    }
+
+    .product-card--large .product-card__image,
+    .product-card--vega-placeholder .product-card__image {
+        height: 84.375vw
+    }
+
+    .product-card--large .product-card__info,
+    .product-card--vega-placeholder .product-card__image {
+        padding: 4.6875vw;
+        gap: 4.375vw
+    }
+
+    .product-card--large .product-card__name,
+    .product-card--vega-placeholder .product-card__name {
+        font-size: 6.875vw
+    }
+
+    .product-card--large .product-card__price,
+    .product-card--vega-placeholder .product-card__price {
+        font-size: 7.8125vw
+    }
+
+    .product-card--latte-nude-catalog {
+        left: 161.25vw;
+        top: 264.3719vw
+    }
+
+    .product-card--latte-nude-set {
+        grid-column: auto;
+        grid-row: auto;
+        /* Сбрасываем rowspan */
+        left: 352.5vw
+    }
+
+    .product-card--latte-nude-solo {
+        display: none;
+        left: 352.5vw;
+        top: 242.5vw
+    }
+
+    .product-card--milky-way {
+        left: 65.625vw;
+        top: 100.625vw
+    }
+
+    .product-card--peach-glow {
+        display: block;
+        left: 161.25vw;
+        top: 100.625vw
+    }
+
+    .product-card--small {
+        height: 94.0625vw;
+        width: 86.25vw
+    }
+
+    .product-card--small .btn--icon-round {
+        width: 8.125vw;
+        height: 8.125vw;
+        display: none
+    }
+
+    .product-card--small .product-card__footer {
+        padding: 0 4.6875vw 4.6875vw 4.6875vw;
+        margin-top: 0
+    }
+
+    .product-card--small .product-card__image {
+        height: 43.125vw
+    }
+
+    .product-card--small .product-card__info {
+        padding: 6.25vw 2.5vw;
+        gap: 3.125vw
+    }
+
+    .product-card--small .product-card__name {
+        font-size: 5.625vw
+    }
+
+    .product-card--small .product-card__price {
+        font-size: 7.8125vw
+    }
+
+    .product-card--unicorn-pearl {
+        left: 352.5vw;
+        top: 500.9375vw
+    }
+
+    .product-card--vega-placeholder {
+        /* Эта карточка остается на своем месте */
+        left: 256.8719vw;
+        top: 100.625vw;
+        width: 86.25vw;
+        height: 154.3741vw;
+        border-radius: 10.9375vw
+    }
+
+    .product-card--vega-placeholder .btn--icon-round {
+        display: block
+    }
+
+    .product-card--vega-placeholder .product-card__footer {
+        padding: 6.25vw 4.6875vw 4.6875vw 4.6875vw
+    }
+
+    .product-card-wrapper {
+        grid-template-columns: 1fr;
+        display: grid;
+        gap: 6.25vw;
+        width: 100%;
+        margin-top: 0
+    }
+
+    .product-card__actions {
+        gap: 6.25vw
+    }
+
+    .product-card__category {
+        font-size: 4.6859vw
+    }
+
+    .product-card__footer {
+        padding: 6.25vw 4.6875vw 4.6875vw 4.6875vw
+    }
+
+    .product-card__image {
+        height: 84.375vw;
+        border-radius: 7.8125vw
+    }
+
+    .product-card__info {
+        gap: 4.375vw;
+        padding: 6.25vw 4.6875vw 0 4.6875vw
+    }
+
+    .product-card__name {
+        font-size: 6.875vw
+    }
+
+    .product-card__price {
+        font-size: 7.8125vw
+    }
+
+    .product-card__volume {
+        font-size: 5.625vw
+    }
+
+    .section {
+        width: 600vw
+    }
+
+    .section-divider {
+        margin: 12.5vw 4.6875vw;
+        height: 0.3125vw
+    }
+
+    .section-divider-invisible {
+        height: 23.4359vw
+    }
+
+    .section-intro {
+        gap: 6.25vw
+    }
+
+    .section-intro__description {
+        font-size: 5.625vw;
+        width: 110.31vw
+    }
+
+    .section-intro__title {
+        font-size: 31.2481vw
+    }
+
+    .site-footer-main {
+        width: 100%;
+        height: auto;
+        padding: 14.0625vw 4.6875vw;
+        margin: 0
+    }
+
+    .site-footer__bg {
+        border-radius: 10.9375vw 10.9375vw 0 0
+    }
+
+    .site-footer__bg-text {
+        display: none
+    }
+
+    .site-footer__container {
+        grid-template-columns: 1fr 1fr;
+        /* 2 колонки */
+        gap: 12.5vw 0
+    }
+
+    .site-header {
+        max-width: 90.625vw;
+        height: 16.25vw;
+        padding: 0 3.125vw;
+        border-radius: 3.75vw;
+        left: 4.6875vw;
+        top: 6.25vw;
+        width: calc(100% - 12.5vw)
+    }
+
+    .social-icon {
+        width: 15.625vw;
+        height: 15.625vw
+    }
+
+    .social-icon img {
+        height: 8.125vw
+    }
+
+    .title-decoration.hero-signature {
+        left: 81.875vw;
+        top: 48.4375vw;
+        font-size: 7.8125vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.3125vw;
+        width: 64.3741vw;
+        height: 43.1219vw;
+        text-shadow: 0.6241vw 0.9375vw 0 rgba(46, 9, 74, 0.35)
+    }
+
+    .title-decoration.hero-signature .title-decoration__text {
+        font-size: 7.8125vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.3125vw;
+        width: 64.3741vw;
+        height: 43.1219vw;
+        text-shadow: 0.6241vw 0.9375vw 0 rgba(46, 9, 74, 0.35)
+    }
+
+    .title-decoration__text {
+        font-size: 13.125vw;
+        text-shadow: 0.39vw 0.5844vw 0 rgba(46, 9, 74, 0.1)
+    }
+
+    .title-decoration__text.stroke {
+        -webkit-text-stroke: 0.6241vw var(--color-accent-pink)
+    }
+
+    .videoplayer {
+        display: none;
+        width: 468.75vw;
+        height: 196.875vw;
+        left: calc(50% - 468.75vw / 2);
+        top: 310vw;
+        border-radius: 10.9375vw
+    }
+
+    .videoplayer-button {
+        width: 39.0625vw;
+        height: 39.0625vw
+    }
+
+    .why-us-intro {
+        position: static;
+        width: 100%;
+        left: 65.625vw
+    }
+
+    .why-us-section {
+        width: 100%;
+        height: auto;
+        padding: 0 4.6875vw;
+        display: flex;
+        flex-direction: column;
+        gap: 12.5vw
+    }
+
+    body {
+        height: 781.2481vw
+    }
+}
