@@ -35,6 +35,10 @@
     --gradient-bg-text: linear-gradient(91.25deg, rgba(121, 239, 255, 0.14) -4.28%, rgba(253, 60, 227, 0.14) 38.62%, rgba(145, 43, 255, 0.14) 82.74%, rgba(0, 149, 255, 0.14) 113.38%)
 }
 
+.fixed-block__phone .fixed-block__btn {
+    --border: 5px;
+}
+
 /* ==========================================================================
    2. БАЗОВЫЕ СТИЛИ И ШРИФТЫ
    ========================================================================== */
@@ -533,6 +537,39 @@ section {
     display: flex;
     align-items: center;
     gap: 0.885vw
+}
+
+.nav-button__shape path {
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.nav-button--svg:hover .nav-button__content .nav-button__text {
+    color: var(--color-white)
+}
+
+.nav-button--svg:hover .nav-button__content .icone--fillstroke {
+    fill: var(--color-white)
+}
+
+.nav-button--svg:hover .nav-button__shape path:first-of-type {
+    fill: url(#hover-gradient);
+}
+
+.nav-button--svg:hover .nav-button__shape path:last-of-type {
+    fill: url(#hover-gradient);
+}
+
+
+svg.nav-button__shape>mask:nth-child(1) {
+    fill: var(--gradient-title-main)
+}
+
+svg.nav-button__shape>path:nth-child(2) {
+    fill: var(--gradient-title-main)
+}
+
+svg.nav-button__shape>path:nth-child(3) {
+    fill: var(--color-primary);
 }
 
 .btn--burger {
@@ -2105,10 +2142,8 @@ section {
         width: 100%
     }
 
-    /* Стили для текстового блока */
     .bestseller-intro {
         order: 1;
-        /* Порядок в flex-контейнере */
         text-align: left
     }
 
@@ -2340,10 +2375,13 @@ section {
 
 .categories-bg-text {
     position: relative;
-    width: 78.125vw;
-    height: 31.7708vw;
     left: 10.9893vw;
     top: 12.9688vw;
+}
+
+.categories-bg-text svg {
+    width: 78.125vw;
+    height: 31.7708vw;
     opacity: 0.14
 }
 
@@ -2375,7 +2413,7 @@ section {
     height: 38.5417vw;
     left: 44.427vw;
     top: 38.229vw;
-    background: #A578C7;
+    background: var(--color-primary);
     border-radius: 50%;
     z-index: 5
 }
@@ -2599,6 +2637,12 @@ section {
     line-height: 105%;
     text-transform: uppercase;
     color: var(--color-white)
+}
+
+.icon-arrow-right {
+    width: 1.77vw;
+    height: 1.77vw;
+    fill: var(--color-primary);
 }
 
 .categories-cta-button {
@@ -2936,17 +2980,16 @@ section {
     .categories-bg-text-mobile {
         position: absolute;
         left: 4.7vw;
-        bottom: 0;
-        width: 90vw;
-        height: 74vw;
-        flex-shrink: 0;
+        bottom: -5vw;
         z-index: 15;
         display: block
     }
 
-    .categories-bg-text img {
-        width: 100%;
-        height: auto
+    .categories-bg-text-mobile svg {
+        width: 90vw;
+        height: 74vw;
+        z-index: 15;
+        display: block
     }
 
     /* Интро блок */
@@ -3786,11 +3829,6 @@ section {
         height: 11.875vw
     }
 
-    /* Управляем расположением конкретных карточек в сетке */
-    .product-card--vega-placeholder {
-        /* Эта карточка остается на своем месте */
-    }
-
     .product-card--blush-cloud-catalog,
     .product-card--vega-placeholder,
     .product-card--berry-chic {
@@ -4089,7 +4127,7 @@ section {
 .why-us-section {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 85.8vw;
     overflow: hidden;
     color: var(--color-white);
     /* Боковые отступы как у других секций */
@@ -4421,7 +4459,8 @@ section {
     width: 1.5625vw;
     height: 1.5625vw;
     transition: transform 0.4s ease;
-    flex-shrink: 0
+    flex-shrink: 0;
+    fill: var(--color-primary);
 }
 
 .faq-item.is-active .faq-item__icon {
@@ -4621,9 +4660,10 @@ section {
     transform: scale(1.1)
 }
 
-.social-icon img {
+.social-icon svg {
     height: 1.6667vw;
-    width: auto
+    width: auto;
+    fill: var(--color-primary)
 }
 
 /* --- Правый блок --- */
@@ -4684,7 +4724,9 @@ section {
     position: absolute;
     right: 0;
     bottom: 0.3vw;
-    height: 1.0417vw
+    height: 1.04vw;
+    width: 1.04vw;
+    fill: var(--color-primary);
 }
 
 /* --- Стили для кастомного чекбокса с SVG-иконкой --- */
@@ -4733,10 +4775,10 @@ section {
     width: 0.625vw;
     height: 0.625vw;
     opacity: 0;
-    /* Изначально иконка невидима */
     transform: scale(0.5);
-    /* Изначально уменьшена */
-    transition: all 0.2s ease
+    transition: all 0.2s ease;
+    fill: var(--color-primary);
+    margin-top: 2px;
 }
 
 .form-group-checkbox__input:checked+.form-group-checkbox__label .form-group-checkbox__box {
@@ -4930,7 +4972,8 @@ section {
     .form-label-icon {
         right: 0;
         bottom: 0.625vw;
-        height: 2.0833vw
+        height: 2.0833vw;
+        width: 2.0833vw;
     }
 
     .contact-form-button {
@@ -4965,7 +5008,8 @@ section {
     }
 
     .form-label-icon {
-        height: 6.25vw
+        height: 6.25vw;
+        width: 6.25vw;
     }
 
     .form-fields {
@@ -5474,6 +5518,7 @@ button {
     width: 2.4705882353rem;
     height: 2.4705882353rem;
     transition: all .4s linear;
+    z-index: 15;
 }
 
 .fixed-block__img {
@@ -5588,6 +5633,7 @@ button {
     visibility: visible;
     pointer-events: all;
     transform: translate(-50%, 0);
+    z-index: 5;
 }
 
 /* --- Медиа-запросы --- */
@@ -5641,17 +5687,12 @@ button {
         color: #fff;
     }
 
-    /* Примечание: немного изменил селектор выше для корректной работы. 
-     Вместо `.open.fixed-block__btn` лучше проверять родителя на класс `.open`.
-     JS добавляет класс `.open` к `.fixed-block__phone` или `.fixed-block__messangers`.
-     Поэтому селектор `.open .fixed-block__btn` будет работать правильно.
-  */
+
     .open .fixed-block__btn:hover {
         filter: contrast(.7);
     }
 }
 
-/* --- CSS Animations --- */
 @keyframes ripple {
     to {
         transform: scale(1.8);

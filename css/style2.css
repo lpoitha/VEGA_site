@@ -35,6 +35,10 @@
     --gradient-bg-text: linear-gradient(91.25deg, rgba(121, 239, 255, 0.14) -4.28%, rgba(253, 60, 227, 0.14) 38.62%, rgba(145, 43, 255, 0.14) 82.74%, rgba(0, 149, 255, 0.14) 113.38%)
 }
 
+.fixed-block__phone .fixed-block__btn {
+    --border: 5px;
+}
+
 /* ==========================================================================
    2. БАЗОВЫЕ СТИЛИ И ШРИФТЫ
    ========================================================================== */
@@ -3823,11 +3827,6 @@ svg.nav-button__shape>path:nth-child(3) {
     .product-card--vega-placeholder .btn--icon-round {
         width: 11.875vw;
         height: 11.875vw
-    }
-
-    /* Управляем расположением конкретных карточек в сетке */
-    .product-card--vega-placeholder {
-        /* Эта карточка остается на своем месте */
     }
 
     .product-card--blush-cloud-catalog,
