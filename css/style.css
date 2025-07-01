@@ -5699,3 +5699,254 @@ button {
         opacity: 0;
     }
 }
+
+
+
+
+/* ==========================================================================
+   HEADER DROPDOWN - REFINED STYLES
+   ========================================================================== */
+
+/* Backdrop for modals/dropdowns */
+.site-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 1, 29, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.site-backdrop.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    /* FIX: Allows interaction (like closing) when visible */
+}
+
+/* --- Main Wrapper --- */
+.catalog-dropdown-wrapper {
+    position: relative;
+}
+
+.catalog-dropdown {
+    position: absolute;
+    top: 3.2vw;
+    left: 0;
+    width: auto;
+    z-index: 1001;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s;
+    pointer-events: none;
+    align-items: flex-start;
+}
+
+.catalog-dropdown-wrapper.is-open .catalog-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* --- Panel Styling ("Windows") --- */
+.catalog-dropdown__panel {
+    position: relative;
+    border: 1px solid var(--35, rgba(165, 120, 199, 0.35));
+    box-shadow: 0px 4px 4px 0px rgba(45, 14, 69, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 1.82vw;
+    padding: 2.08vw 0;
+}
+
+/* --- Active state for the Catalog Button --- */
+.catalog-dropdown-wrapper.is-open .nav-button--svg .nav-button__text {
+    color: var(--color-white);
+}
+
+.catalog-dropdown-wrapper.is-open .nav-button--svg .icone--fillstroke {
+    fill: var(--color-white);
+}
+
+.catalog-dropdown-wrapper.is-open .nav-button--svg .nav-button__shape path:first-of-type,
+.catalog-dropdown-wrapper.is-open .nav-button--svg .nav-button__shape path:last-of-type {
+    fill: url(#hover-gradient);
+}
+
+/* --- Arrow rotation inside Catalog Button --- */
+.nav-button__content .icon-arrow-down {
+    transition: transform 0.3s ease;
+}
+
+.catalog-dropdown-wrapper.is-open .nav-button__content .icon-arrow-down {
+    transform: rotate(-90deg);
+}
+
+/* --- Decorative Stars --- */
+.catalog-dropdown__star-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-primary);
+}
+
+.catalog-dropdown__star-icon .icon {
+    width: 1.09vw;
+    height: 1.09vw;
+    fill: var(--color-primary);
+}
+
+.catalog-dropdown__star-icon--top {
+    top: 0.78vw;
+    /* 15px */
+}
+
+.catalog-dropdown__star-icon--bottom {
+    bottom: 0.78vw;
+    /* 15px */
+}
+
+/* --- Left Panel (Main Categories) --- */
+.catalog-dropdown__main {
+    width: 34.43vw;
+    background: #fff
+}
+
+.catalog-dropdown__main-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.78vw 1.56vw;
+}
+
+.catalog-dropdown__main-item {
+    padding: 1vw 0 .6vw 0;
+    /* 15px 30px */
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+    border-top: 1px solid var(--color-border-dark);
+}
+
+.catalog-dropdown__main-item:last-child,
+.catalog-dropdown__sub-list li:last-child {
+    border-bottom: 1px solid var(--color-border-dark);
+}
+
+.catalog-dropdown__main-link {
+    font-family: 'Cramaten', sans-serif;
+    font-size: 2.76vw;
+    line-height: 1;
+    letter-spacing: -0.53px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.catalog-dropdown__main-item .icon-arrow-right {
+    fill: var(--color-primary);
+    transition: fill 0.2s ease, transform 0.3s ease;
+}
+
+/* --- Active State Styling --- */
+.catalog-dropdown__main-item:hover,
+.catalog-dropdown__main-item.is-active {
+    background-color: var(--color-bg-light);
+}
+
+.catalog-dropdown__main-item:hover .catalog-dropdown__main-link,
+.catalog-dropdown__main-item.is-active .catalog-dropdown__main-link {
+    color: var(--color-accent-pink);
+}
+
+.catalog-dropdown__main-item:hover .icon-arrow-right,
+.catalog-dropdown__main-item.is-active .icon-arrow-right {
+    fill: var(--color-accent-pink);
+    transform: rotate(45deg);
+    transform-origin: 50% 0;
+}
+
+
+/* --- Right Panel (Sub-Categories) --- */
+.catalog-dropdown__sub {
+    width: 34.43vw;
+    background-color: var(--color-bg-light);
+}
+
+.catalog-dropdown__sub-content {
+    padding: 0;
+    /* 40px horizontal padding */
+}
+
+.catalog-dropdown__sub-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.78vw 1.56vw;
+    display: none;
+    counter-reset: sub-item-counter;
+}
+
+.catalog-dropdown__sub-list.is-active {
+    display: block;
+}
+
+.catalog-dropdown__sub-list li {
+    padding: 0.78vw 0;
+    border-top: 1px solid var(--color-border-dark);
+    transition: padding-left 0.5s ease;
+}
+
+.catalog-dropdown__sub-list li:hover {
+    background: #fff;
+    padding-left: 1vw;
+}
+
+.catalog-dropdown__sub-list li a {
+
+    color: var(--, #2D0E45);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Vela Sans";
+    font-size: 1.35vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    letter-spacing: -0.26px;
+    text-transform: uppercase;
+    color: var(--color-primary-darkest);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.5s ease;
+}
+
+.catalog-dropdown__sub-list li:hover a {
+    color: var(--color-accent-pink);
+}
+
+/* CSS Counters for numbers */
+.catalog-dropdown__sub-list li a::before {
+    counter-increment: sub-item-counter;
+    content: counter(sub-item-counter, decimal-leading-zero);
+    font-weight: 500;
+    font-size: 0.83vw;
+    color: var(--color-text-light-gray);
+    margin-right: 0.78vw;
+    min-width: 1.25vw;
+    display: inline-block;
+    color: var(--, #909090);
+    text-align: justify;
+    letter-spacing: -0.48px;
+}

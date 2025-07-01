@@ -61,3 +61,73 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    // Header Catalog Dropdown Logic
+    const catalogWrapper = document.querySelector('.catalog-dropdown-wrapper');
+    const siteBackdrop = document.querySelector('.site-backdrop');
+
+    if (catalogWrapper && siteBackdrop) {
+        const catalogButton = catalogWrapper.querySelector('#catalog-button');
+        const catalogDropdown = catalogWrapper.querySelector('#catalog-dropdown-menu');
+        const mainItems = catalogDropdown.querySelectorAll('.catalog-dropdown__main-item');
+        const subLists = catalogDropdown.querySelectorAll('.catalog-dropdown__sub-list');
+
+        const openDropdown = () => {
+            catalogWrapper.classList.add('is-open');
+            catalogButton.setAttribute('aria-expanded', 'true');
+            siteBackdrop.classList.add('is-active');
+        };
+
+        const closeDropdown = () => {
+            catalogWrapper.classList.remove('is-open');
+            catalogButton.setAttribute('aria-expanded', 'false');
+            siteBackdrop.classList.remove('is-active');
+        };
+
+        // Toggle dropdown visibility on button click
+        catalogButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            const isOpen = catalogWrapper.classList.contains('is-open');
+            if (isOpen) {
+                closeDropdown();
+            } else {
+                openDropdown();
+            }
+        });
+
+        // Close dropdown when clicking on the backdrop
+        siteBackdrop.addEventListener('click', closeDropdown);
+
+        // Prevent clicks inside the dropdown from closing it
+        catalogDropdown.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+
+        // Handle hover to switch between sub-menus
+        mainItems.forEach(item => {
+            item.addEventListener('mouseover', function () {
+                mainItems.forEach(i => i.classList.remove('is-active'));
+                this.classList.add('is-active');
+
+                const category = this.dataset.category;
+
+                subLists.forEach(list => list.classList.remove('is-active'));
+
+                const activeSubList = catalogDropdown.querySelector(`.catalog-dropdown__sub-list[data-category="${category}"]`);
+                if (activeSubList) {
+                    activeSubList.classList.add('is-active');
+                }
+            });
+        });
+
+        // Close dropdown on 'Escape' key press for accessibility
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && catalogWrapper.classList.contains('is-open')) {
+                closeDropdown();
+            }
+        });
+    }
+
+});
