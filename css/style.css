@@ -262,7 +262,7 @@ section {
 
 .title-decoration__text.stroke {
     color: transparent;
-    -webkit-text-stroke: 1px var(--color-accent-pink);
+    -webkit-text-stroke: 2px var(--color-accent-pink);
     z-index: 1
 }
 
@@ -1060,7 +1060,7 @@ svg.nav-button__shape>path:nth-child(3) {
     height: 20.8599vw;
     left: 56.25vw;
     top: 26.0417vw;
-    z-index: 20
+    z-index: 18
 }
 
 .hero-title-cosmos__fill {
@@ -3589,7 +3589,7 @@ svg.nav-button__shape>path:nth-child(3) {
 @media (max-width: 960px) {
     .catalog-section {
         width: 100%;
-        height: 218.75vw;
+        height: 225.5vw;
         padding: 0 1.5625vw;
         margin-top: 5.2083vw
     }
@@ -4698,7 +4698,7 @@ svg.nav-button__shape>path:nth-child(3) {
 
 .form-group {
     position: relative;
-    border-bottom: 1px solid var(--color-primary)
+
 }
 
 .form-group input {
@@ -4711,13 +4711,15 @@ svg.nav-button__shape>path:nth-child(3) {
     font-size: 0.7812vw;
     line-height: 1.0417vw;
     color: var(--color-primary-darkest);
-    text-transform: uppercase
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-primary);
+    padding-bottom: 0.52vw;
 }
 
 .form-group input::placeholder {
     color: var(--color-text-light-gray);
     opacity: 1;
-    letter-spacing: -0.0234vw
+    letter-spacing: -0.0234vw;
 }
 
 .form-label-icon {
@@ -4729,15 +4731,12 @@ svg.nav-button__shape>path:nth-child(3) {
     fill: var(--color-primary);
 }
 
-/* --- Стили для кастомного чекбокса с SVG-иконкой --- */
 .form-group-checkbox {
     margin-top: 1.0417vw;
     display: flex;
     align-items: center;
-    /* Выравниваем по центру по вертикали */
 }
 
-/* 1. Прячем стандартный чекбокс, но оставляем его доступным для клавиатуры */
 .form-group-checkbox__input {
     position: absolute;
     opacity: 0;
@@ -4745,15 +4744,14 @@ svg.nav-button__shape>path:nth-child(3) {
     height: 0
 }
 
-/* 2. Стилизуем наш кастомный label, чтобы он был кликабельным */
+
 .form-group-checkbox__label {
     display: flex;
     align-items: center;
     gap: 0.4167vw;
-    /* Отступ между квадратиком и текстом */
     font-size: 0.7292vw;
     color: var(--color-text-light-gray);
-    cursor: pointer
+    cursor: pointer;
 }
 
 /* 3. Рисуем сам квадратик */
@@ -4767,10 +4765,8 @@ svg.nav-button__shape>path:nth-child(3) {
     border-radius: 0.1562vw;
     transition: all 0.2s ease;
     flex-shrink: 0;
-    /* Чтобы квадратик не сжимался */
 }
 
-/* 4. Стилизуем иконку-галочку внутри квадратика */
 .form-group-checkbox__icon {
     width: 0.625vw;
     height: 0.625vw;
@@ -4932,7 +4928,8 @@ svg.nav-button__shape>path:nth-child(3) {
     .form-group input {
         width: 100%;
         font-size: 1.5625vw;
-        line-height: 2.0833vw
+        line-height: 2.0833vw;
+        padding-bottom: 1.04vw;
     }
 
     .form-group input::placeholder {
@@ -5000,7 +4997,8 @@ svg.nav-button__shape>path:nth-child(3) {
 
     .form-group input {
         font-size: 4.6875vw;
-        line-height: 6.25vw
+        line-height: 6.25vw;
+        padding-bottom: 3.13vw;
     }
 
     .form-group input::placeholder {
@@ -5557,7 +5555,7 @@ button {
     position: absolute;
     bottom: 60%;
     right: 70%;
-    z-index: -1;
+    z-index: 50;
     border-radius: .9411764706rem;
     padding: 1.1764705882rem 2rem 1.1764705882rem 1.1764705882rem;
     background-color: rgba(255, 255, 255, .9);
@@ -5626,6 +5624,7 @@ button {
     visibility: visible;
     pointer-events: all;
     transform: translate(0, 0);
+    z-index: 500;
 }
 
 .fixed-block__messangers.open .socials {
@@ -5633,7 +5632,7 @@ button {
     visibility: visible;
     pointer-events: all;
     transform: translate(-50%, 0);
-    z-index: 5;
+    z-index: 50;
 }
 
 /* --- Медиа-запросы --- */
@@ -5916,8 +5915,6 @@ button {
 .catalog-dropdown__sub-list li a {
 
     color: var(--, #2D0E45);
-    leading-trim: both;
-    text-edge: cap;
     font-family: "Vela Sans";
     font-size: 1.35vw;
     font-style: normal;
@@ -5949,4 +5946,946 @@ button {
     color: var(--, #909090);
     text-align: justify;
     letter-spacing: -0.48px;
+}
+
+@media (max-width: 960px) {
+    .catalog-dropdown {
+        top: 6.2vw;
+    }
+
+    .catalog-dropdown__main-link {
+        font-size: 6vw;
+    }
+
+    .catalog-dropdown__main-item {
+        padding: 1vw 0 0 0;
+    }
+
+    .catalog-dropdown__sub-list li a::before {
+        font-size: 1.5vw;
+        margin-right: 1.78vw;
+    }
+
+    .catalog-dropdown__sub-list li a {
+        font-size: 2vw;
+    }
+
+    .icon-arrow-right,
+    .catalog-dropdown__star-icon .icon {
+        width: 2vw;
+        height: 2vw;
+    }
+
+    .catalog-dropdown__panel {
+        padding: 3.5vw 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .catalog-dropdown {
+        top: 14.2vw;
+    }
+
+    .catalog-dropdown {
+        flex-flow: column;
+        position: fixed;
+        max-width: 90.625vw;
+    }
+
+    .catalog-dropdown__main,
+    .catalog-dropdown__sub {
+        width: 90.625vw;
+        border-radius: 3.75vw;
+    }
+
+    .catalog-dropdown__main-list,
+    .catalog-dropdown__sub-list {
+        padding: 0 3.125vw;
+    }
+
+    .catalog-dropdown__star-icon--top {
+        top: 3vw;
+    }
+
+
+
+    .catalog-dropdown {
+        top: 15.2vw;
+    }
+
+    .catalog-dropdown__main-link {
+        font-size: 15vw;
+    }
+
+    .catalog-dropdown__main-item {
+        padding: 3vw 0 0 0;
+    }
+
+    .catalog-dropdown__sub-list li a::before {
+        font-size: 4vw;
+        margin-right: 5vw;
+    }
+
+    .catalog-dropdown__sub-list li a {
+        font-size: 5vw;
+    }
+
+    .icon-arrow-right,
+    .catalog-dropdown__star-icon .icon {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .catalog-dropdown__panel {
+        padding: 10vw 0;
+    }
+}
+
+
+
+
+/* ==========================================================================
+   БУРГЕР-МЕНЮ
+   ========================================================================== */
+.no-scroll {
+    overflow: hidden;
+}
+
+.burger-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25.52vw;
+    height: 100%;
+    background-color: var(--color-bg-light);
+    border-right: 1px solid var(--color-border);
+    border-radius: 0 1.82vw 1.82vw 0;
+    padding: 1.04vw 1.56vw;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-110%);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.burger-menu.is-open {
+    transform: translateX(0);
+}
+
+.burger-menu__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.04vw;
+}
+
+.line-star {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 2.1875vw;
+    width: 100%;
+}
+
+.line_under-star {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 2.08vw;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.burger-menu__star-icon--top {
+    display: flex;
+    margin: 0 auto;
+}
+
+.burger-menu__logo img {
+    height: 2.812vw;
+}
+
+.burger-menu__actions {
+    display: flex;
+    align-items: center;
+    gap: 1.1vw;
+}
+
+.burger-menu__actions .btn--icon {
+    width: 2.1875vw;
+    height: 2.1875vw;
+    border-color: var(--color-primary);
+}
+
+.burger-menu__actions .nav-separator {
+    display: flex;
+}
+
+.burger-menu__close-btn {
+    border: 1px solid var(--color-text-light-gray);
+    border-radius: 50%;
+    width: 2.1875vw;
+    height: 2.1875vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.burger-menu__close-btn svg {
+    width: 1.04vw;
+    height: 1.04vw;
+    stroke: var(--color-text-light-gray);
+}
+
+.burger-menu__close-btn:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.burger-menu__close-btn:hover svg {
+    stroke: var(--color-white);
+}
+
+#burger-menu-close-mob {
+    display: none;
+}
+
+#burger-menu::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: -20%;
+    /* Смещаем центр круга так, чтобы он был на 60% вниз от верхнего края */
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 0% 0%,
+            #79EFFF -0.28%,
+            #FD3CE3 36.34%,
+            #912BFF 74%,
+            #0095FF 100.16%);
+    filter: blur(425px);
+    opacity: .1;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.burger-menu__body {
+    padding-top: 2.08vw;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.burger-menu__nav {
+    display: flex;
+    gap: 3.6vw;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 2.08vw;
+}
+
+.burger-menu__nav-column .pre-title {
+    margin-bottom: 2vw;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.burger-menu__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.83vw;
+}
+
+.burger-menu__links a {
+    text-decoration: none;
+    font-size: 1.04vw;
+    font-weight: 500;
+    color: var(--color-primary-darkest);
+    transition: color 0.2s ease;
+}
+
+.burger-menu__links a:hover {
+    color: var(--color-accent-pink);
+}
+
+.burger-menu__contacts {
+    margin: 2.08vw 0 2.08vw 0;
+    background-color: #fff;
+    border-radius: 1.04vw;
+    padding: 1.56vw 1.04vw;
+}
+
+.burger-menu__contacts-schedule {
+    font-size: .833vw;
+    color: var(--color-text-light-gray);
+    text-align: right;
+    margin-bottom: 0.52vw;
+}
+
+.burger-menu__contacts-phone {
+    font-family: "Vela Sans", sans-serif;
+    font-size: 2.29vw;
+    line-height: 125%;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.52vw;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+    margin-bottom: 1.04vw;
+}
+
+.burger-menu__contacts-phone svg {
+    width: 1.56vw;
+    height: 1.56vw;
+    flex-shrink: 0;
+}
+
+.burger-menu__contacts-socials {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.78vw;
+    margin-right: 18vw;
+}
+
+.burger-menu__contacts-socials a {
+    font-size: .833vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-primary-darkest);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.burger-menu__contacts-socials a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.burger-menu__contacts-socials a:hover::after {
+    width: 50%;
+}
+
+.burger-menu__socials-wrap {
+    display: flex;
+    align-items: center;
+    gap: 1.04vw;
+    justify-content: space-between;
+}
+
+.burger-menu__socials {
+    display: flex;
+    gap: 0.78vw;
+}
+
+.burger-menu__socials-wrap p {
+    font-size: .833vw;
+    line-height: 1.2;
+    color: var(--color-text-light-gray);
+}
+
+.burger-menu__footer {
+    margin-top: auto;
+    padding-top: 1.04vw;
+    text-align: center;
+}
+
+.burger-menu__star-icon--top .icon,
+.burger-menu__star-icon--bottom .icon {
+    width: 0.625vw;
+    height: 0.625vw;
+    fill: var(--color-primary);
+}
+
+/* --- Адаптация для планшетов --- */
+@media (max-width: 960px) {
+    .burger-menu {
+        width: 58.85vw;
+        border-radius: 0 3.65vw 3.65vw 0;
+    }
+
+    .line-star,
+    .burger-menu__logo {
+        height: 4.06vw;
+    }
+
+    .burger-menu__logo img {
+        height: 4.06vw;
+    }
+
+    .burger-menu__actions .btn--icon,
+    .burger-menu__close-btn {
+        width: 4.06vw;
+        height: 4.06vw;
+    }
+
+    .burger-menu__close-btn svg {
+        width: 1.8vw;
+        height: 1.8vw;
+    }
+
+    .burger-menu__actions .nav-separator .icon {
+        width: 1.1vw;
+    }
+
+    .burger-menu__nav {
+        gap: 6.25vw;
+    }
+
+    .burger-menu__links a {
+        font-size: 1.8vw;
+    }
+
+    .burger-menu__contacts {
+        padding: 2.6vw 2.08vw;
+    }
+
+    .burger-menu__contacts-schedule {
+        font-size: 1.5vw;
+    }
+
+    .burger-menu__contacts-phone {
+        font-size: 4vw;
+    }
+
+    .burger-menu__contacts-phone svg {
+        width: 3.1vw;
+        height: 3.1vw;
+    }
+
+    .burger-menu__contacts-socials a {
+        font-size: 1.67vw;
+    }
+
+    .burger-menu__socials .social-icon {
+        width: 4.69vw;
+        height: 4.69vw;
+    }
+
+    .burger-menu__socials .social-icon svg {
+        height: 2.5vw;
+    }
+
+    .burger-menu__socials-wrap p {
+        font-size: 1.4vw;
+        width: 20.83vw;
+    }
+
+    .burger-menu__star-icon--top .icon,
+    .burger-menu__star-icon--bottom .icon {
+        width: 2.3vw;
+        height: 2.3vw;
+    }
+
+    .burger-menu__actions {
+        margin-left: -7.5vw;
+    }
+}
+
+/* --- Адаптация для мобильных --- */
+@media (max-width: 767px) {
+    .burger-menu {
+        width: 100vw;
+        padding: 4.69vw;
+        border-radius: 0 10.94vw 10.94vw 0;
+        border-right: none;
+    }
+
+    .line-star {
+        justify-content: space-between;
+        height: 10vw;
+        padding-bottom: 4vw;
+        border-bottom: 1px solid var(--color-border);
+        height: 19vw;
+    }
+
+    .burger-menu__nav-column .pre-title {
+        margin-bottom: 6.25vw;
+    }
+
+    #burger-menu-close-mob {
+        display: flex;
+    }
+
+    #burger-menu-close-laptop {
+        display: none;
+    }
+
+    .burger-menu__star-icon--top {
+        margin: 0;
+    }
+
+    .burger-menu__actions {
+        margin-left: 0;
+    }
+
+    .burger-menu__star-icon--top .icon,
+    .burger-menu__star-icon--bottom .icon {
+        width: 7.2vw;
+        height: 7.2vw;
+    }
+
+    .line_under-star {
+        border-bottom: none;
+        padding-bottom: 4vw;
+        padding-top: 4vw;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .burger-menu__actions {
+        gap: 2vw;
+    }
+
+    .burger-menu__logo img {
+        height: 10vw;
+    }
+
+    .burger-menu__actions .btn--icon,
+    .burger-menu__close-btn {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .burger-menu__close-btn svg {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .burger-menu__actions .nav-separator:last-child {
+        display: none;
+    }
+
+    .burger-menu__body {
+        padding-top: 4vw;
+    }
+
+    .burger-menu__nav {
+        flex-direction: initial;
+        gap: 8vw;
+    }
+
+    .burger-menu__contacts-schedule {
+        text-align: left;
+    }
+
+    .burger-menu__links {
+        gap: 2.5vw 5vw;
+    }
+
+    .burger-menu__links a {
+        font-size: 4.5vw;
+    }
+
+    .burger-menu__contacts {
+        margin-top: 8vw;
+        padding: 4vw;
+        border-radius: 4vw;
+    }
+
+    .burger-menu__contacts-schedule {
+        font-size: 4vw;
+        margin-bottom: 4.69vw;
+    }
+
+    .burger-menu__contacts-phone {
+        font-size: 6.25vw;
+        gap: 3vw;
+        margin-bottom: 4.69vw;
+    }
+
+    .burger-menu__contacts-socials {
+        padding-top: 0;
+    }
+
+    .burger-menu__contacts-phone svg {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .burger-menu__contacts-socials a {
+        font-size: 5vw;
+    }
+
+    .burger-menu__socials-wrap {
+        margin-top: 4.69vw;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        gap: 4.69vw;
+    }
+
+    .burger-menu__socials {
+        gap: 2vw;
+        margin-right: auto;
+    }
+
+    .burger-menu__socials .social-icon {
+        width: 11.625vw;
+        height: 11.625vw;
+    }
+
+    .burger-menu__socials .social-icon svg {
+        height: 6.88vw;
+    }
+
+    .burger-menu__socials-wrap p {
+        font-size: 3.8vw;
+    }
+
+    .burger-menu__footer {
+        padding-top: 4vw;
+    }
+
+    .burger-menu__actions .nav-separator .icon {
+        width: 3.13vw;
+    }
+
+    .burger-menu__socials-wrap p {
+        width: 100%;
+    }
+
+    .line-star,
+    .burger-menu__logo {
+        height: 10vw;
+    }
+
+    .burger-menu__contacts-socials {
+        margin-right: 0;
+    }
+}
+
+
+
+/* ==========================================================================
+   14. POPUP MODAL FORM
+   ========================================================================== */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 1, 29, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.popup-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content-wrapper {
+    position: relative;
+    width: 38.125vw;
+    background: var(--color-white);
+    border-radius: 1.8229vw;
+    padding: 3.125vw 3.125vw 1.5vw 3.125vw;
+    transform: scale(0.9);
+    transition: transform 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-overlay.is-open .popup-content-wrapper {
+    transform: scale(1);
+}
+
+.popup-close-btn {
+    position: absolute;
+    top: 1.5625vw;
+    /* 30px */
+    right: 1.5625vw;
+    /* 30px */
+    width: 2.1875vw;
+    height: 2.1875vw;
+    border: 1px solid var(--color-text-light-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    z-index: 10;
+}
+
+.popup-close-btn svg {
+    width: 1.04vw;
+    height: 1.04vw;
+    stroke: var(--color-text-light-gray);
+    transition: stroke 0.3s;
+}
+
+.popup-close-btn:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.popup-close-btn:hover svg {
+    stroke: var(--color-white);
+}
+
+/* --- Views inside the popup --- */
+.popup-form-view,
+.popup-success-view {
+    display: none;
+    /* Скрываем оба блока по умолчанию */
+}
+
+.popup-form-view.is-visible,
+.popup-success-view.is-visible {
+    display: flex;
+    /* Показываем только блок с классом .is-visible */
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.popup-form-view__title {
+    font-family: "Vela Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1.354vw;
+    /* 26px */
+    line-height: 125%;
+    letter-spacing: -0.01em;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-primary-darkest);
+}
+
+.popup-form-view .form-fields {
+    margin: 2.6042vw 0 1.0417vw 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+    flex-grow: 1;
+    /* Позволяем блоку с полями растягиваться */
+}
+
+.popup-form-view .form-group textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: "Vela Sans", sans-serif;
+    font-weight: 500;
+    font-size: 0.7812vw;
+    line-height: 1.2;
+    color: var(--color-primary-darkest);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-primary);
+    padding: 0 0 0.625vw 0;
+    resize: vertical;
+    height: 1.77vw;
+}
+
+
+
+.catalog-dropdown__star-icon .popup-form__star-icon--top {
+    width: 1.51vw;
+    height: 1.51vw;
+    fill: var(--color-primary);
+}
+
+.popup-form-view .form-group textarea::placeholder {
+    color: var(--color-text-light-gray);
+    opacity: 1;
+    letter-spacing: -0.0234vw;
+}
+
+.popup-form-view .form-group {
+    height: auto;
+}
+
+.popup-form-view .form-label-icon {
+    bottom: 0.8vw;
+}
+
+.popup-form-view .contact-form-button {
+    margin-top: auto;
+    align-self: center;
+    margin-left: 0;
+}
+
+/* --- Success View --- */
+.popup-success-view.is-visible {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.popup-success-view__title {
+    font-weight: 600;
+    font-size: 1.354vw;
+    line-height: 130%;
+    color: var(--color-primary-darkest);
+    max-width: 85%;
+    margin-bottom: 2.083vw;
+}
+
+.popup-success-view__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5625vw;
+}
+
+.popup-success-view__actions .btn--primary {
+    transform: rotate(0);
+}
+
+.popup-success-view__link {
+    font-family: "Vela Sans", sans-serif;
+    font-size: 0.8333vw;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.popup-success-view__link:hover {
+    border-bottom-color: var(--color-primary);
+}
+
+#popup-modal-form .form-group-checkbox__label {
+    width: 12vw;
+}
+
+/* --- Tablet Styles --- */
+@media (max-width: 960px) {
+    .popup-content-wrapper {
+        width: 70vw;
+        height: auto;
+        max-height: 80vh;
+        padding: 4vw;
+        border-radius: 3vw;
+    }
+
+    .popup-close-btn {
+        top: 2vw;
+        right: 2vw;
+        width: 4.5vw;
+        height: 4.5vw;
+    }
+
+    .popup-close-btn svg {
+        width: 2vw;
+        height: 2vw;
+    }
+
+    .catalog-dropdown__star-icon .popup-form__star-icon--top {
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+
+
+    .popup-form-view__title,
+    .popup-success-view__title {
+        font-size: 2.5vw;
+    }
+
+    .popup-form-view .form-group textarea,
+    .popup-form-view .form-group input {
+        font-size: 1.6vw;
+        height: auto;
+    }
+
+    .popup-form-view .contact-form-button,
+    .popup-success-view__actions .btn--primary {
+        width: 14.7917vw;
+        height: 14.7917vw;
+    }
+
+    .popup-form-view .contact-form-button span,
+    .popup-success-view__actions .btn span {
+        font-size: 1.5625vw;
+    }
+
+    .popup-success-view__link {
+        font-size: 1.6vw;
+    }
+
+    #popup-modal-form .form-group-checkbox__label {
+        width: 22vw;
+    }
+}
+
+/* --- Mobile Styles --- */
+@media (max-width: 767px) {
+    .popup-content-wrapper {
+        width: 90vw;
+        padding: 8vw 5vw;
+        border-radius: 6vw;
+    }
+
+    .popup-close-btn {
+        top: 4vw;
+        right: 4vw;
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .popup-close-btn svg {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .popup-form-view__title,
+    .popup-success-view__title {
+        font-size: 5.5vw;
+    }
+
+    .popup-form-view .form-group input,
+    .popup-form-view .form-group textarea {
+        font-size: 4vw;
+    }
+
+    .popup-form-view .contact-form-button,
+    .popup-success-view__actions .btn--primary {
+        width: 35.9375vw;
+        height: 35.9375vw;
+    }
+
+    .popup-form-view .contact-form-button span,
+    .popup-success-view__actions .btn span {
+        font-size: 4.7vw;
+    }
+
+    .popup-success-view__link {
+        font-size: 4vw;
+    }
+
+    #popup-modal-form .form-group-checkbox__label {
+        width: 100%;
+    }
+
+    .catalog-dropdown__star-icon .popup-form__star-icon--top {
+        width: 5vw;
+        height: 5vw;
+    }
 }
