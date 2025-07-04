@@ -539,6 +539,10 @@ section {
     gap: 0.885vw
 }
 
+.icon.game-icons_polar-star.icone--fillstroke {
+    fill: var(--color-accent-pink)
+}
+
 .nav-button__shape path {
     transition: fill 0.3s ease, stroke 0.3s ease;
 }
@@ -634,7 +638,7 @@ svg.nav-button__shape>path:nth-child(3) {
     justify-content: left;
     width: 100%;
     height: 100%;
-    padding-left: 0.7812vw
+    padding-left: 0.9vw
 }
 
 .nav-button__text {
@@ -2571,7 +2575,6 @@ svg.nav-button__shape>path:nth-child(3) {
 }
 
 .category-card--care .category-card__image {
-    width: 29vw;
     height: 15.625vw
 }
 
@@ -2589,7 +2592,7 @@ svg.nav-button__shape>path:nth-child(3) {
     width: 30.312vw;
     left: 58.75vw;
     top: 41.1458vw;
-    z-index: 20;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     gap: 2.083vw
@@ -3106,8 +3109,8 @@ svg.nav-button__shape>path:nth-child(3) {
 }
 
 .new-arrivals-intro .title-decoration {
-    left: 6.0417vw;
-    top: 6.51vw;
+    left: 5.0vw;
+    top: 9.5vw;
     transform: rotate(-20deg);
     z-index: 1
 }
@@ -3129,7 +3132,7 @@ svg.nav-button__shape>path:nth-child(3) {
     height: 29.2708vw;
     background-size: cover;
     background-position: center;
-    border-radius: 1.8229vw
+    border-radius: 1.8229vw;
 }
 
 .product-card__info {
@@ -3487,7 +3490,7 @@ svg.nav-button__shape>path:nth-child(3) {
     width: 100vw;
     height: 121.354vw;
     overflow-y: visible;
-    overflow-x: hidden;
+    overflow-x: clip;
     z-index: 1
 }
 
@@ -3513,15 +3516,14 @@ svg.nav-button__shape>path:nth-child(3) {
 }
 
 .catalog-intro {
-    width: 22.083vw;
     left: 10.9375vw;
     top: 0
 }
 
 .catalog-intro .title-decoration {
     position: absolute;
-    left: 7.9687vw;
-    top: 6.7708vw;
+    left: 18.0vw;
+    top: 3.8vw;
     transform: rotate(-20deg);
     z-index: 2;
     width: 10.4167vw
@@ -3739,21 +3741,16 @@ svg.nav-button__shape>path:nth-child(3) {
         height: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* Две равные колонки */
         gap: 6.25vw 4.7vw;
-        /* Отступы между карточками (20px по вертикали, 15px по горизонтали) */
     }
 
-    /* Сбрасываем абсолютное позиционирование для ВСЕХ карточек */
     .catalog-grid .product-card {
         position: static;
         left: auto;
         top: auto;
         width: 100%;
-        /* Карточка занимает всю ширину ячейки грида */
     }
 
-    /* Устанавливаем размеры для маленьких и больших карточек */
     .product-card--small {
         height: 94vw
     }
@@ -3848,6 +3845,13 @@ svg.nav-button__shape>path:nth-child(3) {
         order: 1;
     }
 
+    .catalog-section__bg-wave {
+        left: 0vw;
+        top: -25vw;
+        width: 100.5vw;
+        height: 100.5vw;
+    }
+
 }
 
 /* ==========================================================================
@@ -3862,6 +3866,16 @@ svg.nav-button__shape>path:nth-child(3) {
     align-items: flex-start;
     gap: 6.3542vw;
     left: 10.9375vw
+}
+
+
+.about-section__bg-wave {
+    position: absolute;
+    width: 111.8229vw;
+    height: 156.25vw;
+    top: 0;
+    background-size: contain;
+    z-index: -1
 }
 
 /* Скрываем мобильную картинку на десктопе */
@@ -4001,7 +4015,13 @@ svg.nav-button__shape>path:nth-child(3) {
         margin: 7.8125vw auto 0 auto;
         padding: 0;
         left: 0;
-        overflow: hidden
+        overflow-x: clip;
+    }
+
+    .about-section__bg-wave {
+        width: 111.8229vw;
+        height: 156.25vw;
+        top: 0;
     }
 
     .about-section__image-wrapper--mobile-only .about-section__caption {
@@ -4072,6 +4092,13 @@ svg.nav-button__shape>path:nth-child(3) {
         gap: 7.8125vw;
         padding: 0 4.7vw;
         width: 100%
+    }
+
+    .about-section__bg-wave {
+        width: 111.8229vw;
+        height: 291.3vw;
+        top: -60vw;
+        left: -21vw;
     }
 
     .about-section__link span {
@@ -4759,8 +4786,8 @@ svg.nav-button__shape>path:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1.0417vw;
-    height: 1.0417vw;
+    width: 0.83vw;
+    height: 0.83vw;
     border: 1px solid var(--color-text-light-gray);
     border-radius: 0.1562vw;
     transition: all 0.2s ease;
@@ -4768,13 +4795,12 @@ svg.nav-button__shape>path:nth-child(3) {
 }
 
 .form-group-checkbox__icon {
-    width: 0.625vw;
-    height: 0.625vw;
+    width: 0.55vw;
+    height: 0.55vw;
     opacity: 0;
     transform: scale(0.5);
     transition: all 0.2s ease;
     fill: var(--color-primary);
-    margin-top: 2px;
 }
 
 .form-group-checkbox__input:checked+.form-group-checkbox__label .form-group-checkbox__box {
@@ -5516,7 +5542,7 @@ button {
     width: 2.4705882353rem;
     height: 2.4705882353rem;
     transition: all .4s linear;
-    z-index: 15;
+    z-index: 55;
 }
 
 .fixed-block__img {
@@ -5828,7 +5854,7 @@ button {
 }
 
 .catalog-dropdown__main-item {
-    padding: 1vw 0 .6vw 0;
+    padding: 1vw .6vw .6vw .6vw;
     /* 15px 30px */
     cursor: pointer;
     display: flex;
@@ -5948,6 +5974,16 @@ button {
     letter-spacing: -0.48px;
 }
 
+
+.catalog-dropdown__sub {
+    display: none;
+    margin-left: -1px;
+}
+
+.catalog-dropdown.sub-is-active .catalog-dropdown__sub {
+    display: block;
+}
+
 @media (max-width: 960px) {
     .catalog-dropdown {
         top: 6.2vw;
@@ -5958,7 +5994,7 @@ button {
     }
 
     .catalog-dropdown__main-item {
-        padding: 1vw 0 0 0;
+        padding: 1vw 1vw 0 1vw;
     }
 
     .catalog-dropdown__sub-list li a::before {
@@ -6018,7 +6054,7 @@ button {
     }
 
     .catalog-dropdown__main-item {
-        padding: 3vw 0 0 0;
+        padding: 3vw 3vw 0 3vw;
     }
 
     .catalog-dropdown__sub-list li a::before {

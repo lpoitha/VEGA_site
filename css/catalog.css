@@ -11,6 +11,7 @@
 /* --- Page Structure --- */
 .page-wrapper {
     background-color: var(--color-bg-light);
+    overflow: clip;
 }
 
 .container {
@@ -147,7 +148,7 @@
 }
 
 .filter-group.is-open .filter-group__toggle .icon-arrow-down {
-    transform: rotate(180deg);
+    transform: rotate(-90deg);
 }
 
 .filter-group__body {
@@ -166,49 +167,79 @@
     gap: 15px;
 }
 
-.custom-checkbox {
+.form-group-checkbox__input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+}
+
+
+.form-group-checkbox__label {
     display: flex;
     align-items: center;
     cursor: pointer;
     font-size: 14px;
     color: var(--color-primary-darkest);
     user-select: none;
+    gap: 10px;
 }
 
-.custom-checkbox input {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
 
-.custom-checkbox span {
-    position: relative;
-    padding-left: 28px;
-    /* Space for the custom box */
-}
-
-.custom-checkbox span::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 18px;
-    height: 18px;
+.form-group-checkbox__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
     border: 1px solid var(--color-border);
     border-radius: 2px;
     background-color: var(--color-white);
     transition: all 0.2s;
+    flex-shrink: 0;
 }
 
-.custom-checkbox input:checked+span::before {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-    background-image: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.75 5.25L4.25 8.75L11.25 1.25' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 10px;
+
+.form-group-checkbox__icon {
+    width: 12px;
+    height: 10px;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+
+.form-group-checkbox__input:checked~.form-group-checkbox__label .form-group-checkbox__icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Применение стилей в контексте сайдбара */
+.catalog-sidebar .filter-group__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 18px;
+}
+
+
+/* Адаптация для мобильных */
+@media (max-width: 767px) {
+    .form-group-checkbox__label {
+        font-size: 4vw;
+        gap: 3vw;
+    }
+
+    .form-group-checkbox__box {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .form-group-checkbox__icon {
+        width: 3vw;
+        height: auto;
+    }
 }
 
 /* --- Right Content Area --- */
@@ -376,6 +407,7 @@
     aspect-ratio: 1 / 1;
     object-fit: cover;
     transition: transform 0.3s ease;
+    height: 17.29vw;
 }
 
 
@@ -462,9 +494,7 @@
     gap: 0.5vw;
 }
 
-/* ==========================================================================
-   16. RESPONSIVE STYLES FOR CATALOG
-   ========================================================================== */
+
 
 @media (max-width: 1200px) {
     :root {
@@ -482,37 +512,32 @@
     }
 
     .container {
-        padding: 0 2vw;
+        max-width: 100%;
+        width: 100%;
+        padding: 0 1.5625vw;
     }
 
     .catalog-hero-new {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 2vw 0;
-    }
-
-    .catalog-hero-new__text {
-        order: 2;
-        width: 100%;
-    }
-
-    .catalog-hero-new__image-wrapper {
-        order: 1;
-        width: 80%;
-        margin-bottom: 2vw;
-        position: relative;
+        height: 50vw;
     }
 
     .catalog-hero-new__title {
-        font-size: 12vw;
+        font-size: 20vw;
+        letter-spacing: -0.2%;
+    }
+
+    .catalog-hero-new__text .pre-title {
+        font-size: 1.666vw;
+    }
+
+    .catalog-hero-new__image {
+        width: auto;
     }
 
     .title-decoration {
         font-size: 4vw;
-        bottom: -1vw;
+        bottom: 3vw;
         left: 50%;
-        transform: translateX(-50%) rotate(-10deg);
     }
 
     .catalog-hero-new__subtitle {
@@ -547,6 +572,7 @@
 
     .breadcrumbs {
         font-size: 1.6vw;
+        margin-top: 5.2vw;
     }
 }
 

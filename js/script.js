@@ -85,18 +85,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Header Catalog Dropdown Logic
     const catalogWrapper = document.querySelector('.catalog-dropdown-wrapper');
     const siteBackdrop = document.querySelector('.site-backdrop');
 
     if (catalogWrapper && siteBackdrop) {
+        // --- НОВОЕ: Объявляем переменную для таймера ---
+        let closeTimer;
+
         const catalogButton = catalogWrapper.querySelector('#catalog-button');
         const catalogDropdown = catalogWrapper.querySelector('#catalog-dropdown-menu');
         const mainItems = catalogDropdown.querySelectorAll('.catalog-dropdown__main-item');
+        const subPanel = catalogDropdown.querySelector('.catalog-dropdown__sub');
         const subLists = catalogDropdown.querySelectorAll('.catalog-dropdown__sub-list');
 
         const openDropdown = () => {
@@ -109,72 +110,74 @@ document.addEventListener('DOMContentLoaded', function () {
             catalogWrapper.classList.remove('is-open');
             catalogButton.setAttribute('aria-expanded', 'false');
             siteBackdrop.classList.remove('is-active');
+
+            // Сбрасываем состояние при закрытии
+            catalogDropdown.classList.remove('sub-is-active'); // Прячем правую панель
+            mainItems.forEach(i => i.classList.remove('is-active')); // Снимаем выделение
+            subLists.forEach(list => list.classList.remove('is-active')); // Прячем списки
         };
 
-        // Toggle dropdown visibility on button click
-        catalogButton.addEventListener('click', function (e) {
-            e.preventDefault();
-            const isOpen = catalogWrapper.classList.contains('is-open');
-            if (isOpen) {
-                closeDropdown();
-            } else {
-                openDropdown();
-            }
+        // --- НОВАЯ ЛОГИКА С ТАЙМЕРОМ ---
+
+        // Когда курсор входит в область всей обертки (кнопка + меню)
+        catalogWrapper.addEventListener('mouseenter', function () {
+            // Отменяем любой таймер на закрытие, если он был запущен
+            clearTimeout(closeTimer);
+            // Открываем меню
+            openDropdown();
         });
 
-        // Close dropdown when clicking on the backdrop
-        siteBackdrop.addEventListener('click', closeDropdown);
 
-        // Prevent clicks inside the dropdown from closing it
-        catalogDropdown.addEventListener('click', function (e) {
-            e.stopPropagation();
+        catalogWrapper.addEventListener('click', function () {
+            clearTimeout(closeTimer);
+            openDropdown();
         });
 
-        // =================================================================
-        // NEW: Switch to CLICK event for main category activation
-        // This ensures the menu works on touch devices (mobile/tablet)
-        // =================================================================
+        // Когда курсор покидает область всей обертки (кнопка + меню)
+        catalogWrapper.addEventListener('mouseleave', function () {
+            // Запускаем таймер, который закроет меню через 300 миллисекунд
+            closeTimer = setTimeout(closeDropdown, 300);
+        });
+
+        // --- Логика для показа подкатегорий (остается без изменений) ---
         mainItems.forEach(item => {
-            var eventList = ["click", "mouseover"];
-            for (even of eventList) {
-                item.addEventListener(even, function (e) {
-                    e.preventDefault(); // Prevent page jump from <a> tag
+            item.addEventListener('mouseover', function () {
+                catalogDropdown.classList.add('sub-is-active');
+                mainItems.forEach(i => i.classList.remove('is-active'));
+                subLists.forEach(list => list.classList.remove('is-active'));
+                this.classList.add('is-active');
 
-                    // Remove 'is-active' from all main items
-                    mainItems.forEach(i => i.classList.remove('is-active'));
-
-                    // Add 'is-active' to the clicked item
-                    this.classList.add('is-active');
-
-                    // Get the category from the data-attribute
-                    const category = this.dataset.category;
-
-                    // Hide all sub-lists
-                    subLists.forEach(list => list.classList.remove('is-active'));
-
-                    // Show the corresponding sub-list
-                    const activeSubList = catalogDropdown.querySelector(`.catalog-dropdown__sub-list[data-category="${category}"]`);
-                    if (activeSubList) {
-                        activeSubList.classList.add('is-active');
-                    }
-                });
-
-            }
-
+                const category = this.dataset.category;
+                const activeSubList = catalogDropdown.querySelector(`.catalog-dropdown__sub-list[data-category="${category}"]`);
+                if (activeSubList) {
+                    activeSubList.classList.add('is-active');
+                }
+            });
         });
 
-        // Close dropdown on 'Escape' key press for accessibility
+        mainItems.forEach(item => {
+            item.addEventListener('click', function () {
+                catalogDropdown.classList.add('sub-is-active');
+                mainItems.forEach(i => i.classList.remove('is-active'));
+                subLists.forEach(list => list.classList.remove('is-active'));
+                this.classList.add('is-active');
+
+                const category = this.dataset.category;
+                const activeSubList = catalogDropdown.querySelector(`.catalog-dropdown__sub-list[data-category="${category}"]`);
+                if (activeSubList) {
+                    activeSubList.classList.add('is-active');
+                }
+            });
+        });
+
+        // Закрытие по клавише Escape
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && catalogWrapper.classList.contains('is-open')) {
                 closeDropdown();
             }
         });
     }
-
-
 });
-
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
