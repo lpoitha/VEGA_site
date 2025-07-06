@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VEGA - Каталог</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/catalog2.css">
 </head>
 
 <body>
@@ -880,11 +880,21 @@
             </section>
         </div>
 
+        <!-- Добавьте этот новый символ в ваш основной SVG-блок вверху файла -->
+        <svg style="display: none;" <?xml version='1.0' encoding='utf-8' ?>
+            <!-- ... существующие символы ... -->
+            <symbol id="arrow-right-filter" viewBox="0 0 6 9">
+                <path d="M0.589844 0.330078L5.25984 4.04008L0.589844 8.24008" stroke="#A578C7" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </symbol>
+            <!-- ... остальные символы ... -->
+        </svg>
+
         <main class="catalog-page-content">
             <div class="container">
                 <div class="catalog-layout">
-                    <!-- Левый сайдбар с фильтрами -->
-                    <aside class="catalog-sidebar" id="catalog-sidebar">
+                    <!-- ДЕСКТОПНАЯ ВЕРСИЯ ФИЛЬТРОВ (будет скрыта на мобильных) -->
+                    <aside class="catalog-sidebar catalog-sidebar--desktop" id="catalog-sidebar-desktop">
                         <div class="filter-group is-open">
                             <button class="filter-group__toggle" aria-expanded="true" aria-controls="filter-categories">
                                 <span>Категорії</span>
@@ -1037,10 +1047,131 @@
                     <div class="catalog-content">
 
                         <div class="catalog-controls">
-                            <button class="filter-toggle-btn" id="filter-toggle" aria-expanded="false"
-                                aria-controls="catalog-sidebar">
-                                <span>Фільтр</span>
-                            </button>
+                            <!-- Обертка для мобильных фильтров -->
+                            <div class="filter-dropdown-wrapper">
+                                <button class="filter-toggle-btn" id="filter-toggle" aria-expanded="false"
+                                    aria-controls="catalog-sidebar-mobile">
+                                    <span>Фільтр</span>
+                                    <svg class="icon icon-arrow-right-filter" aria-hidden="true" focusable="false">
+                                        <use href="#arrow-right-filter"></use>
+                                    </svg>
+                                </button>
+                                <!-- МОБИЛЬНАЯ ВЕРСИЯ ФИЛЬТРОВ (будет скрыта на десктопе) -->
+                                <aside class="catalog-sidebar catalog-sidebar--mobile" id="catalog-sidebar-mobile"
+                                    hidden>
+                                    <div class="filter-mobile-header">
+                                        <button class="filter-close-btn" aria-label="Закрити фільтр">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 6L6 18" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M6 6L18 18" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <!-- Дублируем контент фильтров -->
+                                    <div class="filter-group is-open">
+                                        <button class="filter-group__toggle" aria-expanded="true"
+                                            aria-controls="filter-categories-mob">
+                                            <span>Категорії</span>
+                                            <svg class="icon icon-arrow-down">
+                                                <use href="#arrow-down"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="filter-group__body" id="filter-categories-mob">
+                                            <ul class="filter-group__list">
+                                                <li><input type="checkbox" id="filter-cat-1-mob"><label
+                                                        for="filter-cat-1-mob" class="form-group-checkbox__label"><span
+                                                            class="form-group-checkbox__box"><svg
+                                                                class="form-group-checkbox__icon">
+                                                                <use href="#check-mark"></use>
+                                                            </svg></span>Гель-лаки (22)</label></li>
+                                                <li><input type="checkbox" id="filter-cat-2-mob"><label
+                                                        for="filter-cat-2-mob" class="form-group-checkbox__label"><span
+                                                            class="form-group-checkbox__box"><svg
+                                                                class="form-group-checkbox__icon">
+                                                                <use href="#check-mark"></use>
+                                                            </svg></span>Бази (11)</label></li>
+                                                <li><input type="checkbox" id="filter-cat-3-mob"><label
+                                                        for="filter-cat-3-mob" class="form-group-checkbox__label"><span
+                                                            class="form-group-checkbox__box"><svg
+                                                                class="form-group-checkbox__icon">
+                                                                <use href="#check-mark"></use>
+                                                            </svg></span>Топи (04)</label></li>
+                                                <li><input type="checkbox" id="filter-cat-4-mob"><label
+                                                        for="filter-cat-4-mob" class="form-group-checkbox__label"><span
+                                                            class="form-group-checkbox__box"><svg
+                                                                class="form-group-checkbox__icon">
+                                                                <use href="#check-mark"></use>
+                                                            </svg></span>Гелі для нарощування (21)</label></li>
+                                                <li><input type="checkbox" id="filter-cat-5-mob"><label
+                                                        for="filter-cat-5-mob" class="form-group-checkbox__label"><span
+                                                            class="form-group-checkbox__box"><svg
+                                                                class="form-group-checkbox__icon">
+                                                                <use href="#check-mark"></use>
+                                                            </svg></span>Допоміжні матеріали (14)</label></li>
+                                                <li><input type="checkbox" id="filter-cat-6-mob"><label
+                                                        for="filter-cat-6-mob" class="form-group-checkbox__label"><span
+                                                            class="form-group-checkbox__box"><svg
+                                                                class="form-group-checkbox__icon">
+                                                                <use href="#check-mark"></use>
+                                                            </svg></span>Декор (08)</label></li>
+                                                <li><input type="checkbox" id="filter-cat-all-mob" checked><label
+                                                        for="filter-cat-all-mob"
+                                                        class="form-group-checkbox__label"><span
+                                                            class="form-group-checkbox__box"><svg
+                                                                class="form-group-checkbox__icon">
+                                                                <use href="#check-mark"></use>
+                                                            </svg></span>Всі товари (75)</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="filter-group is-open">
+                                        <button class="filter-group__toggle" aria-expanded="true"
+                                            aria-controls="filter-volume-mob">
+                                            <span>Об'єм</span>
+                                            <svg class="icon icon-arrow-down">
+                                                <use href="#arrow-down"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="filter-group__body" id="filter-volume-mob">
+                                            <ul class="filter-group__list">
+                                                <li><input type="checkbox" id="filter-vol-1-mob"><label
+                                                        for="filter-vol-1-mob" class="form-group-checkbox__label"><span
+                                                            class="form-group-checkbox__box"><svg
+                                                                class="form-group-checkbox__icon">
+                                                                <use href="#check-mark"></use>
+                                                            </svg></span>10 мл</label></li>
+                                                <li><input type="checkbox" id="filter-vol-2-mob"><label
+                                                        for="filter-vol-2-mob" class="form-group-checkbox__label"><span
+                                                            class="form-group-checkbox__box"><svg
+                                                                class="form-group-checkbox__icon">
+                                                                <use href="#check-mark"></use>
+                                                            </svg></span>15 мл</label></li>
+                                                <li><input type="checkbox" id="filter-vol-3-mob"><label
+                                                        for="filter-vol-3-mob" class="form-group-checkbox__label"><span
+                                                            class="form-group-checkbox__box"><svg
+                                                                class="form-group-checkbox__icon">
+                                                                <use href="#check-mark"></use>
+                                                            </svg></span>20 мл</label></li>
+                                                <li><input type="checkbox" id="filter-vol-4-mob"><label
+                                                        for="filter-vol-4-mob" class="form-group-checkbox__label"><span
+                                                            class="form-group-checkbox__box"><svg
+                                                                class="form-group-checkbox__icon">
+                                                                <use href="#check-mark"></use>
+                                                            </svg></span>30 мл</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="filter-mobile-footer">
+                                        <svg class="icon game-icons_polar-star" aria-hidden="true" focusable="false">
+                                            <use href="#game-icons_polar-star"></use>
+                                        </svg>
+                                    </div>
+                                </aside>
+                            </div>
+
                             <div class="sort-dropdown">
                                 <span class="sort-dropdown-pre-title">Сортування</span>
                                 <button class="sort-dropdown__toggle" id="sort-toggle" aria-haspopup="true"
@@ -1062,7 +1193,8 @@
                             <div class="product-card"> <a href="#" class="product-card__image-link">
                                     <div class="product-card__image-wrapper"> <img src="img/product-Milky Way.jpg"
                                             alt="Лак для нігтів" class="product-card__image" loading="lazy"> <span
-                                            class="product-card__badge">Хіт продажу</span> </div>
+                                            class="product-card__badge">Хіт продажу</span>
+                                    </div>
                                 </a>
                                 <div class="product-card__content">
                                     <div class="product-card__header"> <span
@@ -1108,7 +1240,8 @@
                             <div class="product-card"> <a href="#" class="product-card__image-link">
                                     <div class="product-card__image-wrapper"> <img src="img/product-crystal-nude.jpg"
                                             alt="Лак з блискітками" class="product-card__image" loading="lazy"> <span
-                                            class="product-card__badge">Хіт продажу</span> </div>
+                                            class="product-card__badge">Хіт продажу</span>
+                                    </div>
                                 </a>
                                 <div class="product-card__content">
                                     <div class="product-card__header"> <span
@@ -1199,7 +1332,8 @@
                             <div class="product-card"> <a href="#" class="product-card__image-link">
                                     <div class="product-card__image-wrapper"> <img src="img/product-Milky Way.jpg"
                                             alt="Лак для нігтів" class="product-card__image" loading="lazy"> <span
-                                            class="product-card__badge">Хіт продажу</span> </div>
+                                            class="product-card__badge">Хіт продажу</span>
+                                    </div>
                                 </a>
                                 <div class="product-card__content">
                                     <div class="product-card__header"> <span
@@ -1245,7 +1379,8 @@
                             <div class="product-card"> <a href="#" class="product-card__image-link">
                                     <div class="product-card__image-wrapper"> <img src="img/product-crystal-nude.jpg"
                                             alt="Лак з блискітками" class="product-card__image" loading="lazy"> <span
-                                            class="product-card__badge">Хіт продажу</span> </div>
+                                            class="product-card__badge">Хіт продажу</span>
+                                    </div>
                                 </a>
                                 <div class="product-card__content">
                                     <div class="product-card__header"> <span
@@ -1355,20 +1490,19 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Dropdown для сортировки
+            // --- Сортировка (без изменений) ---
             const sortToggle = document.getElementById('sort-toggle');
             const sortMenu = document.getElementById('sort-menu');
-            if (sortToggle) {
+            if (sortToggle && sortMenu) {
                 sortToggle.addEventListener('click', (e) => {
                     e.stopPropagation();
-                    const isExpanded = sortToggle.getAttribute('aria-expanded') === 'true';
-                    sortToggle.setAttribute('aria-expanded', !isExpanded);
-                    sortMenu.hidden = isExpanded;
-                    sortToggle.parentElement.classList.toggle('is-open');
+                    const isOpen = sortToggle.parentElement.classList.toggle('is-open');
+                    sortToggle.setAttribute('aria-expanded', isOpen);
+                    sortMenu.hidden = !isOpen;
                 });
             }
 
-            // Аккордеон для групп фильтров
+            // --- Аккордеон для групп фильтров (для обеих версий) ---
             document.querySelectorAll('.filter-group__toggle').forEach(button => {
                 button.addEventListener('click', () => {
                     const group = button.parentElement;
@@ -1377,27 +1511,58 @@
 
                     button.setAttribute('aria-expanded', !isExpanded);
                     group.classList.toggle('is-open', !isExpanded);
+                    // Для плавного раскрытия на мобильных
+                    if (!isExpanded) {
+                        body.style.maxHeight = (body.scrollHeight + 20) + "px";
+                    } else {
+                        body.style.maxHeight = 0;
+                    }
                 });
             });
 
-            // Показать/скрыть фильтры на мобильных/планшетах
+            // --- НОВАЯ ЛОГИКА: Выпадающие фильтры на мобильных/планшетах ---
             const filterToggleBtn = document.getElementById('filter-toggle');
-            const sidebar = document.getElementById('catalog-sidebar');
-            if (filterToggleBtn && sidebar) {
-                filterToggleBtn.addEventListener('click', () => {
-                    const isExpanded = filterToggleBtn.getAttribute('aria-expanded') === 'true';
-                    filterToggleBtn.setAttribute('aria-expanded', !isExpanded);
-                    sidebar.classList.toggle('is-active');
+            const filterWrapper = document.querySelector('.filter-dropdown-wrapper');
+            const mobileSidebar = document.getElementById('catalog-sidebar-mobile');
+            const filterCloseBtn = mobileSidebar.querySelector('.filter-close-btn');
+
+            if (filterToggleBtn && filterWrapper && mobileSidebar) {
+                // Открытие по клику на кнопку "Фильтр"
+                filterToggleBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isOpen = filterWrapper.classList.toggle('is-open');
+                    filterToggleBtn.setAttribute('aria-expanded', isOpen);
+                    mobileSidebar.hidden = !isOpen;
+                });
+
+                // Закрытие по клику на крестик внутри
+                filterCloseBtn.addEventListener('click', () => {
+                    filterWrapper.classList.remove('is-open');
+                    filterToggleBtn.setAttribute('aria-expanded', 'false');
+                    mobileSidebar.hidden = true;
                 });
             }
 
-            // Закрыть выпадающие списки при клике вне их
+            // --- Закрытие выпадающих списков при клике вне их ---
             document.addEventListener('click', function (event) {
+                // Сортировка
                 if (sortToggle && !sortToggle.parentElement.contains(event.target)) {
-                    sortToggle.setAttribute('aria-expanded', 'false');
-                    sortMenu.hidden = true;
                     sortToggle.parentElement.classList.remove('is-open');
+                    sortMenu.hidden = true;
+                    sortToggle.setAttribute('aria-expanded', 'false');
                 }
+
+                // Фильтры
+                if (filterWrapper && !filterWrapper.contains(event.target)) {
+                    filterWrapper.classList.remove('is-open');
+                    mobileSidebar.hidden = true;
+                    filterToggleBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Инициализация высоты для уже открытых аккордеонов
+            document.querySelectorAll('.filter-group.is-open .filter-group__body').forEach(body => {
+                body.style.maxHeight = (body.scrollHeight + 100) + "px";
             });
         });
     </script>

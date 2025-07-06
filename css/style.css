@@ -6177,12 +6177,14 @@ button {
     stroke: var(--color-text-light-gray);
 }
 
-.burger-menu__close-btn:hover {
+.burger-menu__close-btn:hover,
+.filter-close-btn:hover {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
 }
 
-.burger-menu__close-btn:hover svg {
+.burger-menu__close-btn:hover svg,
+.filter-close-btn:hover svg {
     stroke: var(--color-white);
 }
 

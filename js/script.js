@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
+/*
 document.addEventListener('DOMContentLoaded', function () {
 
     // --- Accordion for Desktop Filters ---
@@ -335,4 +335,4 @@ document.addEventListener('DOMContentLoaded', function () {
             mobileFiltersPanel.hidden = true;
         }
     });
-});
+});          */
