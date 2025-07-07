@@ -1,65 +1,60 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // --- Dropdown for Sorting ---
-    const sortToggle = document.getElementById('sort-toggle');
-    const sortMenu = document.getElementById('sort-menu');
+    // === ЛОГИКА ДЛЯ ВЫПАДАЮЩИХ ФИЛЬТРОВ ===
 
-    if (sortToggle && sortMenu) {
-        sortToggle.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const isExpanded = sortToggle.getAttribute('aria-expanded') === 'true';
-            sortToggle.setAttribute('aria-expanded', String(!isExpanded));
-            sortMenu.hidden = isExpanded;
-            sortToggle.parentElement.classList.toggle('is-open');
-        });
-    }
-
-    // --- Accordion for Filter Groups ---
-    document.querySelectorAll('.filter-group__toggle').forEach(button => {
-        button.addEventListener('click', () => {
-            const group = button.parentElement;
-            const isExpanded = button.getAttribute('aria-expanded') === 'true';
-            button.setAttribute('aria-expanded', String(!isExpanded));
-            group.classList.toggle('is-open', !isExpanded);
-        });
-    });
-
-    // --- Show/Hide Filter Panel (Tablet/Mobile) ---
+    // 1. Находим все необходимые элементы
     const filterToggleBtn = document.getElementById('filter-toggle');
     const sidebar = document.getElementById('catalog-sidebar');
-    const sidebarCloseBtn = document.getElementById('filter-sidebar-close');
 
+    // Проверяем, существуют ли элементы, чтобы избежать ошибок
     if (filterToggleBtn && sidebar) {
-        filterToggleBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const isExpanded = filterToggleBtn.getAttribute('aria-expanded') === 'true';
-            filterToggleBtn.setAttribute('aria-expanded', String(!isExpanded));
-            sidebar.classList.toggle('is-active');
-        });
-    }
+        const closeBtn = sidebar.querySelector('.filter-close-btn');
 
-    if (sidebarCloseBtn) {
-        sidebarCloseBtn.addEventListener('click', () => {
-            filterToggleBtn.setAttribute('aria-expanded', 'false');
+        // 2. Функция для открытия фильтров
+        const openFilter = () => {
+            sidebar.classList.add('is-active');
+            filterToggleBtn.setAttribute('aria-expanded', 'true');
+        };
+
+        // 3. Функция для закрытия фильтров
+        const closeFilter = () => {
             sidebar.classList.remove('is-active');
+            filterToggleBtn.setAttribute('aria-expanded', 'false');
+        };
+
+        // 4. Назначаем обработчики событий
+
+        // Клик на основную кнопку "Фільтр"
+        filterToggleBtn.addEventListener('click', (event) => {
+            event.stopPropagation(); // Важно: останавливаем "всплытие" события, чтобы не сработало закрытие по клику вне окна
+
+            if (sidebar.classList.contains('is-active')) {
+                closeFilter();
+            } else {
+                openFilter();
+            }
+        });
+
+        // Клик на кнопку "крестик" внутри фильтров
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                closeFilter();
+            });
+        }
+
+        // Клик вне области фильтров для их закрытия
+        document.addEventListener('click', (event) => {
+            // Закрываем, только если сайдбар открыт и клик был НЕ по сайдбару и НЕ по кнопке открытия
+            if (sidebar.classList.contains('is-active') && !sidebar.contains(event.target) && !filterToggleBtn.contains(event.target)) {
+                closeFilter();
+            }
+        });
+
+        // Закрытие по нажатию клавиши 'Escape' для доступности
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && sidebar.classList.contains('is-active')) {
+                closeFilter();
+            }
         });
     }
 
-
-    // --- Close Dropdowns on Outside Click ---
-    document.addEventListener('click', function (event) {
-        // Close Sort Dropdown
-        if (sortToggle && !sortToggle.parentElement.contains(event.target)) {
-            sortToggle.setAttribute('aria-expanded', 'false');
-            sortMenu.hidden = true;
-            sortToggle.parentElement.classList.remove('is-open');
-        }
-
-        // Close Filter Panel on Tablet/Mobile
-        if (sidebar && filterToggleBtn && sidebar.classList.contains('is-active')) {
-            if (!sidebar.contains(event.target) && !filterToggleBtn.contains(event.target)) {
-                filterToggleBtn.setAttribute('aria-expanded', 'false');
-                sidebar.classList.remove('is-active');
-            }
-        }
-    });
 });

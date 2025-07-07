@@ -20,17 +20,14 @@
     margin: 0 auto;
 }
 
-.container-hero {
-    border-bottom: 1px solid var(--color-border);
-}
 
-/* --- New Hero Section --- */
 .catalog-hero-new {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 5vw;
     position: relative;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .catalog-hero-new__text {
@@ -102,7 +99,7 @@
     padding-top: 2vw;
 }
 
-/* --- Sidebar (Filters) --- */
+
 .catalog-sidebar {
     font-family: "Vela Sans";
     padding: 25px;
@@ -238,7 +235,6 @@
 
     .form-group-checkbox__icon {
         width: 3vw;
-        height: auto;
     }
 }
 
@@ -255,7 +251,8 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-top: 10.42vw;
+    position: absolute;
+    bottom: 0;
 }
 
 .breadcrumbs a {
@@ -272,7 +269,7 @@
 .catalog-controls {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: end;
     margin-bottom: 30px;
 }
 
@@ -298,26 +295,32 @@
 .sort-dropdown__toggle {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 16px;
+    gap: 0.42vw;
+    font-size: 0.83vw;
     color: var(--color-primary-darkest);
-    width: 10.42vw;
     justify-content: space-between;
+    width: 100%;
 }
 
 .sort-dropdown__toggle:hover {
     color: var(--color-primary);
 }
 
-.sort-dropdown__toggle .icon-arrow-down {
+.sort-dropdown__toggle .icon-arrow-down,
+.filter-toggle-btn .icon-arrow-down {
     width: 11px;
     height: 10px;
     fill: var(--color-primary);
     transition: transform 0.3s ease;
 }
 
-.sort-dropdown.is-open .sort-dropdown__toggle .icon-arrow-down {
-    transform: rotate(180deg);
+.sort-dropdown.is-open .sort-dropdown__toggle .icon-arrow-down,
+[aria-expanded="true"] .icon-arrow-down {
+    transform: rotate(-90deg);
+}
+
+.filter-star {
+    display: none;
 }
 
 .sort-dropdown__menu {
@@ -398,16 +401,16 @@
 
 .product-card__image-wrapper {
     position: relative;
-    padding: 0.5208vw 0.5208vw 0 0.5208vw;
+    padding: 0;
 }
 
 .product-card__image {
     display: block;
     width: 100%;
+    height: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     transition: transform 0.3s ease;
-    height: 17.29vw;
 }
 
 
@@ -483,11 +486,7 @@
     margin-top: 1.04vw;
 }
 
-.product-card__price {
-    font-size: 1.66vw;
-    font-weight: 600;
-    color: var(--color-primary);
-}
+
 
 .product-card__actions {
     display: flex;
@@ -509,12 +508,29 @@
 @media (max-width: 960px) {
     .catalog-hero-new__text {
         padding-top: 10vw;
+        height: 100%;
     }
 
     .container {
         max-width: 100%;
         width: 100%;
         padding: 0 1.5625vw;
+    }
+
+    .sort-dropdown__toggle {
+        gap: 0.83vw;
+        font-size: 1.67vw;
+    }
+
+    .filter-star {
+        display: flex;
+        color: var(--color-primary);
+        margin: 1vw auto 0 auto;
+    }
+
+    .filter-star svg {
+        fill: var(--color-primary);
+        margin: 0 auto;
     }
 
     .catalog-hero-new {
@@ -554,17 +570,57 @@
         top: 0;
         display: none;
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 0;
+        padding: 2.92vw 5.21vw 1vw 2.08vw;
     }
 
     .catalog-sidebar.is-active {
         display: block;
+        position: absolute;
+        top: 57vw;
+        z-index: 200;
+        background-color: #fff;
+        left: 15px;
+        border-radius: 25px;
+        width: 30.21vw;
+        box-shadow: 0px 0px 12px 0px rgba(45, 14, 69, 0.15);
     }
 
     .filter-toggle-btn {
         display: flex;
-        font-size: 1.5rem;
+        font-size: 16px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--color-border);
+        width: 10.42vw;
+        justify-content: space-between;
+        align-items: center;
     }
+
+    div.filter-group:nth-child(2)>button:nth-child(1) {
+        width: 80%;
+    }
+
+    .filter-close-btn svg {
+        stroke: var(--color-text-light-gray);
+        width: 14px;
+        height: 14px;
+    }
+
+    .filter-mobile-header {
+        position: absolute;
+        right: 2vw;
+    }
+
+    .filter-close-btn {
+        width: 4.06vw;
+        height: 4.06vw;
+        border: 1px solid var(--color-text-light-gray);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 
     .catalog-controls {
         justify-content: space-between;
@@ -573,6 +629,19 @@
     .breadcrumbs {
         font-size: 1.6vw;
         margin-top: 5.2vw;
+    }
+
+    .product-card__description {
+        font-size: 1.67vw;
+    }
+
+    .product-card__badge {
+        height: 7.6vw;
+        width: 14.17vw;
+        top: 0;
+        left: 0;
+        border-radius: 3.6458vw 3.6458vw 3.6458vw 0;
+        font-size: 1.88vw;
     }
 }
 
@@ -585,21 +654,39 @@
         padding: 0 4.7vw;
     }
 
+    .catalog-controls {
+        justify-content: center;
+        gap: 15px;
+    }
+
+
     .catalog-hero-new {
         padding: 4vw 0;
+        height: auto;
+    }
+
+    .catalog-hero-new__text {
+        width: 70%;
+        gap: 6.25vw;
+        display: flex;
+        flex-flow: column;
     }
 
     .catalog-hero-new__image-wrapper {
-        width: 100%;
+        display: none;
+    }
+
+    .catalog-hero-new__text .pre-title {
+        font-size: 5vw;
     }
 
     .catalog-hero-new__title {
-        font-size: 18vw;
+        font-size: 26.88vw;
     }
 
     .title-decoration {
         font-size: 7vw;
-        bottom: -2vw;
+        bottom: 5vw;
     }
 
     .catalog-hero-new__subtitle {
@@ -609,6 +696,7 @@
     .breadcrumbs {
         font-size: 3.5vw;
         gap: 2vw;
+        position: relative;
     }
 
     .breadcrumbs .breadcrumbs__separator {
@@ -618,7 +706,17 @@
 
     .filter-toggle-btn {
         font-size: 4vw;
+        width: 100%;
     }
+
+    .sort-dropdown {
+        width: 100%;
+    }
+
+    .sort-dropdown-pre-title {
+        display: none;
+    }
+
 
     .sort-dropdown__toggle span {
         font-size: 4vw;
@@ -630,21 +728,55 @@
     }
 
     .product-grid {
-        grid-template-columns: 1fr;
-        gap: 6vw;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4.69vw;
+    }
+
+    .catalog-sidebar.is-active {
+        width: 91vw;
+        top: 115vw;
+    }
+
+    .filter-close-btn {
+        width: 10.63vw;
+        height: 10.63vw;
+    }
+
+    .product-card .btn--icon-round {
+        width: 8.13vw;
+        height: 8.13vw;
+    }
+
+    .product-card .icone--bag {
+        width: 4.06vw;
+        height: 4.06vw;
+    }
+
+    .product-card__category {
+        font-size: 4.38vw;
+        padding-top: 0
+    }
+
+    .product-card__volume {
+        font-size: 4.69vw;
     }
 
     .product-card,
     .product-card__image-wrapper {
-        border-radius: 4vw;
+        height: auto;
+    }
+
+    .product-card__image {
+        border-radius: 0 0 6.25vw 6.25vw;
     }
 
     .product-card__title {
         font-size: 5vw;
     }
 
-    .product-card__description {
-        font-size: 3.8vw;
+    .product-card__description,
+    .btn--icon-round:has(.icon-heart) {
+        display: none;
     }
 
     .product-card__header {
@@ -656,11 +788,7 @@
     }
 
     .product-card__badge {
-        font-size: 3vw;
-        padding: 1vw 2.5vw;
-        border-radius: 4vw;
-        top: 2vw;
-        left: 2vw;
+        display: none;
     }
 
     .product-card__footer {
@@ -668,7 +796,8 @@
     }
 
     .product-card__content {
-        padding: 4vw;
+        padding: 3.4vw;
+        gap: 3.13vw;
     }
 
     .catalog-sidebar {
@@ -681,9 +810,22 @@
         padding: 4vw 0;
     }
 
+    div.filter-group:nth-child(2)>button:nth-child(1) {
+        padding: 0 0 4vw 0;
+    }
+
     .filter-group__toggle .icon-arrow-down {
         width: 3vw;
         height: 3vw;
+    }
+
+    .filter-star svg {
+        width: 4.38vw;
+        height: 4.38vw;
+    }
+
+    .filter-star {
+        padding-top: 4.38vw;
     }
 
     .custom-checkbox {
@@ -697,5 +839,113 @@
     .custom-checkbox span::before {
         width: 20px;
         height: 20px;
+    }
+}
+
+
+
+/* ==========================================================================
+   16. PAGINATION
+   ========================================================================== */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    padding: 3vw 0;
+    margin-top: 1.5vw;
+}
+
+.pagination__list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--color-text-light-gray);
+    background-color: transparent;
+    color: var(--color-text-light-gray);
+    font-family: 'Vela Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.pagination__link--arrow svg {
+    width: 10px;
+    height: 16px;
+}
+
+.pagination__item a.pagination__link:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.pagination__item.is-active .pagination__link {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.pagination__link--accent {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.pagination__item--ellipsis .pagination__link {
+    cursor: default;
+}
+
+.pagination__item--ellipsis .pagination__link:hover {
+    border-color: var(--color-text-light-gray);
+    color: var(--color-text-light-gray);
+}
+
+
+/* --- Responsive Pagination --- */
+@media (max-width: 960px) {
+    .pagination-container {
+        padding: 4vw 0;
+    }
+
+    .pagination__list {
+        gap: 12px;
+    }
+
+    .pagination__link {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .pagination-container {
+        padding: 8vw 0 4vw;
+    }
+
+    .pagination__list {
+        gap: 8px;
+    }
+
+    .pagination__link {
+        width: 25px;
+        height: 25px;
+        font-size: 16px;
+        border-width: 1px;
+    }
+
+    .pagination__link--arrow svg {
+        width: 8px;
+        height: 10px;
     }
 }
