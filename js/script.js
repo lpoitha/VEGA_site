@@ -86,98 +86,102 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-
     const catalogWrapper = document.querySelector('.catalog-dropdown-wrapper');
     const siteBackdrop = document.querySelector('.site-backdrop');
 
-    if (catalogWrapper && siteBackdrop) {
-        // --- НОВОЕ: Объявляем переменную для таймера ---
-        let closeTimer;
+    if (!catalogWrapper || !siteBackdrop) return;
 
-        const catalogButton = catalogWrapper.querySelector('#catalog-button');
-        const catalogDropdown = catalogWrapper.querySelector('#catalog-dropdown-menu');
-        const mainItems = catalogDropdown.querySelectorAll('.catalog-dropdown__main-item');
-        const subPanel = catalogDropdown.querySelector('.catalog-dropdown__sub');
-        const subLists = catalogDropdown.querySelectorAll('.catalog-dropdown__sub-list');
+    let closeTimer;
 
-        const openDropdown = () => {
-            catalogWrapper.classList.add('is-open');
-            catalogButton.setAttribute('aria-expanded', 'true');
-            siteBackdrop.classList.add('is-active');
-        };
+    const catalogButton = catalogWrapper.querySelector('#catalog-button');
+    const catalogDropdown = catalogWrapper.querySelector('#catalog-dropdown-menu');
+    const mainItems = catalogDropdown.querySelectorAll('.catalog-dropdown__main-item');
+    const subPanel = catalogDropdown.querySelector('.catalog-dropdown__sub');
+    const subLists = catalogDropdown.querySelectorAll('.catalog-dropdown__sub-list');
 
-        const closeDropdown = () => {
-            catalogWrapper.classList.remove('is-open');
-            catalogButton.setAttribute('aria-expanded', 'false');
-            siteBackdrop.classList.remove('is-active');
+    const openDropdown = () => {
+        catalogWrapper.classList.add('is-open');
+        catalogButton.setAttribute('aria-expanded', 'true');
+        siteBackdrop.classList.add('is-active');
+    };
 
-            // Сбрасываем состояние при закрытии
-            catalogDropdown.classList.remove('sub-is-active'); // Прячем правую панель
-            mainItems.forEach(i => i.classList.remove('is-active')); // Снимаем выделение
-            subLists.forEach(list => list.classList.remove('is-active')); // Прячем списки
-        };
+    const closeDropdown = () => {
+        catalogWrapper.classList.remove('is-open');
+        catalogButton.setAttribute('aria-expanded', 'false');
+        siteBackdrop.classList.remove('is-active');
 
-        // --- НОВАЯ ЛОГИКА С ТАЙМЕРОМ ---
+        // Reset state
+        catalogDropdown.classList.remove('sub-is-active');
+        mainItems.forEach(i => i.classList.remove('is-active'));
+        subLists.forEach(list => list.classList.remove('is-active'));
+    };
 
-        // Когда курсор входит в область всей обертки (кнопка + меню)
-        catalogWrapper.addEventListener('mouseenter', function () {
-            // Отменяем любой таймер на закрытие, если он был запущен
-            clearTimeout(closeTimer);
-            // Открываем меню
+    // Toggle on button click
+    catalogButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        clearTimeout(closeTimer);
+        if (catalogWrapper.classList.contains('is-open')) {
+            closeDropdown();
+        } else {
             openDropdown();
-        });
+        }
+    });
 
+    // Open on hover
+    catalogWrapper.addEventListener('mouseenter', function () {
+        clearTimeout(closeTimer);
+        openDropdown();
+    });
 
-        catalogWrapper.addEventListener('click', function () {
-            clearTimeout(closeTimer);
-            openDropdown();
-        });
+    // Start close timer on leave
+    catalogWrapper.addEventListener('mouseleave', function () {
+        closeTimer = setTimeout(closeDropdown, 300);
+    });
 
-        // Когда курсор покидает область всей обертки (кнопка + меню)
-        catalogWrapper.addEventListener('mouseleave', function () {
-            // Запускаем таймер, который закроет меню через 300 миллисекунд
-            closeTimer = setTimeout(closeDropdown, 300);
-        });
+    // Close when clicking backdrop
+    siteBackdrop.addEventListener('click', function () {
+        closeDropdown();
+    });
 
-        // --- Логика для показа подкатегорий (остается без изменений) ---
-        mainItems.forEach(item => {
-            item.addEventListener('mouseover', function () {
-                catalogDropdown.classList.add('sub-is-active');
+    // Handle main item interactions
+    mainItems.forEach(item => {
+        const handler = function (e) {
+            e.preventDefault();
+            const isActive = item.classList.contains('is-active');
+
+            // If already active, hide sub-panel
+            if (isActive) {
+                catalogDropdown.classList.remove('sub-is-active');
                 mainItems.forEach(i => i.classList.remove('is-active'));
                 subLists.forEach(list => list.classList.remove('is-active'));
-                this.classList.add('is-active');
-
-                const category = this.dataset.category;
-                const activeSubList = catalogDropdown.querySelector(`.catalog-dropdown__sub-list[data-category="${category}"]`);
-                if (activeSubList) {
-                    activeSubList.classList.add('is-active');
-                }
-            });
-        });
-
-        mainItems.forEach(item => {
-            item.addEventListener('click', function () {
-                catalogDropdown.classList.add('sub-is-active');
-                mainItems.forEach(i => i.classList.remove('is-active'));
-                subLists.forEach(list => list.classList.remove('is-active'));
-                this.classList.add('is-active');
-
-                const category = this.dataset.category;
-                const activeSubList = catalogDropdown.querySelector(`.catalog-dropdown__sub-list[data-category="${category}"]`);
-                if (activeSubList) {
-                    activeSubList.classList.add('is-active');
-                }
-            });
-        });
-
-        // Закрытие по клавише Escape
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && catalogWrapper.classList.contains('is-open')) {
-                closeDropdown();
+                return;
             }
-        });
-    }
+
+            // Otherwise, show relevant sub-list
+            catalogDropdown.classList.add('sub-is-active');
+            mainItems.forEach(i => i.classList.remove('is-active'));
+            subLists.forEach(list => list.classList.remove('is-active'));
+            item.classList.add('is-active');
+
+            const category = item.dataset.category;
+            const activeSubList = catalogDropdown.querySelector(`.catalog-dropdown__sub-list[data-category="${category}"]`);
+            if (activeSubList) {
+                activeSubList.classList.add('is-active');
+            }
+        };
+
+        item.addEventListener('click', handler);
+        item.addEventListener('mouseover', handler);
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && catalogWrapper.classList.contains('is-open')) {
+            closeDropdown();
+        }
+    });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -214,7 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
         setTimeout(() => {
             modal.hidden = true;
-            // Возвращаем в начальное состояние
             formView.classList.add('is-visible');
             successView.classList.remove('is-visible');
             formView.reset();
@@ -271,68 +274,123 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-/*
+
+document.addEventListener('DOMContentLoaded', () => {
+    const phoneBtn = document.querySelector('[data-btn="phone"]');
+    const messageBtn = document.querySelector('[data-btn="message"]');
+
+    // Сохраняем оригинальные SVG как строки
+    const originalPhoneIcon = phoneBtn.querySelector('svg').outerHTML;
+    const originalMessageIcon = messageBtn.querySelector('svg').outerHTML;
+
+    // Новая иконка телефона (вертикальная черта с закруглениями)
+    const phoneIconAlt = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24">
+  <rect x="4" y="11" width="16" height="3" rx="1" fill="currentColor"/>
+</svg>`;
+
+    // Крестик для message
+    const closeIcon = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>`;
+
+    // Переключение иконки телефона
+    phoneBtn.addEventListener('click', () => {
+        const currentSVG = phoneBtn.querySelector('svg');
+        if (currentSVG.outerHTML.trim() === originalPhoneIcon.trim()) {
+            phoneBtn.innerHTML = phoneIconAlt;
+        } else {
+            phoneBtn.innerHTML = originalPhoneIcon;
+        }
+    });
+
+    // Переключение иконки сообщений
+    messageBtn.addEventListener('click', () => {
+        const currentSVG = messageBtn.querySelector('svg');
+        if (currentSVG.outerHTML.trim() === originalMessageIcon.trim()) {
+            messageBtn.innerHTML = closeIcon;
+        } else {
+            messageBtn.innerHTML = originalMessageIcon;
+        }
+    });
+});
+
+
 document.addEventListener('DOMContentLoaded', function () {
+    // --- Сортировка (без изменений) ---
+    const sortToggle = document.getElementById('sort-toggle');
+    const sortMenu = document.getElementById('sort-menu');
+    if (sortToggle && sortMenu) {
+        sortToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = sortToggle.parentElement.classList.toggle('is-open');
+            sortToggle.setAttribute('aria-expanded', isOpen);
+            sortMenu.hidden = !isOpen;
+        });
+    }
 
-    // --- Accordion for Desktop Filters ---
-    const filterToggles = document.querySelectorAll('.catalog-sidebar .filter-group__toggle');
-    filterToggles.forEach(toggle => {
-        toggle.addEventListener('click', () => {
-            const group = toggle.parentElement;
-            const content = toggle.nextElementSibling;
-            const isExpanded = group.classList.contains('is-open');
+    // --- Аккордеон для групп фильтров (для обеих версий) ---
+    document.querySelectorAll('.filter-group__toggle').forEach(button => {
+        button.addEventListener('click', () => {
+            const group = button.parentElement;
+            const body = button.nextElementSibling;
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
 
-            toggle.setAttribute('aria-expanded', !isExpanded);
-            group.classList.toggle('is-open');
-
-            // This is crucial for the animation to work
-            if (group.classList.contains('is-open')) {
-                content.style.maxHeight = content.scrollHeight + 'px';
+            button.setAttribute('aria-expanded', !isExpanded);
+            group.classList.toggle('is-open', !isExpanded);
+            // Для плавного раскрытия на мобильных
+            if (!isExpanded) {
+                body.style.maxHeight = (body.scrollHeight + 20) + "px";
             } else {
-                content.style.maxHeight = null;
+                body.style.maxHeight = 0;
             }
         });
     });
 
-    // --- Dropdown for Mobile Filters ---
-    const mobileFilterToggle = document.getElementById('filter-toggle');
-    const mobileFiltersPanel = document.getElementById('mobile-filters-panel');
+    // --- НОВАЯ ЛОГИКА: Выпадающие фильтры на мобильных/планшетах ---
+    const filterToggleBtn = document.getElementById('filter-toggle');
+    const filterWrapper = document.querySelector('.filter-dropdown-wrapper');
+    const mobileSidebar = document.getElementById('catalog-sidebar-mobile');
+    const filterCloseBtn = mobileSidebar.querySelector('.filter-close-btn');
 
-    if (mobileFilterToggle) {
-        mobileFilterToggle.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent document click listener from closing it immediately
-            const isExpanded = mobileFilterToggle.getAttribute('aria-expanded') === 'true';
-            mobileFilterToggle.setAttribute('aria-expanded', !isExpanded);
-            mobileFiltersPanel.hidden = isExpanded;
+    if (filterToggleBtn && filterWrapper && mobileSidebar) {
+        // Открытие по клику на кнопку "Фильтр"
+        filterToggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = filterWrapper.classList.toggle('is-open');
+            filterToggleBtn.setAttribute('aria-expanded', isOpen);
+            mobileSidebar.hidden = !isOpen;
+        });
+
+        // Закрытие по клику на крестик внутри
+        filterCloseBtn.addEventListener('click', () => {
+            filterWrapper.classList.remove('is-open');
+            filterToggleBtn.setAttribute('aria-expanded', 'false');
+            mobileSidebar.hidden = true;
         });
     }
 
-    // --- Dropdown for Sorting ---
-    const sortToggle = document.getElementById('sort-toggle');
-    const sortMenu = document.getElementById('sort-menu');
-    if (sortToggle) {
-        sortToggle.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent document click listener from closing it immediately
-            const isExpanded = sortToggle.getAttribute('aria-expanded') === 'true';
-            sortToggle.setAttribute('aria-expanded', !isExpanded);
-            sortMenu.hidden = isExpanded;
-            sortToggle.parentElement.classList.toggle('is-open');
-        });
-    }
-
-    // --- Close dropdowns on outside click ---
+    // --- Закрытие выпадающих списков при клике вне их ---
     document.addEventListener('click', function (event) {
-        // Close sort dropdown
+        // Сортировка
         if (sortToggle && !sortToggle.parentElement.contains(event.target)) {
-            sortToggle.setAttribute('aria-expanded', 'false');
-            sortMenu.hidden = true;
             sortToggle.parentElement.classList.remove('is-open');
+            sortMenu.hidden = true;
+            sortToggle.setAttribute('aria-expanded', 'false');
         }
 
-        // Close mobile filter panel
-        if (mobileFiltersPanel && !mobileFiltersPanel.contains(event.target) && !mobileFilterToggle.contains(event.target)) {
-            mobileFilterToggle.setAttribute('aria-expanded', 'false');
-            mobileFiltersPanel.hidden = true;
+        // Фильтры
+        if (filterWrapper && !filterWrapper.contains(event.target)) {
+            filterWrapper.classList.remove('is-open');
+            mobileSidebar.hidden = true;
+            filterToggleBtn.setAttribute('aria-expanded', 'false');
         }
     });
-});          */
+
+    // Инициализация высоты для уже открытых аккордеонов
+    document.querySelectorAll('.filter-group.is-open .filter-group__body').forEach(body => {
+        body.style.maxHeight = (body.scrollHeight + 100) + "px";
+    });
+});

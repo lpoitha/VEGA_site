@@ -39,6 +39,8 @@
     --border: 5px;
 }
 
+
+
 /* ==========================================================================
    2. БАЗОВЫЕ СТИЛИ И ШРИФТЫ
    ========================================================================== */
@@ -3450,9 +3452,9 @@ svg.nav-button__shape>path:nth-child(3) {
         font-size: 7.8125vw
     }
 
-    .product-card__category {
+    .product-card__category,
+    .product-card__volume {
         font-size: 4.6859vw;
-        padding-top: 1.2481vw
     }
 
     .product-card__name {
@@ -3469,9 +3471,6 @@ svg.nav-button__shape>path:nth-child(3) {
         padding: 6.25vw 4.7vw 4.7vw 4.7vw;
     }
 
-    .product-card__volume {
-        font-size: 5.625vw
-    }
 
     .product-card--large .product-card__price {
         font-size: 7.8125vw
@@ -3752,7 +3751,12 @@ svg.nav-button__shape>path:nth-child(3) {
     }
 
     .product-card--small {
-        height: 94vw
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* распределение элементов по вертикали */
+        height: 100%;
+        /* важно! карточка должна иметь фиксированную или растягиваемую высоту */
     }
 
     .product-card--small .product-card__image {
@@ -3760,7 +3764,7 @@ svg.nav-button__shape>path:nth-child(3) {
     }
 
     .product-card--small .product-card__info {
-        padding: 6.25vw 2.5vw;
+        padding: 6.25vw 2.5vw 0 2.5vw;
         gap: 3.125vw
     }
 
@@ -3791,8 +3795,8 @@ svg.nav-button__shape>path:nth-child(3) {
     }
 
     .product-card--small .product-card__footer {
-        padding: 0 4.7vw 4.7vw 4.7vw;
-        margin-top: 0
+        margin: 0;
+        padding: 4.7vw 2.5vw 4.7vw 2.5vw;
     }
 
     .product-card--vega-placeholder .product-card__footer {
@@ -3866,6 +3870,10 @@ svg.nav-button__shape>path:nth-child(3) {
     align-items: flex-start;
     gap: 6.3542vw;
     left: 10.9375vw
+}
+
+.about-section__background {
+    position: relative;
 }
 
 
@@ -3984,14 +3992,13 @@ svg.nav-button__shape>path:nth-child(3) {
 .about-section__caption-content {
     display: flex;
     flex-direction: column;
-    gap: 0.7292vw
 }
 
 .about-section__caption-name {
     font-family: "Cramaten", sans-serif;
     font-size: 2.7604vw;
     font-weight: 400;
-    line-height: 50%;
+    line-height: 100%;
     letter-spacing: -0.01em;
     text-transform: uppercase;
     color: var(--color-primary-darkest)
@@ -4830,71 +4837,59 @@ svg.nav-button__shape>path:nth-child(3) {
 /* --- Планшетна версія (до 960px) --- */
 @media (max-width: 960px) {
     .contacts-section {
-        /* Робимо секцію гнучкою, залишаючи 2 колонки */
         width: 100%;
         height: auto;
         padding: 4.1667vw 1.5625vw;
         gap: 2.0833vw
     }
 
-    /* Робимо обидва блоки гнучкими, щоб вони ділили простір */
     .contact-info,
     .contact-form-wrapper {
         flex: 1;
-        /* Кожен блок займає однакову частину простору */
         min-width: 0;
-        /* Важлива властивість, щоб flex-елементи могли стискатися */
         width: 50%;
         height: auto
     }
 
-    .contact-info {
-        padding: 4.1667vw;
-        /* Важливо: залишаємо position: relative для фону */
-        display: flex;
-        /* Переходимо на flex для внутрішнього компонування */
-        flex-direction: column;
-        gap: 3.125vw;
-        /* Відстань між логічними блоками всередині */
+    .form-group-checkbox__icon {
+        width: 1.1vw;
+        height: 1.1vw;
     }
 
-    /* ГОЛОВНА ЗМІНА ДЛЯ ФОНУ: робимо його гнучким */
+    .contact-info {
+        padding: 4.1667vw;
+        display: flex;
+        flex-direction: column;
+        gap: 3.125vw;
+    }
+
     .contact-info__bg {
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
-        /* 'cover' заповнить весь блок, зберігаючи пропорції (може обрізати краї) */
         background-size: cover;
         background-position: center;
-        /* Центруємо зображення */
         opacity: 0.5;
-        /* Трохи зменшимо яскравість для кращої читабельності тексту */
     }
 
-    /* Скидаємо абсолютне позиціонування для всіх дочірніх елементів */
     .contact-info__intro,
     .contact-info__schedule,
     .contact-info__details,
     .contact-info__socials {
         position: static;
-        /* Повертаємо в потік документа */
         z-index: 2;
-        /* Щоб контент був над фоном */
     }
 
-    /* Створюємо контейнер для заголовку і розкладу за допомогою Grid */
     .contact-info {
         display: grid;
         grid-template-columns: 1fr auto;
-        /* Перша колонка гнучка, друга - по контенту */
         grid-template-areas: "intro    schedule" "details  details" "socials  socials";
         align-items: start;
         column-gap: 1.5625vw;
         row-gap: 3.125vw
     }
 
-    /* Розміщуємо елементи по їх областях в сітці */
     .contact-info__intro {
         grid-area: intro
     }
@@ -4914,9 +4909,7 @@ svg.nav-button__shape>path:nth-child(3) {
 
     .contact-info__intro .section-intro__title {
         width: auto;
-        /* Дозволяємо заголовку бути гнучким */
         font-size: 4.375vw;
-        /* Трохи зменшуємо шрифт */
     }
 
     .contact-info__details a[href^="tel"] {
@@ -5005,9 +4998,13 @@ svg.nav-button__shape>path:nth-child(3) {
         height: 11.98vw;
     }
 
+    .social-icon svg {
+        height: 3.65vw;
+    }
+
 }
 
-/* --- Мобільна версія (до 767px) --- */
+
 @media (max-width: 767px) {
     .contacts-section {
         flex-direction: column;
@@ -5019,6 +5016,11 @@ svg.nav-button__shape>path:nth-child(3) {
         margin-top: 3vw;
         width: 35.94vw;
         height: 35.94vw;
+    }
+
+    .form-group-checkbox__icon {
+        width: 3.3vw;
+        height: 3.3vw;
     }
 
     .form-group input {
@@ -5034,6 +5036,7 @@ svg.nav-button__shape>path:nth-child(3) {
     .form-label-icon {
         height: 6.25vw;
         width: 6.25vw;
+        bottom: 3.75vw;
     }
 
     .form-fields {
@@ -5069,12 +5072,9 @@ svg.nav-button__shape>path:nth-child(3) {
 
     .contact-info {
         padding: 9.375vw 6.25vw;
-        /* Grid-розмітка для заголовку/розкладу працює тут ідеально */
         row-gap: 7.8125vw;
-        /* Зменшуємо вертикальні відступи */
     }
 
-    /* Зменшуємо шрифти для мобільної версії */
     .contact-info__intro .section-intro__title {
         font-size: 15.94vw
     }
@@ -5100,7 +5100,6 @@ svg.nav-button__shape>path:nth-child(3) {
 
     .contact-info__socials {
         justify-content: center;
-        /* Центруємо іконки */
         gap: 4.7vw
     }
 
@@ -5121,7 +5120,6 @@ svg.nav-button__shape>path:nth-child(3) {
         height: 8.125vw
     }
 
-    /* --- Форма на мобільних --- */
     .contact-form-wrapper {
         padding: 9.375vw 6.25vw
     }
@@ -5132,10 +5130,13 @@ svg.nav-button__shape>path:nth-child(3) {
     }
 
     .contact-form-button {
-        /* Прибираємо поворот і центруємо кнопку для зручності */
         transform: rotate(0);
         margin: 12.5vw auto 0 auto;
         align-self: center
+    }
+
+    .social-icon svg {
+        height: 8.44vw;
     }
 }
 
@@ -5543,6 +5544,7 @@ button {
     height: 2.4705882353rem;
     transition: all .4s linear;
     z-index: 55;
+    color: var(--color-primary);
 }
 
 .fixed-block__img {
@@ -5571,6 +5573,8 @@ button {
     border: var(--border, 1px) solid rgba(56, 143, 174, .5);
     border-radius: 50%;
     animation: ripple 2s linear infinite;
+    border-radius: 16px;
+    border: 1px solid rgba(165, 120, 199, 0.40);
 }
 
 .fixed-block__phone .fixed-block__btn::after {
@@ -5583,18 +5587,26 @@ button {
     right: 70%;
     z-index: 50;
     border-radius: .9411764706rem;
-    padding: 1.1764705882rem 2rem 1.1764705882rem 1.1764705882rem;
-    background-color: rgba(255, 255, 255, .9);
-    box-shadow: 0 0 20px 0 rgba(73, 79, 85, .2196078431);
-    backdrop-filter: blur(15px);
     width: max-content;
     height: max-content;
-    border: 1px solid currentColor;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transform: translate(10px, 10px);
     transition: all .4s linear;
+    border: 1px solid rgba(165, 120, 199, 0.40);
+    background: rgba(255, 255, 255, 0.80);
+    box-shadow: 0px 0px 10px 0px rgba(165, 120, 199, 0.20);
+    backdrop-filter: blur(10px);
+}
+
+.fixed-block__wrap .burger-menu__contacts {
+    margin: 0;
+}
+
+.fixed-block__wrap .burger-menu__contacts-socials {
+    margin-right: 8vw;
+    padding-top: 0;
 }
 
 .phone {
@@ -5707,8 +5719,8 @@ button {
 /* --- Стили для устройств с возможностью наведения (hover) --- */
 @media (any-hover: hover) {
     .fixed-block__btn:not(.open-parent .fixed-block__btn):hover {
-        border-color: #fff;
-        background-color: rgba(6, 115, 154, .85);
+        border-color: var(--color-accent-pink);
+        background-color: var(--color-accent-pink);
         color: #fff;
     }
 
@@ -6006,11 +6018,16 @@ button {
         font-size: 2vw;
     }
 
-    .icon-arrow-right,
+    .icon-arrow-right {
+        width: 4vw;
+        height: 4vw;
+    }
+
     .catalog-dropdown__star-icon .icon {
         width: 2vw;
         height: 2vw;
     }
+
 
     .catalog-dropdown__panel {
         padding: 3.5vw 0;
@@ -6070,6 +6087,10 @@ button {
     .catalog-dropdown__star-icon .icon {
         width: 5vw;
         height: 5vw;
+    }
+
+    .icon-arrow-right {
+        fill: #fff;
     }
 
     .catalog-dropdown__panel {
