@@ -1,0 +1,122 @@
+@import url("style.css");
+@import url("catalog.css");
+
+
+.category-container {
+    border-bottom: 1px solid var(--color-primary);
+    padding: 50px 0;
+}
+
+.section-intro {
+    position: relative;
+}
+
+h2 span.title__number {
+    font-family: "Vela Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+    letter-spacing: -0.4px;
+}
+
+.intro-star {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translatey(-50%);
+    fill: #912BFF;
+    opacity: 0.35;
+}
+
+.grid-categories {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-categories .category-card {
+    position: relative;
+}
+
+.category-card-count {
+    display: flex;
+    padding: 5px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    border: 1px solid var(--color-primary);
+}
+
+.category-card-count p {
+    color: var(--color-primary);
+    font-family: "Vela Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    white-space: nowrap;
+}
+
+.category-card__description-box {
+    display: flex;
+    gap: 30px;
+    align-items: start;
+    padding-right: 10px;
+}
+
+.category-card__description-box .category-card__description {
+    color: var(--color-primary-darkest);
+    font-family: "Vela Sans";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    letter-spacing: -0.26px;
+    text-transform: uppercase;
+    text-align: end;
+    transition: color 0.3s ease;
+}
+
+.grid-categories .category-card:hover .category-card__description {
+    color: var(--color-accent-pink);
+}
+
+@media (max-width: 960px) {
+    .grid-categories {
+        gap: 15px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .category-container {
+        padding: 20px 0;
+    }
+
+    .grid-categories {
+        padding-top: 20px;
+    }
+
+    .category-card__description-box {
+        padding: 10px 10px 15px 10px;
+        flex-flow: column;
+        gap: 10px;
+    }
+
+    .category-card__description-box .category-card__description {
+        display: block;
+        font-size: 13px;
+    }
+
+    .category-card-count {
+        padding: 2.5px 7.5px;
+    }
+
+    .category-card-count p {
+        font-size: 14px;
+    }
+
+}

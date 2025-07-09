@@ -2399,7 +2399,7 @@ svg.nav-button__shape>path:nth-child(3) {
     filter: blur(1000px);
     z-index: 0;
     border-radius: 50%;
-    opacity: 0.45 !important
+    opacity: 0.25 !important
 }
 
 .categories-bg-blur--left {
@@ -4450,9 +4450,8 @@ svg.nav-button__shape>path:nth-child(3) {
 
 /* --- Заголовок секции --- */
 .faq-intro {
-    position: relative;
-    /* Чтобы не наследовал абсолютное позиционирование */
-    top: 0;
+    position: sticky;
+    top: 100px;
     left: 0;
     width: 22.0833vw
 }
@@ -5570,10 +5569,8 @@ button {
     right: calc(var(--border, 1px) * -1);
     bottom: calc(var(--border, 1px) * -1);
     left: calc(var(--border, 1px) * -1);
-    border: var(--border, 1px) solid rgba(56, 143, 174, .5);
     border-radius: 50%;
     animation: ripple 2s linear infinite;
-    border-radius: 16px;
     border: 1px solid rgba(165, 120, 199, 0.40);
 }
 

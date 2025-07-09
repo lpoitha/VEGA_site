@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VEGA - Каталог</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/catalog.css">
+
+    <link rel="stylesheet" href="css/categories.css">
 </head>
 
 <body>
@@ -851,26 +851,25 @@
 
 
     <div class="page-wrapper">
-        <div class="catalog-bg-blur--left bg-blur"></div>
         <div class="container container-hero">
             <section class="catalog-hero-new">
                 <div class="catalog-hero-new__text">
-                    <span class="pre-title">Усі товари</span>
+                    <span class="pre-title">Напрямки</span>
                     <h1 class="catalog-hero-new__title">
-                        Каталог
+                        Категорії
                         <span class="title-decoration catalog-signature">
                             <span class="title-decoration__text stroke ">Продукція</span>
                             <span class="title-decoration__text fill">Продукція</span>
                         </span>
                     </h1>
-                    <p class="catalog-hero-new__subtitle">Професійні матеріали, яким довіряють тисячі майстрів</p>
+                    <p class="catalog-hero-new__subtitle">Обирай ідеальний продукт для ідеального манікюру</p>
 
                     <nav class="breadcrumbs breadcrumbs__catalog">
                         <a href="#">Головна</a>
                         <svg class="icon breadcrumbs__separator">
                             <use href="#game-icons_polar-star"></use>
                         </svg>
-                        <span>Каталог</span>
+                        <span>Категорії</span>
                     </nav>
                 </div>
                 <div class="catalog-hero-new__image-wrapper">
@@ -881,492 +880,158 @@
             </section>
         </div>
 
-        <main class="catalog-page-content">
+        <main class="categories-page-content">
             <div class="container">
-                <div class="catalog-layout">
-                    <!-- Левый сайдбар с фильтрами -->
-                    <aside class="catalog-sidebar" id="catalog-sidebar">
-
-                        <div class="filter-mobile-header">
-                            <button class="filter-close-btn" aria-label="Закрити фільтр">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path d="M18 6L6 18" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M6 6L18 18" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="filter-group is-open">
-                            <button class="filter-group__toggle" aria-expanded="true" aria-controls="filter-categories">
-                                <span>Категорії</span>
-                                <svg class="icon icon-arrow-down">
-                                    <use href="#arrow-down"></use>
-                                </svg>
-                            </button>
-                            <div class="filter-group__body" id="filter-categories">
-                                <ul class="filter-group__list">
-                                    <li>
-                                        <input type="checkbox" id="filter-cat-1" class="form-group-checkbox__input">
-                                        <label for="filter-cat-1" class="form-group-checkbox__label">
-                                            <span class="form-group-checkbox__box">
-                                                <svg class="form-group-checkbox__icon">
-                                                    <use href="#check-mark"></use>
-                                                </svg>
-                                            </span>
-                                            Гель-лаки (22)
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="filter-cat-2" class="form-group-checkbox__input">
-                                        <label for="filter-cat-2" class="form-group-checkbox__label">
-                                            <span class="form-group-checkbox__box">
-                                                <svg class="form-group-checkbox__icon">
-                                                    <use href="#check-mark"></use>
-                                                </svg>
-                                            </span>
-                                            Бази (11)
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="filter-cat-3" class="form-group-checkbox__input">
-                                        <label for="filter-cat-3" class="form-group-checkbox__label">
-                                            <span class="form-group-checkbox__box">
-                                                <svg class="form-group-checkbox__icon">
-                                                    <use href="#check-mark"></use>
-                                                </svg>
-                                            </span>
-                                            Топи (04)
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="filter-cat-4" class="form-group-checkbox__input">
-                                        <label for="filter-cat-4" class="form-group-checkbox__label">
-                                            <span class="form-group-checkbox__box">
-                                                <svg class="form-group-checkbox__icon">
-                                                    <use href="#check-mark"></use>
-                                                </svg>
-                                            </span>
-                                            Гелі для нарощування (21)
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="filter-cat-5" class="form-group-checkbox__input">
-                                        <label for="filter-cat-5" class="form-group-checkbox__label">
-                                            <span class="form-group-checkbox__box">
-                                                <svg class="form-group-checkbox__icon">
-                                                    <use href="#check-mark"></use>
-                                                </svg>
-                                            </span>
-                                            Допоміжні матеріали (14)
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="filter-cat-6" class="form-group-checkbox__input">
-                                        <label for="filter-cat-6" class="form-group-checkbox__label">
-                                            <span class="form-group-checkbox__box">
-                                                <svg class="form-group-checkbox__icon">
-                                                    <use href="#check-mark"></use>
-                                                </svg>
-                                            </span>
-                                            Декор (08)
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="filter-cat-all" class="form-group-checkbox__input"
-                                            checked>
-                                        <label for="filter-cat-all" class="form-group-checkbox__label">
-                                            <span class="form-group-checkbox__box">
-                                                <svg class="form-group-checkbox__icon">
-                                                    <use href="#check-mark"></use>
-                                                </svg>
-                                            </span>
-                                            Всі товари (75)
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="filter-group is-open">
-                            <button class="filter-group__toggle" aria-expanded="true" aria-controls="filter-volume">
-                                <span>Об'єм</span>
-                                <svg class="icon icon-arrow-down">
-                                    <use href="#arrow-down"></use>
-                                </svg>
-                            </button>
-                            <div class="filter-group__body" id="filter-volume">
-                                <ul class="filter-group__list">
-                                    <li>
-                                        <input type="checkbox" id="filter-vol-1" class="form-group-checkbox__input">
-                                        <label for="filter-vol-1" class="form-group-checkbox__label">
-                                            <span class="form-group-checkbox__box">
-                                                <svg class="form-group-checkbox__icon">
-                                                    <use href="#check-mark"></use>
-                                                </svg>
-                                            </span>
-                                            10 мл
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="filter-vol-2" class="form-group-checkbox__input">
-                                        <label for="filter-vol-2" class="form-group-checkbox__label">
-                                            <span class="form-group-checkbox__box">
-                                                <svg class="form-group-checkbox__icon">
-                                                    <use href="#check-mark"></use>
-                                                </svg>
-                                            </span>
-                                            15 мл
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="filter-vol-3" class="form-group-checkbox__input">
-                                        <label for="filter-vol-3" class="form-group-checkbox__label">
-                                            <span class="form-group-checkbox__box">
-                                                <svg class="form-group-checkbox__icon">
-                                                    <use href="#check-mark"></use>
-                                                </svg>
-                                            </span>
-                                            20 мл
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="filter-vol-4" class="form-group-checkbox__input">
-                                        <label for="filter-vol-4" class="form-group-checkbox__label">
-                                            <span class="form-group-checkbox__box">
-                                                <svg class="form-group-checkbox__icon">
-                                                    <use href="#check-mark"></use>
-                                                </svg>
-                                            </span>
-                                            30 мл
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                        <span class=" filter-star">
+                <div class="category-container">
+                    <div class="section-intro ">
+                        <span class="pre-title">усi роздikи</span>
+                        <h2 class="title section-intro__title"><span class="title__number">01/</span> Гель-лаки</h2>
+                        <span class="intro-star">
                             <svg class="icon" aria-hidden="true" focusable="false">
                                 <use href="#game-icons_polar-star"></use>
                             </svg>
                         </span>
-                    </aside>
-
-                    <!-- Правый блок с контентом -->
-                    <div class="catalog-content">
-
-                        <div class="catalog-controls">
-                            <button class="filter-toggle-btn " id="filter-toggle" aria-expanded="false"
-                                aria-controls="catalog-sidebar">
-                                <span>Фільтр</span>
-                                <svg class="icon icon-arrow-down">
-                                    <use href="#arrow-down"></use>
-                                </svg>
-                            </button>
-                            <div class="sort-dropdown">
-                                <span class="sort-dropdown-pre-title">Сортування</span>
-                                <button class="sort-dropdown__toggle" id="sort-toggle" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    <span>Популярні</span>
-                                    <svg class="icon icon-arrow-down">
-                                        <use href="#arrow-down"></use>
-                                    </svg>
-                                </button>
-                                <ul class="sort-dropdown__menu" id="sort-menu" role="listbox" hidden>
-                                    <li role="option"><a href="#" class="sort-option">Від дешевших</a></li>
-                                    <li role="option"><a href="#" class="sort-option">Від дорогіших</a></li>
-                                    <li role="option"><a href="#" class="sort-option is-active">Популярні</a></li>
-                                    <li role="option"><a href="#" class="sort-option">Новинки</a></li>
-                                </ul>
+                    </div>
+                    <div class="grid-categories">
+                        <a href="#" class="category-card">
+                            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
+                                <div class="category-card__content-wrapper">
+                                    <h3 class="category-card__title">Гель-лаки</h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="product-grid">
-                            <a class="product-card" href="#">
-                                <div class="product-card__image-link">
-                                    <div class="product-card__image-wrapper"> <img src="img/product-Milky Way.jpg"
-                                            alt="Лак для нігтів" class="product-card__image" loading="lazy"> <span
-                                            class="product-card__badge">Хіт продажу</span> </div>
+                            <div class="category-card__description-box">
+                                <div class="category-card-count">
+                                    <p>
+                                        12 шт
+                                    </p>
                                 </div>
-                                <div class="product-card__content">
-                                    <div class="product-card__header"> <span
-                                            class="product-card__category">Гель-лак</span>
-                                        <span class="product-card__volume">15 мл</span>
-                                    </div>
-                                    <h3 class="product-card__name">Лак для нігтів</h3>
-                                    <p class="product-card__description">Каучукові, камуфлюючі, вирівнюючі – обирай
-                                        під
-                                        свій стиль роботи.</p>
+                                <p class="category-card__description">Summer collection, 10мл, colors 001-011</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-card">
+                            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
+                                <div class="category-card__content-wrapper">
+                                    <h3 class="category-card__title">Гель-лаки</h3>
                                 </div>
-                                <div class="product-card__footer"> <span class="product-card__price">265 грн</span>
-                                    <div class="product-card__actions"> <button class="btn btn--icon-round"
-                                            aria-label="Додати в обране"><svg class="icon icone--strokefill icon-heart">
-                                                <use href="#heart"></use>
-                                            </svg></button> <button class="btn btn--icon-round btn--primary-fill"
-                                            aria-label="Додати в кошик"><svg class="icon icone--strokefill icone--bag">
-                                                <use href="#bag"></use>
-                                            </svg></button> </div>
+                            </div>
+                            <div class="category-card__description-box">
+                                <div class="category-card-count">
+                                    <p>
+                                        9 шт
+                                    </p>
                                 </div>
-                            </a>
-                            <a class="product-card" href="#">
-                                <div class="product-card__image-link">
-                                    <div class="product-card__image-wrapper"> <img src="img/product-peach-glow.jpg"
-                                            alt="Гель-лак Казковий" class="product-card__image" loading="lazy">
-                                        <span class="product-card__badge">Новинка</span>
-                                    </div>
+                                <p class="category-card__description">Summer collection, 10мл, colors 001-011</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-card">
+                            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
+                                <div class="category-card__content-wrapper">
+                                    <h3 class="category-card__title">Гель-лаки</h3>
                                 </div>
-                                <div class="product-card__content">
-                                    <div class="product-card__header"> <span class="product-card__category">Лак</span>
-                                        <span class="product-card__volume">15 мл</span>
-                                    </div>
-                                    <h3 class="product-card__name">Гель-лак Казковий</h3>
-                                    <p class="product-card__description">Для ідеального покриття та міцності,
-                                        каучукові,
-                                        камуфлюючі.</p>
+                            </div>
+                            <div class="category-card__description-box">
+                                <div class="category-card-count">
+                                    <p>
+                                        22 шт
+                                    </p>
                                 </div>
-                                <div class="product-card__footer"> <span class="product-card__price">295
-                                        грн</span>
-                                    <div class="product-card__actions"> <button class="btn btn--icon-round"
-                                            aria-label="Додати в обране"><svg class="icon icone--strokefill icon-heart">
-                                                <use href="#heart"></use>
-                                            </svg></button> <button class="btn btn--icon-round btn--primary-fill"
-                                            aria-label="Додати в кошик"><svg class="icon icone--strokefill icone--bag">
-                                                <use href="#bag"></use>
-                                            </svg></button> </div>
+                                <p class="category-card__description">Summer collection, 10мл, colors 001-011</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-card">
+                            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
+                                <div class="category-card__content-wrapper">
+                                    <h3 class="category-card__title">Гель-лаки</h3>
                                 </div>
-                            </a>
-                            <a href="#" class="product-card">
-                                <div class="product-card__image-link">
-                                    <div class="product-card__image-wrapper"> <img src="img/product-crystal-nude.jpg"
-                                            alt="Лак з блискітками" class="product-card__image" loading="lazy"> <span
-                                            class="product-card__badge">Хіт продажу</span> </div>
+                            </div>
+                            <div class="category-card__description-box">
+                                <div class="category-card-count">
+                                    <p>
+                                        12 шт
+                                    </p>
                                 </div>
-                                <div class="product-card__content">
-                                    <div class="product-card__header"> <span
-                                            class="product-card__category">Гель-лак</span>
-                                        <span class="product-card__volume">150 мл</span>
-                                    </div>
-                                    <h3 class="product-card__name">Лак з блискітками</h3>
-                                    <p class="product-card__description">Для ідеального покриття та
-                                        міцності, каучукові,
-                                        камуфлюючі.</p>
-                                </div>
-                                <div class="product-card__footer"> <span class="product-card__price">185
-                                        грн</span>
-                                    <div class="product-card__actions"> <button class="btn btn--icon-round"
-                                            aria-label="Додати в обране"><svg class="icon icone--strokefill icon-heart">
-                                                <use href="#heart"></use>
-                                            </svg></button> <button class="btn btn--icon-round btn--primary-fill"
-                                            aria-label="Додати в кошик"><svg class="icon icone--strokefill icone--bag">
-                                                <use href="#bag"></use>
-                                            </svg></button> </div>
-                                </div>
-                            </a>
-                            <a href="#" class="product-card">
-                                <div class="product-card__image-link">
-                                    <div class="product-card__image-wrapper"> <img src="img/product-latte-nude-solo.jpg"
-                                            alt="Гель Зірки" class="product-card__image" loading="lazy"> <span
-                                            class="product-card__badge">Новинка</span> </div>
-                                </div>
-                                <div class="product-card__content">
-                                    <div class="product-card__header"> <span class="product-card__category">Лак</span>
-                                        <span class="product-card__volume">15 мл</span>
-                                    </div>
-                                    <h3 class="product-card__name">Гель Зірки</h3>
-                                    <p class="product-card__description">Для ідеального покриття та
-                                        міцності, каучукові,
-                                        камуфлюючі.</p>
-                                </div>
-                                <div class="product-card__footer"> <span class="product-card__price">275
-                                        грн</span>
-                                    <div class="product-card__actions"> <button class="btn btn--icon-round"
-                                            aria-label="Додати в обране"><svg class="icon icone--strokefill icon-heart">
-                                                <use href="#heart"></use>
-                                            </svg></button> <button class="btn btn--icon-round btn--primary-fill"
-                                            aria-label="Додати в кошик"><svg class="icon icone--strokefill icone--bag">
-                                                <use href="#bag"></use>
-                                            </svg></button> </div>
-                                </div>
-                            </a>
-                            <a href="#" class="product-card">
-                                <div href="#" class="product-card__image-link">
-                                    <div class="product-card__image-wrapper"> <img src="img/product-milky-way.jpg"
-                                            alt="Гель Казковий" class="product-card__image" loading="lazy"> <span
-                                            class="product-card__badge">Новинка</span> </div>
-                                </div>
-                                <div class="product-card__content">
-                                    <div class="product-card__header"> <span class="product-card__category">Гель</span>
-                                        <span class="product-card__volume">15 мл</span>
-                                    </div>
-                                    <h3 class="product-card__name">Гель Казковий</h3>
-                                    <p class="product-card__description">Для ідеального покриття та
-                                        міцності, каучукові,
-                                        камуфлюючі.</p>
-                                </div>
-                                <div class="product-card__footer"> <span class="product-card__price">315
-                                        грн</span>
-                                    <div class="product-card__actions"> <button class="btn btn--icon-round"
-                                            aria-label="Додати в обране"><svg class="icon icone--strokefill icon-heart">
-                                                <use href="#heart"></use>
-                                            </svg></button> <button class="btn btn--icon-round btn--primary-fill"
-                                            aria-label="Додати в кошик"><svg class="icon icone--strokefill icone--bag">
-                                                <use href="#bag"></use>
-                                            </svg></button> </div>
-                                </div>
-                            </a>
-                            <a class="product-card" href="#">
-                                <div class="product-card__image-link">
-                                    <div class="product-card__image-wrapper"> <img src="img/product-milky-way.jpg"
-                                            alt="Гель-лак Казковий" class="product-card__image" loading="lazy"> </div>
-                                </div>
-                                <div class="product-card__content">
-                                    <div class="product-card__header"> <span class="product-card__category">Гель</span>
-                                        <span class="product-card__volume">15 мл</span>
-                                    </div>
-                                    <h3 class="product-card__name">Гель-лак Казковий</h3>
-                                    <p class="product-card__description">Для ідеального покриття та
-                                        міцності, каучукові,
-                                        камуфлюючі.</p>
-                                </div>
-                                <div class="product-card__footer"> <span class="product-card__price">195
-                                        грн</span>
-                                    <div class="product-card__actions"> <button class="btn btn--icon-round"
-                                            aria-label="Додати в обране"><svg class="icon icone--strokefill icon-heart">
-                                                <use href="#heart"></use>
-                                            </svg></button> <button class="btn btn--icon-round btn--primary-fill"
-                                            aria-label="Додати в кошик"><svg class="icon icone--strokefill icone--bag">
-                                                <use href="#bag"></use>
-                                            </svg></button> </div>
-                                </div>
-                            </a>
-                            <a class="product-card" href="#">
-                                <div class="product-card__image-link">
-                                    <div class="product-card__image-wrapper"> <img src="img/product-Milky Way.jpg"
-                                            alt="Лак для нігтів" class="product-card__image" loading="lazy"> <span
-                                            class="product-card__badge">Хіт продажу</span> </div>
-                                </div>
-                                <div class="product-card__content">
-                                    <div class="product-card__header"> <span
-                                            class="product-card__category">Гель-лак</span>
-                                        <span class="product-card__volume">15 мл</span>
-                                    </div>
-                                    <h3 class="product-card__name">Лак для нігтів</h3>
-                                    <p class="product-card__description">Каучукові, камуфлюючі,
-                                        вирівнюючі – обирай під
-                                        свій стиль роботи.</p>
-                                </div>
-                                <div class="product-card__footer"> <span class="product-card__price">265
-                                        грн</span>
-                                    <div class="product-card__actions"> <button class="btn btn--icon-round"
-                                            aria-label="Додати в обране"><svg class="icon icone--strokefill icon-heart">
-                                                <use href="#heart"></use>
-                                            </svg></button> <button class="btn btn--icon-round btn--primary-fill"
-                                            aria-label="Додати в кошик"><svg class="icon icone--strokefill icone--bag">
-                                                <use href="#bag"></use>
-                                            </svg></button> </div>
-                                </div>
-                            </a>
-                            <a class="product-card" href="#">
-                                <div class="product-card__image-link">
-                                    <div class="product-card__image-wrapper"> <img src="img/product-peach-glow.jpg"
-                                            alt="Гель-лак Казковий" class="product-card__image" loading="lazy"> <span
-                                            class="product-card__badge">Новинка</span> </div>
-                                </div>
-                                <div class="product-card__content">
-                                    <div class="product-card__header"> <span class="product-card__category">Лак</span>
-                                        <span class="product-card__volume">15 мл</span>
-                                    </div>
-                                    <h3 class="product-card__name">Гель-лак Казковий</h3>
-                                    <p class="product-card__description">Для ідеального покриття та
-                                        міцності, каучукові,
-                                        камуфлюючі.</p>
-                                </div>
-                                <div class="product-card__footer"> <span class="product-card__price">295
-                                        грн</span>
-                                    <div class="product-card__actions"> <button class="btn btn--icon-round"
-                                            aria-label="Додати в обране"><svg class="icon icone--strokefill icon-heart">
-                                                <use href="#heart"></use>
-                                            </svg></button> <button class="btn btn--icon-round btn--primary-fill"
-                                            aria-label="Додати в кошик"><svg class="icon icone--strokefill icone--bag">
-                                                <use href="#bag"></use>
-                                            </svg></button> </div>
-                                </div>
-                            </a>
-                            <a class="product-card" href="#">
-                                <div class="product-card__image-link">
-                                    <div class="product-card__image-wrapper"> <img src="img/product-crystal-nude.jpg"
-                                            alt="Лак з блискітками" class="product-card__image" loading="lazy"> <span
-                                            class="product-card__badge">Хіт продажу</span> </div>
-                                </div>
-                                <div class="product-card__content">
-                                    <div class="product-card__header"> <span
-                                            class="product-card__category">Гель-лак</span>
-                                        <span class="product-card__volume">150 мл</span>
-                                    </div>
-                                    <h3 class="product-card__name">Лак з блискітками</h3>
-                                    <p class="product-card__description">Для ідеального покриття та
-                                        міцності, каучукові,
-                                        камуфлюючі.</p>
-                                </div>
-                                <div class="product-card__footer"> <span class="product-card__price">185
-                                        грн</span>
-                                    <div class="product-card__actions"> <button class="btn btn--icon-round"
-                                            aria-label="Додати в обране"><svg class="icon icone--strokefill icon-heart">
-                                                <use href="#heart"></use>
-                                            </svg></button> <button class="btn btn--icon-round btn--primary-fill"
-                                            aria-label="Додати в кошик"><svg class="icon icone--strokefill icone--bag">
-                                                <use href="#bag"></use>
-                                            </svg></button> </div>
-                                </div>
-                            </a>
-                        </div>
-
-
-                        <div class="pagination-container">
-                            <nav class="pagination" aria-label="Page navigation">
-                                <ul class="pagination__list">
-                                    <li class="pagination__item">
-                                        <a href="#" class="pagination__link pagination__link--arrow"
-                                            aria-label="Previous Page">
-                                            <svg width="10" height="16" viewBox="0 0 10 16" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8.5 15L1.5 8L8.5 1" stroke="currentColor" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="pagination__item is-active">
-                                        <a href="#" class="pagination__link" aria-current="page">1</a>
-                                    </li>
-                                    <li class="pagination__item">
-                                        <a href="#" class="pagination__link">2</a>
-                                    </li>
-                                    <li class="pagination__item">
-                                        <a href="#" class="pagination__link">3</a>
-                                    </li>
-                                    <li class="pagination__item pagination__item--ellipsis">
-                                        <span class="pagination__link">...</span>
-                                    </li>
-                                    <li class="pagination__item">
-                                        <a href="#" class="pagination__link">10</a>
-                                    </li>
-                                    <li class="pagination__item">
-                                        <a href="#"
-                                            class="pagination__link pagination__link--arrow pagination__link--accent"
-                                            aria-label="Next Page">
-                                            <svg width="10" height="16" viewBox="0 0 10 16" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.5 1L8.5 8L1.5 15" stroke="currentColor" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-
+                                <p class="category-card__description">Summer collection, 10мл, colors 001-011</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
-            </div>
+
+                <div class="category-container">
+                    <div class="section-intro ">
+                        <h2 class="title section-intro__title"><span class="title__number">02/</span> Гель</h2>
+                        <span class="intro-star">
+                            <svg class="icon" aria-hidden="true" focusable="false">
+                                <use href="#game-icons_polar-star"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="grid-categories">
+                        <a href="#" class="category-card">
+                            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
+                                <div class="category-card__content-wrapper">
+                                    <h3 class="category-card__title">Гель</h3>
+                                </div>
+                            </div>
+                            <div class="category-card__description-box">
+                                <div class="category-card-count">
+                                    <p>
+                                        5 шт
+                                    </p>
+                                </div>
+                                <p class="category-card__description">Summer collection, 10мл, colors 001-011</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-card">
+                            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
+                                <div class="category-card__content-wrapper">
+                                    <h3 class="category-card__title">Гель</h3>
+                                </div>
+                            </div>
+                            <div class="category-card__description-box">
+                                <div class="category-card-count">
+                                    <p>
+                                        2 шт
+                                    </p>
+                                </div>
+                                <p class="category-card__description">Summer collection, 10мл, colors 001-011</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-card">
+                            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
+                                <div class="category-card__content-wrapper">
+                                    <h3 class="category-card__title">Гель</h3>
+                                </div>
+                            </div>
+                            <div class="category-card__description-box">
+                                <div class="category-card-count">
+                                    <p>
+                                        12 шт
+                                    </p>
+                                </div>
+                                <p class="category-card__description">Summer collection, 10мл, colors 001-011</p>
+                            </div>
+                        </a>
+                        <a href="#" class="category-card">
+                            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
+                                <div class="category-card__content-wrapper">
+                                    <h3 class="category-card__title">Гель-лаки</h3>
+                                </div>
+                            </div>
+                            <div class="category-card__description-box">
+                                <div class="category-card-count">
+                                    <p>
+                                        12 шт
+                                    </p>
+                                </div>
+                                <p class="category-card__description">Summer collection, 10мл, colors 001-011</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <div>
         </main>
     </div>
 
