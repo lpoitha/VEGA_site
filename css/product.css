@@ -449,7 +449,6 @@ main.product-page {
 @media (max-width: 768px) {
     .product-content {
         flex-direction: column;
-        /* Зміна напрямку flex-контейнера */
     }
 
     .product-gallery,
@@ -509,4 +508,255 @@ main.product-page {
 .product-description__scnd_line {
     font-size: 16px;
     font-weight: 400;
+}
+
+.videoplayer {
+    margin-bottom: 10vw;
+}
+
+
+
+
+
+
+
+
+.content-block-wrapper {
+    width: 100%;
+    max-width: 78.125vw;
+    margin: 0 auto;
+}
+
+.content-block {
+    display: grid;
+    grid-template-columns: minmax(25%, 1fr) minmax(25%, 1fr) minmax(50%, 2fr);
+    gap: 20px;
+}
+
+.left-text-column {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-content-column .masked-image {
+    width: 100%;
+    height: 250px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.middle-image-column img,
+.right-content-column img {
+    max-width: 100%;
+}
+
+.right-content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-content-column .bordered-text {
+    font-size: 18px;
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .content-block {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .content-block-wrapper {
+        padding: 20px;
+    }
+
+    .left-text-column h2 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .left-text-column p,
+    .right-content-column .bordered-text {
+        text-align: center;
+    }
+
+    .middle-image-column,
+    .right-content-column {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-text-column h2 {
+        font-size: 2em;
+    }
+}
+
+.bestseller-section__product-page {
+    margin: 89px 0 150px 0
+}
+
+
+.reviews-section-wrapper {
+    width: 100%;
+    max-width: 78.125vw;
+    margin: 0 auto;
+    padding: 75px 0;
+    border-top: 1px solid var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
+    z-index: 10;
+    position: relative;
+}
+
+.reviews-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.reviews-left-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.section-subtitle {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.reviews-title {
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1.1;
+}
+
+.reviews-link {
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+}
+
+.reviews-right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 15px;
+}
+
+.testimonial-card {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex-shrink: 0;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.reviewer-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.reviewer-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.reviewer-name {
+    text-transform: none;
+}
+
+.reviewer-role {
+    opacity: .35;
+    color: var(--color-primary-darkest);
+}
+
+.testimonial-text {
+    margin: 0;
+}
+
+/* The horizontal line at the bottom of the right section */
+.testimonials-footer-line {
+    width: 200px;
+    height: 4px;
+    align-self: center;
+    /* Центрує лінію всередині гнучкого контейнера */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .reviews-content {
+        grid-template-columns: 1fr;
+        /* Стовпці складаються в один на менших екранах */
+        gap: 60px;
+    }
+
+    .reviews-left-panel {
+        align-items: center;
+        /* Центрування вмісту лівої панелі */
+        text-align: center;
+        gap: 10px;
+    }
+
+    .reviews-title {
+        margin-bottom: 20px;
+    }
+
+    .testimonials-container {
+        justify-content: center;
+        /* Центрування карток, коли їх менше вміщається в рядок */
+    }
+
+    .testimonial-card {
+        flex-basis: calc(50% - 10px);
+        /* Дві картки в рядок */
+    }
+
+    .testimonials-footer-line {
+        align-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        flex-basis: 100%;
+        /* Одна картка в рядок на малих екранах */
+        max-width: 400px;
+        /* Обмеження ширини картки */
+    }
+
+    .reviews-section-wrapper {
+        padding: 20px;
+    }
+}
+
+.product-card__index {
+    position: absolute;
+}
+
+.catalog-section {
+    margin-top: 75px;
 }
