@@ -54,7 +54,7 @@
                 d="M42.4545 29.4163L43.3887 29.773L42.4545 29.4163ZM47.1068 29.4718L48.0487 29.1359L47.1068 29.4718ZM47.5178 13.9657L46.5951 13.5801L47.5178 13.9657ZM22.3628 0.25V1.25C31.043 1.25 38.4646 6.64555 41.4541 14.2693L42.3851 13.9043L43.3161 13.5392C40.0364 5.17539 31.8933 -0.75 22.3628 -0.75V0.25ZM47.5178 13.9657L48.4405 14.3513C51.5341 6.94881 58.8422 1.75 67.3628 1.75V0.75V-0.25C58.0075 -0.25 49.9888 5.4596 46.5951 13.5801L47.5178 13.9657ZM67.3628 0.75V1.75H138.363V0.75V-0.25H67.3628V0.75ZM138.363 0.75V1.75C149.685 1.75 158.863 10.9282 158.863 22.25H159.863H160.863C160.863 9.82359 150.789 -0.25 138.363 -0.25V0.75ZM159.863 22.25H158.863C158.863 33.5718 149.685 42.75 138.363 42.75V43.75V44.75C150.789 44.75 160.863 34.6764 160.863 22.25H159.863ZM138.363 43.75V42.75H67.3628V43.75V44.75H138.363V43.75ZM67.3628 43.75V42.75C58.4583 42.75 50.8782 37.072 48.0487 29.1359L47.1068 29.4718L46.1648 29.8076C49.2693 38.5149 57.5862 44.75 67.3628 44.75V43.75ZM42.4545 29.4163L41.5203 29.0596C38.5754 36.7735 31.1078 42.25 22.3628 42.25V43.25V44.25C31.9644 44.25 40.1579 38.2359 43.3887 29.773L42.4545 29.4163ZM22.3628 43.25V42.25C11.041 42.25 1.86279 33.0718 1.86279 21.75H0.862793H-0.137207C-0.137207 34.1764 9.93639 44.25 22.3628 44.25V43.25ZM0.862793 21.75H1.86279C1.86279 10.4282 11.041 1.25 22.3628 1.25V0.25V-0.75C9.93639 -0.75 -0.137207 9.32359 -0.137207 21.75H0.862793ZM44.771 27.75V26.75C43.2685 26.75 42.0223 27.7447 41.5203 29.0596L42.4545 29.4163L43.3887 29.773C43.6295 29.1422 44.1908 28.75 44.771 28.75V27.75ZM47.1068 29.4718L48.0487 29.1359C47.5667 27.7841 46.3042 26.75 44.771 26.75V27.75V28.75C45.3627 28.75 45.9332 29.1579 46.1648 29.8076L47.1068 29.4718ZM44.9631 15.75V16.75C46.5478 16.75 47.8687 15.7194 48.4405 14.3513L47.5178 13.9657L46.5951 13.5801C46.2942 14.3003 45.6417 14.75 44.9631 14.75V15.75ZM42.3851 13.9043L41.4541 14.2693C42.0063 15.6776 43.3452 16.75 44.9631 16.75V15.75V14.75C44.2707 14.75 43.6073 14.2818 43.3161 13.5392L42.3851 13.9043Z"
                 mask="url(#path-1-inside-1_2042_204)" />
         </symbol>
-        <symbol id="check-mark" width="12" height="10" viewBox="0 0 12 10" fill="none">
+        <symbol id="check-mark" viewBox="0 0 12 10" fill="none">
             <path d="M0.75 5.25L4.25 8.75L11.25 1.25" stroke="#A578C7" stroke-width="1.5" stroke-linecap="round"
                 stroke-linejoin="round" />
         </symbol>
@@ -1039,8 +1039,6 @@
         </div>
         <main class="product-page">
             <div class="container">
-
-
                 <!-- Основний контент товару: галерея та деталі -->
                 <div class="product-content">
                     <!-- Ліва колонка: Галерея зображень товару -->
@@ -1062,93 +1060,190 @@
 
                     <!-- Права колонка: Деталі товару -->
                     <div class="product-details">
-                        <!-- Рейтинг та відгуки -->
-                        <div class="product-rating">
-                            <span class="stars">★★★★☆</span> <!-- 4 з 5 зірок -->
-                            <span class="reviews-count">14 відгуків</span>
-                            <button class="add-to-wishlist">❤️</button> <!-- Іконка "в обране" -->
+                        <div class="product-header">
+                            <!-- Рейтинг та відгуки -->
+                            <div class="product-rating">
+                                <span class="stars">
+                                    <svg class="icon star-product_page__top">
+                                        <use href="#game-icons_polar-star"></use>
+                                    </svg>
+                                    <svg class="icon star-product_page__top">
+                                        <use href="#game-icons_polar-star"></use>
+                                    </svg>
+                                    <svg class="icon star-product_page__top">
+                                        <use href="#game-icons_polar-star"></use>
+                                    </svg>
+                                    <svg class="icon star-product_page__top">
+                                        <use href="#game-icons_polar-star"></use>
+                                    </svg>
+                                    <svg class="icon star-product_page__top">
+                                        <use href="#game-icons_polar-star"></use>
+                                    </svg>
+                                </span>
+                                <span class="reviews-count">14 відгуків</span>
+                                <button class="add-to-wishlist">
+                                    <svg class="icon icon-heart">
+                                        <use href="#heart"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <h1 class="product-title title">ГЕЛЬ-ЛАК "CAT EYE", СОЛОР №2</h1>
+                            <!-- Артикул та наявність -->
+                            <div class="product-meta">
+                                <span class="sku">Артикул: 001AH1</span>
+                                <div class="availability">
+                                    <svg class="icon">
+                                        <use href="#check-mark"></use>
+                                    </svg>
+                                    <span>В наявності</span>
+                                </div>
+                            </div>
                         </div>
 
-                        <!-- Назва товару -->
-                        <h1 class="product-title">ГЕЛЬ-ЛАК "CAT EYE", СОЛОР №2</h1>
+                        <div class="product-main-block">
+                            <div class="product-left-clm">
+                                <!-- Ціна -->
+                                <div class="product-price">
+                                    <p class="current-price">195<span class="currency"> ГРН</span>
+                                    </p>
+                                    <p class="old-price">285 <span class="currency">ГРН</span>
+                                    </p>
+                                </div>
 
-                        <!-- Артикул та наявність -->
-                        <div class="product-meta">
-                            <span class="sku">Артикул: 001AH1</span>
-                            <span class="availability">✔️ В наявності</span>
+                                <!-- Опції (об'єм) -->
+                                <div class="product-options">
+                                    <button class="option-button active">10мл</button>
+                                    <button class="option-button">15мл</button>
+                                </div>
+
+                                <!-- Вибір кількості -->
+                                <div class="quantity-selector">
+                                    <button class="quantity-minus"><svg width="5" height="2" viewBox="0 0 5 2"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.400391 1.44101V0.559006H4.60039V1.44101H0.400391Z" />
+                                        </svg></button>
+                                    <span class="quantity-value">1</span>
+                                    <button class="quantity-plus"><svg width="7" height="8" viewBox="0 0 7 8"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M3.06269 7.199V4.441H0.304688V3.55899H3.06269V0.800995H3.94469V3.55899H6.69569V4.441H3.94469V7.199H3.06269Z" />
+                                        </svg></button>
+                                </div>
+                            </div>
+                            <div class="product-center-clm">
+                                <!-- Кнопка "Додати до кошику" -->
+                                <a href="#" class="btn btn--primary btn-add-to-cart">
+                                    <span>ДОДАТИ <br>ДО КОШИКУ</span> </a>
+                            </div>
+
+                            <div class="product-right-clm">
+                                <!-- Інформація про доставку -->
+                                <div class="shipping-info">
+
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M26.6663 26.2667V10.4167C26.6663 9.53262 26.3152 8.68478 25.69 8.05965C25.0649 7.43453 24.2171 7.08334 23.333 7.08334H6.66634C5.78229 7.08334 4.93444 7.43453 4.30932 8.05965C3.6842 8.68478 3.33301 9.53262 3.33301 10.4167V25.4167C3.33301 25.8587 3.5086 26.2826 3.82116 26.5952C4.13372 26.9077 4.55765 27.0833 4.99967 27.0833H6.18301C6.50789 26.3415 7.0419 25.7105 7.71974 25.2674C8.39757 24.8242 9.18985 24.5883 9.99967 24.5883C10.8095 24.5883 11.6018 24.8242 12.2796 25.2674C12.9574 25.7105 13.4915 26.3415 13.8163 27.0833H26.183C26.3052 26.7889 26.4663 26.5167 26.6663 26.2667ZM26.6663 26.2667C27.0995 25.6792 27.6799 25.2163 28.3491 24.9247C29.0182 24.6332 29.7524 24.5233 30.4776 24.6061C31.2029 24.6889 31.8934 24.9616 32.4796 25.3965C33.0657 25.8314 33.5268 26.4133 33.8163 27.0833H36.6663V22.2667C36.667 21.0572 36.3386 19.8704 35.7163 18.8333L33.6663 15.4167L32.1497 12.9C32.0022 12.6512 31.7924 12.4451 31.5411 12.3019C31.2898 12.1587 31.0056 12.0834 30.7163 12.0833H26.6663V26.2667Z"
+                                            stroke="#A578C7" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M18.333 18.75H9.99967M18.333 13.75H9.99967M14.1663 28.75C14.1671 29.3698 14.0295 29.982 13.7637 30.542C13.4978 31.1019 13.1104 31.5955 12.6296 31.9867C12.1488 32.3779 11.5868 32.657 10.9846 32.8035C10.3823 32.95 9.75492 32.9603 9.14817 32.8336C8.54141 32.707 7.97055 32.4465 7.47721 32.0713C6.98386 31.696 6.58045 31.2154 6.29637 30.6645C6.01229 30.1136 5.85471 29.5063 5.83509 28.8867C5.81548 28.2672 5.93434 27.6511 6.18301 27.0833C6.56668 26.2073 7.24004 25.4899 8.09005 25.0516C8.94007 24.6133 9.915 24.4807 10.8512 24.6762C11.7874 24.8716 12.6278 25.3832 13.2315 26.125C13.8351 26.8668 14.1652 27.7936 14.1663 28.75ZM34.1663 28.75C34.1671 29.3698 34.0295 29.982 33.7636 30.542C33.4978 31.1019 33.1104 31.5955 32.6296 31.9867C32.1488 32.3779 31.5868 32.657 30.9846 32.8035C30.3823 32.95 29.7549 32.9603 29.1482 32.8336C28.5414 32.707 27.9706 32.4465 27.4772 32.0713C26.9839 31.696 26.5804 31.2154 26.2964 30.6645C26.0123 30.1136 25.8547 29.5063 25.8351 28.8867C25.8155 28.2672 25.9343 27.6511 26.183 27.0833C26.3052 26.7889 26.4663 26.5167 26.6663 26.2667C27.0995 25.6792 27.6799 25.2163 28.3491 24.9247C29.0182 24.6332 29.7524 24.5233 30.4776 24.6061C31.2028 24.6889 31.8934 24.9616 32.4796 25.3965C33.0657 25.8314 33.5268 26.4133 33.8163 27.0833C34.0497 27.6083 34.1697 28.1767 34.1663 28.75Z"
+                                            stroke="#A578C7" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                    <p>Безкоштовна доставка <br> від <span>3000 грн</span></p>
+                                </div>
+
+                                <!-- Залишити заявку -->
+                                <div class="order-request">
+                                    <div class="order-request__first-line">
+                                        <svg width="37" height="37" viewBox="0 0 37 37" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M18.4933 0C17.3656 7.03535 16.4179 11.2176 13.8177 13.8177C11.2176 16.4179 7.03535 17.3656 0 18.4933C7.03535 19.6211 11.2176 20.5688 13.8177 23.1768C16.4179 25.777 17.3656 29.9592 18.4933 37C19.6211 29.9592 20.5688 25.777 23.169 23.169C25.777 20.5688 29.9592 19.6211 37 18.4933C29.9592 17.3656 25.777 16.4179 23.1768 13.8177C20.5688 11.2176 19.6211 7.03535 18.4933 0Z"
+                                                fill="url(#paint0_linear_268_2762)" />
+                                            <defs>
+                                                <linearGradient id="paint0_linear_268_2762" x1="8.3848e-07"
+                                                    y1="-3.79912" x2="38.1598" y2="-2.74257"
+                                                    gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#79EFFF" />
+                                                    <stop offset="0.364583" stop-color="#FD3CE3" />
+                                                    <stop offset="0.739583" stop-color="#912BFF" />
+                                                    <stop offset="1" stop-color="#0095FF" />
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                        <p>Або ви можете залишити заявку і ми з вами зв'яжемось найближчим часом</p>
+                                    </div>
+                                    <div class="order-request__second-line">
+
+                                        <button class="request-callback-button">ЗАЛИШИТИ ЗАЯВКУ</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <!-- Ціна -->
-                        <div class="product-price">
-                            <span class="current-price">195 ГРН</span>
-                            <span class="old-price">285 ГРН</span>
-                        </div>
-
-                        <!-- Опції (об'єм) -->
-                        <div class="product-options">
-                            <button class="option-button active">10мл</button>
-                            <button class="option-button">15мл</button>
-                        </div>
-
-                        <!-- Вибір кількості -->
-                        <div class="quantity-selector">
-                            <button class="quantity-minus">-</button>
-                            <span class="quantity-value">1</span>
-                            <button class="quantity-plus">+</button>
-                        </div>
-
-                        <!-- Кнопка "Додати до кошику" -->
-                        <button class="add-to-cart-button">ДОДАТИ ДО КОШИКУ</button>
-
-                        <!-- Інформація про доставку -->
-                        <div class="shipping-info">
-                            <span class="icon">📦</span>
-                            <span>Безкоштовна доставка від 3000 грн</span>
-                        </div>
-
-                        <!-- Залишити заявку -->
-                        <div class="order-request">
-                            <span class="icon">✨</span>
-                            <p>Або ви можете залишити заявку і ми з вами зв'яжемось найближчим часом</p>
-                            <button class="request-callback-button">ЗАЛИШИТИ ЗАЯВКУ</button>
-                        </div>
 
                         <!-- Секції-акордеони -->
                         <div class="product-accordion">
                             <div class="accordion-item">
-                                <button class="accordion-header">Короткий опис <span class="arrow">▼</span></button>
+                                <button class="accordion-header">Короткий опис
+                                    <svg class="star-icon icone--fillstroke" aria-hidden="true" focusable="false"
+                                        alt="Toggle Answer">
+                                        <use href="#star"></use>
+                                    </svg>
+                                </button>
                                 <div class="accordion-content">
                                     <p>Тут буде розширений опис товару, що розкривається при натисканні.</p>
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <button class="accordion-header">Спосіб застосування <span
-                                        class="arrow">▼</span></button>
+                                <button class="accordion-header">Спосіб застосування <svg
+                                        class="icon icon-arrow-down icone--fillstroke" aria-hidden="true"
+                                        focusable="false">
+                                        <use href="#arrow-down"></use>
+                                    </svg></button>
                                 <div class="accordion-content">
                                     <p>Інструкції щодо застосування продукту.</p>
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <button class="accordion-header">Склад <span class="arrow">▼</span></button>
+                                <button class="accordion-header">Склад <svg
+                                        class="icon icon-arrow-down icone--fillstroke" aria-hidden="true"
+                                        focusable="false">
+                                        <use href="#arrow-down"></use>
+                                    </svg></button>
                                 <div class="accordion-content">
                                     <p>Перелік інгредієнтів та компонентів.</p>
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <button class="accordion-header">Активні складники <span class="arrow">▼</span></button>
+                                <button class="accordion-header">Активні складники <svg
+                                        class="icon icon-arrow-down icone--fillstroke" aria-hidden="true"
+                                        focusable="false">
+                                        <use href="#arrow-down"></use>
+                                    </svg></button>
                                 <div class="accordion-content">
                                     <p>Деталі про основні активні компоненти, що входять до складу.</p>
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <button class="accordion-header">Умови зберігання та строк придатності <span
-                                        class="arrow">▼</span></button>
+                                <button class="accordion-header">Умови зберігання та строк придатності <svg
+                                        class="icon icon-arrow-down icone--fillstroke" aria-hidden="true"
+                                        focusable="false">
+                                        <use href="#arrow-down"></use>
+                                    </svg></button>
                                 <div class="accordion-content">
                                     <p>Рекомендації щодо зберігання та термін придатності продукту.</p>
                                 </div>
                             </div>
                             <div class="accordion-item">
-                                <button class="accordion-header">Умови доставки <span class="arrow">▼</span></button>
+                                <button class="accordion-header">Умови доставки <svg
+                                        class="icon icon-arrow-down icone--fillstroke" aria-hidden="true"
+                                        focusable="false">
+                                        <use href="#arrow-down"></use>
+                                    </svg></button>
                                 <div class="accordion-content">
                                     <p>Інформація про способи та терміни доставки, вартість, тощо.</p>
                                 </div>
@@ -1157,6 +1252,21 @@
                     </div>
                 </div>
             </div>
+            <section class="product-extra">
+                <div class="product-extra__image-large">
+                    <img src="img/product-blush-cloud.png" alt="Полка с лаками">
+                </div>
+                <div class="product-extra__text-block">
+                    <img src="img/video-preview-glitter.jpg" alt="VEGA флакон" class="product-photo">
+                    <p class="product-description product-description__fst_line">
+                        Для ідеального покриття та міцності. Каучукові, камуфлюючі, вирівнюючі — обирай під свій стиль
+                        роботи...
+                    </p>
+                    <p class="product-description product-description__scnd_line">Для ідеального покриття та міцності.
+                        Каучукові, камуфлюючі, вирівнюючі — обирай під свій стиль
+                        роботи...</p>
+                </div>
+            </section>
         </main>
     </div>
 </body>
