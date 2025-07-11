@@ -84,6 +84,39 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const productAccordionItems = document.querySelectorAll('.product-accordion__item');
+
+    if (productAccordionItems.length > 0) {
+        productAccordionItems.forEach(item => {
+            const header = item.querySelector('.product-accordion__header');
+            const answerWrapper = item.querySelector('.product-accordion__answer-wrapper');
+
+            header.addEventListener('click', () => {
+                const wasActive = item.classList.contains('is-active');
+
+                productAccordionItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('is-active');
+                        otherItem.querySelector('.product-accordion__answer-wrapper').style.maxHeight = '0';
+                        otherItem.querySelector('.product-accordion__answer-wrapper').style.paddingBottom = '0';
+                    }
+                });
+
+                if (!wasActive) {
+                    item.classList.add('is-active');
+                    answerWrapper.style.maxHeight = (answerWrapper.scrollHeight + 20) + 'px';
+                    answerWrapper.style.paddingBottom = '1.25vw';
+                } else {
+                    item.classList.remove('is-active');
+                    answerWrapper.style.maxHeight = '0';
+                    answerWrapper.style.paddingBottom = '0';
+                }
+            });
+        });
+    }
+});
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const catalogWrapper = document.querySelector('.catalog-dropdown-wrapper');
