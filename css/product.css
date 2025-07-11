@@ -49,10 +49,14 @@ main.product-page {
 .main-image-wrapper {
     position: relative;
     width: 100%;
-    padding-bottom: 100%;
-    background-color: #eee;
-    border-radius: 8px;
+    padding-bottom: 0;
+    border-radius: 30px;
     overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+.main-image-wrapper button {
+    border: 1.95px solid var(--color-primary);
 }
 
 .main-product-image {
@@ -61,7 +65,7 @@ main.product-page {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .gallery-nav {
@@ -91,24 +95,24 @@ main.product-page {
 
 .thumbnail-images {
     display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 15px;
 }
+
 
 .thumbnail-images img {
-    width: 80px;
-    /* Розмір прев'ю */
-    height: 80px;
     object-fit: cover;
-    border: 2px solid transparent;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
-    background-color: #eee;
-}
-
-.thumbnail-images img.active {
-    border-color: #8A2BE2;
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1;
 }
 
 
@@ -331,7 +335,6 @@ main.product-page {
 .shipping-info {
     gap: 12px;
     font-size: 18px;
-    line-height: 130%;
 }
 
 .shipping-info span {
@@ -387,7 +390,6 @@ main.product-page {
     width: 50%;
 }
 
-/* Секції-акордеони */
 .product-accordion {
     margin-top: 20px;
 }
@@ -442,31 +444,6 @@ main.product-page {
 
 .accordion-content p {
     margin-bottom: 10px;
-    /* Відступи для абзаців в акордеоні */
-}
-
-/* Адаптивність: стовпці стають один під одним на малих екранах */
-@media (max-width: 768px) {
-    .product-content {
-        flex-direction: column;
-    }
-
-    .product-gallery,
-    .product-details {
-        min-width: unset;
-        width: 100%;
-        max-width: unset;
-    }
-
-    .add-to-cart-button {
-        width: 120px;
-        height: 120px;
-        font-size: 14px;
-    }
-
-    .quantity-selector {
-        margin-bottom: 15px;
-    }
 }
 
 .product-extra {
@@ -489,6 +466,7 @@ main.product-page {
 .product-extra__image-large img,
 .product-extra__text-block img {
     width: 100%;
+    height: auto;
     display: block;
     border-radius: 12px;
 }
@@ -510,14 +488,75 @@ main.product-page {
     font-weight: 400;
 }
 
-.videoplayer {
-    margin-bottom: 10vw;
+@media (max-width: 768px) {
+
+    .page-wrapper.product-page {
+        margin-top: 0px;
+    }
+
+    .product-rating .stars {
+        gap: 10px;
+    }
+
+    .product-rating {
+        gap: 20px;
+        margin-bottom: 15px;
+    }
+
+    .product-rating svg {
+        width: 24px;
+    }
+
+    .product-content {
+        flex-direction: column;
+    }
+
+    .product-gallery,
+    .product-details {
+        min-width: unset;
+        width: 100%;
+        max-width: unset;
+    }
+
+    .add-to-cart-button {
+        width: 120px;
+        height: 120px;
+        font-size: 14px;
+    }
+
+    .product-main-block {
+        gap: 20px;
+    }
+
+    .product-left-clm,
+    .product-content {
+        gap: 15px;
+    }
+
+    .product-price {
+        margin: 0;
+    }
+
+    .product-main-block {
+        flex-flow: column;
+    }
+
+    .btn-add-to-cart {
+        transform: rotate(-22deg);
+        margin-top: 0;
+    }
+
+    .product-description {
+        width: auto;
+    }
+
 }
 
 
 
-
-
+.videoplayer {
+    margin-bottom: 10vw;
+}
 
 
 
@@ -562,37 +601,63 @@ main.product-page {
     width: 50%;
 }
 
+@media (max-width: 960px) {
+
+    .breadcrumbs__product-page {
+        padding: 0 0 20px 0;
+    }
+
+    .product-extra {
+        width: 98.4vw;
+    }
+
+    .content-block {
+        grid-template-columns: minmax(50%, 1fr) minmax(50%, 1fr);
+    }
+
+    .middle-image-column {
+        display: none;
+    }
+
+    .right-content-column .bordered-text {
+        width: 100%;
+    }
+
+    .left-text-column {
+        gap: 35px;
+    }
+
+
+}
+
+
 @media (max-width: 768px) {
+    .product-extra {
+        max-width: 90.625vw;
+        grid-template-columns: 1fr;
+        margin: 20px auto;
+    }
+
+    .product-extra__image-large {
+        display: none;
+    }
+
     .content-block {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 
     .content-block-wrapper {
-        padding: 20px;
+        padding: 20px 0;
+        max-width: 90.625vw;
+        border-top: 1px solid var(--color-primary);
     }
 
     .left-text-column h2 {
-        font-size: 2.5em;
-        text-align: center;
-    }
-
-    .left-text-column p,
-    .right-content-column .bordered-text {
-        text-align: center;
-    }
-
-    .middle-image-column,
-    .right-content-column {
-        align-items: center;
+        font-size: 5.5em;
     }
 }
 
-@media (max-width: 480px) {
-    .left-text-column h2 {
-        font-size: 2em;
-    }
-}
 
 .bestseller-section__product-page {
     margin: 89px 0 150px 0
@@ -644,7 +709,6 @@ main.product-page {
 .reviews-right-panel {
     display: flex;
     flex-direction: column;
-    gap: 30px;
 }
 
 .testimonials-container {
@@ -698,59 +762,10 @@ main.product-page {
     margin: 0;
 }
 
-/* The horizontal line at the bottom of the right section */
 .testimonials-footer-line {
     width: 200px;
     height: 4px;
     align-self: center;
-    /* Центрує лінію всередині гнучкого контейнера */
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .reviews-content {
-        grid-template-columns: 1fr;
-        /* Стовпці складаються в один на менших екранах */
-        gap: 60px;
-    }
-
-    .reviews-left-panel {
-        align-items: center;
-        /* Центрування вмісту лівої панелі */
-        text-align: center;
-        gap: 10px;
-    }
-
-    .reviews-title {
-        margin-bottom: 20px;
-    }
-
-    .testimonials-container {
-        justify-content: center;
-        /* Центрування карток, коли їх менше вміщається в рядок */
-    }
-
-    .testimonial-card {
-        flex-basis: calc(50% - 10px);
-        /* Дві картки в рядок */
-    }
-
-    .testimonials-footer-line {
-        align-self: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .testimonial-card {
-        flex-basis: 100%;
-        /* Одна картка в рядок на малих екранах */
-        max-width: 400px;
-        /* Обмеження ширини картки */
-    }
-
-    .reviews-section-wrapper {
-        padding: 20px;
-    }
 }
 
 .product-card__index {
@@ -759,4 +774,71 @@ main.product-page {
 
 .catalog-section {
     margin-top: 75px;
+}
+
+@media (max-width: 960px) {
+    .reviews-section-wrapper {
+        max-width: 96.875vw;
+    }
+
+    .reviews-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .reviews-left-panel {
+        gap: 10px;
+    }
+
+
+    .testimonials-footer-line {
+        align-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        flex-basis: 47.5%;
+    }
+
+    .testimonials-container {
+        max-width: 90.625vw;
+    }
+
+    .reviews-content {
+        gap: 20px
+    }
+
+    .reviews-section-wrapper {
+        max-width: 90.625vw;
+        padding: 25px 0;
+    }
+
+    .reviewer-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .reviewer-role,
+    .reviewer-name {
+        font-size: 13px;
+    }
+
+    .testimonial-text {
+        font-size: 14px;
+    }
+
+    .bestseller-section__product-page {
+        margin: 25px 0;
+    }
+
+    .catalog-section {
+        margin-top: 25px;
+    }
+
+    .product-card--crystal-nude,
+    .product-card--latte-nude-catalog,
+    .product-card--unicorn-pearl {
+        display: none;
+    }
 }

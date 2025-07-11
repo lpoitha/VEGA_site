@@ -104,6 +104,7 @@ h2 span.title__number {
         padding: 10px 10px 15px 10px;
         flex-flow: column;
         gap: 10px;
+        display: none;
     }
 
     .category-card__description-box .category-card__description {
