@@ -427,3 +427,43 @@ document.addEventListener('DOMContentLoaded', function () {
         body.style.maxHeight = (body.scrollHeight + 100) + "px";
     });
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.contact-form');
+    if (!form) return;
+
+    const stars = form.querySelectorAll('.custom-rate__label');
+    const inputs = form.querySelectorAll('.custom-rate__input');
+
+    stars.forEach(star => {
+        star.addEventListener('mouseenter', function () {
+            const currentIndex = Array.from(stars).indexOf(this);
+            stars.forEach((s, index) => {
+                s.querySelector('svg').style.opacity = index >= currentIndex ? '1' : '0.3';
+            });
+        });
+
+        star.addEventListener('mouseleave', function () {
+            const checkedInput = form.querySelector('.custom-rate__input:checked');
+            if (!checkedInput) {
+                stars.forEach(s => s.querySelector('svg').style.opacity = '0.3');
+                return;
+            }
+            const checkedIndex = Array.from(inputs).indexOf(checkedInput);
+            stars.forEach((s, index) => {
+                s.querySelector('svg').style.opacity = index >= checkedIndex ? '1' : '0.3';
+            });
+        });
+    });
+
+    inputs.forEach(input => {
+        input.addEventListener('change', function () {
+            const index = Array.from(inputs).indexOf(this);
+            stars.forEach((s, i) => {
+                s.querySelector('svg').style.opacity = i >= index ? '1' : '0.3';
+            });
+        });
+    });
+});

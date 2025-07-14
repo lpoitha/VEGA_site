@@ -87,6 +87,17 @@ html {
     scrollbar-color: var(--color-primary) var(--color-bg-light)
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 h2 {
     color: var(--color-primary);
     font-family: Cramaten;
@@ -173,15 +184,32 @@ h2 {
     color: var(--color-primary)
 }
 
+.container.container--mt {
+    margin-top: 150px;
+}
+
+.section--centered {
+    width: 100%;
+    margin: 0 auto;
+}
+
 @media (max-width: 960px) {
     .pre-title {
         font-size: 1.666vw;
+    }
+
+    .container.container--mt {
+        margin-top: 50px;
     }
 }
 
 @media (max-width: 767px) {
     .pre-title {
         font-size: 5vw;
+    }
+
+    .container.container--mt {
+        margin-top: 25px;
     }
 }
 
@@ -677,16 +705,31 @@ svg.nav-button__shape>path:nth-child(3) {
     border: none
 }
 
-.nav-button__shape {
+.nav-buton__shape {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    overflow: inherit;
 }
 
-.nav-button__content {
+.nav-buton__shape-hover {
+    opacity: 0;
+}
+
+.catalog-dropdown-wrapper.is-open .nav-buton__shape-hover {
+    opacity: 1;
+}
+
+.catalog-dropdown-wrapper.is-open .nav-buton__shape-default {
+    opacity: 0;
+}
+
+.icon.icon-grid.icone--fillstroke {
+    display: none;
+}
+
+
+.header-nav_svg .nav-button__content {
     position: relative;
     z-index: 2;
     display: flex;
@@ -694,7 +737,7 @@ svg.nav-button__shape>path:nth-child(3) {
     justify-content: left;
     width: 100%;
     height: 100%;
-    padding-left: 0.9vw
+    padding-left: 1.5vw
 }
 
 .nav-button__text {
@@ -819,7 +862,7 @@ svg.nav-button__shape>path:nth-child(3) {
     }
 
     .nav-button--svg {
-        width: 16.5625vw;
+        width: 16.6vw;
         height: 4.4792vw
     }
 
@@ -863,12 +906,11 @@ svg.nav-button__shape>path:nth-child(3) {
     }
 
     .nav-button--svg {
-        width: 39.6875vw;
-        height: 13.4375vw
+        width: 40vw;
     }
 
     .nav-button__text {
-        padding-left: 5.4688vw;
+        padding-left: 9.5vw;
         font-size: 4.7vw;
     }
 
@@ -2453,7 +2495,7 @@ svg.nav-button__shape>path:nth-child(3) {
     filter: blur(1000px);
     z-index: 0;
     border-radius: 50%;
-    opacity: 0.25 !important
+    opacity: 0.2 !important
 }
 
 .categories-bg-blur--left {
@@ -3928,6 +3970,8 @@ svg.nav-button__shape>path:nth-child(3) {
 
 .about-section__background {
     position: relative;
+    width: 100vw;
+    overflow: clip;
 }
 
 
@@ -4515,11 +4559,17 @@ svg.nav-button__shape>path:nth-child(3) {
     color: var(--color-primary)
 }
 
+
+
 /* --- Список вопросов --- */
 .faq-list {
     width: 46.25vw;
     display: flex;
     flex-direction: column
+}
+
+.section--centered .faq-list {
+    width: 100%;
 }
 
 .faq-item {
@@ -4570,10 +4620,8 @@ svg.nav-button__shape>path:nth-child(3) {
 }
 
 .faq-item.is-active .faq-item__answer-wrapper {
-    max-height: 7.8125vw;
-    /* Достаточная высота для отображения текста */
+    max-height: fit-content;
     padding-bottom: 1.25vw;
-    /* Отступ снизу для открытого ответа */
 }
 
 /*
@@ -4591,7 +4639,6 @@ svg.nav-button__shape>path:nth-child(3) {
     .faq-intro {
         width: 44.1667vw;
         flex-shrink: 0;
-        /* Чтобы колонка не сжималась */
     }
 
     .faq-intro .section-intro__title {
@@ -4600,19 +4647,15 @@ svg.nav-button__shape>path:nth-child(3) {
 
     .faq-list {
         width: 100%;
-        /* Занимает оставшееся пространство */
     }
 
     .faq-item__question {
         font-size: 1.875vw;
-        /* Уменьшаем шрифт вопроса */
         max-width: 90%;
-        /* Ограничиваем ширину, чтобы текст не прилипал к иконке */
     }
 
     .faq-item__answer {
         font-size: 1.5625vw;
-        /* Уменьшаем шрифт ответа */
         max-width: 100%
     }
 }
@@ -4798,15 +4841,16 @@ svg.nav-button__shape>path:nth-child(3) {
     font-size: 0.7812vw;
     line-height: 1.0417vw;
     color: var(--color-primary-darkest);
-    text-transform: uppercase;
     border-bottom: 1px solid var(--color-primary);
     padding-bottom: 0.52vw;
 }
 
-.form-group input::placeholder {
+.form-group input::placeholder,
+.form-group textarea::placeholder {
     color: var(--color-text-light-gray);
     opacity: 1;
     letter-spacing: -0.0234vw;
+    text-transform: uppercase;
 }
 
 .form-label-icon {
@@ -6805,7 +6849,6 @@ button {
     font-size: 0.7812vw;
     line-height: 1.2;
     color: var(--color-primary-darkest);
-    text-transform: uppercase;
     border-bottom: 1px solid var(--color-primary);
     padding: 0 0 0.625vw 0;
     resize: vertical;
@@ -6831,7 +6874,7 @@ button {
 }
 
 .popup-form-view .form-label-icon {
-    bottom: 0.8vw;
+    top: 0;
 }
 
 .popup-form-view .contact-form-button {

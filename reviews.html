@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VEGA - Каталог</title>
-
+    <title>VEGA - Контакти</title>
     <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/reviews.css">
+
 </head>
 
 <body>
@@ -881,194 +883,230 @@
 
 
     <div class="page-wrapper">
+        <div class="catalog-bg-blur--left bg-blur"></div>
         <div class="container container-hero">
             <section class="catalog-hero-new">
                 <div class="catalog-hero-new__text">
-                    <span class="pre-title">Напрямки</span>
+                    <span class="pre-title">Зв'язатися з нами </span>
                     <h1 class="catalog-hero-new__title">
-                        Категорії
-                        <span class="title-decoration catalog-signature">
-                            <span class="title-decoration__text stroke ">Продукція</span>
-                            <span class="title-decoration__text fill">Продукція</span>
+                        Запитання
+                        <span id="title-decoration-faq" class="title-decoration catalog-signature">
+                            <span class="title-decoration__text stroke ">Vega</span>
+                            <span class="title-decoration__text fill">Vega</span>
                         </span>
                     </h1>
-                    <p class="catalog-hero-new__subtitle">Обирай ідеальний продукт для ідеального манікюру</p>
+                    <p class="catalog-hero-new__subtitle">Ми завжди на зв'язку</p>
 
                     <nav class="breadcrumbs breadcrumbs__catalog">
                         <a href="#">Головна</a>
                         <svg class="icon breadcrumbs__separator">
                             <use href="#game-icons_polar-star"></use>
                         </svg>
-                        <span>Категорії</span>
+                        <span>Часті запитання</span>
                     </nav>
                 </div>
                 <div class="catalog-hero-new__image-wrapper">
-                    <img src="img/catalog.png" alt="Nail polish and tools" class="catalog-hero-new__image">
+                    <img src="img/contacts_bg.jpg" alt="Nail polish and tools" class="catalog-hero-new__image">
                 </div>
-
-
             </section>
         </div>
 
         <main class="categories-page-content">
-            <div class="container">
-                <div class="category-container">
-                    <div class="section-intro ">
-                        <span class="pre-title">усi роздikи</span>
-                        <h2 class="title section-intro__title"><span class="title__number">01/</span> Гель-лаки</h2>
-                        <span class="intro-star">
-                            <svg class="icon" aria-hidden="true" focusable="false">
-                                <use href="#game-icons_polar-star"></use>
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="grid-categories">
-                        <a href="#" class="category-card">
-                            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
-                                <div class="category-card__content-wrapper">
-                                    <h3 class="category-card__title">Гель-лаки</h3>
-                                </div>
-                            </div>
-                            <div class="category-card__description-box">
-                                <div class="category-card-count">
-                                    <p>
-                                        12 шт
-                                    </p>
-                                </div>
-                                <p class="category-card__description">Summer collection, 10мл, colors 001-011</p>
-                            </div>
-                        </a>
-                        <a href="#" class="category-card">
-                            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
-                                <div class="category-card__content-wrapper">
-                                    <h3 class="category-card__title">Гель-лаки</h3>
-                                </div>
-                            </div>
-                            <div class="category-card__description-box">
-                                <div class="category-card-count">
-                                    <p>
-                                        9 шт
-                                    </p>
-                                </div>
-                                <p class="category-card__description">Summer collection, 10мл, colors 001-011</p>
-                            </div>
-                        </a>
-                        <a href="#" class="category-card">
-                            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
-                                <div class="category-card__content-wrapper">
-                                    <h3 class="category-card__title">Гель-лаки</h3>
-                                </div>
-                            </div>
-                            <div class="category-card__description-box">
-                                <div class="category-card-count">
-                                    <p>
-                                        22 шт
-                                    </p>
-                                </div>
-                                <p class="category-card__description">Summer collection, 10мл, colors 001-011</p>
-                            </div>
-                        </a>
-                        <a href="#" class="category-card">
-                            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
-                                <div class="category-card__content-wrapper">
-                                    <h3 class="category-card__title">Гель-лаки</h3>
-                                </div>
-                            </div>
-                            <div class="category-card__description-box">
-                                <div class="category-card-count">
-                                    <p>
-                                        12 шт
-                                    </p>
-                                </div>
-                                <p class="category-card__description">Summer collection, 10мл, colors 001-011</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+            <div class="container container--mt">
 
-                <div class="category-container">
-                    <div class="section-intro ">
-                        <h2 class="title section-intro__title"><span class="title__number">02/</span> Гель</h2>
-                        <span class="intro-star">
-                            <svg class="icon" aria-hidden="true" focusable="false">
-                                <use href="#game-icons_polar-star"></use>
-                            </svg>
-                        </span>
+                <section class="section--centered">
+                    <div class="reviews-content">
+                        <div class="reviews-left-panel">
+                            <p class="section-subtitle pre-title">ВІДГУКИ</p>
+                            <h2 class="reviews-title">ВАШІ СЛОВА – НАША<br>ГОРДІСТЬ</h2>
+                            <a href="#" class="reviews-link main-text underlined-text">УСІ ВІДГУКИ</a>
+                        </div>
+                        <div class="reviews-right-panel">
+                            <div class="testimonials-container" style="overflow-y: scroll;scrollbar-width: thin;">
+                                <div class="testimonial-card">
+                                    <div class="reviewer-info">
+                                        <img src="img/avatar.jpg" alt="Reviewer Avatar" class="reviewer-image">
+                                        <div class="reviewer-details">
+                                            <h3 class="reviewer-name main-text">Анна Литвиненко</h3>
+                                            <p class="reviewer-role pre-title">МАЙСТЕР МАНІКЮРУ<br>З КИЄВА</p>
+                                        </div>
+                                    </div>
+                                    <p class="testimonial-text suport-text ">VEGA – це любов з першого мазка! Щільний
+                                        пігмент, ідеально
+                                        лягає, а
+                                        клієнтки у захваті від стійкості. Нарешті знайшла бренд, який не підводить!</p>
+                                </div>
+                                <div class="testimonial-card">
+                                    <div class="reviewer-info">
+                                        <img src="img/avatar.jpg" alt="Reviewer Avatar" class="reviewer-image">
+                                        <div class="reviewer-details">
+                                            <h3 class="reviewer-name main-text">Олена Гуменюк</h3>
+                                            <p class="reviewer-role pre-title">СТУДІЯ МАНІКЮРУ<br>У ЛЬВОВІ</p>
+                                        </div>
+                                    </div>
+                                    <p class="testimonial-text suport-text ">Перепробувала багато гель-лаків, але VEGA –
+                                        поза
+                                        конкуренцією. Кольори
+                                        яскраві, як на фото, не тріскається і легко знімається. Рекомендую кожному
+                                        майстру!
+                                    </p>
+                                </div>
+                                <div class="testimonial-card">
+                                    <div class="reviewer-info">
+                                        <img src="img/avatar.jpg" alt="Reviewer Avatar" class="reviewer-image">
+                                        <div class="reviewer-details">
+                                            <h3 class="reviewer-name main-text">Марія Коваль</h3>
+                                            <p class="reviewer-role pre-title">ПРИВАТНИЙ МАЙСТЕР<br>ІЗ ДНІПРА</p>
+                                        </div>
+                                    </div>
+                                    <p class="testimonial-text suport-text ">З VEGA працювати – одне задоволення! Навіть
+                                        базові відтінки
+                                        виглядають
+                                        дорого, а палітра – це просто мрія. Моє відкриття року!</p>
+                                </div>
+                                <div class="testimonial-card">
+                                    <div class="reviewer-info">
+                                        <img src="img/avatar.jpg" alt="Reviewer Avatar" class="reviewer-image">
+                                        <div class="reviewer-details">
+                                            <h3 class="reviewer-name main-text">Анна Литвиненко</h3>
+                                            <p class="reviewer-role pre-title">МАЙСТЕР МАНІКЮРУ<br>З КИЄВА</p>
+                                        </div>
+                                    </div>
+                                    <p class="testimonial-text suport-text ">VEGA – це любов з першого мазка! Щільний
+                                        пігмент, ідеально
+                                        лягає, а
+                                        клієнтки у захваті від стійкості. Нарешті знайшла бренд, який не підводить!</p>
+                                </div>
+                                <div class="testimonial-card">
+                                    <div class="reviewer-info">
+                                        <img src="img/avatar.jpg" alt="Reviewer Avatar" class="reviewer-image">
+                                        <div class="reviewer-details">
+                                            <h3 class="reviewer-name main-text">Анна Литвиненко</h3>
+                                            <p class="reviewer-role pre-title">МАЙСТЕР МАНІКЮРУ<br>З КИЄВА</p>
+                                        </div>
+                                    </div>
+                                    <p class="testimonial-text suport-text ">VEGA – це любов з першого мазка! Щільний
+                                        пігмент, ідеально
+                                        лягає, а
+                                        клієнтки у захваті від стійкості. Нарешті знайшла бренд, який не підводить!</p>
+                                </div>
+                            </div>
+                            <div class="testimonials-footer-line"></div>
+                        </div>
                     </div>
-                    <div class="grid-categories">
-                        <a href="#" class="category-card">
-                            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
-                                <div class="category-card__content-wrapper">
-                                    <h3 class="category-card__title">Гель</h3>
-                                </div>
-                            </div>
-                            <div class="category-card__description-box">
-                                <div class="category-card-count">
-                                    <p>
-                                        5 шт
-                                    </p>
-                                </div>
-                                <p class="category-card__description">Summer collection, 10мл, colors 001-011</p>
-                            </div>
-                        </a>
-                        <a href="#" class="category-card">
-                            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
-                                <div class="category-card__content-wrapper">
-                                    <h3 class="category-card__title">Гель</h3>
-                                </div>
-                            </div>
-                            <div class="category-card__description-box">
-                                <div class="category-card-count">
-                                    <p>
-                                        2 шт
-                                    </p>
-                                </div>
-                                <p class="category-card__description">Summer collection, 10мл, colors 001-011</p>
-                            </div>
-                        </a>
-                        <a href="#" class="category-card">
-                            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
-                                <div class="category-card__content-wrapper">
-                                    <h3 class="category-card__title">Гель</h3>
-                                </div>
-                            </div>
-                            <div class="category-card__description-box">
-                                <div class="category-card-count">
-                                    <p>
-                                        12 шт
-                                    </p>
-                                </div>
-                                <p class="category-card__description">Summer collection, 10мл, colors 001-011</p>
-                            </div>
-                        </a>
-                        <a href="#" class="category-card">
-                            <div class="category-card__image" style="background-image: url('img/gellaki.jpg');">
-                                <div class="category-card__content-wrapper">
-                                    <h3 class="category-card__title">Гель-лаки</h3>
-                                </div>
-                            </div>
-                            <div class="category-card__description-box">
-                                <div class="category-card-count">
-                                    <p>
-                                        12 шт
-                                    </p>
-                                </div>
-                                <p class="category-card__description">Summer collection, 10мл, colors 001-011</p>
-                            </div>
-                        </a>
+                </section>
+
+                <section class="section contacts-section review-form-section">
+                    <!-- Левый блок -->
+                    <div class="contact-info review-left-block">
+                        <div class="contact-info__bg " style="background-image: url('img/nataliya.jpg');"></div>
+
                     </div>
-                </div>
+
+                    <!-- Правый блок с формой -->
+                    <div class="contact-form-wrapper review-right-block">
+                        <form class="contact-form">
+                            <div class="contact-form-header ">
+                                <h3 class="review-title">маєте що росповісти? <span>Залишайте відгук</span></h3>
+                                <p class="pre-title "> Задоволення від обслуговування</p>
+                                <div class="review-stars">
+                                    <input required="" id="custom-star5" type="radio" name="review_rating" value="5"
+                                        class="visually-hidden custom-rate__input">
+                                    <label class="custom-rate__label" for="custom-star5">
+                                        <svg viewBox="0 0 72 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M35.0489 0.92705C35.3483 0.00573921 36.6517 0.00574017 36.9511 0.927051L44.756 24.9483C44.8899 25.3604 45.2739 25.6393 45.7071 25.6393H70.9646C71.9333 25.6393 72.3361 26.8789 71.5524 27.4483L51.1186 42.2943C50.7682 42.549 50.6215 43.0003 50.7554 43.4123L58.5604 67.4336C58.8597 68.3549 57.8052 69.1211 57.0215 68.5517L36.5878 53.7057C36.2373 53.451 35.7627 53.451 35.4122 53.7057L14.9785 68.5517C14.1948 69.1211 13.1403 68.3549 13.4396 67.4336L21.2446 43.4123C21.3785 43.0003 21.2319 42.549 20.8814 42.2943L0.447639 27.4483C-0.336074 26.8789 0.0667009 25.6393 1.03542 25.6393H26.2929C26.7261 25.6393 27.1101 25.3604 27.244 24.9483L35.0489 0.92705Z" />
+                                        </svg>
+                                    </label>
+                                    <input required="" id="custom-star4" type="radio" name="review_rating" value="4"
+                                        class="visually-hidden custom-rate__input">
+                                    <label class="custom-rate__label" for="custom-star4">
+                                        <svg viewBox="0 0 72 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M35.0489 0.92705C35.3483 0.00573921 36.6517 0.00574017 36.9511 0.927051L44.756 24.9483C44.8899 25.3604 45.2739 25.6393 45.7071 25.6393H70.9646C71.9333 25.6393 72.3361 26.8789 71.5524 27.4483L51.1186 42.2943C50.7682 42.549 50.6215 43.0003 50.7554 43.4123L58.5604 67.4336C58.8597 68.3549 57.8052 69.1211 57.0215 68.5517L36.5878 53.7057C36.2373 53.451 35.7627 53.451 35.4122 53.7057L14.9785 68.5517C14.1948 69.1211 13.1403 68.3549 13.4396 67.4336L21.2446 43.4123C21.3785 43.0003 21.2319 42.549 20.8814 42.2943L0.447639 27.4483C-0.336074 26.8789 0.0667009 25.6393 1.03542 25.6393H26.2929C26.7261 25.6393 27.1101 25.3604 27.244 24.9483L35.0489 0.92705Z" />
+                                        </svg>
+                                    </label>
+                                    <input required="" id="custom-star3" type="radio" name="review_rating" value="3"
+                                        class="visually-hidden custom-rate__input">
+                                    <label class="custom-rate__label" for="custom-star3">
+                                        <svg viewBox="0 0 72 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M35.0489 0.92705C35.3483 0.00573921 36.6517 0.00574017 36.9511 0.927051L44.756 24.9483C44.8899 25.3604 45.2739 25.6393 45.7071 25.6393H70.9646C71.9333 25.6393 72.3361 26.8789 71.5524 27.4483L51.1186 42.2943C50.7682 42.549 50.6215 43.0003 50.7554 43.4123L58.5604 67.4336C58.8597 68.3549 57.8052 69.1211 57.0215 68.5517L36.5878 53.7057C36.2373 53.451 35.7627 53.451 35.4122 53.7057L14.9785 68.5517C14.1948 69.1211 13.1403 68.3549 13.4396 67.4336L21.2446 43.4123C21.3785 43.0003 21.2319 42.549 20.8814 42.2943L0.447639 27.4483C-0.336074 26.8789 0.0667009 25.6393 1.03542 25.6393H26.2929C26.7261 25.6393 27.1101 25.3604 27.244 24.9483L35.0489 0.92705Z" />
+                                        </svg>
+                                    </label>
+                                    <input required="" id="custom-star2" type="radio" name="review_rating" value="2"
+                                        class="visually-hidden custom-rate__input">
+                                    <label class="custom-rate__label" for="custom-star2">
+                                        <svg viewBox="0 0 72 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M35.0489 0.92705C35.3483 0.00573921 36.6517 0.00574017 36.9511 0.927051L44.756 24.9483C44.8899 25.3604 45.2739 25.6393 45.7071 25.6393H70.9646C71.9333 25.6393 72.3361 26.8789 71.5524 27.4483L51.1186 42.2943C50.7682 42.549 50.6215 43.0003 50.7554 43.4123L58.5604 67.4336C58.8597 68.3549 57.8052 69.1211 57.0215 68.5517L36.5878 53.7057C36.2373 53.451 35.7627 53.451 35.4122 53.7057L14.9785 68.5517C14.1948 69.1211 13.1403 68.3549 13.4396 67.4336L21.2446 43.4123C21.3785 43.0003 21.2319 42.549 20.8814 42.2943L0.447639 27.4483C-0.336074 26.8789 0.0667009 25.6393 1.03542 25.6393H26.2929C26.7261 25.6393 27.1101 25.3604 27.244 24.9483L35.0489 0.92705Z" />
+                                        </svg>
+                                    </label>
+                                    <input required="" id="custom-star1" type="radio" name="review_rating" value="1"
+                                        class="visually-hidden custom-rate__input">
+                                    <label class="custom-rate__label" for="custom-star1">
+                                        <svg viewBox="0 0 72 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M35.0489 0.92705C35.3483 0.00573921 36.6517 0.00574017 36.9511 0.927051L44.756 24.9483C44.8899 25.3604 45.2739 25.6393 45.7071 25.6393H70.9646C71.9333 25.6393 72.3361 26.8789 71.5524 27.4483L51.1186 42.2943C50.7682 42.549 50.6215 43.0003 50.7554 43.4123L58.5604 67.4336C58.8597 68.3549 57.8052 69.1211 57.0215 68.5517L36.5878 53.7057C36.2373 53.451 35.7627 53.451 35.4122 53.7057L14.9785 68.5517C14.1948 69.1211 13.1403 68.3549 13.4396 67.4336L21.2446 43.4123C21.3785 43.0003 21.2319 42.549 20.8814 42.2943L0.447639 27.4483C-0.336074 26.8789 0.0667009 25.6393 1.03542 25.6393H26.2929C26.7261 25.6393 27.1101 25.3604 27.244 24.9483L35.0489 0.92705Z" />
+                                        </svg>
+                                    </label>
+
+                                </div>
+                            </div>
+
+                            <div class="form-fields">
+                                <div class="form-group">
+                                    <input type="text" id="name" name="name" required="" placeholder="ВВЕДІТЬ ІМ'Я*">
+                                    <svg class="form-label-icon" aria-hidden="true" focusable="false">
+                                        <use href="#arrow-right"></use>
+                                    </svg>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" required=""
+                                        placeholder="ВВЕДІТЬ ПОШТУ*">
+                                    <svg class="form-label-icon" aria-hidden="true" focusable="false">
+                                        <use href="#arrow-right"></use>
+                                    </svg>
+                                </div>
+                                <div class="form-group textarea">
+                                    <textarea id="comment-text" name="comment" placeholder="ВАШ ВІДГУК"
+                                        style="height: 47px;"></textarea>
+                                    <svg class="form-label-icon" aria-hidden="true" focusable="false">
+                                        <use href="#arrow-right"></use>
+                                    </svg>
+                                </div>
+                            </div>
 
 
 
-                <div>
+                            <div class="form-group-checkbox">
+                                <input type="checkbox" id="consent" name="consent" required=""
+                                    class="form-group-checkbox__input">
+                                <label for="consent" class="form-group-checkbox__label">
+                                    <span class="form-group-checkbox__box">
+                                        <svg class="form-group-checkbox__icon" aria-hidden="true" focusable="false"
+                                            alt="галочка">
+                                            <use href="#check-mark"></use>
+                                        </svg>
+
+                                    </span>
+                                    Я погоджуюся на обробку персональних даних
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn--primary contact-form-button">
+                                <span>Зв'язатися</span>
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
+            </div>
         </main>
     </div>
 
     <footer class="site-footer-main">
         <div class="site-footer__bg" style="background-image: url('img/footer-bg.png');"></div>
-
-
         <div class="site-footer__container">
             <!-- Колонка 1: Онлайн-магазин -->
             <div class="footer-column footer-column--info">

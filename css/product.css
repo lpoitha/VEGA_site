@@ -740,7 +740,8 @@ main.product-page {
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 15px;
+    padding-bottom: 40px;
+    scrollbar-width: thin;
 }
 
 .testimonial-card {
