@@ -99,18 +99,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('is-active');
                         otherItem.querySelector('.product-accordion__answer-wrapper').style.maxHeight = '0';
-                        otherItem.querySelector('.product-accordion__answer-wrapper').style.paddingBottom = '0';
                     }
                 });
 
                 if (!wasActive) {
                     item.classList.add('is-active');
                     answerWrapper.style.maxHeight = (answerWrapper.scrollHeight + 20) + 'px';
-                    answerWrapper.style.paddingBottom = '1.25vw';
                 } else {
                     item.classList.remove('is-active');
                     answerWrapper.style.maxHeight = '0';
-                    answerWrapper.style.paddingBottom = '0';
                 }
             });
         });
@@ -466,4 +463,60 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const testimonialsContainer = document.querySelector('.testimonials-container');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+
+    if (!testimonialsContainer || !leftArrow || !rightArrow) {
+        return;
+    }
+
+    const updateArrowStates = () => {
+        const { scrollLeft, scrollWidth, clientWidth } = testimonialsContainer;
+
+        leftArrow.disabled = scrollLeft <= 5;
+
+        rightArrow.disabled = (scrollLeft + clientWidth) >= (scrollWidth - 5);
+    };
+
+    const getScrollAmount = () => {
+        const firstCard = testimonialsContainer.querySelector('.testimonial-card');
+        if (firstCard) {
+            const nextCard = firstCard.nextElementSibling;
+            if (nextCard) {
+                return nextCard.offsetLeft - firstCard.offsetLeft;
+            } else {
+                return firstCard.offsetWidth;
+            }
+        }
+        return testimonialsContainer.clientWidth / 2;
+    };
+
+    leftArrow.addEventListener('click', () => {
+        testimonialsContainer.scrollBy({
+            left: -getScrollAmount(),
+            behavior: 'smooth'
+        });
+    });
+
+    rightArrow.addEventListener('click', () => {
+        testimonialsContainer.scrollBy({
+            left: getScrollAmount(),
+            behavior: 'smooth'
+        });
+    });
+
+    testimonialsContainer.addEventListener('scroll', updateArrowStates);
+
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(updateArrowStates, 150);
+    });
+
+    updateArrowStates();
 });

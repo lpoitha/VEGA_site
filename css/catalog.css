@@ -227,7 +227,6 @@
 }
 
 
-/* Адаптация для мобильных */
 @media (max-width: 767px) {
     .form-group-checkbox__label {
         font-size: 4vw;
@@ -237,10 +236,6 @@
     .form-group-checkbox__box {
         width: 5vw;
         height: 5vw;
-    }
-
-    .form-group-checkbox__icon {
-        width: 3vw;
     }
 }
 
@@ -480,7 +475,7 @@
 }
 
 .product-card__description {
-    font-size: 0.83vw;
+    font-size: 16px;
     line-height: 1.4;
     color: var(--color-text-medium-gray);
     margin: 0;
@@ -556,7 +551,7 @@
 
     .catalog-hero-new__title {
         font-size: 20vw;
-        letter-spacing: -0.2%;
+        letter-spacing: -1.72px;
     }
 
     .catalog-hero-new__text .pre-title {
@@ -601,7 +596,6 @@
         top: 57vw;
         z-index: 200;
         background-color: #fff;
-        left: 15px;
         border-radius: 25px;
         width: 30.21vw;
         box-shadow: 0px 0px 12px 0px rgba(45, 14, 69, 0.15);
@@ -617,31 +611,6 @@
         align-items: center;
     }
 
-    div.filter-group:nth-child(2)>button:nth-child(1) {
-        width: 80%;
-    }
-
-    .filter-close-btn svg {
-        stroke: var(--color-text-light-gray);
-        width: 14px;
-        height: 14px;
-    }
-
-    .filter-mobile-header {
-        position: absolute;
-        right: 2vw;
-    }
-
-    .filter-close-btn {
-        width: 4.06vw;
-        height: 4.06vw;
-        border: 1px solid var(--color-text-light-gray);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
 
     .catalog-controls {
         justify-content: space-between;
@@ -653,7 +622,7 @@
     }
 
     .product-card__description {
-        font-size: 1.67vw;
+        font-size: 15px;
     }
 
     .product-card__badge {
@@ -751,6 +720,7 @@
         font-size: 4vw;
     }
 
+    .filter-toggle-btn .icon-arrow-down,
     .sort-dropdown__toggle .icon-arrow-down {
         width: 2.5vw;
         height: 2.5vw;
@@ -841,9 +811,6 @@
         padding: 4vw 0;
     }
 
-    div.filter-group:nth-child(2)>button:nth-child(1) {
-        padding: 0 0 4vw 0;
-    }
 
     .filter-group__toggle .icon-arrow-down {
         width: 3vw;

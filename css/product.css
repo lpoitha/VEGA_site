@@ -55,10 +55,6 @@ main.product-page {
     aspect-ratio: 1 / 1;
 }
 
-.main-image-wrapper button {
-    border: 1.95px solid var(--color-primary);
-}
-
 .main-product-image {
     position: absolute;
     top: 0;
@@ -68,21 +64,22 @@ main.product-page {
     object-fit: cover;
 }
 
+.arrow-button,
 .gallery-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background: rgba(255, 255, 255, 0.7);
-    border: 1px solid #ccc;
+    border: 1.95px solid var(--color-primary);
     border-radius: 50%;
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
     cursor: pointer;
     z-index: 10;
+    transition: opacity 0.3s ease;
 }
 
 .gallery-nav.prev {
@@ -410,6 +407,10 @@ main.product-page {
     cursor: pointer;
 }
 
+.is-active .product-accordion__header h3 {
+    color: var(--color-accent-pink);
+}
+
 .product-accordion__question {
     font-size: 15px;
     color: var(--color-primary-darkest);
@@ -445,11 +446,10 @@ main.product-page {
 
 .product-accordion__item.is-active .product-accordion__answer-wrapper {
     max-height: 7.8125vw;
-    padding-bottom: 1.25vw;
 }
 
 .product-accordion__answer {
-    padding: 0;
+    padding: 0 0 20px 0;
     margin: 0;
     font-size: 14px;
     line-height: 130%;
@@ -459,10 +459,28 @@ main.product-page {
 @media (max-width: 960px) {}
 
 @media (max-width: 767px) {
+    .product-title {
+        font-size: 50px;
+    }
+
+    .arrow-button,
+    .gallery-nav {
+        width: 25px;
+        height: 25px;
+    }
+
+    .gallery-nav svg,
+    .arrow-button svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .thumbnail-images img {
+        height: 100px;
+    }
 
     .product-accordion__item.is-active .product-accordion__answer-wrapper {
         max-height: 30vw;
-        padding-bottom: 4vw;
     }
 }
 
@@ -560,7 +578,7 @@ main.product-page {
     }
 
     .product-main-block {
-        flex-flow: column;
+        flex-flow: wrap;
     }
 
     .btn-add-to-cart {
@@ -572,9 +590,13 @@ main.product-page {
         width: auto;
     }
 
+    .order-request {
+        flex-flow: column;
+        gap: 15px;
+    }
+
+
 }
-
-
 
 .videoplayer {
     margin-bottom: 10vw;
@@ -733,15 +755,34 @@ main.product-page {
     flex-direction: column;
 }
 
+/* Новый контейнер для карусели и стрелок */
+.testimonials-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 0 60px;
+    /* Добавляем отступы для стрелок */
+    box-sizing: border-box;
+}
+
+/* Скрытие стандартного скроллбара */
+.testimonials-container::-webkit-scrollbar {
+    display: none;
+    /* Для WebKit (Chrome, Safari, Opera) */
+}
+
+.testimonials-container {
+    scrollbar-width: none;
+    /* Для Firefox */
+}
+
+/* Остальные свойства testimonials-container остаются */
 .testimonials-container {
     display: flex;
     justify-content: space-between;
-    gap: 5%;
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 40px;
-    scrollbar-width: thin;
 }
 
 .testimonial-card {
@@ -799,6 +840,26 @@ main.product-page {
     margin-top: 75px;
 }
 
+
+
+.arrow-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+.right-arrow svg {
+    transform: rotate(180deg);
+}
+
+/* Медиа-запросы */
 @media (max-width: 960px) {
     .reviews-section-wrapper {
         max-width: 96.875vw;
@@ -813,15 +874,20 @@ main.product-page {
         gap: 10px;
     }
 
-
     .testimonials-footer-line {
         align-self: center;
     }
 }
 
 @media (max-width: 768px) {
+
+    .testimonials-carousel-wrapper {
+        padding: 0;
+    }
+
     .testimonial-card {
-        flex-basis: 47.5%;
+        flex-basis: 90%;
+        padding: 0 0 0 10%;
     }
 
     .testimonials-container {

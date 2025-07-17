@@ -70,13 +70,15 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
 body {
     background-color: var(--color-bg-light);
     overflow-x: hidden;
-    font-family: "Vela Sans", sans-serif
+    font-family: "Vela Sans", sans-serif;
+
 }
 
 ::-webkit-scrollbar-thumb {
@@ -96,6 +98,10 @@ html {
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+span strong {
+    font-weight: 900;
 }
 
 h2 {
@@ -151,6 +157,12 @@ h2 {
     text-transform: uppercase;
 }
 
+@media (max-width: 767px) {
+    h2 {
+        font-size: 50px;
+    }
+}
+
 /* ==========================================================================
    3. УТИЛИТАРНЫЕ КЛАССЫ
    ========================================================================== */
@@ -191,6 +203,10 @@ h2 {
 .section--centered {
     width: 100%;
     margin: 0 auto;
+}
+
+svg.icon-search {
+    margin-right: 2px;
 }
 
 @media (max-width: 960px) {
@@ -270,7 +286,7 @@ h2 {
 }
 
 .btn--primary span {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.833vw;
     line-height: 110%;
     letter-spacing: -0.03em;
@@ -945,8 +961,8 @@ svg.nav-button__shape>path:nth-child(3) {
     }
 
     .icon {
-        width: 7.5vw;
-        height: 7.5vw;
+        width: 6vw;
+        height: 6vw;
     }
 
     .nav-button__content .icon-grid {
@@ -963,6 +979,84 @@ svg.nav-button__shape>path:nth-child(3) {
     height: 58.33vw;
     margin: 0 auto;
     overflow: hidden
+}
+
+/* Новая обертка, которая создает "пространство для прокрутки" */
+.hero-pin-wrapper {
+    height: 300vh;
+}
+
+
+.hero-section {
+    position: sticky;
+    top: 0;
+}
+
+.flying-bottle {
+    position: fixed;
+    transition: top 0.8s ease-in-out, left 0.8s ease-in-out, width 0.8s ease-in-out, height 0.8s ease-in-out;
+}
+
+
+
+.bestseller-section__bottle,
+.categories-section__bottle {
+    display: none;
+}
+
+
+.movable-bottle.is-landed {
+    position: absolute;
+    /* Конечные координаты и размер внутри плейсхолдера */
+    top: 50px;
+    left: 50px;
+    width: 200px;
+    height: auto;
+    transform: translate(0, 0);
+    /* Сбрасываем центрирование */
+}
+
+/* 2. Стили для плейсхолдера и статичной баночки */
+.product-card--vega-placeholder {
+    overflow: visible !important;
+}
+
+.static-bottle {
+    position: absolute;
+    top: -17vw;
+    width: 14.2vw;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+@media (max-width: 960px) {
+
+    .hero-pin-wrapper {
+        height: min-content;
+    }
+
+
+    .hero-section {
+        position: relative;
+    }
+
+    .flying-bottle {
+        position: absolute;
+        transition: top 0.8s ease-in-out, left 0.8s ease-in-out, width 0.8s ease-in-out, height 0.8s ease-in-out;
+    }
+
+    .bestseller-section__bottle,
+    .categories-section__bottle {
+        display: block;
+    }
+
+    .static-bottle {
+        position: absolute;
+        top: -22vw;
+        width: 80%;
+        opacity: 1;
+        left: 2.6vw;
+    }
 }
 
 .hero-background {
@@ -1201,7 +1295,7 @@ svg.nav-button__shape>path:nth-child(3) {
     width: 10.729vw;
     height: 7.187vw;
     left: 70.5729vw;
-    top: 460px;
+    top: 36.46vw;
     font-family: "Great Vibes", cursive;
     font-size: 5.729vw;
     line-height: 7.187vw;
@@ -1255,13 +1349,11 @@ svg.nav-button__shape>path:nth-child(3) {
 }
 
 .hero-images__bottle {
-    position: absolute;
     height: 37.2396vw;
-    width: 15.3536vw;
     left: 42.3229vw;
     top: 10.885vw;
     transform: rotate(-16.46deg);
-    z-index: 15
+    z-index: 14;
 }
 
 .hero-images__balloons {
@@ -1718,7 +1810,7 @@ svg.nav-button__shape>path:nth-child(3) {
     border-radius: 2.3438vw;
     margin-top: -2.0833vw;
     position: relative;
-    z-index: 3;
+    z-index: 1;
     overflow: hidden
 }
 
@@ -1950,7 +2042,7 @@ svg.nav-button__shape>path:nth-child(3) {
 
 .info-card__item {
     margin-top: 1vw;
-    padding-top: 0.651vw;
+    padding-top: 1vw;
     display: flex;
     align-items: flex-start;
     gap: 1.0417vw
@@ -1984,7 +2076,7 @@ svg.nav-button__shape>path:nth-child(3) {
 .info-card__item.line {
     border-top: 1px solid rgba(247, 243, 248, 0.25);
     border-bottom: 1px solid rgba(247, 243, 248, 0.25);
-    padding-bottom: 0.651vw
+    padding-bottom: 1vw
 }
 
 .bestseller-price-block-mob {
@@ -2492,10 +2584,10 @@ svg.nav-button__shape>path:nth-child(3) {
     width: 25.312vw;
     height: 25.312vw;
     background: var(--gradient-title-main);
-    filter: blur(1000px);
+    filter: blur(400px);
     z-index: 0;
     border-radius: 50%;
-    opacity: 0.2 !important
+    opacity: 0.5 !important
 }
 
 .categories-bg-blur--left {
@@ -2568,6 +2660,17 @@ svg.nav-button__shape>path:nth-child(3) {
     text-decoration: none;
     color: var(--color-primary-darkest)
 }
+
+.category-card:hover .category-card__title {
+    color: var(--color-accent-pink);
+}
+
+.category-card:hover,
+.product-card:hover {
+    box-shadow: 0 8px 24px rgba(165, 120, 199, 0.2);
+}
+
+
 
 .category-card__image {
     width: 100%;
@@ -2719,7 +2822,7 @@ svg.nav-button__shape>path:nth-child(3) {
     align-items: flex-start;
     height: 3.713vw;
     flex: none;
-    transition: all 0.3s ease
+    transition: all 0.3s ease;
 }
 
 .category-list__item:hover {
@@ -4180,6 +4283,11 @@ svg.nav-button__shape>path:nth-child(3) {
 
     .about-section__main-text p {
         font-size: 1.875vw;
+        margin-top: 1em;
+    }
+
+    .about-section__link {
+        margin-top: 1.25em;
     }
 
     .about-section__link span {
@@ -4604,6 +4712,10 @@ svg.nav-button__shape>path:nth-child(3) {
     transform: rotate(45deg)
 }
 
+.faq-item.is-active .faq-item__question {
+    color: var(--color-accent-pink);
+}
+
 .faq-item__answer-wrapper {
     max-height: 0;
     /* Изначально ответ скрыт */
@@ -4732,12 +4844,10 @@ svg.nav-button__shape>path:nth-child(3) {
     z-index: 2
 }
 
-/* ... после стилей для .contact-info__socials ... */
 .contact-info__schedule {
     position: absolute;
     top: 4.7vw;
     right: 1.8229vw;
-    /* Прижимаем к правому краю блока */
     font-size: 0.9375vw;
     font-weight: 400;
     line-height: 130%;
@@ -4770,7 +4880,7 @@ svg.nav-button__shape>path:nth-child(3) {
     left: 3.125vw;
     top: 24.9479vw;
     display: flex;
-    gap: 1.1458vw;
+    gap: 2vw;
     z-index: 2
 }
 
@@ -4992,8 +5102,8 @@ svg.nav-button__shape>path:nth-child(3) {
     }
 
     .contact-info__schedule {
-        grid-area: schedule;
-        margin-top: 3.6458vw
+        margin-top: 3.6458vw;
+        font-size: 1.875vw;
     }
 
     .contact-info__details {
@@ -5029,10 +5139,6 @@ svg.nav-button__shape>path:nth-child(3) {
     .social-icon img {
         height: 3.3333vw;
         width: auto
-    }
-
-    .contact-info__schedule {
-        font-size: 1.875vw;
     }
 
     .contact-form__title {
@@ -5180,7 +5286,7 @@ svg.nav-button__shape>path:nth-child(3) {
         font-size: 4.375vw;
         text-align: right;
         margin-top: 10.9375vw;
-        width: 32vw;
+        width: 30vw;
     }
 
     .contact-info__details {
@@ -5197,20 +5303,12 @@ svg.nav-button__shape>path:nth-child(3) {
 
     .contact-info__socials {
         justify-content: center;
-        gap: 4.7vw
+        gap: 6vw
     }
 
     .social-icon {
         width: 15.625vw;
         height: 15.625vw
-    }
-
-    .contact-info__schedule {
-        top: 28.125vw;
-        right: 10.9375vw;
-        font-size: 4.375vw;
-        margin-top: 10.9375vw;
-        text-align: right
     }
 
     .social-icon img {
@@ -5295,7 +5393,8 @@ svg.nav-button__shape>path:nth-child(3) {
 
 .footer-column .pre-title {
     color: var(--color-primary);
-    font-weight: 400
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 
 .footer-column--info {
@@ -5318,7 +5417,7 @@ svg.nav-button__shape>path:nth-child(3) {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.4167vw
+    gap: 8px;
 }
 
 .footer-links a {
@@ -5376,6 +5475,7 @@ svg.nav-button__shape>path:nth-child(3) {
 .footer-credits--desktop {
     position: absolute;
     bottom: 0;
+    gap: 8px;
 }
 
 .footer-credits--mobile {
@@ -5490,9 +5590,7 @@ svg.nav-button__shape>path:nth-child(3) {
         margin: 0
     }
 
-    .site-footer__bg-text {
-        display: none
-    }
+
 
     .site-footer__container {
         grid-template-columns: 1fr 1fr;
@@ -6444,7 +6542,7 @@ button {
 
 .burger-menu__socials {
     display: flex;
-    gap: 0.78vw;
+    gap: 1vw;
 }
 
 .burger-menu__socials-wrap p {
@@ -6631,6 +6729,7 @@ button {
     .burger-menu__nav {
         flex-direction: initial;
         gap: 8vw;
+        padding-bottom: 4vw;
     }
 
     .burger-menu__contacts-schedule {
@@ -6684,7 +6783,7 @@ button {
     }
 
     .burger-menu__socials {
-        gap: 2vw;
+        gap: 3vw;
         margin-right: auto;
     }
 
