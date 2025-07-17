@@ -1055,7 +1055,15 @@ svg.nav-button__shape>path:nth-child(3) {
         top: -22vw;
         width: 80%;
         opacity: 1;
-        left: 2.6vw;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+}
+
+@media (max-width: 767px) {
+    .static-bottle {
+        top: -10vw;
+        width: 45%;
     }
 }
 
