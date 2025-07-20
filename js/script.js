@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+
     // --- Burger Menu Logic ---
     const burgerMenu = document.getElementById('burger-menu');
     const burgerButton = document.querySelector('.btn--burger');
     const burgerCloseButtonMob = document.getElementById('burger-menu-close-mob');
     const burgerCloseButtonLap = document.getElementById('burger-menu-close-laptop');
-    const siteBackdrop = document.querySelector('.site-backdrop');
-    const body = document.body;
 
     if (burgerMenu && burgerButton && burgerCloseButtonLap && burgerCloseButtonMob && siteBackdrop) {
         const openMenu = () => {
@@ -157,11 +156,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Open on hover
-    catalogWrapper.addEventListener('mouseenter', function () {
-        clearTimeout(closeTimer);
-        openDropdown();
-    });
+    if (window.innerWidth >= 960) {
+        catalogWrapper.addEventListener('mouseenter', function () {
+            clearTimeout(closeTimer);
+            openDropdown();
+        });
+    }
 
     // Start close timer on leave
     catalogWrapper.addEventListener('mouseleave', function () {
@@ -200,8 +200,12 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         };
 
+
         item.addEventListener('click', handler);
-        item.addEventListener('mouseover', handler);
+        if (window.innerWidth >= 960) {
+            item.addEventListener('mouseover', handler);
+        }
+
     });
 
     // Close on Escape key

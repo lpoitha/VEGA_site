@@ -394,6 +394,98 @@
         </div>
     </div>
 
+    <!-- CART SIDE MENU -->
+    <div class="cart-menu" id="cart-menu" role="dialog" aria-modal="true" aria-labelledby="cart-menu-title" hidden>
+
+        <!-- Header -->
+        <div class="cart-menu__header">
+            <h2 id="cart-menu-title title" class="cart-menu__title">ВАШЕ ЗАМОВЛЕННЯ</h2>
+            <span class="cart-menu__star-icon">
+                <svg class="icon" aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 12 12">
+                    <use href="#game-icons_polar-star"></use>
+                </svg>
+            </span>
+            <button class="cart-menu__close-btn" id="cart-menu-close" aria-label="Закрити корзину">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M6 6L18 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="cart-menu__body">
+            <ul class="cart-menu__items-list">
+                <li class="cart-item">
+                    <img src="https://i.imgur.com/R38qT7V.png" alt="Гель-лак Cat Eye" class="cart-item__image">
+                    <h5 class="cart-item__name">Гель-лак "Cat Eye", солор №2</h5>
+                    <p class="cart-item__volume suport-text ">15мл</p>
+
+                    <div class="quantity-selector">
+                        <button class="quantity-minus"><svg width="5" height="2" viewBox="0 0 5 2" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.400391 1.44101V0.559006H4.60039V1.44101H0.400391Z"></path>
+                            </svg></button>
+                        <span class="quantity-value">1</span>
+                        <button class="quantity-plus"><svg width="7" height="8" viewBox="0 0 7 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.06269 7.199V4.441H0.304688V3.55899H3.06269V0.800995H3.94469V3.55899H6.69569V4.441H3.94469V7.199H3.06269Z">
+                                </path>
+                            </svg></button>
+                    </div>
+                    <p class="cart-item__price ">195 грн</p>
+                    <button class="cart-item__remove" aria-label="Видалити товар">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M9 3L3 9" stroke="#929292" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M3 3L9 9" stroke="#929292" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </li>
+                <li class="cart-item">
+                    <img src="https://i.imgur.com/R38qT7V.png" alt="Гель-лак Cat Eye" class="cart-item__image">
+                    <h5 class="cart-item__name">Гель-лак "Cat Eye", солор №2</h5>
+                    <p class="cart-item__volume suport-text ">15мл</p>
+
+                    <div class="quantity-selector">
+                        <button class="quantity-minus"><svg width="5" height="2" viewBox="0 0 5 2" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.400391 1.44101V0.559006H4.60039V1.44101H0.400391Z"></path>
+                            </svg></button>
+                        <span class="quantity-value">1</span>
+                        <button class="quantity-plus"><svg width="7" height="8" viewBox="0 0 7 8" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.06269 7.199V4.441H0.304688V3.55899H3.06269V0.800995H3.94469V3.55899H6.69569V4.441H3.94469V7.199H3.06269Z">
+                                </path>
+                            </svg></button>
+                    </div>
+                    <p class="cart-item__price ">195 грн</p>
+                    <button class="cart-item__remove" aria-label="Видалити товар">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M9 3L3 9" stroke="#929292" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M3 3L9 9" stroke="#929292" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Footer with total and purchase button -->
+        <div class="cart-menu__footer">
+            <div class="cart-menu__total">
+                <span class="total-label">Загальна сума:</span>
+                <span class="total-amount">390 грн</span>
+            </div>
+            <button class="btn btn--primary cart-menu__purchase-btn">
+                Придбати
+            </button>
+        </div>
+    </div>
+
     <div class="popup-overlay" id="contact-popup-modal" role="dialog" aria-modal="true"
         aria-labelledby="popup-modal-title" hidden>
         <div class="popup-content-wrapper">

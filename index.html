@@ -1030,6 +1030,7 @@
             </ul>
         </div>
     </div>
+
     <div class="hero-pin-wrapper">
         <main class="hero-section">
             <!-- Правая часть с фоном космоса -->
@@ -1093,7 +1094,8 @@
                 <div class="hero-images__bottle-shadow"></div>
             </div>
         </main>
-        <img src="img/butylka-lak.png" alt="Бутылочка лака Vega" class="hero-images__bottle flying-bottle">
+        <img src="img/butylka-lak.png" alt="Бутылочка лака Vega"
+            class="hero-images__bottle flying-bottle moving-bottle">
 
     </div>
 
@@ -2045,17 +2047,12 @@
     <script src="js/script.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Регистрация плагина ScrollTrigger
             gsap.registerPlugin(ScrollTrigger);
 
-            // Фоновая анимация шаров остается без изменений
-            gsap.to(".hero-images__balloons", {
-                y: "-=1vw", rotation: "+=2", duration: 4,
-                ease: "sine.inOut", repeat: -1, yoyo: true
-            });
-
+            // ScrollTrigger активен только для экранов шире 960px
             ScrollTrigger.matchMedia({
                 "(min-width: 961px)": function () {
+                    // Анимация элементов hero-секции
                     const tlScroll = gsap.timeline({
                         scrollTrigger: {
                             trigger: ".hero-pin-wrapper",
@@ -2065,21 +2062,17 @@
                         }
                     });
 
-
                     tlScroll.to(".hero-background", {
                         width: "100vw",
                         ease: "power1.in",
                         duration: 0.1
                     }, 0);
 
-                    // 2. Центральный круг-планета сильно светлеет и уменьшается
                     tlScroll.to(".hero-planet-bg", {
-                        background: "rgba(255, 240, 251, 0.75)",
-                        scale: 0.7, // Уменьшаем масштаб
+                        scale: 0.7,
                         ease: "power1.inOut"
                     }, 0);
 
-                    // 3. Заголовки трансформируются по вашим точным значениям
                     tlScroll.to(".hero-title-block", {
                         x: "-12.5vw",
                         y: "-13.65vw",
@@ -2094,14 +2087,12 @@
                         ease: "power1.inOut"
                     }, 0);
 
-                    // 4. Кнопка сдвигается по точным координатам
                     tlScroll.to(".hero-cta-button", {
                         x: "-28.5vw",
                         y: "-17vw",
                         ease: "power1.inOut"
                     }, 0);
 
-                    // 5. Подпись "Vega" и описание трансформируются
                     tlScroll.to(".hero-signature", {
                         rotation: 0,
                         x: "7vw",
@@ -2114,14 +2105,12 @@
                         ease: "power1.inOut"
                     }, 0);
 
-                    // 6. Бутылочка поворачивается и уменьшается
                     tlScroll.to(".hero-images__bottle", {
                         rotation: 0,
                         height: "33.5vw",
                         ease: "power1.inOut"
                     }, 0);
 
-                    // 7. Шары улетают вверх
                     tlScroll.to(".hero-images__balloons", {
                         yPercent: -250,
                         autoAlpha: 0,
@@ -2131,51 +2120,51 @@
                     tlScroll.to(".hero-images__bottle-shadow", {
                         opacity: 0,
                         ease: "power1.in"
-                    }, 0)
+                    }, 0);
 
                     tlScroll.to(".hero-background__dark-overlay", {
                         opacity: 0.1,
                         ease: "power1.in"
-                    }, 0)
+                    }, 0);
 
-                    gsap.registerPlugin(ScrollTrigger);
-                    const bottle = document.querySelector('.flying-bottle');
+                    // Логика остановки бутылки
+                    const movingBottle = document.querySelector(".moving-bottle");
+                    const staticBottle = document.querySelector(".static-bottle");
 
-                    const flyingBottle = document.querySelector('.flying-bottle');
-                    const staticBottle = document.querySelector('.static-bottle');
-                    const placeholder = document.querySelector('.product-card--vega-placeholder');
+                    if (!movingBottle || !staticBottle) return;
 
-                    ScrollTrigger.create({
-                        trigger: placeholder,
-                        start: "top 150%",
+                    const checkPosition = () => {
+                        const placeholderRect = staticBottle.getBoundingClientRect();
 
+                        const triggerStop = 10 * window.innerWidth / 100;
 
-                        onEnter: (self) => {
-                            const targetRect = staticBottle.getBoundingClientRect();
+                        if (placeholderRect.top <= triggerStop) {
+                            // Остановка
+                            const scrollTop = window.scrollY || window.pageYOffset;
+                            const offsetTop = scrollTop + placeholderRect.top;
 
+                            movingBottle.classList.add("stopped");
+                            movingBottle.style.top = offsetTop + "px";
 
-                            gsap.to(flyingBottle, {
-                                top: targetRect.top,
-                                left: targetRect.left,
-                                width: targetRect.width,
-                                height: targetRect.height,
-                                rotation: 0,
-                                ease: "power2.inOut",
-                                duration: 0.3,
+                        } else {
+                            // Пока не дошла — остаётся fixed
+                            movingBottle.classList.remove("stopped");
+                            movingBottle.style.top = "10.885vw";
+                        }
+                    };
 
-
-                                onComplete: () => {
-                                    gsap.set(flyingBottle, { opacity: 0 });
-                                    gsap.set(staticBottle, { opacity: 1 });
-                                    self.kill();
-                                }
-                            });
-                        },
-                        once: false
-                    });
+                    window.addEventListener("scroll", checkPosition);
+                    window.addEventListener("resize", checkPosition);
+                    checkPosition();
                 }
             });
         });
+
+
+
+
+
+
     </script>
 </body>
 
